@@ -14,6 +14,7 @@
   "require": {
     "cweagans/composer-patches": "~1",
     "drupal-composer/drupal-scaffold": "^2",
+    "drupal/admin_toolbar": "^1.27",
     "drupal/adminimal_theme": "^1.5"
   },
   "require-dev": {
