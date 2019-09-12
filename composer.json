@@ -54,14 +54,6 @@
         "type:drupal-theme"
       ]
     },
-    "patches": {
-      "drupal/blog": {
-        "Blog module unmet dependencies fix" : "https://www.drupal.org/files/issues/2019-04-30/blog-added-dependencies.patch"
-      },
-      "drupal/core": {
-        "Media upload ajax issue fix" : "https://www.drupal.org/files/issues/2019-05-23/media-library-subfolder-installation-path-error-2990664-5-d8.patch"
-      }
-    },
     "enable-patching": true
   }
 }
