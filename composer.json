@@ -15,7 +15,13 @@
     "cweagans/composer-patches": "~1",
     "drupal-composer/drupal-scaffold": "^2",
     "drupal/admin_toolbar": "^1.27",
-    "drupal/adminimal_theme": "^1.5"
+    "drupal/adminimal_theme": "^1.5",
+    "drupal/google_analytics": "^3.0",
+    "drupal/metatag": "^1.10",
+    "drupal/pathauto": "^1.4",
+    "drupal/redirect": "^1.4",
+    "drupal/scheduler": "^1.1",
+    "drupal/simple_sitemap": "^3.3"
   },
   "require-dev": {
     "drush/drush": "~9",
