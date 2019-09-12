@@ -1,0 +1,66 @@
+{
+  "name": "srijanaravali/ezcontent",
+  "description": "A Feature rich stater profile from Srijan.",
+  "type": "drupal-profile",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "cweagans/composer-patches": "~1",
+    "drupal-composer/drupal-scaffold": "^2"
+  },
+  "require-dev": {
+    "drush/drush": "~9",
+    "drupal/coder": "~8"
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": {
+      "drupal/core": "dist"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@composer drupal-scaffold",
+      "./import.sh"
+    ],
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+  },
+  "extra": {
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ]
+    },
+    "patches": {
+      "drupal/blog": {
+        "Blog module unmet dependencies fix" : "https://www.drupal.org/files/issues/2019-04-30/blog-added-dependencies.patch"
+      },
+      "drupal/core": {
+        "Media upload ajax issue fix" : "https://www.drupal.org/files/issues/2019-05-23/media-library-subfolder-installation-path-error-2990664-5-d8.patch"
+      }
+    },
+    "enable-patching": true
+  }
+}
