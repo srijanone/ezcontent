@@ -38,6 +38,7 @@ install:
   - views_ui
   - editor
   - ckeditor
+  - workflows
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
