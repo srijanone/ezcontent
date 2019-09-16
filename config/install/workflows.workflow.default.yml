@@ -1,6 +1,9 @@
 langcode: en
 status: true
 dependencies:
+  config:
+  - node.type.article
+  - node.type.page
   module:
   - content_moderation
 id: default
@@ -92,4 +95,7 @@ type_settings:
       to: published
       weight: 3
   default_moderation_state: draft
-  entity_types: {  }
+  entity_types:
+    node:
+    - article
+    - page
