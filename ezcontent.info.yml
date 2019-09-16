@@ -38,6 +38,7 @@ install:
   - views_ui
   - editor
   - ckeditor
+  - content_moderation
   - workflows
 
 # Required modules
