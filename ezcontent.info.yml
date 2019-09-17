@@ -42,6 +42,7 @@ install:
   - workflows
   - scheduler
   - metatag
+  - simple_sitemap
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
