@@ -92,7 +92,4 @@ type_settings:
       to: published
       weight: 3
   default_moderation_state: draft
-  entity_types:
-    node:
-    - article
-    - page
+  entity_types: {  }
