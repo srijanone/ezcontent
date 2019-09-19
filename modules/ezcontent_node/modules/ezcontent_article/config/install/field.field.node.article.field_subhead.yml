@@ -2,19 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_meta_tags
+    - field.storage.node.field_subhead
     - node.type.article
-  module:
-    - metatag
-id: node.article.field_meta_tags
-field_name: field_meta_tags
+id: node.article.field_subhead
+field_name: field_subhead
 entity_type: node
 bundle: article
-label: 'Meta Tags'
+label: Subhead
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: metatag
+field_type: string
