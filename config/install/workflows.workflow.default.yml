@@ -1,9 +1,6 @@
 langcode: en
 status: true
 dependencies:
-  config:
-  - node.type.article
-  - node.type.page
   module:
   - content_moderation
 id: default
