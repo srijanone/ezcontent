@@ -17,6 +17,7 @@
     "drupal/admin_toolbar": "^1.27",
     "drupal/adminimal_theme": "^1.5",
     "drupal/claro": "^1.0@alpha",
+    "drupal/field_group": "^1.0",
     "drupal/google_analytics": "^3.0",
     "drupal/metatag": "^1.10",
     "drupal/pathauto": "^1.4",
