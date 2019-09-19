@@ -1,0 +1,7 @@
+name: Page Feature
+type: module
+description: 'Provides page content type.'
+package: EZContent Node
+core: 8.x
+dependencies:
+  - ezcontent_node

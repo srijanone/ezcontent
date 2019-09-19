@@ -1,0 +1,7 @@
+name: Article Feature
+type: module
+description: 'Provides article content type.'
+package: EZContent Node
+core: 8.x
+dependencies:
+  - ezcontent_node
