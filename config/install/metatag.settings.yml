@@ -1,7 +1,0 @@
-entity_type_groups:
-  node:
-    article:
-      basic: basic
-      advanced: advanced
-    page:
-      basic: basic
