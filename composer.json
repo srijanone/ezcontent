@@ -23,6 +23,8 @@
     "drupal/inline_entity_form": "^1.0@RC",
     "drupal/media_entity_browser": "2.x",
     "drupal/metatag": "^1.10",
+    "drupal/paragraphs": "^1.9",
+    "drupal/paragraphs_previewer": "^1.4",
     "drupal/pathauto": "^1.4",
     "drupal/redirect": "^1.4",
     "drupal/scheduler": "^1.1",

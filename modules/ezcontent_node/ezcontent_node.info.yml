@@ -7,3 +7,4 @@ dependencies:
   - scheduler
   - pathauto
   - field_group
+  - paragraphs_previewer

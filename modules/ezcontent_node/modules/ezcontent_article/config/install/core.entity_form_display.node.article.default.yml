@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.image_browser
+    - field.field.node.article.field_content
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_short_title
     - field.field.node.article.field_subhead
@@ -48,6 +49,20 @@ third_party_settings:
         description: ''
       label: Teaser
       region: content
+    group_content:
+      children:
+        - field_content
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+        description: ''
+      label: Content
+      region: content
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -59,6 +74,28 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_content:
+    type: paragraphs_previewer
+    weight: 9
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: add_above
+      closed_mode_threshold: 0
+    third_party_settings:
+      paragraphs_features:
+        add_in_between: false
+        split_text: true
+    region: content
   field_meta_tags:
     weight: 121
     settings: {  }
