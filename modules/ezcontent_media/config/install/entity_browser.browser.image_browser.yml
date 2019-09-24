@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - views
+name: image_browser
+label: 'Image Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select image(s)'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  aa5910c2-a8f5-43b6-8349-bf09bf25b360:
+    settings:
+      view: media_entity_browser
+      view_display: media_browser_all
+      submit_text: 'Select image(s)'
+      auto_select: false
+    uuid: aa5910c2-a8f5-43b6-8349-bf09bf25b360
+    weight: 1
+    label: Library
+    id: view
+  33ccd0e8-2916-4881-855e-38905eac295f:
+    settings:
+      extensions: 'jpg jpeg png gif'
+      media_type: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      multiple: 0
+      submit_text: 'Select image(s)'
+    uuid: 33ccd0e8-2916-4881-855e-38905eac295f
+    weight: 2
+    label: Upload
+    id: media_image_upload

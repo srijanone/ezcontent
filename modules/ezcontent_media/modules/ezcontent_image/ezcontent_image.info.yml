@@ -1,0 +1,7 @@
+name: Image Feature
+type: module
+description: 'Provides Image Media type for image based features.'
+package: EZContent Media
+core: 8.x
+dependencies:
+  - ezcontent_media
