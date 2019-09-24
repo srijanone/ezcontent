@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.article.field_short_title
     - field.field.node.article.field_subhead
     - field.field.node.article.field_summary
+    - field.field.node.article.field_tags
     - field.field.node.article.field_thumbnail
     - node.type.article
   module:
@@ -62,6 +63,21 @@ third_party_settings:
         required_fields: true
         description: ''
       label: Content
+      region: content
+    group_taxonomy:
+      children:
+        - field_tags
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        label: Taxonomy
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: Taxonomy
       region: content
 id: node.article.default
 targetEntityType: node
@@ -125,6 +141,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_tags:
+    weight: 15
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_thumbnail:
     weight: 122

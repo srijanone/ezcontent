@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Tags
+vid: tags
+description: 'Tags to categorize content into different categories.'
+hierarchy: 0
+weight: 0
