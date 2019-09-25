@@ -7,3 +7,4 @@ dependencies:
   - ezcontent_node
   - ezcontent_image
   - ezcontent_taxonomy
+  - ezcontent_text

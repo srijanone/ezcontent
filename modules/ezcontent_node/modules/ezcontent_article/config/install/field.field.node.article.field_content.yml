@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.article
+    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
 id: node.article.field_content
@@ -21,5 +22,9 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      faq_qa: faq_qa
+      text: text
+    target_bundles_drag_drop:
+      text:
+        enabled: true
+        weight: 2
 field_type: entity_reference_revisions

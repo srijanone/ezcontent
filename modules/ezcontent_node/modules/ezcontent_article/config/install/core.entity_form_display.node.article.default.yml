@@ -15,6 +15,7 @@ dependencies:
     - entity_browser
     - field_group
     - metatag
+    - paragraphs
     - path
     - scheduler
 third_party_settings:
@@ -91,21 +92,17 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_content:
-    type: paragraphs_previewer
+    type: paragraphs
     weight: 9
     settings:
       title: Paragraph
       title_plural: Paragraphs
       edit_mode: closed
-      closed_mode: preview
-      autocollapse: none
       add_mode: modal
       form_display_mode: default
       default_paragraph_type: _none
-      features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
-        add_above: add_above
+      closed_mode: summary
+      autocollapse: none
       closed_mode_threshold: 0
     third_party_settings:
       paragraphs_features:

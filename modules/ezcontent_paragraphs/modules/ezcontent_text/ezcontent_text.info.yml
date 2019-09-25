@@ -1,0 +1,7 @@
+name: Text Feature
+type: module
+description: 'Provides basic Text paragraph feature.'
+package: EZContent Paragraphs
+core: 8.x
+dependencies:
+  - ezcontent_paragraphs
