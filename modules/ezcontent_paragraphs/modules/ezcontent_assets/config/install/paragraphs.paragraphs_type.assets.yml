@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: assets
+label: Assets
+icon_uuid: null
+description: 'Create or attach your Media Assets'
+behavior_plugins: {  }

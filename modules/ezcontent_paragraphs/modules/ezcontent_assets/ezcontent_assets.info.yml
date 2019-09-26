@@ -1,0 +1,9 @@
+name: Assets Feature
+type: module
+description: 'Provides Media assets paragraph feature.'
+package: EZContent Paragraphs
+core: 8.x
+dependencies:
+  - ezcontent_paragraphs
+  - ezcontent_image
+  - ezcontent_video
