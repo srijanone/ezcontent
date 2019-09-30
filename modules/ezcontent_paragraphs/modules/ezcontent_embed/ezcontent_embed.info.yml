@@ -1,0 +1,8 @@
+name: Embed Feature
+type: module
+description: 'Provides Embed feature for third party scripts.'
+package: EZContent Paragraphs
+core: 8.x
+dependencies:
+  - ezcontent_paragraphs
+  - allowed_formats

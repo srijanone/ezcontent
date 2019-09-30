@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: embed
+label: Embed
+icon_uuid: null
+description: 'Third party embedded script.'
+behavior_plugins: {  }

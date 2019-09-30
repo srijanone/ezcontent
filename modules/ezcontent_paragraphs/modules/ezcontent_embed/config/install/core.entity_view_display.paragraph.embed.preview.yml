@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.embed.field_script
+    - paragraphs.paragraphs_type.embed
+id: paragraph.embed.preview
+targetEntityType: paragraph
+bundle: embed
+mode: preview
+content: {  }
+hidden:
+  field_script: true
