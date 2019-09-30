@@ -1,0 +1,27 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.card_list
+    - field.field.paragraph.card_list.field_card
+    - field.field.paragraph.card_list.field_title
+    - paragraphs.paragraphs_type.card_list
+  module:
+    - entity_reference_revisions
+id: paragraph.card_list.card_list
+targetEntityType: paragraph
+bundle: card_list
+mode: card_list
+content:
+  field_card:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
+  field_title: true

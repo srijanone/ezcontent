@@ -1,0 +1,10 @@
+uuid: 7c62fdfc-7b47-41ae-9759-57d2f02dc73d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.card_nested
+label: 'Card Nested'
+targetEntityType: paragraph
+cache: true

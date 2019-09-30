@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.card_list
+  module:
+    - entity_reference_revisions
+id: paragraph.card_list.field_card
+field_name: field_card
+entity_type: paragraph
+bundle: card_list
+label: Card
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      card: card
+    target_bundles_drag_drop:
+      card_list:
+        weight: 9
+        enabled: false
+      faq:
+        weight: 10
+        enabled: false
+      faq_qa:
+        weight: 11
+        enabled: false
+      gallery:
+        weight: 12
+        enabled: false
+      media:
+        weight: 13
+        enabled: false
+      card:
+        enabled: true
+        weight: 14
+      quote:
+        weight: 15
+        enabled: false
+      text:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

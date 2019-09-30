@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.card_list
+    - field.field.media.image.field_media_image
+    - image.style.card_list
+    - media.type.image
+  module:
+    - image
+id: media.image.card_list
+targetEntityType: media
+bundle: image
+mode: card_list
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: card_list
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

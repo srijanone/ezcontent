@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: card
+label: Card
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

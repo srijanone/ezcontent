@@ -6,3 +6,4 @@ core: 8.x
 dependencies:
   - paragraphs
   - media
+  - svg_image

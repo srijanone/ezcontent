@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.card_list
+label: Card List
+targetEntityType: media
+cache: true
