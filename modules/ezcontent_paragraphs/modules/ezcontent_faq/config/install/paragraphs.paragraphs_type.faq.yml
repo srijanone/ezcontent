@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: faq
+label: FAQ
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

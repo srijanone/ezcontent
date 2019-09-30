@@ -1,0 +1,43 @@
+uuid: 036d3848-b23c-44f5-abd0-750d306aa1fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faq.field_faq_items
+    - paragraphs.paragraphs_type.faq
+  module:
+    - paragraphs
+_core:
+  default_config_hash: jlf0T7aJYzUW1JzSU1iXlEkfmBPRMjljhlXHA8irIJw
+id: paragraph.faq.default
+targetEntityType: paragraph
+bundle: faq
+mode: default
+content:
+  field_faq_items:
+    type: paragraphs_previewer
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: faq_qa
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings:
+      paragraphs_features:
+        delete_confirmation: false
+        add_in_between: false
+        split_text: false
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
