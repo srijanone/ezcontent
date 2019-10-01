@@ -9,15 +9,21 @@
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     }
   },
   "require": {
+    "bower-asset/dropzone": "5.1",
     "cweagans/composer-patches": "~1",
     "drupal-composer/drupal-scaffold": "^2",
     "drupal/admin_toolbar": "^1.27",
     "drupal/adminimal_theme": "^1.5",
     "drupal/allowed_formats": "^1.1",
     "drupal/claro": "^1.0@alpha",
+    "drupal/dropzonejs": "2.0.0-alpha4",
     "drupal/entity_browser": "~2.1",
     "drupal/entity_embed": "^1.0",
     "drupal/entity_usage": "^2.0@beta",
