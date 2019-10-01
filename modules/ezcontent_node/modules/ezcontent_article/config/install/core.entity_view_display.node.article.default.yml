@@ -29,4 +29,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
 hidden: {  }

@@ -33,7 +33,7 @@ widgets:
       extensions: 'jpg jpeg png gif'
       media_type: image
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
-      multiple: 0
+      multiple: '1'
       submit_text: 'Select image(s)'
     uuid: 33ccd0e8-2916-4881-855e-38905eac295f
     weight: 2
