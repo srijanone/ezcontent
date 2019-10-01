@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.view.field_title
+    - field.field.paragraph.view.field_view_ref
+    - paragraphs.paragraphs_type.view
+  module:
+    - viewsreference
+id: paragraph.view.preview
+targetEntityType: paragraph
+bundle: view
+mode: preview
+content:
+  field_title:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_view_ref:
+    type: viewsreference_formatter
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+hidden: {  }

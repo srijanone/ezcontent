@@ -34,6 +34,7 @@
     "drupal/simple_sitemap": "^3.3",
     "drupal/svg_image": "^1.9",
     "drupal/video_embed_field": "^2.2",
+    "drupal/viewsreference": "^1.4",
     "drupal/webform": "^5.4"
   },
   "require-dev": {
