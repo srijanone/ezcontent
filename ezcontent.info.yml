@@ -13,41 +13,43 @@ distribution:
 # Modules to install to support the profile.
 install:
   - admin_toolbar_tools
-  - history
   - block_content
   - breakpoint
+  - ckeditor
   - color
-  - config
   - comment
-  - contextual
+  - config
   - contact
-  - quickedit
-  - help
-  - image
-  - options
-  - path
-  - taxonomy
+  - content_moderation
+  - contextual
   - dblog
-  - search
-  - shortcut
-  - toolbar
+  - editor
+  - entity_embed
+  - ezcontent_media
+  - ezcontent_node
   - field_ui
   - file
+  - google_analytics
+  - help
+  - history
+  - image
+  - linkit
+  - metatag
+  - options
+  - path
+  - pathauto
+  - quickedit
   - rdf
+  - redirect
+  - scheduler
+  - search
+  - shortcut
+  - simple_sitemap
+  - taxonomy
+  - toolbar
   - views
   - views_ui
-  - editor
-  - ckeditor
-  - content_moderation
   - workflows
-  - scheduler
-  - metatag
-  - simple_sitemap
-  - google_analytics
-  - redirect
-  - pathauto
-  - ezcontent_node
-  - ezcontent_media
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
