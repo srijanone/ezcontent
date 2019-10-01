@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.preview
+    - field.field.paragraph.hero_media.field_card
+    - paragraphs.paragraphs_type.hero_media
+  module:
+    - entity_reference_revisions
+id: paragraph.hero_media.preview
+targetEntityType: paragraph
+bundle: hero_media
+mode: preview
+content:
+  field_card:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  field_subhead: true
+  field_title: true

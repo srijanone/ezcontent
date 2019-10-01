@@ -1,0 +1,8 @@
+name: Hero media Feature
+type: module
+description: "Provides hero media feature."
+package: EZContent Paragraphs
+core: 8.x
+dependencies:
+  - ezcontent_paragraphs
+  - ezcontent_card
