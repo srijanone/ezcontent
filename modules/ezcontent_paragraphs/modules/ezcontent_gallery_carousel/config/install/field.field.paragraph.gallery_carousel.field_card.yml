@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.gallery_carousel
+  module:
+    - entity_reference_revisions
+id: paragraph.gallery_carousel.field_card
+field_name: field_card
+entity_type: paragraph
+bundle: gallery_carousel
+label: Card
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card: card
+    target_bundles_drag_drop:
+      gallery_carousel:
+        weight: 16
+        enabled: false
+      breaker:
+        weight: 17
+        enabled: false
+      card:
+        enabled: true
+        weight: 18
+      card_list:
+        weight: 19
+        enabled: false
+      faq:
+        weight: 20
+        enabled: false
+      faq_qa:
+        weight: 21
+        enabled: false
+      form:
+        weight: 22
+        enabled: false
+      gallery:
+        weight: 23
+        enabled: false
+      hero_media:
+        weight: 24
+        enabled: false
+      map:
+        weight: 25
+        enabled: false
+      media:
+        weight: 26
+        enabled: false
+      page_title:
+        weight: 27
+        enabled: false
+      quote:
+        weight: 28
+        enabled: false
+      text:
+        weight: 29
+        enabled: false
+      view:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

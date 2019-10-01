@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gallery_carousel.field_card
+    - field.field.paragraph.gallery_carousel.field_subhead
+    - field.field.paragraph.gallery_carousel.field_title
+    - paragraphs.paragraphs_type.gallery_carousel
+  module:
+    - entity_reference_revisions
+id: paragraph.gallery_carousel.default
+targetEntityType: paragraph
+bundle: gallery_carousel
+mode: default
+content:
+  field_card:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_subhead:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
