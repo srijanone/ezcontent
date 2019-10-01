@@ -1,0 +1,9 @@
+name: Map Feature
+type: module
+description: 'Provides Google map feature.'
+package: EZContent Paragraphs
+core: 8.x
+dependencies:
+  - ezcontent_paragraphs
+  - geolocation
+  - geolocation_google_maps

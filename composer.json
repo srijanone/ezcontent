@@ -21,6 +21,7 @@
     "drupal/entity_browser": "~2.1",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/field_group": "^1.0",
+    "drupal/geolocation": "~3.0",
     "drupal/google_analytics": "^3.0",
     "drupal/inline_entity_form": "^1.0@RC",
     "drupal/media_entity_browser": "2.x",

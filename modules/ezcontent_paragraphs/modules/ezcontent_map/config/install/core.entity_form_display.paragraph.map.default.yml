@@ -1,0 +1,209 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_body
+    - field.field.paragraph.map.field_link
+    - field.field.paragraph.map.field_map
+    - field.field.paragraph.map.field_short_title
+    - field.field.paragraph.map.field_title
+    - paragraphs.paragraphs_type.map
+  module:
+    - geolocation_google_maps
+    - link
+    - text
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_map:
+    weight: 3
+    settings:
+      default_longitude: ''
+      default_latitude: ''
+      google_map_settings:
+        height: 400px
+        width: 100%
+        type: ROADMAP
+        zoom: '10'
+        maxZoom: '18'
+        minZoom: '0'
+        scrollwheel: true
+        gestureHandling: auto
+        map_features:
+          control_locate:
+            weight: 0
+            settings:
+              position: TOP_LEFT
+            enabled: false
+          marker_infowindow:
+            enabled: true
+            weight: 0
+            settings:
+              info_window_solitary: 1
+              disable_auto_pan: 1
+              info_auto_display: 0
+          marker_infobubble:
+            weight: 0
+            settings:
+              close_other: 1
+              close_button_src: ''
+              shadow_style: 0
+              padding: 10
+              border_radius: 8
+              border_width: 2
+              border_color: '#039be5'
+              background_color: '#fff'
+              min_width: null
+              max_width: 550
+              min_height: null
+              max_height: null
+              close_button: 0
+            enabled: false
+          marker_icon:
+            weight: 0
+            settings:
+              marker_icon_path: ''
+              anchor:
+                x: 0
+                'y': 0
+              origin:
+                x: 0
+                'y': 0
+              label_origin:
+                x: 0
+                'y': 0
+              size:
+                width: null
+                height: null
+              scaled_size:
+                width: null
+                height: null
+            enabled: false
+          marker_clusterer:
+            weight: 0
+            settings:
+              image_path: ''
+              styles: ''
+              max_zoom: '15'
+            enabled: false
+          map_type_style:
+            weight: 0
+            settings:
+              style: '""'
+            enabled: false
+          control_zoom:
+            enabled: true
+            weight: 0
+            settings:
+              position: RIGHT_CENTER
+              behavior: default
+              style: LARGE
+          control_streetview:
+            weight: 0
+            settings:
+              position: TOP_LEFT
+              behavior: default
+            enabled: false
+          control_recenter:
+            weight: 0
+            settings:
+              position: TOP_LEFT
+            enabled: false
+          control_maptype:
+            enabled: true
+            weight: 0
+            settings:
+              position: RIGHT_BOTTOM
+              behavior: default
+              style: DEFAULT
+          control_geocoder:
+            enabled: true
+            weight: 0
+            settings:
+              position: TOP_LEFT
+              geocoder: google_geocoding_api
+              settings:
+                label: Address
+                description: 'Enter an address to be localized.'
+                component_restrictions:
+                  route: ''
+                  locality: ''
+                  administrative_area: ''
+                  postal_code: ''
+                  country: ''
+          drawing:
+            weight: 0
+            settings:
+              strokeColor: '#FF0000'
+              strokeOpacity: '0.8'
+              strokeWeight: '2'
+              fillColor: '#FF0000'
+              fillOpacity: '0.35'
+              polyline: '0'
+              geodesic: '0'
+              polygon: '0'
+            enabled: false
+          map_disable_poi:
+            weight: 0
+            enabled: false
+          context_popup:
+            weight: 0
+            settings:
+              content:
+                value: ''
+                format: basic_html
+            enabled: false
+          client_location_indicator:
+            weight: 0
+            enabled: false
+          spiderfying:
+            weight: 0
+            enabled: false
+        rotateControl: false
+        preferScrollingToZooming: false
+        disableDoubleClickZoom: '0'
+      auto_client_location_marker: '0'
+      allow_override_map_settings: 0
+      auto_client_location: ''
+    third_party_settings: {  }
+    type: geolocation_googlegeocoder
+    region: content
+  field_short_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

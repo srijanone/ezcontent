@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: map
+label: Map
+icon_uuid: null
+description: 'Embed a map.'
+behavior_plugins: {  }
