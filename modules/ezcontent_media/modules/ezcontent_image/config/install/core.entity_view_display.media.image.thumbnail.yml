@@ -13,7 +13,7 @@ targetEntityType: media
 bundle: image
 mode: thumbnail
 content:
-  field_image:
+  field_media_image:
     weight: 0
     label: hidden
     settings:

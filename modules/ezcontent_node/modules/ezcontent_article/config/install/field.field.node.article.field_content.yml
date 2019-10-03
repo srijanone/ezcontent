@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.article
-    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
 id: node.article.field_content
@@ -20,11 +19,50 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
+    negate: 1
     target_bundles:
-      text: text
+      faq_qa: faq_qa
     target_bundles_drag_drop:
-      text:
+      card:
+        weight: 11
+        enabled: false
+      card_list:
+        weight: 12
+        enabled: false
+      embed:
+        weight: 13
+        enabled: false
+      faq:
+        weight: 14
+        enabled: false
+      faq_qa:
         enabled: true
-        weight: 2
+        weight: 15
+      form:
+        weight: 16
+        enabled: false
+      gallery:
+        weight: 17
+        enabled: false
+      hero_media:
+        weight: 18
+        enabled: false
+      map:
+        weight: 19
+        enabled: false
+      media:
+        weight: 20
+        enabled: false
+      page_title:
+        weight: 21
+        enabled: false
+      quote:
+        weight: 23
+        enabled: false
+      text:
+        weight: 25
+        enabled: false
+      view:
+        weight: 26
+        enabled: false
 field_type: entity_reference_revisions
