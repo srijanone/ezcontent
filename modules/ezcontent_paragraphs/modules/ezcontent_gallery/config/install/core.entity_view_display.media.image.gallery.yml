@@ -7,7 +7,7 @@ dependencies:
     - image.style.medium
     - media.type.image
   module:
-    - svg_image
+    - colorbox
 id: media.image.gallery
 targetEntityType: media
 bundle: image
@@ -18,17 +18,17 @@ content:
     label: hidden
     third_party_settings: {  }
     region: content
-    type: image
+    type: colorbox
     settings:
-      image_style: medium
-      image_link: file
-      svg_render_as_image: '1'
-      svg_attributes:
-        width: ''
-        height: ''
+      colorbox_node_style: ''
+      colorbox_node_style_first: medium
+      colorbox_image_style: ''
+      colorbox_gallery: field_page
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
 hidden:
   created: true
-  langcode: true
   name: true
   thumbnail: true
   uid: true

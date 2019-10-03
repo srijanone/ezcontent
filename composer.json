@@ -16,6 +16,7 @@
     }
   },
   "require": {
+    "bower-asset/colorbox": "^1.6",
     "bower-asset/dropzone": "5.1",
     "cweagans/composer-patches": "~1",
     "drupal-composer/drupal-scaffold": "^2",
@@ -23,6 +24,7 @@
     "drupal/adminimal_theme": "^1.5",
     "drupal/allowed_formats": "^1.1",
     "drupal/claro": "^1.0@alpha",
+    "drupal/colorbox": "^1.4",
     "drupal/dropzonejs": "2.0.0-alpha4",
     "drupal/entity_browser": "~2.1",
     "drupal/entity_embed": "^1.0",
