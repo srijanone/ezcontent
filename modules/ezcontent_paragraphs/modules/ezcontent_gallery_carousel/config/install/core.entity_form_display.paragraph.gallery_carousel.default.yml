@@ -2,57 +2,28 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.gallery_carousel.field_card
-    - field.field.paragraph.gallery_carousel.field_subhead
-    - field.field.paragraph.gallery_carousel.field_title
+    - core.entity_form_mode.media.inline
+    - field.field.paragraph.gallery_carousel.field_media
     - paragraphs.paragraphs_type.gallery_carousel
   module:
-    - paragraphs
+    - inline_entity_form
 id: paragraph.gallery_carousel.default
 targetEntityType: paragraph
 bundle: gallery_carousel
 mode: default
 content:
-  field_card:
-    weight: 2
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: closed
-      closed_mode: preview
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: card_gallery
-      default_paragraph_type: card
-      features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
-        add_above: '0'
-    third_party_settings:
-      paragraphs_features:
-        delete_confirmation: false
-        add_in_between: false
-        split_text: false
-    type: paragraphs
-    region: content
-  field_subhead:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_title:
+  field_media:
     weight: 0
     settings:
-      size: 60
-      placeholder: ''
+      form_mode: inline
+      override_labels: true
+      label_singular: Gallery
+      label_plural: Galleries
+      collapsible: false
+      collapsed: false
     third_party_settings: {  }
-    type: string_textfield
+    type: inline_entity_form_simple
     region: content
 hidden:
   created: true
   status: true
-  uid: true

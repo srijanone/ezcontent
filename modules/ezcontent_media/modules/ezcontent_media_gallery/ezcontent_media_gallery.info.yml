@@ -1,0 +1,11 @@
+name: Media Gallery Feature
+type: module
+description: 'Provides Slick Gallery.'
+package: EZContent Media
+core: 8.x
+dependencies:
+  - blazy
+  - ezcontent_media
+  - ezcontent_image
+  - media_entity_slideshow
+  - slick_media

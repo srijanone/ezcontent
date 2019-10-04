@@ -4,5 +4,7 @@ description: "Provides gallery carousel feature."
 package: EZContent Paragraphs
 core: 8.x
 dependencies:
-  - ezcontent_paragraphs
   - ezcontent_card
+  - ezcontent_media_gallery
+  - ezcontent_paragraphs
+  - slick_entityreference

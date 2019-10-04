@@ -18,6 +18,7 @@
   "require": {
     "bower-asset/colorbox": "^1.6",
     "bower-asset/dropzone": "5.1",
+    "bower-asset/slick-carousel": "^1.8",
     "cweagans/composer-patches": "~1",
     "drupal-composer/drupal-scaffold": "^2",
     "drupal/admin_toolbar": "^1.27",
@@ -35,6 +36,7 @@
     "drupal/inline_entity_form": "^1.0@RC",
     "drupal/linkit": "~5.0",
     "drupal/media_entity_browser": "2.x",
+    "drupal/media_entity_slideshow": "2.x",
     "drupal/metatag": "^1.10",
     "drupal/paragraphs": "^1.9",
     "drupal/paragraphs_previewer": "^1.4",
@@ -42,6 +44,8 @@
     "drupal/redirect": "^1.4",
     "drupal/scheduler": "^1.1",
     "drupal/simple_sitemap": "^3.3",
+    "drupal/slick": "~2.0",
+    "drupal/slick_media": "2.x",
     "drupal/svg_image": "^1.9",
     "drupal/video_embed_field": "^2.2",
     "drupal/viewsreference": "^1.4",
@@ -67,6 +71,11 @@
   "extra": {
     "patchLevel": {
       "drupal/core": "-p2"
+    },
+    "patches": {
+      "drupal/inline_entity_form": {
+        "Remove revision log": "https://www.drupal.org/files/issues/2019-07-16/inline_entity_form-remove_log_message-2927884-6.patch"
+      }
     },
     "installer-paths": {
       "web/core": [

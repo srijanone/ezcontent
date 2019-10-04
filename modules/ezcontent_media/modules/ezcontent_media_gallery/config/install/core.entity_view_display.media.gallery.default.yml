@@ -1,0 +1,99 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.gallery.field_media_slideshow
+    - media.type.gallery
+  module:
+    - slick_media
+id: media.gallery.default
+targetEntityType: media
+bundle: gallery
+mode: default
+content:
+  field_media_slideshow:
+    weight: 0
+    label: hidden
+    settings:
+      vanilla: true
+      optionset: default
+      optionset_thumbnail: ''
+      skin: default
+      skin_thumbnail: ''
+      image_style: ''
+      thumbnail_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      view_mode: slick
+      ratio: ''
+      iframe_lazy: true
+      image: ''
+      title: ''
+      link: ''
+      layout: ''
+      class: ''
+      cache: 0
+      sizes: ''
+      current_view_mode: default
+      background: false
+      caption:
+        field_media_image: '0'
+      breakpoints:
+        xs:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        sm:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        md:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        lg:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        xl:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      preserve_keys: false
+      thumbnail_caption: ''
+      visible_items: 0
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+      icon: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      grid: 0
+      grid_header: ''
+      grid_medium: 0
+      grid_small: 0
+      id: ''
+      overlay: ''
+    third_party_settings: {  }
+    type: slick_media
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true
