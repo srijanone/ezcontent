@@ -44,7 +44,7 @@
     "drupal/redirect": "^1.4",
     "drupal/scheduler": "^1.1",
     "drupal/simple_sitemap": "^3.3",
-    "drupal/slick": "~2.0",
+    "drupal/slick": "~1.0",
     "drupal/slick_media": "2.x",
     "drupal/svg_image": "^1.9",
     "drupal/video_embed_field": "^2.2",
