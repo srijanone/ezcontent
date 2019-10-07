@@ -5,19 +5,98 @@ dependencies:
     - field.field.paragraph.hero_media.field_card
     - paragraphs.paragraphs_type.hero_media
   module:
-    - entity_reference_revisions
+    - slick_paragraphs
 id: paragraph.hero_media.default
 targetEntityType: paragraph
 bundle: hero_media
 mode: default
 content:
   field_card:
-    type: entity_reference_revisions_entity_view
+    type: slick_paragraphs
     weight: 0
     region: content
     label: hidden
     settings:
+      vanilla: true
+      optionset: default
+      optionset_thumbnail: ''
+      skin: default
+      skin_thumbnail: ''
+      image_style: ''
+      thumbnail_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
       view_mode: hero_media
+      ratio: ''
+      iframe_lazy: true
+      image: ''
+      overlay: ''
+      title: ''
       link: ''
+      layout: ''
+      thumbnail_caption: ''
+      class: ''
+      cache: 0
+      sizes: ''
+      current_view_mode: default
+      background: false
+      caption:
+        field_card_layout: '0'
+        field_link: '0'
+        field_media: '0'
+        field_short_title: '0'
+        field_subhead: '0'
+        field_summary: '0'
+        field_thumb: '0'
+        field_title: '0'
+      breakpoints:
+        xs:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        sm:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        md:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        lg:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+        xl:
+          breakpoint: ''
+          image_style: ''
+          width: ''
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      preserve_keys: false
+      visible_items: 0
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+      icon: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      grid: 0
+      grid_header: ''
+      grid_medium: 0
+      grid_small: 0
+      id: ''
     third_party_settings: {  }
 hidden: {  }
