@@ -6,19 +6,26 @@ dependencies:
     - field.field.paragraph.faq.field_title
     - paragraphs.paragraphs_type.faq
   module:
-    - entity_reference_revisions
+    - paragraphs_jquery_ui_accordion
 id: paragraph.faq.default
 targetEntityType: paragraph
 bundle: faq
 mode: default
 content:
   field_faq_items:
-    type: entity_reference_revisions_entity_view
+    type: paragraphs_jquery_ui_accordion_formatter
     weight: 1
     label: hidden
     settings:
+      bundle: faq
+      title: field_question
+      content: field_answer
       view_mode: default
-      link: ''
+      autoscroll_offset: ''
+      active: 0
+      simple_id: 0
+      autoscroll: 0
+      autoscroll_offset_toolbar: 0
     third_party_settings: {  }
     region: content
   field_title:
