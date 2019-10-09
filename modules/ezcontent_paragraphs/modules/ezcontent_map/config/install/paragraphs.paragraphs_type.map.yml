@@ -4,5 +4,5 @@ dependencies: {  }
 id: map
 label: Map
 icon_uuid: null
-description: 'Embed a map.'
+description: 'Embed a Google map.'
 behavior_plugins: {  }

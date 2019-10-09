@@ -4,17 +4,15 @@ dependencies:
   config:
     - field.storage.paragraph.field_map
     - paragraphs.paragraphs_type.map
-  module:
-    - geolocation
 id: paragraph.map.field_map
 field_name: field_map
 entity_type: paragraph
 bundle: map
-label: Map
-description: ''
+label: Google Map
+description: 'Enter a location that can be recognised by Google Maps, e.g. "Taj Mahal, Agra, India".'
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: geolocation
+field_type: string
