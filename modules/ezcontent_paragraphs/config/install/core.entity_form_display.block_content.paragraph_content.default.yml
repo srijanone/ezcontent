@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraph_content
+    - field.field.block_content.paragraph_content.field_paragraph_content
+  module:
+    - paragraphs
+id: block_content.paragraph_content.default
+targetEntityType: block_content
+bundle: paragraph_content
+mode: default
+content:
+  field_paragraph_content:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

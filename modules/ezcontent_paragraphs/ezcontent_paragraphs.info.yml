@@ -4,6 +4,6 @@ description: 'Provides base for multiple paragraphs like Text, Image, Video etc.
 package: EZContent Paragraphs
 core: 8.x
 dependencies:
-  - paragraphs
   - media_library
+  - paragraphs_library
   - svg_image
