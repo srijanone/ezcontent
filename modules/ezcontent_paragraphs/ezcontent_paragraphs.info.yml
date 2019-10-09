@@ -5,5 +5,5 @@ package: EZContent Paragraphs
 core: 8.x
 dependencies:
   - paragraphs
-  - media
+  - media_library
   - svg_image

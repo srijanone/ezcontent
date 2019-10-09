@@ -1,0 +1,8 @@
+name: 'Media Instagram Feature'
+type: module
+description: 'Provides Instagram media type.'
+package: EZContent Media
+core: 8.x
+dependencies:
+  - media_entity_instagram
+  - ezcontent_media

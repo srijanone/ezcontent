@@ -1,0 +1,10 @@
+name: Social Media Embed Feature
+type: module
+description: 'Provides Embed feature for Social Media links.'
+package: EZContent Paragraphs
+core: 8.x
+dependencies:
+  - allowed_formats
+  - ezcontent_media_instagram
+  - ezcontent_media_twitter
+  - ezcontent_paragraphs

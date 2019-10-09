@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media
+    - media.type.instagram
+    - media.type.tweet
+    - paragraphs.paragraphs_type.social_media
+id: paragraph.social_media.field_social_media
+field_name: field_social_media
+entity_type: paragraph
+bundle: social_media
+label: 'Social Media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      instagram: instagram
+      tweet: tweet
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: instagram
+field_type: entity_reference
