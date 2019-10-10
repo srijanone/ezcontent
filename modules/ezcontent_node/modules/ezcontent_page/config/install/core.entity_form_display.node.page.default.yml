@@ -5,7 +5,6 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
     - node.type.page
-    - workflows.workflow.default
   module:
     - content_moderation
     - metatag

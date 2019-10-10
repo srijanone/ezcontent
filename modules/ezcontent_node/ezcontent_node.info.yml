@@ -4,7 +4,8 @@ description: 'Provides shared node fields for other node-based features.'
 package: EZContent Node
 core: 8.x
 dependencies:
-  - scheduler
-  - pathauto
   - field_group
+  - metatag
   - paragraphs_previewer
+  - pathauto
+  - scheduler

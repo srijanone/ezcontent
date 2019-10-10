@@ -26,7 +26,7 @@ install:
   - editor
   - entity_embed
   - ezcontent_media
-  - ezcontent_node
+  - ezcontent_page
   - field_ui
   - file
   - google_analytics
