@@ -21,7 +21,7 @@ settings:
   handler_settings:
     negate: 1
     target_bundles:
-      faq_qa: faq_qa
+      text: text
     target_bundles_drag_drop:
       card:
         weight: 11
