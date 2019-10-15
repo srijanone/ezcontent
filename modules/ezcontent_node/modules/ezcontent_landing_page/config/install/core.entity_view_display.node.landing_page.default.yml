@@ -1,0 +1,90 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.layout_builder__layout
+    - field.field.node.landing_page.layout_selection
+    - node.type.landing_page
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - layout_library
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          c08b8803-9e37-4196-b977-7238eeb6a89e:
+            uuid: c08b8803-9e37-4196-b977-7238eeb6a89e
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:landing_page:links'
+            additional: {  }
+            weight: 0
+          ef475ec8-2f6b-4d48-af12-f9766d224e37:
+            uuid: ef475ec8-2f6b-4d48-af12-f9766d224e37
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+  layout_library:
+    enable: true
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_blocks:
+        'Chaos tools': {  }
+        'Content fields':
+          - 'field_block:node:landing_page:uid'
+          - 'field_block:node:landing_page:created'
+          - 'field_block:node:landing_page:body'
+          - 'field_block:node:landing_page:nid'
+          - 'field_block:node:landing_page:langcode'
+          - 'field_block:node:landing_page:title'
+        Help: {  }
+        System:
+          - system_breadcrumb_block
+          - system_messages_block
+          - node_syndicate_block
+        User: {  }
+      allowed_layouts: {  }
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  layout_builder__layout: true
+  layout_selection: true
