@@ -28,6 +28,7 @@
     "drupal/bootstrap": "^3.20",
     "drupal/claro": "^1.0@alpha",
     "drupal/colorbox": "^1.4",
+    "drupal/decoupled_router": "^1.11",
     "drupal/dropzonejs": "2.0.0-alpha4",
     "drupal/entity_browser": "~2.1",
     "drupal/entity_embed": "^1.0",
