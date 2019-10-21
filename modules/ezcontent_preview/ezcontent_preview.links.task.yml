@@ -1,0 +1,6 @@
+ezcontent.preview.view:
+  title: Decoupled Preview
+  route_name: ezcontent.preview.view
+  description: 'EZContent preview view page'
+  base_route: entity.node.canonical
+  weight: 100

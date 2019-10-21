@@ -1,0 +1,30 @@
+<?php
+
+use Drupal\Core\Entity\EntityForm;
+
+/**
+ * Implementation of hook_form_alter
+ */
+function ezcontent_preview_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+    // check if preview button is enabled
+    if (isset($form['actions']['preview'])) {
+        if ($form_state->getFormObject() instanceof EntityForm) {
+            /*
+            $entity = $form_state->getFormObject();
+            if($entity->getEntity()->id()){
+                $form['actions']['preview']['#submit'][] = 'ezcontent_preview_form_submit';
+            } else {
+                $form['actions']['preview']['#access'] = FALSE;
+            }
+            */
+        }
+    }
+}
+
+/**
+ * Preview handler for content
+ */
+function ezcontent_preview_form_submit(array $form, FormStateInterface $form_state){
+    //die("I'm not getting run, why :(");
+    drupal_set_message("Why won't this message show?");
+}
