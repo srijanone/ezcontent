@@ -1,6 +1,6 @@
-name: Page Feature
+name: Baasic Page Feature
 type: module
-description: 'Provides page content type.'
+description: 'Provides basic page content type.'
 package: EZContent Node
 core: 8.x
 dependencies:
