@@ -20,11 +20,3 @@ function ezcontent_preview_form_alter(&$form, \Drupal\Core\Form\FormStateInterfa
         }
     }
 }
-
-/**
- * Preview handler for content
- */
-function ezcontent_preview_form_submit(array $form, FormStateInterface $form_state){
-    //die("I'm not getting run, why :(");
-    drupal_set_message("Why won't this message show?");
-}
