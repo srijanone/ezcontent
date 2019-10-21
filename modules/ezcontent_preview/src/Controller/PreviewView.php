@@ -6,6 +6,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\NodeInterface;
 use Drupal\Component\Utility\UrlHelper;
 use Drupal\access_unpublished\AccessTokenManager;
+use Drupal\Core\Url;
 
 /**
  * Preview the content
@@ -18,7 +19,7 @@ class PreviewView extends ControllerBase {
     $node_id = $node->id();
     $node_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/' . $node_id);
     $node_type = $node->getEntityType();
-    $url_query = '';
+    $urlQuery = [];
     
     // if node is unpublished using https://www.drupal.org/project/access_unpublished module
     // generate token and pass it to Drupal
@@ -26,24 +27,30 @@ class PreviewView extends ControllerBase {
       $tokenKey = \Drupal::config('access_unpublished.settings')->get('hash_key');
       $tokenManager = \Drupal::service('access_unpublished.access_token_manager');
       $activeToken = $tokenManager->getActiveAccessToken($node);
+      
       if(!$activeToken) {
         $activeToken = $this->buildToken($node);
       } 
       $tokenValue = $activeToken->get('value')->value;
 
-      $urlQuery = UrlHelper::buildQuery(
-        [
-          $tokenKey => $tokenValue
-        ]
-      );
-      $urlQuery = '?' . UrlHelper::parse($urlQuery)['path'];
+      $urlQuery = [
+        'query' => [ $tokenKey => $tokenValue],
+      ];
     }
+    
+    $siteUrl = Url::fromUri($preview_base_url . $node_alias, $urlQuery);
 
-    $output = '<iframe class="decoupled-content--preview" src="' . $preview_base_url . $node_alias . $url_query . '" width="100%"></iframe>';
+    $output = '<iframe class="decoupled-content--preview" src="' . $siteUrl->toString() . '"></iframe>';
+    
     return array(
       '#type' => 'markup',
       '#allowed_tags' => ['iframe'],
       '#markup' => $output,
+      '#attached' => [
+        'library' => [
+          'ezcontent_preview/global',
+        ],
+      ],
     );
 
   }
