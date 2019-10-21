@@ -60,7 +60,8 @@
     "drupal/video_embed_field": "^2.2",
     "drupal/viewsreference": "^1.4",
     "drupal/webform": "^5.4",
-    "oomphinc/composer-installers-extender": "^1.1"
+    "oomphinc/composer-installers-extender": "^1.1",
+    "drupal/access_unpublished": "^1.0@alpha"
   },
   "require-dev": {
     "drush/drush": "~9",
