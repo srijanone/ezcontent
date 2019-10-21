@@ -7,7 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\taxonomy\Entity\Term;
 
 /**
- * Class that configures forms module settings.
+ * Class that configures module settings.
  */
 class PreviewConfigForm extends ConfigFormBase {
 
@@ -64,7 +64,5 @@ class PreviewConfigForm extends ConfigFormBase {
       ->set('ezcontent_preview_token_expire_time', $form_state->getValue('ezcontent_preview_token_expire_time'))
       ->save();
   }
-
-
 
 }

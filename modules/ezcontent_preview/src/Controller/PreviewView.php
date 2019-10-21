@@ -21,7 +21,7 @@ class PreviewView extends ControllerBase {
     $node_type = $node->getEntityType();
     $urlQuery = [];
     
-    // if node is unpublished using https://www.drupal.org/project/access_unpublished module
+    // if node is unpublished using https://www.drupal.org/project/access_unpublished module to
     // generate token and pass it to Drupal
     if(!$node->isPublished()) {
       $tokenKey = \Drupal::config('access_unpublished.settings')->get('hash_key');
