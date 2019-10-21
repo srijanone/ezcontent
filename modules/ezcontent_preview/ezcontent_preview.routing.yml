@@ -1,0 +1,16 @@
+ezcontent.preview.config:
+  path: '/admin/config/ezcontent/preview'
+  defaults:
+    _form: '\Drupal\ezcontent_preview\Form\PreviewConfigForm'
+    _title: 'EZContent preview config'
+  requirements:
+    _permission: 'EZContent preview config'
+    
+ezcontent.preview.view:
+  path: '/node/{node}/decoupled-preview'
+  defaults:
+    _controller: '\Drupal\ezcontent_preview\Controller\PreviewView::preview'
+    _title: 'EZContent view preview'
+  requirements:
+    _permission: 'EZContent view preview'
+    node: \d+
