@@ -30,4 +30,3 @@
     "lint:fix": "sass-lint-auto-fix"
   }
 }
-
