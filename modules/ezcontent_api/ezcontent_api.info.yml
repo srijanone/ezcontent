@@ -1,0 +1,10 @@
+name: EZContent API
+type: module
+description: 'Provides Media types for media based features.'
+package: EZContent Media
+core: 8.x
+dependencies:
+  - media_entity_browser
+  - video_embed_media
+  - dropzonejs_eb_widget
+  - libraries
