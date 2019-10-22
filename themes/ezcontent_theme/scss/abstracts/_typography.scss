@@ -1,0 +1,82 @@
+body {
+  font-family: $primary-font;
+  font-size: $secondary-font;
+  color: $color-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+caption {
+  font-family: $secondary-font;
+}
+
+a {
+  color: $color-primary;
+
+  &:focus {
+    color: $color-secondary;
+  }
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+table {
+  thead {
+    border: 1px solid $color-grey-light-2;
+
+    tr {
+
+      td {
+        @include tableStyle;
+      }
+
+      th {
+        @include tableStyle;
+      }
+
+    }
+  }
+
+  tbody {
+    border: 1px solid $color-grey-light-2;
+
+    tr {
+
+      td {
+        @include tableStyle;
+      }
+
+      th {
+        @include tableStyle;
+      }
+
+    }
+  }
+
+  tfoot {
+    border: 1px solid #ddd;
+
+    tr {
+
+      td {
+        @include tableStyle;
+      }
+
+      th {
+        @include tableStyle;
+      }
+
+    }
+  }
+
+}
+
+img {
+  max-width: 100%;
+}
