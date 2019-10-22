@@ -9,19 +9,40 @@ dependencies:
     - field.field.paragraph.map.field_title
     - paragraphs.paragraphs_type.map
   module:
+    - link
     - simple_gmap
+    - text
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map
 mode: default
 content:
+  field_body:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_map:
-    weight: 0
+    weight: 2
     label: hidden
     settings:
       include_map: true
       apikey: ''
-      iframe_width: '100%'
+      iframe_width: 100%
       iframe_height: '400'
       static_scale: 1
       link_text: 'View larger map'
@@ -44,29 +65,10 @@ content:
     region: content
   field_title:
     type: string
-    weight: 2
+    weight: 0
     region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  field_body:
-    type: text_default
-    weight: 3
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-  field_link:
-    weight: 4
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
 hidden: {  }
