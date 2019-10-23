@@ -1,0 +1,8 @@
+name: EZContent Preview
+type: module
+description: Provide preview funtionality
+core: 8.x
+package: EZContent Preview
+configure: ezcontent.preview.config
+dependencies:
+  - access_unpublished
