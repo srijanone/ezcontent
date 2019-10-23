@@ -86,6 +86,9 @@
     "patches": {
       "drupal/inline_entity_form": {
         "Remove revision log": "https://www.drupal.org/files/issues/2019-07-16/inline_entity_form-remove_log_message-2927884-6.patch"
+      },
+      "drupal/paragraphs" : {
+        "Langcode cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
       }
     },
     "installer-paths": {
