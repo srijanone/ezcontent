@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: hero_media
+label: 'Hero Media'
+effects:
+  5a728887-3dd2-46f2-9397-697fd841b1d4:
+    uuid: 5a728887-3dd2-46f2-9397-697fd841b1d4
+    id: image_scale
+    weight: 1
+    data:
+      width: 1140
+      height: null
+      upscale: false

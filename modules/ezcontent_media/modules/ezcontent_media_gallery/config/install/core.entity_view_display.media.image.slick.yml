@@ -16,7 +16,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: large
+      image_style: hero_media
       thumbnail_style: thumbnail
       media_switch: ''
       ratio: ''
