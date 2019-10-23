@@ -3,13 +3,11 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.image_browser
-    - field.field.paragraph.card.field_card_layout
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
-    - field.field.paragraph.card.field_thumb
     - field.field.paragraph.card.field_title
     - paragraphs.paragraphs_type.card
   module:
@@ -22,12 +20,6 @@ targetEntityType: paragraph
 bundle: card
 mode: default
 content:
-  field_card_layout:
-    type: options_select
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_link:
     weight: 6
     settings:
@@ -85,6 +77,5 @@ content:
     region: content
 hidden:
   created: true
-  field_thumb: true
   status: true
   uid: true

@@ -42,13 +42,11 @@ content:
       current_view_mode: default
       background: false
       caption:
-        field_card_layout: '0'
         field_link: '0'
         field_media: '0'
         field_short_title: '0'
         field_subhead: '0'
         field_summary: '0'
-        field_thumb: '0'
         field_title: '0'
       breakpoints:
         xs:
