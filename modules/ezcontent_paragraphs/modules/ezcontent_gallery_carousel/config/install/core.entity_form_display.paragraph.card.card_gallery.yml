@@ -4,13 +4,11 @@ dependencies:
   config:
     - core.entity_form_mode.paragraph.card_gallery
     - entity_browser.browser.image_browser
-    - field.field.paragraph.card.field_card_layout
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
-    - field.field.paragraph.card.field_thumb
     - field.field.paragraph.card.field_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.card
@@ -62,17 +60,8 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_thumb:
-    type: image_image
-    weight: 1
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
 hidden:
   created: true
-  field_card_layout: true
   field_short_title: true
   field_title: true
   status: true

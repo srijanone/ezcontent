@@ -2,13 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.card.field_card_layout
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
-    - field.field.paragraph.card.field_thumb
     - field.field.paragraph.card.field_title
     - paragraphs.paragraphs_type.card
   module:
@@ -20,13 +18,6 @@ targetEntityType: paragraph
 bundle: card
 mode: default
 content:
-  field_card_layout:
-    weight: 6
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_link:
     weight: 5
     label: hidden
@@ -70,19 +61,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-    region: content
-  field_thumb:
-    weight: 7
-    label: above
-    settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
     region: content
   field_title:
     weight: 1

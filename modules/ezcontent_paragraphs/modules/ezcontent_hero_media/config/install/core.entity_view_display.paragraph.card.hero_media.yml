@@ -3,13 +3,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.hero_media
-    - field.field.paragraph.card.field_card_layout
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
-    - field.field.paragraph.card.field_thumb
     - field.field.paragraph.card.field_title
     - paragraphs.paragraphs_type.card
   module:
@@ -71,6 +69,4 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden:
-  field_card_layout: true
-  field_thumb: true
+hidden: {  }
