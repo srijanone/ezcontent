@@ -9,12 +9,11 @@ dependencies:
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
     - field.field.paragraph.card.field_title
+    - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
     - entity_browser
     - link
-_core:
-  default_config_hash: l4CA6waoBTLIaAjq6fjn3U0l-kgI_gZF4T_d7IQ3ksM
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
@@ -75,6 +74,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  layout_selection:
+    type: options_select
+    region: content
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true
