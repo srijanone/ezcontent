@@ -3,6 +3,8 @@ framework:
     theme:
       css/style.css: {}
       css/paragraph_type_map.css: {}
+      css/paragraph_type_social.css: {}
+      css/paragraph_type_embed.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:
