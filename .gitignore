@@ -6,5 +6,4 @@ themes/*/package-lock.json
 
 # Ignore theme build artifacts
 themes/*/node_modules
-themes/*/css
 themes/*/styleguide
