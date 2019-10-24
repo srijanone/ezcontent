@@ -1,0 +1,101 @@
+//import
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.paragraph--type--hero-media {
+  margin: 30px 0;
+
+  .slick-arrow::before {
+    color: $color-primary;
+    opacity: 1;
+  }
+
+  .slick-arrow:hover::before {
+    color: $color-white;
+  }
+
+  .paragraph--type--card {
+    @include clearfix;
+    background: $color-white-light;
+    padding: 0;
+
+    .blazy__caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, .5);
+      width: 100%;
+      padding: 10px;
+      color: $color-white;
+      text-align: center;
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    .field {
+
+      &--name-field-title {
+        font-family: $secondary-font;
+        font-size: 30px;
+        font-weight: 500;
+        padding: 0 10px;
+      }
+
+      &--name-field-short-title {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 5px 10px;
+      }
+
+      &--name-field-subhead {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px;
+        border-top: 1px solid $color-white;
+      }
+
+      &--name-field-summary {
+        padding: 10px;
+        border-bottom: 1px solid $color-white;
+        display: block;
+        font-size: 16px;
+      }
+
+      &--name-field-link {
+        text-align: right;
+        padding: 10px;
+
+        a {
+          background: $color-primary;
+          border: 1px solid $color-primary;
+          border-radius: 4px;
+          color: $color-white;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.42857143;
+          margin-bottom: 0;
+          padding: 10px;
+          text-align: center;
+          vertical-align: middle;
+          white-space: nowrap;
+
+          &:hover {
+            background: $color-white;
+            color: $color-primary;
+            text-decoration: none;
+          }
+
+          &:focus {
+            background: $color-white;
+            color: $color-primary;
+            text-decoration: none;
+          }
+
+        }
+      }
+    }
+  }
+
+}
