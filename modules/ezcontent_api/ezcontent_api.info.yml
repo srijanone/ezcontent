@@ -1,10 +1,12 @@
 name: EZContent API
 type: module
-description: 'Provides Media types for media based features.'
-package: EZContent Media
+description: 'Improves Drupal core JSONAPI experience.'
+package: EZContent API
 core: 8.x
 dependencies:
-  - media_entity_browser
-  - video_embed_media
-  - dropzonejs_eb_widget
-  - libraries
+  - decoupled_router
+  - jsonapi_extras
+  - openapi
+  - openapi_ui_redoc
+  - openapi_ui_swagger
+  - simple_oauth_extras
