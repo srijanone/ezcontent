@@ -18,7 +18,7 @@ content:
     label: hidden
     settings:
       vanilla: true
-      optionset: default
+      optionset: ezcontent_setting
       optionset_thumbnail: ''
       skin: default
       skin_thumbnail: ''
