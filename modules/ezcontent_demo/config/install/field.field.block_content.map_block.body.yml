@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.text_paragraph
+    - block_content.type.map_block
     - field.storage.block_content.body
   module:
     - text
-id: block_content.text_paragraph.body
+id: block_content.map_block.body
 field_name: body
 entity_type: block_content
-bundle: text_paragraph
+bundle: map_block
 label: Body
 description: ''
 required: false
