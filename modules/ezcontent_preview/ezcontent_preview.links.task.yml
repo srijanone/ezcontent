@@ -3,5 +3,6 @@ ezcontent.preview.view:
   route_name: ezcontent.preview.view
   description: 'EZContent preview view page'
   base_route: entity.node.canonical
+  class: \Drupal\ezcontent_preview\Plugin\Menu\DynamicTab
   weight: 100
   
