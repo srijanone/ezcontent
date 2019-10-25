@@ -1,6 +1,8 @@
 <?php
 
 use Drupal\Core\Entity\EntityForm;
+use Drupal\Core\Url;
+use Drupal\ezcontent_preview\Utils;
 
 /**
  * Implementation of hook_form_alter
@@ -17,6 +19,34 @@ function ezcontent_preview_form_alter(&$form, \Drupal\Core\Form\FormStateInterfa
                 $form['actions']['preview']['#access'] = FALSE;
             }
             */
+        }
+    }
+}
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function ezcontent_preview_menu_local_tasks_alter(&$data, $route_name) {
+    foreach ($data['tabs'] as $key1 => $tabs) {
+        foreach ($tabs as $key2 => $item) {
+            // open links on new tab if selected as external
+            if ($key2 == 'ezcontent.preview.view') {
+                $config = \Drupal::config('ezcontent_preview.settings');
+                $new_window = $config->get('ezcontent_preview_new_window');
+                if ($new_window) {
+                    $node = \Drupal::routeMatch()->getParameter('node');
+                    $url_utils = new Utils();
+                    $options = [
+                        'attributes' => [
+                            'target' => '_blank'
+                        ]
+                    ];
+                    $url = $url_utils->buildUrl($node, $options);
+                    if ($url) {
+                        $data['tabs'][$key1][$key2]['#link']['url']  = $url;
+                    }
+                }
+            }
         }
     }
 }
