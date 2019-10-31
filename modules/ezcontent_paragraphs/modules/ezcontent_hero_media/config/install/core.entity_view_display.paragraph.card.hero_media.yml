@@ -9,9 +9,34 @@ dependencies:
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
     - field.field.paragraph.card.field_title
+    - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
+    - field_group
     - link
+    - text
+third_party_settings:
+  field_group:
+    group_hero_media_content:
+      children:
+        - field_title
+        - field_short_title
+        - field_subhead
+        - field_summary
+        - field_link
+      parent_name: ''
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: hero_media_content
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Hero Media Content'
 id: paragraph.card.hero_media
 targetEntityType: paragraph
 bundle: card
@@ -57,9 +82,10 @@ content:
   field_summary:
     weight: 4
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 250
     third_party_settings: {  }
-    type: basic_string
+    type: text_trimmed
     region: content
   field_title:
     weight: 1
@@ -69,4 +95,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  layout_selection: true
+

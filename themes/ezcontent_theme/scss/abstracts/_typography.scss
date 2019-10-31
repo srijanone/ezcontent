@@ -1,8 +1,10 @@
 body {
-  font-family: $primary-font;
-  font-size: $secondary-font;
   color: $color-text;
+  font-family: $secondary-font;
+  font-family: $primary-font;
+  font-size: 16px;
 }
+
 h1,
 h2,
 h3,
@@ -10,8 +12,15 @@ h4,
 h5,
 h6,
 caption {
-  font-family: $secondary-font;
+  font-family: $primary-font;
+  font-weight: 700;
 }
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 a {
   color: $color-primary;
 
@@ -23,6 +32,7 @@ a {
     color: $color-secondary;
   }
 }
+
 table {
   thead {
     border: 1px solid $color-grey-light-2;
@@ -30,11 +40,11 @@ table {
     tr {
 
       td {
-        @include tableStyle;
+        @include tablestyle;
       }
 
       th {
-        @include tableStyle;
+        @include tablestyle;
       }
 
     }
@@ -46,33 +56,45 @@ table {
     tr {
 
       td {
-        @include tableStyle;
+        @include tablestyle;
       }
 
       th {
-        @include tableStyle;
+        @include tablestyle;
       }
 
     }
   }
 
   tfoot {
-    border: 1px solid #ddd;
+    border: 1px solid $color-grey-light-2;
 
     tr {
 
       td {
-        @include tableStyle;
+        @include tablestyle;
       }
 
       th {
-        @include tableStyle;
+        @include tablestyle;
       }
 
     }
   }
 
 }
+
+.nav {
+  &.tabs--primary {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+.main-container {
+  min-height: 40rem;
+}
+
 img {
   max-width: 100%;
 }
