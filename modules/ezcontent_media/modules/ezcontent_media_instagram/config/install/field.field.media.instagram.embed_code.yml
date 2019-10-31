@@ -9,7 +9,7 @@ field_name: embed_code
 entity_type: media
 bundle: instagram
 label: 'Instagram post'
-description: 'Paste media post URL or embed code.'
+description: 'Paste Instagram post URL.'
 required: true
 translatable: false
 default_value: {  }
