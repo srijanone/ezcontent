@@ -1,0 +1,80 @@
+.footer {
+  background-color: $color-grey-light-1;
+  border-top: 4px solid $color-footer-border-lighter;
+  margin: 0;
+  padding: 0;
+
+  &--logo {
+    padding: 10px 0;
+  }
+
+  &--top {
+    border-bottom: 1px solid $color-grey-light-4;
+    clear: both;
+    float: left;
+    width: 100%;
+  }
+
+  &--middle {
+    float: left;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  &--about {
+    &--address {
+      position: relative;
+
+      p {
+        margin: 0;
+      }
+
+      &:after {
+        background-color: $color-grey-light-4;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        right: 15%;
+        top: 0;
+        width: 1px;
+      }
+    }
+  }
+
+  &--bottom {
+    border-top: 1px solid $color-grey-light-4;
+    float: left;
+    font-size: 11px;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    &.social--list {
+      border-left: 1px solid $color-grey-light-4;
+      height: 80px;
+      padding: 25px 20px;
+      text-align: center;
+      vertical-align: top;
+      width: 80px;
+
+      &:last-child {
+        border-right: 1px solid $color-grey-light-4;
+      }
+    }
+
+    a {
+      color: $color-black;
+      padding: 0;
+
+      &:hover {
+        background: none;
+      }
+    }
+  }
+}

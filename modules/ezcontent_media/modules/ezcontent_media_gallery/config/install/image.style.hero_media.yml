@@ -4,11 +4,10 @@ dependencies: {  }
 name: hero_media
 label: 'Hero Media'
 effects:
-  5a728887-3dd2-46f2-9397-697fd841b1d4:
-    uuid: 5a728887-3dd2-46f2-9397-697fd841b1d4
-    id: image_scale
+  221b95ae-6fff-4598-b560-2c2b1972f07d:
+    uuid: 221b95ae-6fff-4598-b560-2c2b1972f07d
+    id: image_resize
     weight: 1
     data:
-      width: 1140
-      height: null
-      upscale: false
+      width: 1600
+      height: 600

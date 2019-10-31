@@ -3,7 +3,8 @@
 @import 'abstracts/variables';
 
 .paragraph--type--hero-media {
-  margin: 30px 0;
+  margin: 30px -15px;
+  padding: 0;
 
   .slick-arrow::before {
     color: $color-primary;
@@ -11,22 +12,35 @@
   }
 
   .slick-arrow:hover::before {
-    color: $color-white;
+    color: $color-primary;
   }
 
   .paragraph--type--card {
     @include clearfix;
-    background: $color-white-light;
+    background: transparent;
+    margin: 0;
     padding: 0;
+    position: relative;
+
+    .hero_media_content {
+      display: block;
+      padding: 72px 30px 0;
+      height: 100%;
+      width: 70%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
     .blazy__caption {
-      position: absolute;
-      bottom: 0;
       background: rgba(0, 0, 0, .5);
-      width: 100%;
-      padding: 10px;
+      bottom: 0;
       color: $color-white;
+      display: none;
+      padding: 10px;
+      position: absolute;
       text-align: center;
+      width: 100%;
 
       &:empty {
         display: none;
@@ -36,66 +50,76 @@
     .field {
 
       &--name-field-title {
-        font-family: $secondary-font;
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 50px;
         padding: 0 10px;
+        width: 100%;
+
+        @include respond(tab-land) {
+          font-size: 25px;
+          line-height: 25px;
+          width: 100%;
+        }
       }
 
       &--name-field-short-title {
         font-size: 18px;
         font-weight: 500;
         padding: 5px 10px;
+
+        @include respond(tab-land) {
+          font-size: 14px;
+        }
       }
 
       &--name-field-subhead {
-        font-size: 18px;
+        border-color: transparent;
+        font-size: 16px;
         font-weight: 500;
-        padding: 10px;
-        border-top: 1px solid $color-white;
+        padding: 5px 10px;
+
+        @include respond(tab-land) {
+          font-size: 14px;
+        }
       }
 
       &--name-field-summary {
-        padding: 10px;
-        border-bottom: 1px solid $color-white;
+        border-color: transparent;
         display: block;
         font-size: 16px;
+        padding: 10px;
+
+        @include respond(tab-land) {
+          font-size: 14px;
+          padding: 5px 10px;
+        }
       }
 
       &--name-field-link {
-        text-align: right;
         padding: 10px;
+        text-align: left;
 
         a {
-          background: $color-primary;
-          border: 1px solid $color-primary;
-          border-radius: 4px;
-          color: $color-white;
-          display: inline-block;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 1.42857143;
-          margin-bottom: 0;
-          padding: 10px;
-          text-align: center;
-          vertical-align: middle;
-          white-space: nowrap;
+          @include btnstyle;
+          min-width: 360px;
+          padding-top:15px;
+          padding-bottom:15px;
+          text-align: left;
 
-          &:hover {
-            background: $color-white;
-            color: $color-primary;
-            text-decoration: none;
+          &:after {
+            background: url('../images/video.svg') no-repeat;
+            content: "";
+            display: inline-block;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            width: 30px;
           }
-
-          &:focus {
-            background: $color-white;
-            color: $color-primary;
-            text-decoration: none;
-          }
-
         }
       }
     }
   }
-
 }
