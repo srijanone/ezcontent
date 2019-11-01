@@ -104,10 +104,7 @@ content:
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
-    third_party_settings:
-      paragraphs_features:
-        add_in_between: false
-        split_text: true
+    third_party_settings: {  }
     region: content
   field_meta_tags:
     weight: 121
