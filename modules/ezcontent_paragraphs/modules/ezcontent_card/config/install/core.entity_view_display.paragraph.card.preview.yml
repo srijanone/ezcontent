@@ -69,6 +69,4 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden:
-  field_card_layout: true
-  field_thumb: true
+hidden: {  }

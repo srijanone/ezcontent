@@ -2,31 +2,158 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.card.field_card_layout
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
-    - field.field.paragraph.card.field_thumb
     - field.field.paragraph.card.field_title
+    - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - layout_library
     - link
-    - options
-    - svg_image
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          40c44252-9858-47f8-bd58-dd6700261c21:
+            uuid: 40c44252-9858-47f8-bd58-dd6700261c21
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:card:field_media'
+              formatter:
+                label: hidden
+                settings:
+                  view_mode: card_list
+                  link: false
+                third_party_settings: {  }
+                type: entity_reference_entity_view
+            additional: {  }
+            weight: 0
+          920a7b11-c2d1-46cc-95a6-06f7d8cac21f:
+            uuid: 920a7b11-c2d1-46cc-95a6-06f7d8cac21f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:card:field_title'
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 1
+          fcda339f-cc61-40f3-a929-81712fd685a8:
+            uuid: fcda339f-cc61-40f3-a929-81712fd685a8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:card:field_short_title'
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 2
+          c1f337ef-aaf3-43c4-a891-d435f352f8ee:
+            uuid: c1f337ef-aaf3-43c4-a891-d435f352f8ee
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:card:field_subhead'
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 3
+          d0c0a25b-c51b-4a2a-baf6-0e27b2c3e549:
+            uuid: d0c0a25b-c51b-4a2a-baf6-0e27b2c3e549
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:card:field_summary'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: basic_string
+            additional: {  }
+            weight: 4
+          bbb0db43-404e-4157-acf0-6355194730e8:
+            uuid: bbb0db43-404e-4157-acf0-6355194730e8
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:card:field_link'
+              formatter:
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 5
+        third_party_settings: {  }
+  layout_library:
+    enable: true
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_blocks:
+        'Chaos tools': {  }
+        'Custom block types': {  }
+        Forms: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        'Lists (Views)': {  }
+        'Paragraph fields':
+          - 'field_block:paragraph:card:field_link'
+          - 'field_block:paragraph:card:field_media'
+          - 'field_block:paragraph:card:field_short_title'
+          - 'field_block:paragraph:card:field_subhead'
+          - 'field_block:paragraph:card:field_summary'
+          - 'field_block:paragraph:card:field_title'
+        System: {  }
+        User: {  }
+        'User fields': {  }
+        core: {  }
+      allowed_layouts: {  }
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
 mode: default
 content:
-  field_card_layout:
-    weight: 6
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
   field_link:
     weight: 5
     label: hidden
@@ -43,7 +170,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      view_mode: default
+      view_mode: card_list
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
@@ -71,19 +198,6 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_thumb:
-    weight: 7
-    label: above
-    settings:
-      svg_attributes:
-        width: ''
-        height: ''
-      svg_render_as_image: true
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
   field_title:
     weight: 1
     label: hidden
@@ -92,4 +206,5 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  layout_selection: true

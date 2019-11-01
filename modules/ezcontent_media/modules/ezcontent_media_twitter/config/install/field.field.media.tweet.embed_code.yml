@@ -9,7 +9,7 @@ field_name: embed_code
 entity_type: media
 bundle: tweet
 label: Tweet
-description: 'Paste tweet''s URL or embed code.'
+description: 'Paste tweet URL.'
 required: true
 translatable: false
 default_value: {  }

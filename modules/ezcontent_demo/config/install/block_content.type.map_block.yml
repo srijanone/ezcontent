@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: map_block
+label: 'Map Block'
+revision: 1
+description: ''

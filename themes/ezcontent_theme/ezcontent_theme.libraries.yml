@@ -2,6 +2,10 @@ framework:
   css:
     theme:
       css/style.css: {}
+      css/paragraph_type_map.css: {}
+      css/paragraph_type_social.css: {}
+      css/paragraph_type_embed.css: {}
+      css/paragraph_type_hero_media.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:

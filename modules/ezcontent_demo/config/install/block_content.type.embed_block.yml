@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: embed_block
+label: 'Embed Block'
+revision: 1
+description: ''

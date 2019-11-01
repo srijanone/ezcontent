@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.inline
+    - field.field.media.tweet.embed_code
+    - media.type.tweet
+id: media.tweet.inline
+targetEntityType: media
+bundle: tweet
+mode: inline
+content:
+  embed_code:
+    type: string_textarea
+    weight: 0
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  path: true
+  status: true
+  uid: true

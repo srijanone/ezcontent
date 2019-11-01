@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_form_mode.paragraph.card_nested
     - entity_browser.browser.image_browser
-    - field.field.paragraph.card.field_card_layout
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
@@ -77,7 +76,5 @@ content:
     region: content
 hidden:
   created: true
-  field_card_layout: true
-  field_thumb: true
   status: true
   uid: true
