@@ -2,18 +2,16 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
-.paragraph--type {
-  &--social-media {
-    padding: 30px 0;
+.paragraph--type--social-media {
+  padding: 0;
 
-    twitter-widget {
-      margin: 30px auto !important;
-      @include clearfix;
-    }
-    
-    iframe {
-      margin: 30px auto !important;
-      @include clearfix;
-    }
+  twitter-widget {
+    margin: 30px auto !important;
+    @include clearfix;
+  }
+
+  iframe {
+    margin: 30px auto !important;
+    @include clearfix;
   }
 }
