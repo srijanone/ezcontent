@@ -19,6 +19,20 @@
     float: left;
     padding: 20px 0;
     width: 100%;
+
+    li {
+      a {
+        font-weight: 500;
+        color: $color-grey-light-3;
+
+        &:before {
+          content: url(../images/righticon.svg);
+          padding-right: 10px;
+
+        }
+      }
+
+    }
   }
 
   &--about {
@@ -48,6 +62,10 @@
     font-size: 11px;
     padding: 20px 0;
     width: 100%;
+
+    a {
+      color: $color-black;
+    }
   }
 
   li {
@@ -69,7 +87,6 @@
     }
 
     a {
-      color: $color-black;
       padding: 0;
 
       &:hover {
