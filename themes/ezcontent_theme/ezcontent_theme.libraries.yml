@@ -6,6 +6,8 @@ framework:
       css/paragraph_type_social.css: {}
       css/paragraph_type_embed.css: {}
       css/paragraph_type_hero_media.css: {}
+      css/paragraph_type_card.css: {}
+      css/paragraph_type_card_list.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:
