@@ -23,7 +23,7 @@
   }
 
   .navbar-collapse {
-    
+
     nav {
       float: right;
       padding: 10px;
@@ -44,5 +44,11 @@
 .user-logged-in {
   .navbar-default {
     top: 79px;
+  }
+
+  &.toolbar-vertical {
+    .navbar-default {
+      top: 38px;
+    }
   }
 }

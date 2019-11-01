@@ -2,24 +2,25 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
-.paragraph {
-  padding: 30px 0;
+.paragraph--type--embed {
+  padding: 0;
 
-  &--type--embed {
-    iframe {
-      height: 500px;
-      margin: 30px auto;
-      width: 100%;
-      @include clearfix;
+  .field--name-field-script {
+    text-align: center;
+  }
 
-      @include respond(phone) {
-        height: 300px
-      }
+  iframe {
+    margin: 30px auto;
+    max-width: 100%;
+    @include clearfix;
 
-      @include respond(tab-port) {
-        height: 400px
-      }
+    @include respond(phone) {
+      height: 300px
     }
 
+    @include respond(tab-port) {
+      height: 400px
+    }
   }
+
 }
