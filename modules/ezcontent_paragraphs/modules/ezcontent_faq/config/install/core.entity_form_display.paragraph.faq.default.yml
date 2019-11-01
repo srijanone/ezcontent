@@ -31,11 +31,7 @@ content:
         duplicate: duplicate
         collapse_edit_all: collapse_edit_all
         add_above: '0'
-    third_party_settings:
-      paragraphs_features:
-        delete_confirmation: false
-        add_in_between: false
-        split_text: false
+    third_party_settings: {  }
     region: content
 hidden:
   created: true

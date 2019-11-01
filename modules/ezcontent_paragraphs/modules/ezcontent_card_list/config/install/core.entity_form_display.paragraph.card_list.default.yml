@@ -1,4 +1,3 @@
-uuid: b3d2ea9d-5db5-4330-9208-3d68310b4109
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - paragraphs.paragraphs_type.card_list
   module:
     - paragraphs
-_core:
-  default_config_hash: Umg9xI5OkXPskJakDMDMs9CPSmoUytPdMD0D_5vpEgY
 id: paragraph.card_list.default
 targetEntityType: paragraph
 bundle: card_list
@@ -32,11 +29,7 @@ content:
         duplicate: duplicate
         collapse_edit_all: collapse_edit_all
         add_above: '0'
-    third_party_settings:
-      paragraphs_features:
-        delete_confirmation: false
-        add_in_between: false
-        split_text: false
+    third_party_settings: {  }
     region: content
   field_title:
     weight: 0
