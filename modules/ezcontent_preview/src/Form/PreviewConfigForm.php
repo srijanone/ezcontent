@@ -51,6 +51,12 @@ class PreviewConfigForm extends ConfigFormBase {
       '#description' => $this->t('Provide the expire time in seconds.'),
       '#default_value' => $config->get('ezcontent_preview_token_expire_time') ?? 300,
     ];
+    $form['ezcontent_preview_new_window'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Preview on new window'),
+      '#description' => $this->t('Check this checkbox if you want to see preview in new browser tab. Default is <strong>embeded</strong> preview in Drupal.'),
+      '#default_value' => $config->get('ezcontent_preview_new_window'),
+    ];
     return parent::buildForm($form, $form_state);
   }
 
@@ -62,6 +68,7 @@ class PreviewConfigForm extends ConfigFormBase {
     $this->config(static::SETTINGS)
       ->set('ezcontent_preview_url', $form_state->getValue('ezcontent_preview_url'))
       ->set('ezcontent_preview_token_expire_time', $form_state->getValue('ezcontent_preview_token_expire_time'))
+      ->set('ezcontent_preview_new_window', $form_state->getValue('ezcontent_preview_new_window'))
       ->save();
   }
 
