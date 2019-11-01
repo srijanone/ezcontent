@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.assets
+label: Assets
+targetEntityType: media
+cache: true
