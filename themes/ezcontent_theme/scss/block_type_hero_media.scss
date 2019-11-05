@@ -1,0 +1,111 @@
+//import
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.block-inline-blockhero-media-block{
+  margin: 30px -15px;
+  padding: 0;
+
+  .slick-arrow::before {
+    color: $color-primary;
+    opacity: 1;
+  }
+
+  .slick-arrow:hover::before {
+    color: $color-primary;
+  }
+
+  .paragraph--type--card {
+    @include clearfix;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    .hero_media_content {
+      display: block;
+      height: 100%;
+      left: 0;
+      padding: 72px 30px 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .blazy__caption {
+      background: rgba(0, 0, 0, .5);
+      bottom: 0;
+      color: $color-white;
+      display: none;
+      padding: 10px;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+
+      &:empty {
+        display: none;
+      }
+    }
+
+    .field {
+
+      &--name-field-title {
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        line-height: 50px;
+        padding: 0 10px;
+        width: 100%;
+
+        @include respond(tab-land) {
+          font-size: 25px;
+          line-height: 25px;
+          width: 100%;
+        }
+      }
+
+      &--name-field-short-title {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 5px 10px;
+
+        @include respond(tab-land) {
+          font-size: 14px;
+        }
+      }
+
+      &--name-field-subhead {
+        border-color: transparent;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 5px 10px;
+
+        @include respond(tab-land) {
+          font-size: 14px;
+        }
+      }
+
+      &--name-field-summary {
+        border-color: transparent;
+        display: block;
+        font-size: 16px;
+        padding: 10px;
+
+        @include respond(tab-land) {
+          font-size: 14px;
+          padding: 5px 10px;
+        }
+      }
+
+      &--name-field-link {
+        padding: 10px;
+        text-align: right;
+
+        a {
+          @include btnstyle;
+          min-width: 150px;
+        }
+      }
+    }
+  }
+}
