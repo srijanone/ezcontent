@@ -1,6 +1,7 @@
 framework:
   css:
     theme:
+      css/glyphicons.css: {}
       css/style.css: {}
       css/paragraph_type_map.css: {}
       css/paragraph_type_social.css: {}
@@ -9,6 +10,8 @@ framework:
       css/paragraph_type_card.css: {}
       css/paragraph_type_card_list.css: {}
       css/paragraph_type_asset.css: {}
+      css/block_type_hero_media.css: {}
+      css/block_type_map.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:
