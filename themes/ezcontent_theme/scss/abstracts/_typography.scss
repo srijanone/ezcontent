@@ -104,16 +104,69 @@ img {
   padding: 30px 0;
 }
 
-#drupal-off-canvas {
-  table {
-    margin: 0;
-  }
+.ui-dialog-position-side {
+  #drupal-off-canvas {
+    table {
+      margin: 0;
+      min-width: 100%;
+    }
 
-  td {
-    padding: 0;
-  }
+    td {
+      padding: 0;
+    }
 
-  td.field-multiple-drag {
-    display: none !important;
+    td.field-multiple-drag {
+      display: none !important;
+    }
+
+    .dialog-cancel {
+      background: $color-white-light;
+      color: $color-grey-light-3;
+      margin: 8px 0;
+      padding: 2px 5px;
+      display: inline-block;
+      clear: left;
+      margin-left: 1px;
+      line-height: 20px;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+
+    button[type="submit"] {
+      background: $color-white-light;
+      color: $color-grey-light-3;
+      margin: 8px 0;
+      padding: 2px 5px;
+
+      span.glyphicon {
+        background: transparent;
+        color: $color-grey-light-3;
+      }
+    }
+
+    .paragraphs-actions {
+      position: absolute;
+      right: 0;
+
+      button[type="submit"] {
+        height: 21px;
+        margin-left: 2px;
+        top: 0;
+      }
+
+      ul.dropbutton {
+
+        li button[type="submit"] {
+          background: transparent;
+          color: $color-white;
+          padding: 0;
+        }
+      }
+    }
+
   }
+}
+
+.block-title {
+  font-weight: 500;
 }
