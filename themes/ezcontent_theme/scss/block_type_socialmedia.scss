@@ -1,0 +1,17 @@
+//import
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.block-inline-blocksocial-media{
+  padding: 0;
+
+  twitter-widget {
+    margin: 30px auto !important;
+    @include clearfix;
+  }
+
+  iframe {
+    margin: 30px auto !important;
+    @include clearfix;
+  }
+}

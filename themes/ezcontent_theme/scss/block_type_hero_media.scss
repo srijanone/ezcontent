@@ -2,17 +2,28 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
-.block-inline-blockhero-media-block{
+.block-inline-blockhero-media-block {
   margin: 30px -15px;
   padding: 0;
 
-  .slick-arrow::before {
-    color: $color-primary;
-    opacity: 1;
-  }
+  .slick-arrow {
 
-  .slick-arrow:hover::before {
-    color: $color-primary;
+    &::before {
+      color: $color-primary;
+      opacity: 1;
+    }
+
+    &:hover::before {
+      color: $color-primary;
+    }
+
+    &.slick-prev {
+      left: -35px;
+    }
+
+    &.slick-next {
+      right: -35px;
+    }
   }
 
   .paragraph--type--card {
@@ -23,12 +34,13 @@
     position: relative;
 
     .hero_media_content {
+      @include backgroundopacity;
+      bottom: 0;
       display: block;
-      height: 100%;
+      height: auto;
       left: 0;
-      padding: 72px 30px 0;
+      padding: 15px 0;
       position: absolute;
-      top: 0;
       width: 100%;
     }
 
@@ -54,6 +66,7 @@
         font-weight: 500;
         letter-spacing: 1px;
         line-height: 50px;
+        margin: 0;
         padding: 0 10px;
         width: 100%;
 
