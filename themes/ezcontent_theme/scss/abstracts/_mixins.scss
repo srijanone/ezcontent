@@ -20,6 +20,16 @@
   vertical-align: top;
 }
 
+@mixin backgroundopacity {
+  background-color: rgba(0, 0, 0, 0.37);
+  border-width: 0;
+  color: $color-white;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin: 0;
+  opacity: 1;
+}
+
 @mixin btnstyle {
   background: $color-primary;
   border: 1px solid $color-primary;
