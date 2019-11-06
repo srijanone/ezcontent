@@ -38,7 +38,7 @@
       display: block;
       height: auto;
       left: 0;
-      padding: 15px 0;
+      padding: 5px 0;
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -62,12 +62,13 @@
     .field {
 
       &--name-field-title {
-        font-size: 40px;
+        font-size: 36px;
         font-weight: 500;
         letter-spacing: 1px;
-        line-height: 50px;
+        line-height: 37px;
         padding: 0 10px;
         width: 100%;
+        margin: 0;
 
         @include respond(tab-land) {
           font-size: 25px;
@@ -79,8 +80,8 @@
       &--name-field-short-title {
         font-size: 18px;
         font-weight: 500;
-        padding: 5px 10px;
-        margin:0;
+        padding: 5px 10px 0;
+        margin: 0;
 
         @include respond(tab-land) {
           font-size: 14px;
@@ -91,7 +92,7 @@
         border-color: transparent;
         font-size: 16px;
         font-weight: 500;
-        padding: 5px 10px;
+        padding: 5px 10px 0;
 
         @include respond(tab-land) {
           font-size: 14px;
@@ -101,8 +102,8 @@
       &--name-field-summary {
         border-color: transparent;
         display: block;
-        font-size: 16px;
-        padding: 10px;
+        font-size: 14px;
+        padding: 5px 10px;
 
         @include respond(tab-land) {
           font-size: 14px;
@@ -111,11 +112,12 @@
       }
 
       &--name-field-link {
-        padding: 10px;
+        padding: 0 10px;
         text-align: right;
 
         a {
           @include btnstyle;
+          padding: 5px 10px;
           min-width: 150px;
         }
       }
