@@ -61,6 +61,7 @@
     "drupal/simple_oauth": "^3.16",
     "drupal/simple_sitemap": "^3.3",
     "drupal/slick": "~1.0",
+    "drupal/slick_entityreference": "^1.1",
     "drupal/slick_media": "2.x",
     "drupal/slick_paragraphs": "1.x",
     "drupal/svg_image": "^1.9",
