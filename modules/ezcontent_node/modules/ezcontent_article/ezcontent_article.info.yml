@@ -8,3 +8,4 @@ dependencies:
   - ezcontent_image
   - ezcontent_taxonomy
   - ezcontent_text
+  - ezcontent_assets
