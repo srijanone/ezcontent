@@ -4,15 +4,16 @@ dependencies:
   config:
     - image.style.media_entity_browser_thumbnail
     - media.type.image
+    - media.type.video
   module:
     - entity_browser
     - media
     - svg_image
     - user
-id: image_browser
-label: 'Image Browser'
+id: asset_browser
+label: 'Asset Browser'
 module: views
-description: 'Image entity browser'
+description: 'Asset entity browser'
 tag: ''
 base_table: media_field_data
 base_field: mid
@@ -387,22 +388,24 @@ display:
           operator: in
           value:
             image: image
+            video: video
           group: 1
-          exposed: false
+          exposed: true
           expose:
             operator_id: bundle_op
-            label: Provider
+            label: 'Media type'
             description: ''
             use_operator: false
             operator: bundle_op
-            identifier: provider
+            identifier: bundle
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-            reduce: false
+              administrator: '0'
+            reduce: true
           is_grouped: false
           group_info:
             label: ''
@@ -522,11 +525,11 @@ display:
   media_browser_all:
     display_plugin: entity_browser
     id: media_browser_all
-    display_title: 'Image browser'
+    display_title: 'Asset browser'
     position: 1
     display_options:
       display_extenders: {  }
-      display_description: ''
+      display_description: 'Asset entity browser'
     cache_metadata:
       max-age: -1
       contexts:
