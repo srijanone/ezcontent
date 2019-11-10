@@ -101,7 +101,7 @@
       },
       "drupal/core": {
         "Expose Layout Builder data to REST and JSON:API": "https://www.drupal.org/files/issues/2019-09-03/layout_builder-export-content-2942975-59.patch",
-        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2019-07-17/drupal8-layout-builder-reusable-2999491-24.patch",
+        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2019-11-10/2999491-28.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch"
       }
     },
