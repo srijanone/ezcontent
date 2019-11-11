@@ -15,18 +15,22 @@ content:
     weight: 0
     label: hidden
     settings:
-      vanilla: true
-      optionset: default
-      optionset_thumbnail: ''
+      optionset: ezcontent_setting
+      optionset_thumbnail: ezcontent_thumbnail
       skin: default
-      skin_thumbnail: ''
-      image_style: ''
-      thumbnail_style: ''
-      thumbnail_effect: ''
+      skin_thumbnail: asnavfor
+      image_style: hero_media
+      thumbnail_style: gallery
+      thumbnail_effect: grid
       thumbnail_position: ''
       media_switch: ''
+      box_style: ''
+      box_media_style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      background: true
       view_mode: slick
-      ratio: ''
+      ratio: enforced
       iframe_lazy: true
       image: ''
       title: ''
@@ -35,31 +39,31 @@ content:
       class: ''
       cache: 0
       sizes: ''
-      current_view_mode: default
-      background: false
-      caption:
-        field_media_image: '0'
       breakpoints:
         xs:
-          breakpoint: ''
           image_style: ''
           width: ''
+          breakpoint: ''
         sm:
-          breakpoint: ''
           image_style: ''
           width: ''
+          breakpoint: ''
         md:
-          breakpoint: ''
           image_style: ''
           width: ''
+          breakpoint: ''
         lg:
-          breakpoint: ''
           image_style: ''
           width: ''
+          breakpoint: ''
         xl:
-          breakpoint: ''
           image_style: ''
           width: ''
+          breakpoint: ''
+      current_view_mode: default
+      vanilla: false
+      caption:
+        field_media_image: '0'
       override: false
       overridables:
         arrows: '0'
@@ -78,10 +82,6 @@ content:
       skin_dots: ''
       style: ''
       icon: ''
-      box_caption: ''
-      box_caption_custom: ''
-      box_style: ''
-      box_media_style: ''
       responsive_image_style: ''
       grid: 0
       grid_header: ''
