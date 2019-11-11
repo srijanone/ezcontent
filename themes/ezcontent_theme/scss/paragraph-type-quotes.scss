@@ -1,0 +1,45 @@
+//import
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.paragraph--type--quote {
+  margin: 60px auto;
+  padding: 10px 60px 10px 70px;
+  position: relative;
+  width: 80%;
+
+  .field--name-field-quote {
+    color: #333;
+    display: block;
+    font-size: 18px;
+    line-height: 1.25em;
+    margin-bottom: 12px;
+    quotes: "“""”";
+    color: $color-grey-light-3;
+
+    &::before {
+      color: $color-primary;
+      content: open-quote;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 120px;
+      font-weight: bold;
+      line-height: 120px;
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 90px;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+  }
+
+  .field--name-field-author {
+    font-weight: 500;
+  }
+
+  .field--name-job-title {
+    font-size: 14px;
+  }
+}

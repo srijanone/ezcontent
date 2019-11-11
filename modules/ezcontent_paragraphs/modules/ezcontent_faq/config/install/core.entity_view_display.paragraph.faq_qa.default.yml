@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.faq_qa.field_answer
-    - field.field.paragraph.faq_qa.field_link
     - field.field.paragraph.faq_qa.field_question
     - paragraphs.paragraphs_type.faq_qa
   module:
@@ -16,26 +15,14 @@ mode: default
 content:
   field_answer:
     weight: 2
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_link:
-    weight: 3
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
   field_question:
     weight: 1
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
