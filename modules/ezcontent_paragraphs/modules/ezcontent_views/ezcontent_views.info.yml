@@ -4,6 +4,6 @@ description: 'Provides Views reference field feature.'
 package: EZContent Paragraphs
 core: 8.x
 dependencies:
-- ezcontent_node
-- ezcontent_paragraphs
-- viewsreference
+  - ezcontent_node
+  - ezcontent_paragraphs
+  - viewsreference
