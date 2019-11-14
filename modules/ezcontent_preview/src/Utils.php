@@ -13,9 +13,10 @@ use Drupal\Core\Url;
  */
 class Utils {
 
-  public function buildUrl(NodeInterface $node = NULL, $options = []) {
+  public function buildUrl(NodeInterface $node = NULL, $decoupledRoutes, $options = []) {
     $config = \Drupal::config('ezcontent_preview.settings');
-    $preview_base_url = $config->get('ezcontent_preview_url');
+    //$preview_base_url = $config->get('ezcontent_preview_url');
+    $preview_base_url = $decoupledRoutes->url;
 
     if (!$preview_base_url) {
       \Drupal::messenger()->addMessage('Add frontend URL in module config form to view decoupled preview.');

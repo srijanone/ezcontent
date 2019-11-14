@@ -1,6 +1,6 @@
 name: EZContent Preview
 type: module
-description: Provide preview funtionality
+description: Provide decoupled preview
 core: 8.x
 package: EZContent Preview
 configure: ezcontent.preview.config

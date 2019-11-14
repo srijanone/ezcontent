@@ -1,0 +1,5 @@
+entity.ezcontent_preview.add_form:
+  route_name: 'entity.ezcontent_preview.add_form'
+  title: 'Add Decoupled Routes'
+  appears_on:
+    - entity.ezcontent_preview.collection
