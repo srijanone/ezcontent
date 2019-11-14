@@ -1,0 +1,172 @@
+body {
+  color: $color-text;
+  font-family: $secondary-font;
+  font-family: $primary-font;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+caption {
+  font-family: $primary-font;
+  font-weight: 700;
+}
+
+.no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+a {
+  color: $color-primary;
+
+  &:focus {
+    color: $color-secondary;
+  }
+
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
+table {
+  thead {
+    border: 1px solid $color-grey-light-2;
+
+    tr {
+
+      td {
+        @include tablestyle;
+      }
+
+      th {
+        @include tablestyle;
+      }
+
+    }
+  }
+
+  tbody {
+    border: 1px solid $color-grey-light-2;
+
+    tr {
+
+      td {
+        @include tablestyle;
+      }
+
+      th {
+        @include tablestyle;
+      }
+
+    }
+  }
+
+  tfoot {
+    border: 1px solid $color-grey-light-2;
+
+    tr {
+
+      td {
+        @include tablestyle;
+      }
+
+      th {
+        @include tablestyle;
+      }
+
+    }
+  }
+
+}
+
+.nav {
+  &.tabs--primary {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+.main-container {
+  margin-top: 75px;
+  min-height: 40rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.paragraph {
+  padding: 30px 0;
+}
+
+.ui-dialog-position-side {
+  #drupal-off-canvas {
+    table {
+      margin: 0;
+      min-width: 100%;
+    }
+
+    td {
+      padding: 0;
+    }
+
+    td.field-multiple-drag {
+      display: none !important;
+    }
+
+    .dialog-cancel {
+      background: $color-white-light;
+      color: $color-grey-light-3;
+      margin: 8px 0;
+      padding: 2px 5px;
+      display: inline-block;
+      clear: left;
+      margin-left: 1px;
+      line-height: 20px;
+      border-radius: 3px;
+      text-decoration: none;
+    }
+
+    button[type="submit"] {
+      background: $color-white-light;
+      color: $color-grey-light-3;
+      margin: 8px 0;
+      padding: 2px 5px;
+
+      span.glyphicon {
+        background: transparent;
+        color: $color-grey-light-3;
+      }
+    }
+
+    .paragraphs-actions {
+      position: absolute;
+      right: 0;
+
+      button[type="submit"] {
+        height: 21px;
+        margin-left: 2px;
+        top: 0;
+      }
+
+      ul.dropbutton {
+
+        li button[type="submit"] {
+          background: transparent;
+          color: $color-white;
+          padding: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.block-title {
+  font-weight: 500;
+}

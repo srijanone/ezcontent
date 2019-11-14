@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.embed_block
+    - field.storage.block_content.field_script
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    scripts: scripts
+    basic_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
+id: block_content.embed_block.field_script
+field_name: field_script
+entity_type: block_content
+bundle: embed_block
+label: Script
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

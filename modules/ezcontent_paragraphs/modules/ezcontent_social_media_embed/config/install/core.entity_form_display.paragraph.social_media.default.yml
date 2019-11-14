@@ -2,21 +2,34 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.inline
     - field.field.paragraph.social_media.field_social_media
     - paragraphs.paragraphs_type.social_media
   module:
-    - media_library
+    - entity_browser_entity_form
+    - inline_entity_form
 id: paragraph.social_media.default
 targetEntityType: paragraph
 bundle: social_media
 mode: default
 content:
   field_social_media:
-    type: media_library_widget
+    type: inline_entity_form_complex
     weight: 0
     settings:
-      media_types: {  }
-    third_party_settings: {  }
+      form_mode: inline
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
     region: content
 hidden:
   created: true

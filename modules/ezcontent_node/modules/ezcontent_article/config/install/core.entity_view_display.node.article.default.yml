@@ -2,11 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.node.article.field_meta_tags
-  - node.type.article
+    - field.field.node.article.field_content
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_short_title
+    - field.field.node.article.field_subhead
+    - field.field.node.article.field_summary
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_thumbnail
+    - node.type.article
   module:
-  - metatag
-  - user
+    - entity_reference_revisions
+    - metatag
+    - user
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -14,18 +21,6 @@ mode: default
 content:
   content_moderation_control:
     weight: -20
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_meta_tags:
-    weight: 101
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: content
-  links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -38,4 +33,21 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-hidden: {  }
+  field_meta_tags:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_short_title: true
+  field_subhead: true
+  field_summary: true
+  field_tags: true
+  field_thumbnail: true

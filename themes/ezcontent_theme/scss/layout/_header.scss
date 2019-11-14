@@ -1,0 +1,54 @@
+.navbar-default {
+  background: $color-white;
+  border-bottom: 1px solid $color-grey-light-2;
+  font-size: $default-font-size;
+  font-weight: 500;
+  height: 70px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 0.5s ease 0s;
+  z-index: 2;
+
+  .navbar-header {
+    .logo {
+      margin: 0;
+      padding: 10px 0;
+
+      img {
+        width: 127px;
+      }
+    }
+  }
+
+  .navbar-collapse {
+
+    nav {
+      float: right;
+      padding: 10px;
+
+      .navbar-nav {
+
+        li {
+
+          a {
+            color: $color-grey-light-3
+          }
+        }
+      }
+    }
+  }
+}
+
+.user-logged-in {
+  .navbar-default {
+    top: 79px;
+  }
+
+  &.toolbar-vertical {
+    .navbar-default {
+      top: 38px;
+    }
+  }
+}

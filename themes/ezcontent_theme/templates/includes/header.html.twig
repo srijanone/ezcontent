@@ -1,0 +1,35 @@
+<header class="navbar navbar-default" id="navbar" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <div class="region region-navigation">
+                <a class="logo navbar-btn pull-left" href="{{ url('<front>') }}" title="Home" rel="home">
+                    <img src="/{{ active_theme_path() }}/images/logo.svg" alt="Home">
+                </a>
+            </div>
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="region region-navigation-collapsible">
+                <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="contextual-region">
+                    <h2 class="sr-only" id="block-mainnavigation-menu">Main navigation</h2>
+                    <ul class="menu menu--main nav navbar-nav">
+                        <li class="first">
+                            <a href="/" >Home</a>
+                        </li>
+                        <li class="last">
+                            <a href="/" >About Us</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+

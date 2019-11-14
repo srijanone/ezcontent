@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.embed_block
+    - field.field.block_content.embed_block.field_script
+  module:
+    - text
+id: block_content.embed_block.default
+targetEntityType: block_content
+bundle: embed_block
+mode: default
+content:
+  field_script:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

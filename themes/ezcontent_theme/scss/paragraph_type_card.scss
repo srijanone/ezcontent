@@ -1,0 +1,77 @@
+//import
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.paragraph--type--card {
+  @include clearfix;
+  background: $color-white-light;
+  margin: 30px 0;
+  padding: 0;
+
+  .layout {
+    background: $color-white-light;
+
+    .layout__region {
+      padding: 0 15px;
+
+      img {
+        margin: 0 auto;
+      }
+
+      .block-field-blockparagraphcardfield-media {
+        height: 100%;
+
+        div,
+        section {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .field {
+
+    &--name-field-title {
+      font-size: 30px;
+      font-weight: 500;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+
+    &--name-field-short-title {
+      font-size: 14px;
+      font-weight: 500;
+      padding: 5px 10px;
+    }
+
+    &--name-field-subhead {
+      border-top: 1px solid $color-white;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px;
+    }
+
+    &--name-field-summary {
+      border-bottom: 1px solid $color-white;
+      display: block;
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    &--name-field-media-image {
+      align-items: center;
+      display: flex;
+      margin: 0 auto;
+    }
+
+    &--name-field-link {
+      padding: 10px;
+      text-align: right;
+
+      a {
+        @include btnstyle;
+
+      }
+    }
+  }
+}

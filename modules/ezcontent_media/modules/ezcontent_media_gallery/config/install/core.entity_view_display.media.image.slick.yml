@@ -16,10 +16,13 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: large
+      image_style: hero_media
       thumbnail_style: thumbnail
       media_switch: ''
-      ratio: ''
+      box_style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      ratio: enforced
       caption:
         title: title
         alt: alt
@@ -55,9 +58,6 @@ content:
       optionset: default
       skin: ''
       style: ''
-      box_caption: ''
-      box_caption_custom: ''
-      box_style: ''
       box_media_style: ''
       responsive_image_style: ''
       grid: 0

@@ -1,0 +1,26 @@
+//import
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.paragraph--type--embed {
+  padding: 0;
+
+  .field--name-field-script {
+    text-align: center;
+  }
+
+  iframe {
+    margin: 30px auto;
+    max-width: 100%;
+    @include clearfix;
+
+    @include respond(phone) {
+      height: 300px
+    }
+
+    @include respond(tab-port) {
+      height: 400px
+    }
+  }
+
+}

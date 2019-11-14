@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.embed_block
+    - field.field.block_content.embed_block.field_script
+  module:
+    - ezcontent_embed
+id: block_content.embed_block.default
+targetEntityType: block_content
+bundle: embed_block
+mode: default
+content:
+  field_script:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: ezcontent_embed
+    region: content
+hidden: {  }
