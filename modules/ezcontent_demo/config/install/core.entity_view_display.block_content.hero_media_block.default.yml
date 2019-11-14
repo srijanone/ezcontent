@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_media_block
+    - field.field.block_content.hero_media_block.field_card
+  module:
+    - slick_paragraphs
+id: block_content.hero_media_block.default
+targetEntityType: block_content
+bundle: hero_media_block
+mode: default
+content:
+  field_card:
+    type: slick_paragraphs_vanilla
+    weight: 0
+    label: above
+    settings:
+      optionset: ezcontent_setting
+      skin: default
+      view_mode: hero_media
+      cache: 0
+      current_view_mode: default
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,7 +1,23 @@
 framework:
   css:
     theme:
+      css/glyphicons.css: {}
       css/style.css: {}
+      css/paragraph_type_map.css: {}
+      css/paragraph_type_social.css: {}
+      css/paragraph_type_embed.css: {}
+      css/paragraph_type_hero_media.css: {}
+      css/paragraph_type_card.css: {}
+      css/paragraph_type_card_list.css: {}
+      css/paragraph_type_asset.css: {}
+      css/paragraph_type_gallery.css: {}
+      css/paragraph_type_gallery_carousel.css: {}
+      css/paragraph-type-quotes.css: {}
+      css/paragraph_type_faq.css: {}
+      css/block_type_hero_media.css: {}
+      css/block_type_map.css: {}
+      css/block_type_embed.css: {}
+      css/block_type_socialmedia.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:

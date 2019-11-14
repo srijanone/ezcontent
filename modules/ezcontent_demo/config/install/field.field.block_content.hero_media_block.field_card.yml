@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_media_block
+    - field.storage.block_content.field_card
+    - paragraphs.paragraphs_type.card
+  module:
+    - entity_reference_revisions
+id: block_content.hero_media_block.field_card
+field_name: field_card
+entity_type: block_content
+bundle: hero_media_block
+label: 'Hero Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      card: card
+    target_bundles_drag_drop:
+      card:
+        enabled: true
+        weight: 8
+      embed:
+        weight: 9
+        enabled: false
+      from_library:
+        weight: 10
+        enabled: false
+      hero_media:
+        weight: 11
+        enabled: false
+      map:
+        weight: 12
+        enabled: false
+      social_media:
+        weight: 13
+        enabled: false
+      text:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

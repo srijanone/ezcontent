@@ -1,0 +1,19 @@
+//import
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.layout {
+
+  .block--type-embed-block{
+    margin: 30px 0;
+
+    .field--name-field-script {
+      text-align: center;
+    }
+
+    iframe {
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+}

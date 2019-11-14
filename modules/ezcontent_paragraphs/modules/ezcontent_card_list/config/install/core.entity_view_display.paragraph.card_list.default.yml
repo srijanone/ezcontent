@@ -19,7 +19,7 @@ content:
     weight: 1
     label: hidden
     settings:
-      view_mode: card_list
+      view_mode: default
       link: ''
     third_party_settings: {  }
     region: content

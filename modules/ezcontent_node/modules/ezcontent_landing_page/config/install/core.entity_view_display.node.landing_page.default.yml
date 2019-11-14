@@ -59,14 +59,23 @@ third_party_settings:
           - 'field_block:node:landing_page:created'
           - 'field_block:node:landing_page:body'
           - 'field_block:node:landing_page:nid'
-          - 'field_block:node:landing_page:langcode'
           - 'field_block:node:landing_page:title'
+        'Entity Block':
+          - 'entity_block:block'
+          - 'entity_block:node'
+          - 'entity_block:block_content'
+          - 'entity_block:media'
+          - 'entity_block:paragraph'
+          - 'entity_block:taxonomy_term'
+          - 'entity_block:user'
+        Forms: {  }
         Help: {  }
-        System:
-          - system_breadcrumb_block
-          - system_messages_block
-          - node_syndicate_block
+        'Lists (Views)': {  }
+        Menus: {  }
+        System: {  }
         User: {  }
+        'User fields': {  }
+        core: {  }
       allowed_layouts: {  }
 id: node.landing_page.default
 targetEntityType: node

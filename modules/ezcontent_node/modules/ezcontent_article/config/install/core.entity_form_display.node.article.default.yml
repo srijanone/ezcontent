@@ -104,10 +104,10 @@ content:
       closed_mode: summary
       autocollapse: none
       closed_mode_threshold: 0
-    third_party_settings:
-      paragraphs_features:
-        add_in_between: false
-        split_text: true
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+    third_party_settings: {  }
     region: content
   field_meta_tags:
     weight: 121
@@ -152,13 +152,14 @@ content:
     weight: 122
     settings:
       entity_browser: image_browser
-      field_widget_display: label
+      field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
       open: true
       selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
       field_widget_replace: false
-      field_widget_display_settings: {  }
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content

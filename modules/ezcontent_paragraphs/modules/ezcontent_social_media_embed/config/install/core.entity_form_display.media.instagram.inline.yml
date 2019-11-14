@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.inline
+    - field.field.media.instagram.embed_code
+    - media.type.instagram
+id: media.instagram.inline
+targetEntityType: media
+bundle: instagram
+mode: inline
+content:
+  embed_code:
+    type: string_textarea
+    weight: 0
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  name: true
+  path: true
+  status: true
+  uid: true

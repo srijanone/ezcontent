@@ -1,0 +1,12 @@
+name: EZContent Demo
+type: module
+description: 'Contain configs for a Demo.'
+package: EZContent Demo
+core: 8.x
+dependencies:
+  - ezcontent_article
+  - ezcontent_embed
+  - ezcontent_hero_media
+  - ezcontent_landing_page
+  - ezcontent_map
+  - ezcontent_social_media_embed

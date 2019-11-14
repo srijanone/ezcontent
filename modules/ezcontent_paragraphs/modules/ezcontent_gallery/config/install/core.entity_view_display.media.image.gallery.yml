@@ -4,7 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.gallery
     - field.field.media.image.field_media_image
-    - image.style.medium
+    - image.style.gallery
     - media.type.image
   module:
     - colorbox
@@ -21,7 +21,7 @@ content:
     type: colorbox
     settings:
       colorbox_node_style: ''
-      colorbox_node_style_first: medium
+      colorbox_node_style_first: gallery
       colorbox_image_style: ''
       colorbox_gallery: field_page
       colorbox_gallery_custom: ''

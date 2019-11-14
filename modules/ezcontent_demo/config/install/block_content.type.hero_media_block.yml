@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: hero_media_block
+label: 'Hero Media Block'
+revision: 1
+description: ''
