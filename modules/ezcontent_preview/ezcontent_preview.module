@@ -26,6 +26,7 @@ function ezcontent_preview_form_alter(&$form, \Drupal\Core\Form\FormStateInterfa
 /**
  * Implements hook_menu_local_tasks_alter().
  */
+/*
 function ezcontent_preview_menu_local_tasks_alter(&$data, $route_name) {
     foreach ($data['tabs'] as $key1 => $tabs) {
         foreach ($tabs as $key2 => $item) {
@@ -49,4 +50,21 @@ function ezcontent_preview_menu_local_tasks_alter(&$data, $route_name) {
             }
         }
     }
+}
+*/
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function ezcontent_preview_views_data_alter(&$data) {
+    $label = 'Published or Access Unpublished Token';
+    $data['node']['published_access_unpublished_token'] = array(
+        'title' => $label,
+        'filter' => array(
+            'title' => $label,
+            'help' => t('Published or Access unpublish content with token'),
+            'field' => 'nid',
+            'id' => 'published_access_unpublished_token'
+        ),
+    );
 }
