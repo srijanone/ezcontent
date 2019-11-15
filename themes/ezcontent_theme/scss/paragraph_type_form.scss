@@ -1,0 +1,103 @@
+//import
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.paragraph--type--form {
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  margin: 30px auto;
+
+  .field {
+
+    &--name-field-title {
+      font-size: 30px;
+      font-weight: 500;
+      margin: 0 auto 20px;
+    }
+
+    label.control-label {
+      font-weight: 500;
+    }
+  }
+
+  .form-actions {
+    text-align: right;
+  }
+
+  .fieldgroup {
+    margin-bottom: 15px;
+  }
+
+  .form-control {
+    border-radius: 0;
+  }
+
+  .select-wrapper select {
+    line-height: 1.4;
+    padding: 5px 10px;
+  }
+
+  .btn-primary {
+    color: $color-white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  .rateit {
+    vertical-align: middle;
+  }
+
+  .webform-type-radios {
+
+    legend {
+      border: none;
+      font-size: 16px;
+      font-weight: 500;
+      color: $color-black;
+      font-size: 16px;
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    label.control-label {
+      font-weight: normal;
+    }
+
+    .radio {
+      margin: 5px 0 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .webform-type-checkboxes {
+
+    legend {
+      border: none;
+      font-size: 16px;
+      font-weight: 500;
+      color: $color-black;
+      font-size: 16px;
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    label.control-label {
+      font-weight: normal;
+    }
+
+    .checkbox {
+      margin: 5px 0 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

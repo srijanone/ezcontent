@@ -1,0 +1,22 @@
+//import
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+
+.paragraph--type--view {
+  margin: 60px auto;
+
+  .field {
+
+    &--name-field-title {
+      font-size: 30px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    .viewsreference--view-title {
+      font-size: 22px;
+      font-weight: 500;
+      margin: 5px 0 20px;
+    }
+  }
+}

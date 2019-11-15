@@ -14,6 +14,8 @@ framework:
       css/paragraph_type_gallery_carousel.css: {}
       css/paragraph-type-quotes.css: {}
       css/paragraph_type_faq.css: {}
+      css/paragraph_type_form.css: {}
+      css/paragraph_type_view_list.css: {}
       css/block_type_hero_media.css: {}
       css/block_type_map.css: {}
       css/block_type_embed.css: {}
