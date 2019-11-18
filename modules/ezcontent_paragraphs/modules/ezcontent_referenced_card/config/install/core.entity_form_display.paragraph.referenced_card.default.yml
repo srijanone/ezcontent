@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.referenced_card.field_article
+    - paragraphs.paragraphs_type.referenced_card
+id: paragraph.referenced_card.default
+targetEntityType: paragraph
+bundle: referenced_card
+mode: default
+content:
+  field_article:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

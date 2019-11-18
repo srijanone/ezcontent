@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: referenced_card
+label: 'Referenced Card'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
