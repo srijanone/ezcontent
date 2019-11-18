@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_article
+    - node.type.article
+    - paragraphs.paragraphs_type.referenced_card
+id: paragraph.referenced_card.field_article
+field_name: field_article
+entity_type: paragraph
+bundle: referenced_card
+label: Article
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
