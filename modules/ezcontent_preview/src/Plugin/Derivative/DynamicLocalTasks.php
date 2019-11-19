@@ -17,6 +17,7 @@ class DynamicLocalTasks extends DeriverBase {
   public function getDerivativeDefinitions($base_plugin_definition) {
     $decoupledRoutes = \Drupal::entityTypeManager()->getStorage('ezcontent_preview')->loadMultiple();
     if ($decoupledRoutes) {
+      // @TODO better way to find get the node object
       $current_path = \Drupal::service('path.current')->getPath();
       $path_args = explode('/', $current_path);
       if ($path_args && $path_args[1] == 'node') {

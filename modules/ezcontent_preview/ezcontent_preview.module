@@ -5,66 +5,17 @@ use Drupal\Core\Url;
 use Drupal\ezcontent_preview\Utils;
 
 /**
- * Implementation of hook_form_alter
- */
-function ezcontent_preview_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-    // check if preview button is enabled
-    if (isset($form['actions']['preview'])) {
-        if ($form_state->getFormObject() instanceof EntityForm) {
-            /*
-            $entity = $form_state->getFormObject();
-            if($entity->getEntity()->id()){
-                $form['actions']['preview']['#submit'][] = 'ezcontent_preview_form_submit';
-            } else {
-                $form['actions']['preview']['#access'] = FALSE;
-            }
-            */
-        }
-    }
-}
-
-/**
- * Implements hook_menu_local_tasks_alter().
- */
-/*
-function ezcontent_preview_menu_local_tasks_alter(&$data, $route_name) {
-    foreach ($data['tabs'] as $key1 => $tabs) {
-        foreach ($tabs as $key2 => $item) {
-            // open links on new tab if selected as external
-            if ($key2 == 'ezcontent.preview.view') {
-                $config = \Drupal::config('ezcontent_preview.settings');
-                $new_window = $config->get('ezcontent_preview_new_window');
-                if ($new_window) {
-                    $node = \Drupal::routeMatch()->getParameter('node');
-                    $url_utils = new Utils();
-                    $options = [
-                        'attributes' => [
-                            'target' => '_blank'
-                        ]
-                    ];
-                    $url = $url_utils->buildUrl($node, $options);
-                    if ($url) {
-                        $data['tabs'][$key1][$key2]['#link']['url']  = $url;
-                    }
-                }
-            }
-        }
-    }
-}
-*/
-
-/**
- * Implements hook_views_data_alter().
+ * Implements hook_views_data_alter()
  */
 function ezcontent_preview_views_data_alter(&$data) {
-    $label = 'Published or Access Unpublished Token';
-    $data['node']['published_access_unpublished_token'] = array(
-        'title' => $label,
-        'filter' => array(
-            'title' => $label,
-            'help' => t('Published or Access unpublish content with token'),
-            'field' => 'nid',
-            'id' => 'published_access_unpublished_token'
-        ),
-    );
+	$label = 'Published or Access Unpublished Token';
+	$data['node']['published_access_unpublished_token'] = array(
+		'title' => $label,
+		'filter' => array(
+			'title' => $label,
+			'help' => t('Published or Access unpublish content with token'),
+			'field' => 'nid',
+			'id' => 'published_access_unpublished_token'
+		),
+	);
 }
