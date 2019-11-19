@@ -15,7 +15,6 @@ class Utils {
 
   public function buildUrl(NodeInterface $node = NULL, $decoupledRoutes, $options = []) {
     $config = \Drupal::config('ezcontent_preview.settings');
-    //$preview_base_url = $config->get('ezcontent_preview_url');
     $preview_base_url = $decoupledRoutes->url;
 
     if (!$preview_base_url) {

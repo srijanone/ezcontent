@@ -4,8 +4,11 @@ namespace Drupal\ezcontent_preview\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\NodeInterface;
-use Drupal\ezcontent_preview\Utils;
 use Drupal\Core\Routing\TrustedRedirectResponse; 
+use Drupal\Core\Entity\EntityTypeManager;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+use Drupal\ezcontent_preview\Utils;
 
 
 /**
@@ -13,10 +16,28 @@ use Drupal\Core\Routing\TrustedRedirectResponse;
  */
 class PreviewView extends ControllerBase {
 
+  protected $entityTypeManager;
+
+  /**
+   * Constructor
+   */
+  public function __construct(EntityTypeManager $entity_type_manager) {
+    $this->entityTypeManager = $entity_type_manager;
+  }
+
+   /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('entity_type.manager')->getStorage('ezcontent_preview')
+    );
+  }
+
   public function preview(NodeInterface $node = NULL, $preview_type) {
 
     if ($preview_type) {
-      $decoupledRoutes = \Drupal::entityTypeManager()->getStorage('ezcontent_preview')->load($preview_type);
+      $decoupledRoutes = $this->entityTypeManager->load($preview_type);
       if($decoupledRoutes) {
         $urlUtils = new Utils();
         $url = $urlUtils->buildUrl($node, $decoupledRoutes);
