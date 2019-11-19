@@ -1,6 +1,6 @@
 //import
-@import 'abstracts/mixins';
-@import 'abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
 
 .paragraph--type--gallery-carousel {
   @include clearfix;
@@ -54,5 +54,5 @@
     &:empty {
       display: none;
     }
-  } 
+  }
 }
