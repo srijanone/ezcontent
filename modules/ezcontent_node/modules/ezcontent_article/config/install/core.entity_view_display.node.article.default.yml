@@ -34,20 +34,34 @@ content:
       link: ''
     third_party_settings: {  }
   field_meta_tags:
-    weight: 101
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
+  field_short_title:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_subhead:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_short_title: true
-  field_subhead: true
   field_summary: true
   field_tags: true
   field_thumbnail: true
