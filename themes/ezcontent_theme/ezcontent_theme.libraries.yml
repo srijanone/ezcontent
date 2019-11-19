@@ -3,24 +3,23 @@ framework:
     theme:
       css/glyphicons.css: {}
       css/style.css: {}
-      css/paragraph_type_map.css: {}
-      css/paragraph_type_social.css: {}
-      css/paragraph_type_embed.css: {}
-      css/paragraph_type_hero_media.css: {}
-      css/paragraph_type_card.css: {}
-      css/paragraph_type_card_list.css: {}
-      css/paragraph_type_asset.css: {}
-      css/paragraph_type_gallery.css: {}
-      css/paragraph_type_gallery_carousel.css: {}
-      css/paragraph-type-quotes.css: {}
-      css/paragraph_type_faq.css: {}
-      css/paragraph_type_form.css: {}
-      css/paragraph_type_referenced.css: {}
-      css/paragraph_type_view_list.css: {}
-      css/block_type_hero_media.css: {}
-      css/block_type_map.css: {}
-      css/block_type_embed.css: {}
-      css/block_type_socialmedia.css: {}
+      css/paragraph/map.css: {}
+      css/paragraph/social.css: {}
+      css/paragraph/embed.css: {}
+      css/paragraph/hero_media.css: {}
+      css/paragraph/card.css: {}
+      css/paragraph/card_list.css: {}
+      css/paragraph/asset.css: {}
+      css/paragraph/gallery.css: {}
+      css/paragraph/gallery_carousel.css: {}
+      css/paragraph/quotes.css: {}
+      css/paragraph/faq.css: {}
+      css/paragraph/form.css: {}
+      css/paragraph/view_list.css: {}
+      css/block/hero_media.css: {}
+      css/block/map.css: {}
+      css/block/embed.css: {}
+      css/block/socialmedia.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:
