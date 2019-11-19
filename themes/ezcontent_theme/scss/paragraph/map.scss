@@ -9,14 +9,12 @@
   .field {
 
     &--name-field-title {
-      font-family: $secondary-font;
+      font-family: $heading-font;
       font-size: 30px;
-      font-weight: 500;
     }
 
     &--name-field-short-title {
       font-size: 18px;
-      font-weight: 400;
       padding: 10px 0;
     }
 

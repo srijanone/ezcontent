@@ -12,8 +12,7 @@ h4,
 h5,
 h6,
 caption {
-  font-family: $primary-font;
-  font-weight: 700;
+  font-family: $heading-font;
 }
 
 .no-padding {
@@ -165,8 +164,4 @@ img {
     }
 
   }
-}
-
-.block-title {
-  font-weight: 500;
 }
