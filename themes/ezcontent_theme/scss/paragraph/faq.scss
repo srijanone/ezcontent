@@ -1,6 +1,6 @@
 //import
-@import 'abstracts/mixins';
-@import 'abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
 
 .paragraph--type--faq {
   margin: 30px auto;
@@ -22,7 +22,7 @@
       background-color: $color-white-light;
       border-color: $color-grey-light-2;
       margin-bottom: 10px;
-      
+
       span.ui-accordion-header-icon {
         background: transparent !important;
         font-family: "Glyphicons Halflings" !important;
