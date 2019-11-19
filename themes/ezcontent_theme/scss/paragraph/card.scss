@@ -33,21 +33,19 @@
 
     &--name-field-title {
       font-size: 30px;
-      font-weight: 500;
       margin-top: 20px;
       padding: 0 10px;
+      font-family: $heading-font;
     }
 
     &--name-field-short-title {
       font-size: 14px;
-      font-weight: 500;
       padding: 5px 10px;
     }
 
     &--name-field-subhead {
       border-top: 1px solid $color-white;
       font-size: 14px;
-      font-weight: 500;
       padding: 10px;
     }
 
