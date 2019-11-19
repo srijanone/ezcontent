@@ -14,6 +14,7 @@ dependencies:
   module:
     - entity_browser
     - field_group
+    - length_indicator
     - metatag
     - paragraphs
     - path
@@ -214,7 +215,13 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      length_indicator:
+        indicator: true
+        indicator_opt:
+          optimin: 20
+          optimax: 30
+          tolerance: 5
   uid:
     type: entity_reference_autocomplete
     weight: 5

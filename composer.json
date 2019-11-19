@@ -41,6 +41,7 @@
     "drupal/layout_builder_modal": "^1.0@alpha",
     "drupal/layout_builder_restrictions": "^2.1",
     "drupal/layout_library": "^1.0-beta1",
+    "drupal/length_indicator": "^1.0",
     "drupal/libraries": "3.0-alpha1",
     "drupal/linkit": "~5.0",
     "drupal/media_entity_browser": "2.x",
