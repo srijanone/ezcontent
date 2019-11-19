@@ -1,8 +1,8 @@
 //import
-@import 'abstracts/mixins';
-@import 'abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
 
-.paragraph--type--hero-media {
+.block--type-hero-media-block {
   margin: 30px -15px;
   padding: 0;
 

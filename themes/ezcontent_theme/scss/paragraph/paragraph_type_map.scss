@@ -1,14 +1,10 @@
 //import
-@import 'abstracts/mixins';
-@import 'abstracts/variables';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
 
-.block--type-map-block {
+.paragraph--type--map {
   @include clearfix;
   padding: 30px 0;
-
-  .block-title {
-    margin-bottom: 5px;
-  }
 
   .field {
 
