@@ -38,6 +38,7 @@
     "drupal/google_analytics": "^3.0",
     "drupal/inline_entity_form": "^1.0@RC",
     "drupal/jsonapi_extras": "^3.12",
+    "drupal/layout_builder_modal": "^1.0@alpha",
     "drupal/layout_builder_restrictions": "^2.1",
     "drupal/layout_library": "^1.0-beta1",
     "drupal/libraries": "3.0-alpha1",
