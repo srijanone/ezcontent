@@ -4,12 +4,12 @@
 
 .paragraph--type--card {
   @include clearfix;
-  background: $color-white-light;
-  margin: 30px 0;
+  background: $color-grey-light-dark;
+  margin-bottom: 30px;
   padding: 0;
 
   .layout {
-    background: $color-white-light;
+    background: $color-grey-light-dark;
 
     .layout__region {
       padding: 0 15px;
@@ -60,6 +60,7 @@
       align-items: center;
       display: flex;
       margin: 0 auto;
+      padding: 15px 0;
     }
 
     &--name-field-link {
