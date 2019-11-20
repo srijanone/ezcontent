@@ -12,8 +12,7 @@ h4,
 h5,
 h6,
 caption {
-  font-family: $primary-font;
-  font-weight: 700;
+  font-family: $heading-font;
 }
 
 .no-padding {
@@ -92,7 +91,7 @@ table {
 }
 
 .main-container {
-  margin-top: 75px;
+  margin-top: 100px;
   min-height: 40rem;
 }
 
@@ -101,7 +100,7 @@ img {
 }
 
 .paragraph {
-  padding: 30px 0;
+  margin-bottom: 30px;
 }
 
 .ui-dialog-position-side {
@@ -165,8 +164,4 @@ img {
     }
 
   }
-}
-
-.block-title {
-  font-weight: 500;
 }

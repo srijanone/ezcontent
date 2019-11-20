@@ -11,8 +11,8 @@
 
     &--name-field-title {
       font-size: 30px;
-      font-weight: 500;
       margin-top: 20px;
+      font-family: $heading-font;
     }
 
     &--name-field-body {
@@ -31,9 +31,7 @@
         display: inline-block;
         flex: 0 0 25%;
         max-width: 25%;
-        padding: 10px;
-        margin: 10px 0;
-
+        padding: 3px;
         @include respond(tab-port) {
           flex: 0 0 33.33333%;
           max-width: 33.33333%;
@@ -50,28 +48,13 @@
       align-items: center;
       display: flex;
       margin: 0 auto;
-      padding: 10px;
-      background: #f2f2f2;
-
-      &:hover {
-        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
-      }
-
-      a {
-        border: 1px solid #ddd;
-        overflow: hidden;
-      }
+      overflow: hidden;
 
       img {
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
         transition: opacity 0.35s, transform 0.35s;
         -webkit-transform: scale(1.15);
         transform: scale(1.15);
-
-        &:hover {
-          transform: scale(1);
-        }
       }
     }
   }

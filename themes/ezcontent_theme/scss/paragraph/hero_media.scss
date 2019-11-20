@@ -3,7 +3,6 @@
 @import '../abstracts/variables';
 
 .paragraph--type--hero-media {
-  margin: 30px -15px;
   padding: 0;
 
   .slick-arrow {
@@ -63,7 +62,6 @@
 
       &--name-field-title {
         font-size: 36px;
-        font-weight: 500;
         letter-spacing: 1px;
         line-height: 37px;
         padding: 0 10px;
@@ -79,7 +77,6 @@
 
       &--name-field-short-title {
         font-size: 18px;
-        font-weight: 500;
         padding: 5px 10px 0;
         margin: 0;
 
@@ -91,7 +88,6 @@
       &--name-field-subhead {
         border-color: transparent;
         font-size: 16px;
-        font-weight: 500;
         padding: 5px 10px 0;
 
         @include respond(tab-land) {
