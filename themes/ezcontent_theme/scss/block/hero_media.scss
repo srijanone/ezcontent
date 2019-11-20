@@ -120,5 +120,12 @@
         }
       }
     }
+    &.paragraph--view-mode--hero-media {
+      .field {
+        &--name-field-media-image {
+          padding: 0;
+        }
+      }
+    }
   }
 }
