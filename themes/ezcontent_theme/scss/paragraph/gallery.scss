@@ -4,7 +4,7 @@
 
 .paragraph--type--gallery {
   @include clearfix;
-  margin: 30px 0;
+  margin-bottom: 30px;
   padding: 0;
 
   .field {
@@ -13,6 +13,7 @@
       font-size: 30px;
       margin-top: 20px;
       font-family: $heading-font;
+      margin-bottom: 10px;
     }
 
     &--name-field-body {
