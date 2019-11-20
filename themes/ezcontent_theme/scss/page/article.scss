@@ -1,0 +1,40 @@
+//import
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.path-node {
+  .page-header {
+    font-size: 42px;
+    line-height: 46px;
+    border: none;
+    margin-bottom: 10px;
+  }
+  .full {
+  .content {
+      > .field--name-field-subhead  {
+        font-family: $heading-font;
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .paragraph--type--text {
+    p,
+    ol,
+    ul {
+      max-width: 810px;
+      margin: 0 0 0 auto;
+    }
+    img {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    p {
+      margin-bottom: 1em;
+      line-height: 24px;
+    }
+  }
+  .region-content {
+    padding-bottom: 40px;
+  }
+}

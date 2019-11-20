@@ -20,6 +20,7 @@ framework:
       css/block/map.css: {}
       css/block/embed.css: {}
       css/block/socialmedia.css: {}
+      css/page/article.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:
