@@ -4,7 +4,7 @@
 
 .paragraph--type--gallery-carousel {
   @include clearfix;
-  margin: 30px 0;
+  margin-bottom: 30px;
   padding: 0;
   position: relative;
 
@@ -58,7 +58,7 @@
   .slick-wrapper {
     margin-bottom: 0;
     .slick-list {
-      padding: 30px 0 0 0;
+      padding-bottom: 30px;
     }
   }
 }

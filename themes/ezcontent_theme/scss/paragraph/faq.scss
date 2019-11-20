@@ -3,7 +3,7 @@
 @import '../abstracts/variables';
 
 .paragraph--type--faq {
-  margin: 30px auto;
+  margin-bottom: 30px;
   padding: 0;
 
   a,
@@ -22,6 +22,7 @@
       background-color: $color-white-light;
       border-color: $color-grey-light-2;
       margin-bottom: 10px;
+      font-size: 20px;
 
       span.ui-accordion-header-icon {
         background: transparent !important;
