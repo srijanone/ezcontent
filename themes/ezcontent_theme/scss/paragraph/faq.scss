@@ -69,3 +69,13 @@
     }
   }
 }
+
+.paragraph--type--faq-qa {
+  .field {
+    &--name-field-question {
+      font-size: 24px;
+      font-family: $heading-font;
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -21,6 +21,7 @@ framework:
       css/block/embed.css: {}
       css/block/socialmedia.css: {}
       css/page/article.css: {}
+      css/admin/layout_builder_modal.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:
