@@ -16,6 +16,7 @@
     }
   },
   "require": {
+    "bower-asset/chosen": "^1.8.7",
     "bower-asset/colorbox": "^1.6",
     "bower-asset/dropzone": "^5.1",
     "bower-asset/slick-carousel": "^1.8",
@@ -27,6 +28,7 @@
     "drupal/allowed_formats": "^1.1",
     "drupal/block_blacklist": "^1.0",
     "drupal/bootstrap": "^3.20",
+    "drupal/chosen": "^2.8",
     "drupal/claro": "^1.0@alpha",
     "drupal/colorbox": "^1.4",
     "drupal/decoupled_router": "^1.11",
@@ -71,7 +73,6 @@
     "drupal/viewsreference": "2.x-dev",
     "drupal/webform": "^5.4",
     "oomphinc/composer-installers-extender": "^1.1",
-    "drupal/access_unpublished": "^1.0@alpha",
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
