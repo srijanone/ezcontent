@@ -1,8 +1,3 @@
-ezcontent.preview.view:
-  title: Decoupled Preview
-  route_name: ezcontent.preview.view
-  description: 'EZContent preview view page'
-  base_route: entity.node.canonical
-  class: \Drupal\ezcontent_preview\Plugin\Menu\DynamicTab
+ezcontent_preview.local_tasks:
+  deriver: \Drupal\ezcontent_preview\Plugin\Derivative\DynamicLocalTasks
   weight: 100
-  

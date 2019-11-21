@@ -71,6 +71,7 @@
     "drupal/viewsreference": "2.x-dev",
     "drupal/webform": "^5.4",
     "oomphinc/composer-installers-extender": "^1.1",
+    "drupal/access_unpublished": "^1.0@alpha"
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
