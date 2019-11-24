@@ -117,7 +117,6 @@ class PreviewForm extends EntityForm {
       ]), MessengerInterface::TYPE_ERROR);
     }
 
-
     $form_state->setRedirect('entity.ezcontent_preview.collection');
   }
 
