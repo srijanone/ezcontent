@@ -23,7 +23,7 @@ class PreviewDeleteForm extends EntityConfirmFormBase {
    * {@inheritdoc}
    */
   public function getCancelUrl() {
-    return new Url('ezcontent.preview.collection');
+    return new Url('entity.ezcontent_preview.collection');
   }
 
   /**
