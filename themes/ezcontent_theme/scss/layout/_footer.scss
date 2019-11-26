@@ -23,12 +23,6 @@
     li {
       a {
         color: $color-grey-light-3;
-
-        &:before {
-          content: url(../images/righticon.svg);
-          padding-right: 10px;
-
-        }
       }
 
     }
