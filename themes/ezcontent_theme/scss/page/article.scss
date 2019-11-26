@@ -4,8 +4,7 @@
 
 .path-node {
   .page-header {
-    font-size: 42px;
-    line-height: 46px;
+    @extend %h1;
     border: none;
     margin-bottom: 10px;
   }

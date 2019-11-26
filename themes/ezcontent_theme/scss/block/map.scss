@@ -14,7 +14,7 @@
 
     &--name-field-title {
       font-family: $heading-font;
-      font-size: 30px;
+      @extend %h2;
     }
 
     &--name-field-short-title {

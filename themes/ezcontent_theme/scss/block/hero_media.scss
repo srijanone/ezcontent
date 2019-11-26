@@ -62,7 +62,7 @@
     .field {
 
       &--name-field-title {
-        font-size: 36px;
+        @extend %h2;
         letter-spacing: 1px;
         line-height: 37px;
         padding: 0 10px;
