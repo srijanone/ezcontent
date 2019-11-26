@@ -62,6 +62,9 @@
   @if $breakpoint == phone {
       @media only screen and (max-width: 37.5em) { @content };    //600px
   }
+  @if $breakpoint == phone-min {
+      @media only screen and (min-width: 37.5em) { @content };    //600px
+  }
   @if $breakpoint == tab-port {
       @media only screen and (max-width: 56.25em) { @content };     //900px
   }
@@ -73,5 +76,23 @@
   }
   @if $breakpoint == tab-port-min {
       @media only screen and (min-width: 56.25em) { @content };    //1800
+  }
+}
+
+// placeholder
+%h1 {
+  font-size: 36px;
+  line-height: 40px;
+  @include respond(phone-min) {
+    font-size: 42px;
+    line-height: 46px;
+  }
+}
+%h2 {
+  font-size: 20px;
+  line-height: 24px;
+  @include respond(phone-min) {
+    font-size: 30px;
+    line-height: 34px;
   }
 }
