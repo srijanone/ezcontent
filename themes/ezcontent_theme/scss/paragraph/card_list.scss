@@ -36,15 +36,7 @@
     .field {
 
       &--name-field-card {
-        @include respond(tab-port-min) {
-          display: flex;
-          flex-wrap: wrap;
-        }
-        >.field--item:not(.card_left_media):not(.card_right_media) {
-          @include respond(tab-port-min) {
-            flex: 0 0 33.33%;
-          }
-        }
+        display:  inline-block;
       }
       &--name-field-short-title{
         font-size: 16px;
