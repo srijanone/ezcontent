@@ -15,9 +15,8 @@
   >.field {
 
     &--name-field-title {
-      font-size: 32px;
+      @extend %h2;
       letter-spacing: 1px;
-      line-height: 50px;
       padding: 15px 10px 0;
       text-align: center;
       font-family: $heading-font;

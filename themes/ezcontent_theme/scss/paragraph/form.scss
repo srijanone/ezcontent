@@ -14,7 +14,7 @@
   .field {
 
     &--name-field-title {
-      font-size: 30px;
+      @extend %h2;
       margin: 0 auto 20px;
     }
   }

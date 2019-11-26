@@ -8,7 +8,7 @@
   .field {
 
     &--name-field-title {
-      font-size: 30px;
+      @extend %h2;
       margin-top: 20px;
     }
 
