@@ -10,7 +10,7 @@
   .field {
 
     &--name-field-title {
-      font-size: 30px;
+      @extend %h2;
       margin-top: 20px;
       font-family: $heading-font;
       margin-bottom: 10px;
@@ -27,21 +27,11 @@
       margin: 20px 0;
       align-items: center;
       justify-content: center;
+      width: 100%;
 
       >.field--item {
         display: inline-block;
-        flex: 0 0 25%;
-        max-width: 25%;
-        padding: 3px;
-        @include respond(tab-port) {
-          flex: 0 0 33.33333%;
-          max-width: 33.33333%;
-        }
-
-        @include respond(phone) {
-          flex: 0 0 50%;
-          max-width: 50%;
-        }
+        padding: 2px;
       }
     }
 
