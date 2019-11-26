@@ -57,7 +57,12 @@
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field--items') }}>
       {% for item in items %}
-        {% set layoutClass = item.content['#paragraph'].layout_selection.target_id %}
+        {% set layoutClassC = item.content['#paragraph'].layout_selection.target_id %}
+        {% if layoutClassC == ''%}
+            {% set layoutClass = 'col-xs-12 col-sm-4' %}
+        {% else %}
+            {% set layoutClass = 'col-xs-12' %}
+        {% endif %}
         <div{{ item.attributes.addClass('field--item ' ~ layoutClass) }}>{{ item.content }}</div>
       {% endfor %}
     </div>
