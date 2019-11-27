@@ -4,15 +4,21 @@
 
 .paragraph--type--card {
   @include clearfix;
-  background: $color-grey-light-dark;
   margin-bottom: 30px;
   padding: 0;
-
+  &.card_left_media {
+    .layout__region--second {
+      padding: 0 0 0 80px ;
+    }
+  }
+  &.card_right_media {
+    .layout__region--first {
+      padding: 0 80px 0 0 ;
+    }
+  }
   .layout {
-    background: $color-grey-light-dark;
 
     .layout__region {
-      padding: 0 15px;
 
       img {
         margin: 0 auto;
@@ -33,38 +39,36 @@
 
     &--name-field-title {
       @extend %h2;
-      margin-top: 20px;
-      padding: 0 10px;
       font-family: $heading-font;
+      margin-top: 20px;
+      margin-bottom: 15px;
     }
 
     &--name-field-short-title {
       font-size: 14px;
-      padding: 5px 10px;
+      margin-bottom: 8px;
     }
 
     &--name-field-subhead {
       border-top: 1px solid $color-white;
       font-size: 14px;
-      padding: 10px;
+      margin-bottom: 8px;
     }
 
     &--name-field-summary {
       border-bottom: 1px solid $color-white;
       display: block;
       font-size: 16px;
-      padding: 10px;
+      margin-bottom: 15px;
     }
 
     &--name-field-media-image {
       align-items: center;
       display: flex;
       margin: 0 auto;
-      padding: 15px 0;
     }
 
     &--name-field-link {
-      padding: 10px;
       text-align: right;
 
       a {

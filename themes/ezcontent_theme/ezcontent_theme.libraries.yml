@@ -72,6 +72,10 @@ paragraph-type-view:
     theme:
       css/paragraph/view.css: {}
 
+full-width-bg-background:
+  css:
+    theme:
+      css/layout/full-width-bg-background.css: {}
 
 # Uncomment for LESS source JavaScript files.
 #  js:

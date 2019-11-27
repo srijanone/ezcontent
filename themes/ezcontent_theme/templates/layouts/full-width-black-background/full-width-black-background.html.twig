@@ -1,0 +1,12 @@
+{{ attach_library("ezcontent_theme/full-width-bg-background") }}
+{% if content %}
+  {% if content.middle %}
+    <div {{ attributes.addClass('full-width-content-template-black-background') }}>
+      <div class="container">
+          <div {{ region_attributes.middle.addClass('middle-region') }}>
+            {{ content.middle }}
+          </div>
+      </div>
+    </div>
+  {% endif %}
+{% endif %}
