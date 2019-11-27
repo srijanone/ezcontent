@@ -1,0 +1,15 @@
+//import
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.full-width-content-template-black-background {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  padding: 20px 0;
+  margin-bottom: 60px;
+}
+.full-width-content-template-black-background {
+  * {
+    color: $color-white;
+  }
+}
