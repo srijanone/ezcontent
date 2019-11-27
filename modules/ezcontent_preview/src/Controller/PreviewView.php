@@ -7,6 +7,8 @@ use Drupal\node\NodeInterface;
 use Drupal\Core\Routing\TrustedRedirectResponse; 
 use Drupal\Core\Entity\EntityTypeManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
 
 use Drupal\ezcontent_preview\Utils;
 
@@ -51,6 +53,21 @@ class PreviewView extends ControllerBase {
       '#type' => 'markup',
       '#markup' => '',
     );
+  }
+
+  /** 
+   * Custom access validation
+  */
+  public function access(AccountInterface $account, $preview_type) {
+    $decoupledRoutes = \Drupal::entityTypeManager()->getStorage('ezcontent_preview')->load($preview_type);
+    $nid = \Drupal::routeMatch()->getRawParameter('node');
+    $node = \Drupal::entityManager()->getStorage('node')->load($nid);
+    foreach($decoupledRoutes->content_entity as $entType) {
+      if ($entType === $node->bundle()) {
+        return AccessResult::allowed();
+      }
+    }
+    return AccessResult::forbidden();
   }
 
 }
