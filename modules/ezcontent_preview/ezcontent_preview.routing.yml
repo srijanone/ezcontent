@@ -38,4 +38,5 @@ ezcontent.preview.view:
     preview_type: ''
   requirements:
     _permission: 'EZContent view preview'
+    _custom_access: '\Drupal\ezcontent_preview\Controller\PreviewView::access'
     node: \d+
