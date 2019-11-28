@@ -3,21 +3,19 @@
 @import '../abstracts/variables';
 
 .paragraph--type--card-list {
-  background: $color-white;
-  border: 1px solid $color-grey-light-2;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   padding: 0;
 
   .paragraph--type--card {
-    margin: 0;
+    margin-bottom: 30px;
   }
 
   >.field {
 
     &--name-field-title {
       @extend %h2;
-      letter-spacing: 1px;
-      padding: 15px 10px 0;
+      padding: 0 15px;
+      margin-bottom: 30px;
       text-align: center;
       font-family: $heading-font;
     }
@@ -27,7 +25,7 @@
 
     &--name-field-card {
       >.field--item {
-        padding: 10px;
+        padding: 0 10px;
       }
     }
   }
