@@ -32,27 +32,26 @@
 
 @mixin btnstyle {
   background: $color-primary;
-  border: 1px solid $color-primary;
-  border-radius: 4px;
+  border: 0;
   color: $color-white;
   display: inline-block;
   font-size: 16px;
   line-height: 1.42857143;
   margin-bottom: 0;
-  padding: 5px 10px;
+  padding: 7px 15px;
   position: relative;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
 
   &:hover {
-    background: $color-primary;
+    background: $color-primary-hover;
     color: $color-white;
     text-decoration: none;
   }
 
   &:focus {
-    background: $color-primary;
+    background: $color-primary-hover;
     color: $color-white;
     text-decoration: none;
   }

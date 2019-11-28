@@ -56,9 +56,8 @@
 {% include '@ezcontent_theme/includes/header.html.twig' %}
 {# Main #}
 {% block main %}
-    <div role="main" class="main-container {{ container }} js-quickedit-main-content">
-        <div
-            class="row">
+    <div role="main" class="main-container js-quickedit-main-content">
+        <div>
 
             {# Header #}
             {% if page.header %}
@@ -83,8 +82,7 @@
         set content_classes = [
           page.sidebar_first and page.sidebar_second ? 'col-sm-6',
           page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-          page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9'
         ]
       %}
             <section{{content_attributes.addClass(content_classes)}}>
