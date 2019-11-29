@@ -41,6 +41,7 @@ install:
   - quickedit
   - rdf
   - redirect
+  - robotstxt
   - scheduler
   - search
   - shortcut
