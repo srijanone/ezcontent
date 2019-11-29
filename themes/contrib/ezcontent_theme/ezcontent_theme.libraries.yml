@@ -1,0 +1,78 @@
+framework:
+  css:
+    theme:
+      css/glyphicons.css: {}
+      css/style.css: {}
+      css/block/hero_media.css: {}
+      css/block/map.css: {}
+      css/block/embed.css: {}
+      css/block/socialmedia.css: {}
+      css/page/article.css: {}
+      css/admin/layout_builder_modal.css: {}
+
+
+paragraph-type-gallery:
+  css:
+    theme:
+      css/paragraph/gallery.css: {}
+
+paragraph-type-faq:
+  css:
+    theme:
+      css/paragraph/faq.css: {}
+
+paragraph-type-quote:
+  css:
+    theme:
+      css/paragraph/quotes.css: {}
+
+paragraph-type-card:
+  css:
+    theme:
+      css/paragraph/card.css: {}
+      css/paragraph/card_list.css: {}
+
+paragraph-type-hero-media:
+  css:
+    theme:
+      css/paragraph/hero_media.css: {}
+
+paragraph-type-embed:
+  css:
+    theme:
+      css/paragraph/embed.css: {}
+
+paragraph-type-social-media:
+  css:
+    theme:
+      css/paragraph/social.css: {}
+
+paragraph-type-gallery-carousel:
+  css:
+    theme:
+      css/paragraph/gallery_carousel.css: {}
+
+paragraph-type-map:
+  css:
+    theme:
+      css/paragraph/map.css: {}
+
+paragraph-type-assets:
+  css:
+    theme:
+      css/paragraph/assets.css: {}
+
+paragraph-type-form:
+  css:
+    theme:
+      css/paragraph/form.css: {}
+
+paragraph-type-view:
+  css:
+    theme:
+      css/paragraph/view.css: {}
+
+full-width-bg-background:
+  css:
+    theme:
+      css/layout/full-width-bg-background.css: {}

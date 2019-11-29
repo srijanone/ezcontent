@@ -1,0 +1,14 @@
+/* style for paragraph modal box */
+.paragraphs-add-dialog-list .paragraphs-add-wrapper  {
+   margin: 0 0.75em 0 0;
+}
+
+.paragraphs-tabs-wrapper .form-actions {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+
+.paragraphs-tabs-wrapper .form-actions .paragraph-type-add-modal-button {
+  margin-right: 10px;
+}

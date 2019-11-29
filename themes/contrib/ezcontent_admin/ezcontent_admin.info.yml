@@ -1,0 +1,12 @@
+core: 8.x
+type: theme
+base theme: claro
+
+name: 'Ezcontent Admin Theme'
+description: 'A clean, accessible, and powerful drupal Administration theme(Base Theme Claro).'
+package: 'Claro'
+
+
+libraries-extend:
+  claro/global-styling:
+    - ezcontent_admin/framework

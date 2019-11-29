@@ -1,0 +1,43 @@
+//import
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.paragraph--type--card-list {
+  margin-bottom: 30px;
+  padding: 0;
+
+  .paragraph--type--card {
+    margin-bottom: 60px;
+  }
+
+  >.field {
+
+    &--name-field-title {
+      @extend %h2;
+      padding: 0 15px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-family: $heading-font;
+    }
+  }
+
+  .field {
+
+    &--name-field-card {
+      >.field--item {
+        padding: 0 10px;
+      }
+    }
+  }
+  &.paragraph--view-mode--default {
+    .field {
+
+      &--name-field-card {
+        display:  inline-block;
+      }
+      &--name-field-short-title{
+        font-size: 16px;
+      }
+    }
+  }
+}
