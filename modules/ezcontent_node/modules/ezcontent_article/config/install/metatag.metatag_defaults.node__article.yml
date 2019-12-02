@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node__article
+label: 'Content: Article'
+tags:
+  title: '[node:title] | [site:name]'
+  content_language: '[node:langcode]'
+  canonical_url: '[node:url]'
+  description: '[node:summary]'
+  schema_article_date_modified: '[node:changed]'
+  schema_article_type: Article
+  schema_article_is_accessible_for_free: 'True'
+  schema_article_main_entity_of_page: '[node:url]'
+  schema_article_image: 'a:4:{s:5:"@type";s:11:"ImageObject";s:3:"url";s:39:"[node:field_thumbnail:entity:thumbnail]";s:5:"width";s:3:"100";s:6:"height";s:3:"100";}'
+  schema_article_headline: '[node:title]'
+  schema_article_publisher: 'a:4:{s:5:"@type";s:6:"Person";s:3:"@id";s:17:"[node:author:url]";s:4:"name";s:26:"[node:author:display-name]";s:3:"url";s:17:"[node:author:url]";}'
+  schema_article_about: '[node:field_tags]'
+  schema_article_name: '[node:title]'
+  schema_article_description: '[node:summary]'
+  schema_article_date_published: '[node:created]'
+  schema_article_author: 'a:4:{s:5:"@type";s:6:"Person";s:3:"@id";s:17:"[node:author:url]";s:4:"name";s:26:"[node:author:display-name]";s:3:"url";s:17:"[node:author:url]";}'

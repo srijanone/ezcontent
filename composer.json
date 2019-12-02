@@ -64,6 +64,7 @@
     "drupal/redirect": "^1.4",
     "drupal/robotstxt": "^1.2",
     "drupal/scheduler": "^1.1",
+    "drupal/schema_metatag": "^1.4",
     "drupal/simple_gmap": "^1.4",
     "drupal/simple_oauth": "^3.16",
     "drupal/simple_sitemap": "^3.3",
