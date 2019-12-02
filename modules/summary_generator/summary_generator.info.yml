@@ -1,0 +1,6 @@
+name: Summary Generator
+type: module
+description: Summary genertor from the xls sheet
+core: 8.x
+package: Custom
+configure: summary_generator.config
