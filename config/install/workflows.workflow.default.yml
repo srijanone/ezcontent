@@ -1,8 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.article
+    - node.type.page
   module:
-  - content_moderation
+    - content_moderation
 id: default
 label: Default
 type: content_moderation
@@ -32,19 +35,19 @@ type_settings:
     archived_to_draft:
       label: 'Un-archive to Draft'
       from:
-      - archived
+        - archived
       to: draft
       weight: -2
     archived_to_published:
       label: 'Un-archive to Published'
       from:
-      - archived
+        - archived
       to: published
       weight: -1
     archived_to_review:
       label: 'Un-archive to Review'
       from:
-      - archived
+        - archived
       to: needs_review
       weight: -3
     create_new_draft:
@@ -52,12 +55,12 @@ type_settings:
       to: draft
       weight: -4
       from:
-      - draft
-      - published
+        - draft
+        - published
     draft_need_review:
       label: 'Need Review'
       from:
-      - draft
+        - draft
       to: needs_review
       weight: 0
     publish:
@@ -65,31 +68,34 @@ type_settings:
       to: published
       weight: 1
       from:
-      - draft
-      - published
+        - draft
+        - published
     published_archive:
       label: Archive
       from:
-      - published
+        - published
       to: archived
       weight: 2
     review_archived:
       label: 'Review to Archive'
       from:
-      - needs_review
+        - needs_review
       to: archived
       weight: 5
     review_draft:
       label: 'Review to Draft'
       from:
-      - needs_review
+        - needs_review
       to: draft
       weight: 4
     review_published:
       label: Publish
       from:
-      - needs_review
+        - needs_review
       to: published
       weight: 3
   default_moderation_state: draft
-  entity_types: {  }
+  entity_types:
+    node:
+      - article
+      - page

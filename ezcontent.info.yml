@@ -25,8 +25,9 @@ install:
   - dblog
   - editor
   - entity_embed
-  - ezcontent_media
+  - ezcontent_article
   - ezcontent_basic_page
+  - ezcontent_media
   - field_ui
   - file
   - google_analytics
@@ -35,6 +36,8 @@ install:
   - image
   - linkit
   - metatag
+  - moderation_dashboard
+  - moderation_sidebar
   - options
   - path
   - pathauto
