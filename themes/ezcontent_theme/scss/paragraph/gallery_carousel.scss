@@ -55,10 +55,42 @@
       display: none;
     }
   }
+
   .slick-wrapper {
     margin-bottom: 0;
+  }
+
+  .slick-dotted {
+
+    .slick__slide {
+      height: 11px;
+      width: 11px !important;
+      display: inline-block;
+      background: $color-grey-light-4;
+      margin-right: 8px !important;
+      margin-left: 0 !important;
+      cursor: pointer;
+
+      &:before {
+        display: none !important;
+      }
+
+      &.slick-current {
+        background: $color-primary;
+        box-shadow: none !important;
+      }
+    }
+
     .slick-list {
+      padding-top: 5px !important;
       padding-bottom: 30px;
+
+      .slick-track {
+        left: 0 !important;
+        width: auto !important;
+        text-align: left;
+      }
     }
   }
+
 }
