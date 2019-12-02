@@ -10,3 +10,4 @@ dependencies:
   - ezcontent_text
   - ezcontent_assets
   - length_indicator
+  - schema_article

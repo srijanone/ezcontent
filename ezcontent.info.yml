@@ -35,7 +35,7 @@ install:
   - history
   - image
   - linkit
-  - metatag
+  - schema_metatag
   - moderation_dashboard
   - moderation_sidebar
   - options
