@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.article.field_thumbnail
     - node.type.article
   module:
+    - autocomplete_deluxe
     - content_moderation
     - entity_browser
     - field_group
@@ -28,6 +29,7 @@ third_party_settings:
         - title
         - field_short_title
         - field_subhead
+        - field_author
       parent_name: ''
       weight: 0
       format_type: fieldset
@@ -95,13 +97,21 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_author:
-    weight: 123
+    weight: -2
     settings:
+      limit: '10'
+      min_length: '0'
+      delimiter: ''
+      not_found_message_allow: '1'
+      not_found_message: 'Author ''@term'' could not be found.'
+      no_empty_message: 'No Author found.'
+      new_terms: 0
       match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
       size: 60
-      placeholder: ''
+      selection_handler: default
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: autocomplete_deluxe
     region: content
   field_content:
     type: paragraphs
@@ -128,7 +138,7 @@ content:
     type: metatag_firehose
     region: content
   field_short_title:
-    weight: 2
+    weight: -4
     settings:
       size: 60
       placeholder: ''
@@ -136,7 +146,7 @@ content:
     type: string_textfield
     region: content
   field_subhead:
-    weight: 3
+    weight: -3
     settings:
       size: 60
       placeholder: ''
@@ -154,11 +164,19 @@ content:
   field_tags:
     weight: 15
     settings:
+      limit: '10'
+      min_length: '0'
+      delimiter: ''
+      not_found_message_allow: '1'
+      not_found_message: 'The term ''@term'' will be added'
+      new_terms: '1'
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
       match_operator: CONTAINS
+      autocomplete_route_name: autocomplete_deluxe.autocomplete
       size: 60
-      placeholder: ''
+      selection_handler: default
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: autocomplete_deluxe
     region: content
   field_thumbnail:
     weight: 122
