@@ -1,0 +1,83 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.author.body
+    - field.field.node.author.field_thumbnail
+    - node.type.author
+  module:
+    - layout_builder
+    - layout_library
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          column_widths: 33-67
+        components:
+          ac9bab72-816c-4be5-9bfc-c9c4a3010997:
+            uuid: ac9bab72-816c-4be5-9bfc-c9c4a3010997
+            region: first
+            configuration:
+              id: 'field_block:node:author:field_thumbnail'
+              label: Avatar
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: card_list
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          94e07755-58d7-485b-83fe-b259412346a0:
+            uuid: 94e07755-58d7-485b-83fe-b259412346a0
+            region: second
+            configuration:
+              id: 'field_block:node:author:body'
+              label: Bio
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+id: node.author.default
+targetEntityType: node
+bundle: author
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_thumbnail:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: card_list
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  links: true
