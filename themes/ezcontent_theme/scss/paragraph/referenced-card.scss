@@ -1,0 +1,38 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.paragraph--type--referenced-card  {
+  margin-bottom: 30px;
+  .field--name-field-article {
+
+     @include respond(phone-min) {
+       display: flex;
+       flex-wrap: wrap;
+     }
+     > .field--item {
+       margin-bottom: 20px;
+       flex: 0 0 100%;
+       @include respond(phone-min) {
+         flex:  0 0 33%;
+         max-width: 33%;
+         padding: 0 10px;
+       }
+       .layout__region {
+         width: 100%;
+         flex: 0 0 100%;
+       }
+     }
+  }
+  .block-field {
+    &-blocknodearticlefield-thumbnail {
+      margin-bottom: 10px;
+    }
+    &-blocknodearticletitle {
+      @extend %h2;
+      margin-bottom: 15px;
+      a {
+        color: black;
+      }
+    }
+  }
+}
