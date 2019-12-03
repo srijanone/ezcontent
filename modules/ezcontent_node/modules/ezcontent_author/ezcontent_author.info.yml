@@ -1,0 +1,10 @@
+name: Author Feature
+type: module
+description: 'Provides author content type.'
+package: EZContent Node
+core: 8.x
+dependencies:
+  - ezcontent_node
+  - ezcontent_image
+  - layout_library
+  - allowed_formats
