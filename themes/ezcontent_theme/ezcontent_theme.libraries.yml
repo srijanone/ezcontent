@@ -72,6 +72,11 @@ paragraph-type-view:
     theme:
       css/paragraph/view.css: {}
 
+paragraph-type-referenced-card:
+  css:
+    theme:
+      css/paragraph/referenced-card.css: {}
+
 full-width-bg-background:
   css:
     theme:

@@ -8,12 +8,16 @@
   padding: 0;
   &.card_left_media {
     .layout__region--second {
-      padding: 0 0 0 80px ;
+      @include respond(phone-min) {
+        padding: 0 0 0 80px ;
+      }
     }
   }
   &.card_right_media {
     .layout__region--first {
-      padding: 0 80px 0 0 ;
+      @include respond(phone-min) {
+        padding: 0 80px 0 0 ;
+      }
     }
   }
   .layout {
