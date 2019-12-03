@@ -1,33 +1,7 @@
 .footer {
-  background-color: $color-grey-light-1;
-  border-top: 4px solid $color-footer-border-lighter;
+  border-top: 1px solid $color-grey-light-dark;
   margin: 0;
-  padding: 0;
-
-  &--logo {
-    padding: 10px 0;
-  }
-
-  &--top {
-    border-bottom: 1px solid $color-grey-light-4;
-    clear: both;
-    float: left;
-    width: 100%;
-  }
-
-  &--middle {
-    float: left;
-    padding: 20px 0;
-    width: 100%;
-
-    li {
-      a {
-        color: $color-grey-light-3;
-      }
-
-    }
-  }
-
+  padding: 20px 0;
   &--about {
     &--address {
       position: relative;
@@ -37,7 +11,7 @@
       }
 
       &:after {
-        background-color: $color-grey-light-4;
+        background-color: $color-grey-light-dark;
         content: '';
         display: block;
         height: 100%;
@@ -48,43 +22,58 @@
       }
     }
   }
-
-  &--bottom {
-    border-top: 1px solid $color-grey-light-4;
-    float: left;
-    font-size: 11px;
-    padding: 20px 0;
-    width: 100%;
-
-    a {
-      color: $color-black;
+}
+.region-footer {
+  .block--type-text-block {
+    width: 25%;
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  [aria-labelledby='block-footermenu-menu'] {
+    width: 74%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .menu--footer-menu {
+    li {
+      display: inline-block;
+      width: 25%;
+      padding: 0 10px;
+      a {
+        padding: 0;
+        color: black;
+        &:hover,
+        &:focus {
+          background: transparent;
+        }
+      }
     }
   }
-
-  li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-
-    &.social--list {
-      border-left: 1px solid $color-grey-light-4;
-      height: 80px;
-      padding: 25px 20px;
-      text-align: center;
-      vertical-align: top;
-      width: 80px;
-
+  .menu--privacy-policy  {
+    li {
+      display: inline-block;
+      padding: 3px;
+      a {
+        padding: 0;
+        color: black;
+        font-family: $primary-font;
+        font-size: 11px;
+        &:hover,
+        &:focus {
+          background: transparent;
+        }
+      }
       &:last-child {
-        border-right: 1px solid $color-grey-light-4;
+        float: right;
       }
     }
-
-    a {
-      padding: 0;
-
-      &:hover {
-        background: none;
-      }
-    }
+  }
+  [aria-labelledby='block-privacypolicy-menu'] {
+    border-top: 1px solid $color-grey-light-dark;
+    float: left;
+    font-size: 11px;
+    padding: 20px 0 0 0;
+    margin-top: 20px;
+    width: 100%;
   }
 }
