@@ -1,0 +1,15 @@
+summary_generator.config:
+  path: '/admin/config/summary-generator-summary'
+  defaults:
+    _form: '\Drupal\summary_generator\Form\ConfigForm'
+    _title: 'Summary Generator Preview'
+  requirements:
+    _permission: 'Summary Generator Preview'
+
+summary_generator.autocomplete.companies:
+  path: '/admin/summary_generator/autocomplete/companies'
+  defaults:
+    _controller: '\Drupal\summary_generator\Controller\CompaniesAutoCompleteController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'Comapanies Autocomplete'
