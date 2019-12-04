@@ -40,5 +40,8 @@
 
 
 .block--type-text-block {
-  margin-bottom: 90px;
+  margin-bottom: 30px;
+  @include respond(phone-min) {
+    margin-bottom: 90px;
+  }
 }

@@ -18,16 +18,24 @@
         padding-left: 15px;
       }
       img {
-        width: 127px;
+        width: 100px;
+        @include respond(phone-min) {
+          width: 127px;
+        }
       }
     }
   }
 
   .navbar-collapse {
-
+    @include respond(phone) {
+      background: #d8d8d8;
+      border: 0;
+    }
     nav {
-      float: right;
-      padding: 10px;
+      @include respond(phone-min) {
+        float: right;
+        padding: 10px;
+      }
 
       .navbar-nav {
 
