@@ -1,0 +1,8 @@
+third_party_settings:
+  shortcut:
+    module_link: true
+
+logo:
+  use_default: false
+  path: profiles/contrib/ezcontent/themes/ezcontent_admin/logo.svg
+ezcontent_admin_logo: true

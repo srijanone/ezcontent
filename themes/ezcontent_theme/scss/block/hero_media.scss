@@ -3,9 +3,11 @@
 @import '../abstracts/variables';
 
 .block--type-hero-media-block {
-  margin: 30px 0 90px 0;
   padding: 0;
-
+  margin: 30px 0 30px 0;
+  @include respond(phone-min) {
+    margin: 30px 0 90px 0;
+  }
   .slick-arrow {
 
     &::before {
@@ -38,10 +40,13 @@
       display: block;
       height: auto;
       left: 0;
-      padding: 20px 40px 20px 40px;
       position: absolute;
       bottom: 0;
       width: 100%;
+      padding: 10px 0;
+      @include respond(phone-min) {
+        padding: 20px 40px 20px 40px;
+      }
     }
 
     .blazy__caption {
@@ -69,7 +74,7 @@
         width: 100%;
         margin: 0;
         font-family: $heading-font;
-
+        color: white;
         @include respond(tab-land) {
           font-size: 25px;
           line-height: 25px;
@@ -123,6 +128,12 @@
       .field {
         &--name-field-media-image {
           padding: 0;
+          .media--image {
+            width: 100%;
+          }
+          img {
+            width: 100%;
+          }
         }
       }
     }

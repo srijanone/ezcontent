@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Contains ezcontent_admin.theme.
+ */
+/**
+ * Implements hook_preprocess_page_title().
+ */
+function ezcontent_admin_preprocess_page_title(&$variables) {
+  if (theme_get_setting('ezcontent_admin_site_name')) {
+    $site_name = \Drupal::config('system.site')->get('name');
+    $variables['title_prefix'] = $site_name . ' - ';
+  }
+  if (theme_get_setting('ezcontent_admin_logo')) {
+    $variables['logo_url'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+  }
+}

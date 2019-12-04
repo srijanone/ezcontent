@@ -9,13 +9,21 @@
        display: flex;
        flex-wrap: wrap;
      }
-     > .field--item {
-       margin-bottom: 20px;
-       flex: 0 0 100%;
+      > .field--item {
+       margin-bottom: 30px;
        @include respond(phone-min) {
-         flex:  0 0 33%;
-         max-width: 33%;
-         padding: 0 10px;
+          margin-bottom: 20px;
+       }
+       flex: 0 0 100%;
+
+       &:nth-child(3n+2) {
+         @include respond(phone-min) {
+           margin: 0 20px;
+         }
+       }
+
+       @include respond(phone-min) {
+         max-width: calc(33% - 20px);
        }
        .layout__region {
          width: 100%;

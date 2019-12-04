@@ -2,3 +2,8 @@ framework:
   css:
     theme:
       css/style.css: {}
+
+page-title:
+  css:
+    theme:
+      css/dist/components/page-title.css: {}
