@@ -14,7 +14,9 @@
     .logo {
       margin: 0;
       padding: 10px 0;
-
+      @include respond(phone) {
+        padding-left: 15px;
+      }
       img {
         width: 127px;
       }

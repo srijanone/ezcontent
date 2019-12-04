@@ -5,39 +5,51 @@
   &--about {
     &--address {
       position: relative;
+      margin-bottom: 20px;
+      @include respond(phone-min) {
+        margin-bottom: 0
+      }
 
       p {
         margin: 0;
       }
 
       &:after {
-        background-color: $color-grey-light-dark;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        right: 15%;
-        top: 0;
-        width: 1px;
+        @include respond(phone-min) {
+          background-color: $color-grey-light-dark;
+          content: '';
+          display: block;
+          height: 100%;
+          position: absolute;
+          right: 15%;
+          top: 0;
+          width: 1px;
+        }
       }
     }
   }
 }
 .region-footer {
   .block--type-text-block {
-    width: 25%;
+    @include respond(phone-min) {
+      width: 25%;
+    }
     display: inline-block;
     margin-bottom: 0;
   }
   [aria-labelledby='block-footermenu-menu'] {
-    width: 74%;
+    @include respond(phone-min) {
+      width: 74%;
+    }
     display: inline-block;
     vertical-align: top;
   }
   .menu--footer-menu {
     li {
       display: inline-block;
-      width: 25%;
+      @include respond(phone-min) {
+        width: 25%;
+      }
       padding: 0 10px;
       a {
         padding: 0;
@@ -53,6 +65,10 @@
     li {
       display: inline-block;
       padding: 3px;
+      @include respond(phone) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
       a {
         padding: 0;
         color: black;
