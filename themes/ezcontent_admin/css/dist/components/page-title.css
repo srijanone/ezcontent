@@ -1,0 +1,13 @@
+/* style for page title */
+.page-title-grid {
+  display: flex;
+}
+.page-title-grid .page-title {
+  max-width: 70%;
+  flex: 0 0 70%;
+}
+.page-logo-with-title {
+  max-width: 30%;
+  flex: 0 0 30%;
+  text-align: right;
+}

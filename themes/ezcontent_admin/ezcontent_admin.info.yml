@@ -10,3 +10,49 @@ package: 'Claro'
 libraries-extend:
   claro/global-styling:
     - ezcontent_admin/framework
+
+libraries-override:
+  system/base:
+    css:
+      component:
+        /core/themes/stable/css/system/components/ajax-progress.module.css: css/dist/components/ajax-progress.module.css
+        /core/themes/stable/css/system/components/autocomplete-loading.module.css: css/dist/components/autocomplete-loading.module.css
+        /core/themes/stable/css/system/components/system-status-counter.css: css/dist/components/system-status-counter.css
+        /core/themes/stable/css/system/components/system-status-report-counters.css: css/dist/components/system-status-report-counters.css
+        /core/themes/stable/css/system/components/system-status-report-general-info.css: css/dist/components/system-status-report-general-info.css
+        /core/themes/stable/css/system/components/tabledrag.module.css: css/dist/components/tabledrag.css
+
+  core/drupal.dropbutton:
+    css:
+      component:
+        /core/themes/stable/css/core/dropbutton/dropbutton.css: css/dist/components/dropbutton.css
+
+  classy/base:
+    css:
+      component:
+        css/components/tableselect.css: css/dist/components/tableselect.css
+
+  classy/progress:
+    css:
+      component:
+        css/components/progress.css: css/dist/components/progress.css
+
+  field_ui/drupal.field_ui:
+    css:
+      theme:
+        /core/themes/stable/css/field_ui/field_ui.admin.css: css/dist/theme/field-ui.admin.css
+
+  filter/drupal.filter.admin:
+    css:
+      theme:
+        /core/themes/stable/css/filter/filter.admin.css: css/dist/theme/filter.theme.css
+
+  filter/drupal.filter:
+    css:
+      theme:
+        /core/themes/stable/css/filter/filter.admin.css: css/dist/theme/filter.theme.css
+
+  views_ui/admin.styling:
+    css:
+      theme:
+        /core/themes/stable/css/views_ui/views_ui.admin.theme.css: css/dist/theme/views_ui.admin.theme.css
