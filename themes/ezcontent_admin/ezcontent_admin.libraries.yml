@@ -7,3 +7,8 @@ page-title:
   css:
     theme:
       css/dist/components/page-title.css: {}
+
+node-edit-form:
+  css:
+    theme:
+      css/dist/components/node-edit-form.css: {}

@@ -15,13 +15,14 @@
  * @see claro_form_node_form_alter()
  */
 #}
-<div class="layout-node-form clearfix">
+{{ attach_library("ezcontent_admin/node-edit-form") }}
+<div class="layout-node-form node-edit-layout clearfix">
   <div class="layout-region layout-region-node-main">
     {{ form|without('advanced', 'footer', 'actions') }}
   </div>
   <div class="layout-region layout-region-node-secondary">
     {{ form.advanced }}
     {{ form.footer }}
-    {{ form.actions }}
+    <div class="node-edit-actions"> {{ form.actions }} </div>
   </div>
 </div>
