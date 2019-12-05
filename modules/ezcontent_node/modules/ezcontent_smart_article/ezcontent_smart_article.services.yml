@@ -1,0 +1,4 @@
+services:
+  ezcontent_smart_article.companies_list:
+    class: Drupal\ezcontent_smart_article\CompaniesList
+    arguments: ['@config.factory', '@http_client', '@serialization.json', '@logger.factory']
