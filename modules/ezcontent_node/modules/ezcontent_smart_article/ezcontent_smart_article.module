@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * Module file for ezcontent_smart_article.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\InvokeCommand;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  if (in_array($form['#form_id'], [
+    'node_smart_article_edit_form',
+    'node_smart_article_form',
+  ])) {
+    // Make Company name Autocomplete.
+    $form['field_company_name']['widget'][0]['value']['#autocomplete_route_name'] = 'ezcontent_smart_article.autocomplete.companies';
+
+    // Add a generate summary button and hide body field.
+    $form['generate_summary'] = [
+      '#type' => 'submit',
+      '#name' => 'generate_summary',
+      '#value' => t('Generate Summary'),
+      '#weight' => 11,
+      '#ajax' => [
+        'callback' => 'ezcontent_smart_article_generate_callback',
+        'wrapper' => 'form-summary-generate-wrapper',
+        'effect' => 'fade',
+        'event' => 'click',
+        'progress' => [
+          'type' => 'throbber',
+          'message' => 'Please wait...',
+        ],
+      ],
+    ];
+    $form['#attached']['library'][] = 'ezcontent_smart_article/ezcontent_smart_article_libs';
+
+    if (isset($form['body'])) {
+      if ($form['body']['widget'][0]['#default_value'] == '') {
+        $form['body']['#attributes']['class'][] = 'hide-body--field';
+        $form['body']['#attributes']['style'] = 'display:none;';
+      }
+    }
+
+  }
+}
+
+/**
+ * Summary generator callback
+ */
+function ezcontent_smart_article_generate_callback(&$form, FormStateInterface $form_state) {
+  $results = \Drupal::service('ezcontent_smart_article.companies_list');
+  $company_name = $form_state->getValue('field_company_name')[0]['value'];
+  $text = $results->getData($company_name, 'article');
+
+  $response = new AjaxResponse();
+  $arguments = [$text, 'edit-body-0-value'];
+  $response->addCommand(new InvokeCommand(NULL, "update_text_editor", $arguments));
+  $response->addCommand(new InvokeCommand('.hide-body--field', 'show'));
+  return $response;
+}

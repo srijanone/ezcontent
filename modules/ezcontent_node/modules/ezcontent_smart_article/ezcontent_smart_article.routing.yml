@@ -1,0 +1,15 @@
+ezcontent_smart_article.config:
+  path: '/admin/config/ezcontent-smart-article/settings'
+  defaults:
+    _form: '\Drupal\ezcontent_smart_article\Form\ConfigForm'
+    _title: 'Smart Article Settings'
+  requirements:
+    _permission: 'Smart Article Settings'
+
+ezcontent_smart_article.autocomplete.companies:
+  path: '/admin/ezcontent_smart_article/autocomplete/companies'
+  defaults:
+    _controller: '\Drupal\ezcontent_smart_article\Controller\CompaniesAutoCompleteController::handleAutocomplete'
+    _format: json
+  requirements:
+    _access: 'TRUE'

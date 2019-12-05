@@ -1,0 +1,4 @@
+'Smart Article Settings':
+  title: 'Smart Article Settings'
+  description: 'EZContent Smart Article Settings.'
+  restrict access: true
