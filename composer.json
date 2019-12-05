@@ -114,6 +114,9 @@
         "Expose Layout Builder data to REST and JSON:API": "https://www.drupal.org/files/issues/2019-11-21/layout_builder-export-content-2942975-67.patch",
         "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2019-11-20/2999491-42.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch"
+      },
+      "drupal/jsonapi_extras": {
+        "Link enhancer to add Aliased URL for internal links": "https://www.drupal.org/files/issues/2019-03-08/jsonapi_extras-Field-enhancer-for-URL-alias-2942851-24.patch"
       }
     },
     "installer-paths": {
