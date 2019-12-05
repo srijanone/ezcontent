@@ -5,9 +5,11 @@
 .paragraph--type--card-list {
   margin-bottom: 30px;
   padding: 0;
-
   .paragraph--type--card {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    @include respond(phone-min) {
+      margin-bottom: 60px;
+    }
   }
 
   >.field {
@@ -15,9 +17,12 @@
     &--name-field-title {
       @extend %h2;
       padding: 0 15px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       text-align: center;
       font-family: $heading-font;
+      @include respond(phone-min) {
+        margin-bottom: 30px;
+      }
     }
   }
 
