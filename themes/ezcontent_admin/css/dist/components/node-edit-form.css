@@ -1,0 +1,19 @@
+.node-edit-actions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  z-index: 1;
+  box-shadow: 5px 4px 8px #000;
+}
+
+.node-edit-actions div#edit-actions {
+  margin: 0;
+}
+
+.node-edit-layout {
+  padding-bottom: 90px;
+}
