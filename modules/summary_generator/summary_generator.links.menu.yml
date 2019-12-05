@@ -1,4 +1,0 @@
-summary_generator.config:
-  title: 'Summary Generator'
-  route_name: summary_generator.config
-  parent: system.admin_config_system
