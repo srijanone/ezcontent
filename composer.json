@@ -118,6 +118,9 @@
       },
       "drupal/jsonapi_extras": {
         "Link enhancer to add Aliased URL for internal links": "https://www.drupal.org/files/issues/2019-03-08/jsonapi_extras-Field-enhancer-for-URL-alias-2942851-24.patch"
+      },
+      "drupal/metatag": {
+        "Support JSON API, REST, GraphQL and custom normalizations": "https://www.drupal.org/files/issues/2019-04-23/2945817-73.patch"
       }
     },
     "installer-paths": {
