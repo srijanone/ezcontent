@@ -63,7 +63,7 @@ class PreviewView extends ControllerBase {
     $nid = \Drupal::routeMatch()->getRawParameter('node');
     $node = \Drupal::entityManager()->getStorage('node')->load($nid);
     foreach($decoupledRoutes->content_entity as $entType) {
-      if ($entType === $node->bundle()) {
+      if ($node instanceof NodeInterface && $entType === $node->bundle()) {
         return AccessResult::allowed();
       }
     }
