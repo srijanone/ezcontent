@@ -87,7 +87,7 @@ function ezcontent_smart_article_get_alt_title(array $element, FormStateInterfac
     $file = File::load($item['fids'][0]);
     $image_file = file_get_contents(\Drupal::service('file_system')->realpath($file->getFileUri()));
 
-    $url = 'http://13.233.181.232:26002/api';
+    $url = \Drupal::config('summary_generator.settings')->get('image_captioning_api_url');
     $response = \Drupal::service('http_client')->request('POST', $url, [
       'headers' => [
         'content-type' => $file->getMimeType(),

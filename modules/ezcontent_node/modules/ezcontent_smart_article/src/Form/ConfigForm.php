@@ -109,7 +109,7 @@ class ConfigForm extends ConfigFormBase {
     $config = $this->config(static::SETTINGS);
     $form['summary_generator_api_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('API URL'),
+      '#title' => $this->t('Summary Generator API URL'),
       '#description' => $this->t('Provide the API URL.'),
       '#default_value' => $config->get('summary_generator_api_url'),
     ];
@@ -124,6 +124,12 @@ class ConfigForm extends ConfigFormBase {
       ],
       '#upload_location' => 'public://companies-data/',
       '#default_value' => $config->get('summary_generator_data_file'),
+    ];
+    $form['image_captioning_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Image Captioning API URL'),
+      '#description' => $this->t('Provide the API URL.'),
+      '#default_value' => $config->get('image_captioning_api_url'),
     ];
     return parent::buildForm($form, $form_state);
   }
