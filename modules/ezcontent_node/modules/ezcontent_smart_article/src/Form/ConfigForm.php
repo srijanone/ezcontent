@@ -134,7 +134,6 @@ class ConfigForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
     $config = $this->config(static::SETTINGS);
-    $values = $form_state->cleanValues()->getValues();
     foreach ($form_state->cleanValues()->getValues() as $key => $value) {
       $config->set($key, $value);
     }
