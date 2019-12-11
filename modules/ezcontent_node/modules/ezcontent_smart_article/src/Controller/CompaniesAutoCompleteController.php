@@ -46,11 +46,11 @@ class CompaniesAutoCompleteController extends ControllerBase {
     $query = $request->query->get('q');
     // @todo: The response returns all data, Filter it based on query, via API
     // or else cache data and flush cache on new file upload.
-    $get_data = $this->companiesList->getData("null", 'all');
+    $companies = $this->companiesList->getData("null", 'all');
     $results = [];
 
     // @todo: Move filtering from here to API.
-    foreach ($get_data as $company) {
+    foreach ($companies as $company) {
       if (strpos(strtolower($company), strtolower($query)) !== FALSE) {
         $results[] = [
           'value' => $company,

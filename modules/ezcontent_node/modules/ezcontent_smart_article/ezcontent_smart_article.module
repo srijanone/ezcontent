@@ -8,6 +8,7 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\InvokeCommand;
+use Drupal\file\Entity\File;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -46,11 +47,17 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       }
     }
 
+    // Add a process to field_company_logo
+    if (!empty($form['field_company_logo'])) {
+      $form['field_company_logo']['widget'][0]['#process'][] = 'ezcontent_smart_article_get_alt_title';
+    }
+
   }
 }
 
 /**
  * Summary generator callback
+ * @todo: Move to a service.
  */
 function ezcontent_smart_article_generate_callback(&$form, FormStateInterface $form_state) {
   $results = \Drupal::service('ezcontent_smart_article.companies_list');
@@ -62,4 +69,36 @@ function ezcontent_smart_article_generate_callback(&$form, FormStateInterface $f
   $response->addCommand(new InvokeCommand(NULL, "update_text_editor", $arguments));
   $response->addCommand(new InvokeCommand('.hide-body--field', 'show'));
   return $response;
+}
+
+/**
+ * Process callback: Adds the ALT title to image.
+ * @todo: Move to a service.
+ *
+ * @param array $element
+ *   Form API element.
+ *
+ * @return array $element
+ *
+ */
+function ezcontent_smart_article_get_alt_title(array $element, FormStateInterface $form_state, array &$form) {
+  $item = $element['#value'];
+  if (!empty($item['fids'])) {
+    $file = File::load($item['fids'][0]);
+    $image_file = file_get_contents(\Drupal::service('file_system')->realpath($file->getFileUri()));
+
+    $url = 'http://13.233.181.232:26002/api';
+    $response = \Drupal::service('http_client')->request('POST', $url, [
+      'headers' => [
+        'content-type' => $file->getMimeType(),
+      ],
+      'body' => $image_file,
+    ]);
+    if ($response->getStatusCode() == 200) {
+      $body = \Drupal::service('serialization.json')->decode($response->getBody()->getContents());
+      $element['alt']['#default_value'] = $body['data'][0]['caption'];
+    }
+
+  }
+  return $element;
 }

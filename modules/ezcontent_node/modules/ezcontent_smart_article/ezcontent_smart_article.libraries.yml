@@ -1,3 +1,3 @@
 ezcontent_smart_article_libs:
   js:
-    js/update-text-editor.js: {}
+    js/ezcontent_smart_article.js: {}

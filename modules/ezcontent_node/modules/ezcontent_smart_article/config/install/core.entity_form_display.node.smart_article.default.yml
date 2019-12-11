@@ -3,12 +3,15 @@ status: true
 dependencies:
   config:
     - field.field.node.smart_article.body
+    - field.field.node.smart_article.field_company_logo
     - field.field.node.smart_article.field_company_name
+    - image.style.thumbnail
     - node.type.smart_article
   module:
     - content_moderation
     - path
     - scheduler
+    - svg_image
     - text
 id: node.smart_article.default
 targetEntityType: node
@@ -30,6 +33,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_company_logo:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_company_name:
     weight: 1
     settings:
