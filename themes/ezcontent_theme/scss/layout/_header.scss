@@ -36,15 +36,12 @@
         float: right;
         padding: 10px;
       }
-
-      .navbar-nav {
-
-        li {
-
-          a {
-            color: $color-grey-light-3
-          }
-        }
+    }
+  }
+  .navbar-nav {
+    li {
+      a {
+        color: $color-grey-light-3
       }
     }
   }
