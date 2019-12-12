@@ -106,6 +106,7 @@ permissions:
   - 'use default transition review_draft'
   - 'use default transition review_published'
   - 'use moderation dashboard'
+  - 'use moderation sidebar'
   - 'use text format basic_html'
   - 'use text format full_html'
   - 'use text format restricted_html'
