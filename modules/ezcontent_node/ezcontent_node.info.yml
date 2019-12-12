@@ -9,3 +9,4 @@ dependencies:
   - paragraphs_previewer
   - pathauto
   - scheduler
+  - yoast_seo
