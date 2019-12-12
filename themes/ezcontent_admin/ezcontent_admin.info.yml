@@ -56,3 +56,17 @@ libraries-override:
     css:
       theme:
         /core/themes/stable/css/views_ui/views_ui.admin.theme.css: css/dist/theme/views_ui.admin.theme.css
+
+
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
