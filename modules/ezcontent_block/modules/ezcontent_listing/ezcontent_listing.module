@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Used for maintaining content listing component changes.
+ */
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function ezcontent_listing_preprocess_block(&$variables) {
+  if (isset($variables['content']) && isset($variables['content']['#block_content'])) {
+    $block = $variables['content']['#block_content'];
+    $block_type = $block->bundle();
+    if ($block_type == 'content_listing_component') {
+      $block_view_mode = $variables['content']['#view_mode'];
+      $helper_block_service = \Drupal::service('ezcontent_listing.helper_block');
+
+      switch ($block_view_mode) {
+        case 'full':
+          $content_list_data = $helper_block_service->getContentListingBlock($block);
+          $variables['content_listing_data'] = $content_list_data;
+          break;
+      }
+    }
+  }
+}

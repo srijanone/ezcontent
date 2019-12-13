@@ -81,3 +81,8 @@ full-width-bg-background:
   css:
     theme:
       css/layout/full-width-bg-background.css: {}
+
+content-listing-component:
+  css:
+    theme:
+      css/block/content-listing-component.css: {}
