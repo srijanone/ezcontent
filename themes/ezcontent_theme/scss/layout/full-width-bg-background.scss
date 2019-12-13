@@ -11,7 +11,7 @@
   }
 }
 .full-width-content-template-black-background {
-  * {
+  *:not(.layout-builder__link--add) {
     color: $color-white;
   }
 }
