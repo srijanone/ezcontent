@@ -1,0 +1,10 @@
+name: EZContent Listing
+type: module
+description: 'Includes content listing changes.'
+package: EZContent Block
+core: '8.x'
+dependencies:
+  - ezcontent_block
+  - ezcontent_article
+  - ezcontent_author
+  - ezcontent_taxonomy

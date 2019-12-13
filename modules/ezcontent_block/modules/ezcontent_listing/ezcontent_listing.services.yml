@@ -1,0 +1,3 @@
+services:
+  ezcontent_listing.helper_block:
+    class: Drupal\ezcontent_listing\ContentListingHelperBlock
