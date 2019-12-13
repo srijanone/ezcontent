@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.content_listing_component
+    - field.storage.block_content.field_author
+    - node.type.author
+id: block_content.content_listing_component.field_author
+field_name: field_author
+entity_type: block_content
+bundle: content_listing_component
+label: Author
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author: author
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

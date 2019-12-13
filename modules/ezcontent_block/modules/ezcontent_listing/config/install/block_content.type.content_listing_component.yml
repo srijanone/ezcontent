@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: content_listing_component
+label: 'Content Listing Component'
+revision: 1
+description: 'A block type which contains value on base of which the article listing view will be filtered.'

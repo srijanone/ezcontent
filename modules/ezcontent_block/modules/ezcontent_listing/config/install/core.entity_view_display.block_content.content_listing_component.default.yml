@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.content_listing_component
+    - field.field.block_content.content_listing_component.field_author
+    - field.field.block_content.content_listing_component.field_tags
+id: block_content.content_listing_component.default
+targetEntityType: block_content
+bundle: content_listing_component
+mode: default
+content:
+  field_author:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }
