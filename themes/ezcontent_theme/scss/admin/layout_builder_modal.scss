@@ -10,3 +10,15 @@
     color: #000;
   }
 }
+
+.user-logged-in {
+  .navbar-default {
+    top: 79px;
+  }
+
+  &.toolbar-vertical {
+    .navbar-default {
+      top: 38px;
+    }
+  }
+}
