@@ -20,48 +20,60 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 1
-    target_bundles: null
+    target_bundles:
+      card: card
+      faq_qa: faq_qa
+      form: form
     target_bundles_drag_drop:
-      card:
-        weight: 11
+      text:
+        weight: -35
         enabled: false
-      card_list:
-        weight: 12
-        enabled: false
-      embed:
-        weight: 13
-        enabled: false
-      faq:
-        weight: 14
-        enabled: false
-      faq_qa:
-        enabled: true
-        weight: 15
-      form:
-        weight: 16
+      assets:
+        weight: -34
         enabled: false
       gallery:
-        weight: 17
+        weight: -33
         enabled: false
-      hero_media:
-        weight: 18
+      gallery_carousel:
+        weight: -32
         enabled: false
-      map:
-        weight: 19
+      embed:
+        weight: -31
         enabled: false
-      media:
-        weight: 20
-        enabled: false
-      page_title:
-        weight: 21
+      social_media:
+        weight: -30
         enabled: false
       quote:
-        weight: 23
+        weight: -29
         enabled: false
-      text:
-        weight: 25
+      map:
+        weight: -28
+        enabled: false
+      faq:
+        weight: -27
+        enabled: false
+      hero_media:
+        weight: -26
+        enabled: false
+      card_list:
+        weight: -25
+        enabled: false
+      referenced_card:
+        weight: -24
+        enabled: false
+      from_library:
+        weight: -23
         enabled: false
       view:
-        weight: 26
+        weight: -22
         enabled: false
+      card:
+        enabled: true
+        weight: -21
+      faq_qa:
+        enabled: true
+        weight: -20
+      form:
+        enabled: true
+        weight: -19
 field_type: entity_reference_revisions

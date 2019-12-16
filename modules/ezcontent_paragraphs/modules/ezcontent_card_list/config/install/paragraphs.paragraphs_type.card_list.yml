@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: card_list
-label: Card List
+label: Cards
 icon_uuid: null
 description: ''
 behavior_plugins: {  }
