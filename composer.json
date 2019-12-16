@@ -63,6 +63,7 @@
     "drupal/paragraphs_previewer": "^1.4",
     "drupal/pathauto": "^1.4",
     "drupal/redirect": "^1.4",
+    "drupal/responsive_preview": "^1.0@beta",
     "drupal/robotstxt": "^1.2",
     "drupal/scheduler": "^1.1",
     "drupal/schema_metatag": "^1.4",

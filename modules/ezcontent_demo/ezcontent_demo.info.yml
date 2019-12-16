@@ -10,3 +10,4 @@ dependencies:
   - ezcontent_landing_page
   - ezcontent_map
   - ezcontent_social_media_embed
+  - responsive_preview
