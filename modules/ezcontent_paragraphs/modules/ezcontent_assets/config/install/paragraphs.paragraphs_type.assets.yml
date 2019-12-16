@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: assets
-label: Assets
+label: Media
 icon_uuid: null
 description: 'Create or attach your Media Assets'
 behavior_plugins: {  }
