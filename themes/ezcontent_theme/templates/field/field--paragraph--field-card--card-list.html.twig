@@ -59,9 +59,9 @@
       {% for item in items %}
         {% set layoutClassC = item.content['#paragraph'].layout_selection.target_id %}
         {% if layoutClassC == ''%}
-            {% set layoutClass = 'col-xs-12 col-sm-4' %}
+            {% set layoutClass = 'col-12 col-sm-12 col-md-4' %}
         {% else %}
-            {% set layoutClass = 'col-xs-12' %}
+            {% set layoutClass = 'col-12 col-sm-12' %}
         {% endif %}
         <div{{ item.attributes.addClass('field--item ' ~ layoutClass) }}>{{ item.content }}</div>
       {% endfor %}
