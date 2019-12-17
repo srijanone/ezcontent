@@ -12,13 +12,21 @@
 }
 
 .user-logged-in {
-  .navbar-default {
+  .ezcontent-header {
     top: 79px;
   }
 
   &.toolbar-vertical {
-    .navbar-default {
+    .ezcontent-header {
       top: 38px;
     }
+  }
+}
+
+.node-landing-page-layout-builder-form,
+.layout-builder-discard-changes,
+.layout-builder-revert-overrides {
+  .form-control {
+    width: auto;
   }
 }

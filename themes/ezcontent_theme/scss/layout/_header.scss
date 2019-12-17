@@ -1,40 +1,17 @@
 .ezcontent-header {
   background: $color-white;
   border-bottom: 1px solid $color-grey-light-2;
-
-  .navbar-header {
-    .logo {
-      margin: 0;
-      padding: 10px 0;
-      @include respond(phone) {
-        padding-left: 15px;
-      }
-      img {
-        width: 100px;
-        @include respond(phone-min) {
-          width: 127px;
-        }
-      }
-    }
-  }
-
+  z-index: 99;
   .navbar-collapse {
-    @include respond(phone) {
-      background: #d8d8d8;
-      border: 0;
-    }
-    nav {
-      @include respond(phone-min) {
-        float: right;
-        padding: 10px;
-      }
-    }
+    justify-content: flex-end;
   }
   .navbar-nav {
-    li {
-      a {
-        color: $color-grey-light-3
-      }
+    .nav-link {
+      color: $color-grey-light-3;
     }
   }
+}
+
+.ezcontent-main-wrapper {
+  margin-top: 6em;
 }
