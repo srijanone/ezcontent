@@ -30,8 +30,7 @@
         set item_classes = [
           item.is_expanded and item.below ? 'expanded dropdown',
           item.in_active_trail ? 'active active-trail',
-          loop.first ? 'first',
-          loop.last ? 'last',
+          loop.first ? 'first'
         ]
       %}
       <li{{ item.attributes.addClass(item_classes) }}>
@@ -60,4 +59,4 @@
   This allows the template to be extended without having to also duplicate the
   code above. @see http://twig.sensiolabs.org/doc/tags/macro.html
 #}
-{{ _self.menu_links(items, attributes, 0, classes ?: ['menu', 'menu--' ~ menu_name|clean_class, 'nav'], dropdown_classes ?: ['dropdown-menu']) }}
+{{ _self.menu_links(items, attributes, 0, classes ?: ['menu'], dropdown_classes ?: ['dropdown-menu']) }}

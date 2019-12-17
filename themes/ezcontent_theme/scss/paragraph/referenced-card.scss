@@ -9,7 +9,7 @@
        display: flex;
        flex-wrap: wrap;
      }
-      > .field--item {
+      > .field__item {
        margin-bottom: 30px;
        @include respond(phone-min) {
           margin-bottom: 20px;
