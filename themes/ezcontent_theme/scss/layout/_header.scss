@@ -1,60 +1,17 @@
-.navbar-default {
+.ezcontent-header {
   background: $color-white;
   border-bottom: 1px solid $color-grey-light-2;
-  font-size: $default-font-size;
-  height: 70px;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: all 0.5s ease 0s;
-  z-index: 3;
-
-  .navbar-header {
-    .logo {
-      margin: 0;
-      padding: 10px 0;
-      @include respond(phone) {
-        padding-left: 15px;
-      }
-      img {
-        width: 100px;
-        @include respond(phone-min) {
-          width: 127px;
-        }
-      }
-    }
-  }
-
+  z-index: 99;
   .navbar-collapse {
-    @include respond(phone) {
-      background: #d8d8d8;
-      border: 0;
-    }
-    nav {
-      @include respond(phone-min) {
-        float: right;
-        padding: 10px;
-      }
-    }
+    justify-content: flex-end;
   }
   .navbar-nav {
-    li {
-      a {
-        color: $color-grey-light-3
-      }
+    .nav-link {
+      color: $color-grey-light-3;
     }
   }
 }
 
-.user-logged-in {
-  .navbar-default {
-    top: 79px;
-  }
-
-  &.toolbar-vertical {
-    .navbar-default {
-      top: 38px;
-    }
-  }
+.ezcontent-main-wrapper {
+  margin-top: 6em;
 }
