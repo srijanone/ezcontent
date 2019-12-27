@@ -35,6 +35,7 @@
     "drupal/entity_browser": "~2.1",
     "drupal/entity_embed": "^1.0",
     "drupal/entity_usage": "^2.0@beta",
+    "drupal/environment_indicator": "^3.7",
     "drupal/field_group": "^1.0",
     "drupal/google_analytics": "^3.0",
     "drupal/inline_entity_form": "^1.0@RC",
