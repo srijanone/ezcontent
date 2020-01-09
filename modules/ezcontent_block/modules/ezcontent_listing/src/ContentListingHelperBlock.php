@@ -2,7 +2,8 @@
 
 namespace Drupal\ezcontent_listing;
 
-use Drupal\views\Views;
+use Drupal\Core\Entity\EntityTypeManager;
+use Drupal\views\ViewExecutableFactory;
 
 /**
  * Class ContentListingHelperBlock.
@@ -10,6 +11,33 @@ use Drupal\views\Views;
  * @package Drupal\ezcontent_listing
  */
 class ContentListingHelperBlock {
+
+  /**
+   * Entity Type Manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManager
+   */
+  protected $entityTypeManager;
+
+  /**
+   * The Executable view.
+   *
+   * @var \Drupal\views\ViewExecutable
+   */
+  protected $viewExecutable;
+
+  /**
+   * Content Listing constructor.
+   *
+   * @param \Drupal\Core\Entity\EntityTypeManager $entityTypeManager
+   *   Entity Type manager.
+   * @param \Drupal\views\ViewExecutableFactory $viewExecutable
+   *   A view executable instance, from the loaded entity.
+   */
+  public function __construct(EntityTypeManager $entityTypeManager, ViewExecutableFactory $viewExecutable) {
+    $this->entityTypeManager = $entityTypeManager;
+    $this->viewExecutable = $viewExecutable;
+  }
 
   /**
    * Preprocess the Content Listing Block.
@@ -37,7 +65,8 @@ class ContentListingHelperBlock {
       }
     }
 
-    $view = Views::getView('article_content_listing');
+    $viewObject = $this->entityTypeManager->getStorage('view')->load('article_content_listing');
+    $view = $this->viewExecutable->get($viewObject);
 
     if (is_object($view)) {
       $view->setDisplay('block_1');

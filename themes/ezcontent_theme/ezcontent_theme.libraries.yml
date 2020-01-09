@@ -9,6 +9,7 @@ framework:
       css/block/socialmedia.css: {}
       css/page/article.css: {}
       css/admin/layout_builder_modal.css: {}
+      css/block/content-listing-component.css: {}
 
 
 paragraph-type-gallery:
@@ -81,11 +82,6 @@ full-width-bg-background:
   css:
     theme:
       css/layout/full-width-bg-background.css: {}
-
-content-listing-component:
-  css:
-    theme:
-      css/block/content-listing-component.css: {}
 
 bootstrap_cdn:
   js:
