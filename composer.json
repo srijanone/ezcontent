@@ -130,7 +130,7 @@
         "Support JSON API, REST, GraphQL and custom normalizations": "https://www.drupal.org/files/issues/2019-04-23/2945817-73.patch"
       },
       "bootstrap_barrio": {
-        "Display Suite classes breaks Layout Builder if Display Suite is not installed": "https://www.drupal.org/files/issues/2019-10-04/bootstrap_barrio-disable_default_layouts-2976934-38.patch"
+        "Display Suite classes breaks Layout Builder if Display Suite is not installed": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
       }
     },
     "installer-paths": {
