@@ -96,7 +96,7 @@ function ezcontent_smart_article_get_alt_title(array $element, FormStateInterfac
     ]);
     if ($response->getStatusCode() == 200) {
       $body = \Drupal::service('serialization.json')->decode($response->getBody()->getContents());
-      $element['alt']['#default_value'] = $body['data'][0]['caption'];
+      $element['alt']['#default_value'] = $body['data']['caption'];
     }
 
   }
