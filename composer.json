@@ -129,7 +129,7 @@
       "drupal/metatag": {
         "Support JSON API, REST, GraphQL and custom normalizations": "https://www.drupal.org/files/issues/2019-04-23/2945817-73.patch"
       },
-      "bootstrap_barrio": {
+      "drupal/bootstrap_barrio": {
         "Display Suite classes breaks Layout Builder if Display Suite is not installed": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
       }
     },
