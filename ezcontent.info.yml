@@ -35,6 +35,7 @@ install:
   - history
   - image
   - linkit
+  - login_onlyemail
   - schema_metatag
   - moderation_dashboard
   - moderation_sidebar
@@ -55,7 +56,6 @@ install:
   - views_ui
   - workflows
   - ezcontent_demo
-  - login_onlyemail
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
