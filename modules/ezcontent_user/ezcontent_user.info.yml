@@ -1,0 +1,5 @@
+name: EZContent USER
+type: module
+description: 'Alter user forms and manage user entity.'
+package: EZContent USER
+core: 8.x

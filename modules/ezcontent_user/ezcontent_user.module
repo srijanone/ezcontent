@@ -1,0 +1,15 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function ezcontent_user_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'user_register_form') {
+    $moduleHandler = \Drupal::service('module_handler');
+    if ($moduleHandler->moduleExists('email_registration')) {
+      $form['account']['mail']['#description'] = t('We will send one time login link on this email id to set your password.');
+    }
+  }
+}
