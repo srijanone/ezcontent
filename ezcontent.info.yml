@@ -24,10 +24,12 @@ install:
   - contextual
   - dblog
   - editor
+  - email_registration
   - entity_embed
   - ezcontent_article
   - ezcontent_basic_page
   - ezcontent_media
+  - ezcontent_user
   - field_ui
   - file
   - google_analytics
@@ -35,7 +37,6 @@ install:
   - history
   - image
   - linkit
-  - login_onlyemail
   - schema_metatag
   - moderation_dashboard
   - moderation_sidebar
