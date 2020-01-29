@@ -1,5 +1,5 @@
-name: EZContent USER
+name: EZContent User Feature
 type: module
-description: 'Alter user forms and manage user entity.'
-package: EZContent USER
+description: 'Provides user based features.'
+package: EZContent User
 core: 8.x
