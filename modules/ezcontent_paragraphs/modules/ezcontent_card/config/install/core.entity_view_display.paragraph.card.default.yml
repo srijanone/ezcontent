@@ -2,20 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.card.field_text_background_color
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
+    - field.field.paragraph.card.field_text_position
     - field.field.paragraph.card.field_title
     - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
+    - color_field
     - layout_builder
     - layout_builder_restrictions
     - layout_discovery
     - layout_library
     - link
+    - options
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -125,13 +129,44 @@ third_party_settings:
                 type: link
             additional: {  }
             weight: 5
+          76d81cb0-4167-4bf6-ab26-ba85786b1fd5:
+            uuid: 76d81cb0-4167-4bf6-ab26-ba85786b1fd5
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:card:field_text_background_color'
+              formatter:
+                label: above
+                settings:
+                  format: hex
+                  opacity: '1'
+                third_party_settings: {  }
+                type: color_field_formatter_text
+            additional: {  }
+            weight: 6
+          75df6b39-ae62-4713-a8b8-7801a479a693:
+            uuid: 75df6b39-ae62-4713-a8b8-7801a479a693
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:card:field_text_position'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 7
         third_party_settings: {  }
   layout_library:
     enable: true
   layout_builder_restrictions:
     entity_view_mode_restriction:
       allowed_blocks:
-        'Chaos tools': {  }
         'Custom block types': {  }
         Forms: {  }
         Help: {  }
@@ -154,6 +189,15 @@ targetEntityType: paragraph
 bundle: card
 mode: default
 content:
+  field_text_background_color:
+    weight: 6
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
+    region: content
   field_link:
     weight: 5
     label: hidden
@@ -197,6 +241,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_text_position:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_title:
     weight: 1
