@@ -29,6 +29,7 @@
     "drupal/block_blacklist": "^1.0",
     "drupal/bootstrap_barrio": "^4.22",
     "drupal/claro": "^1.0@alpha",
+    "drupal/color_field": "^2.2",
     "drupal/colorbox": "^1.4",
     "drupal/decoupled_router": "^1.11",
     "drupal/dropzonejs": "2.0.0-alpha4",

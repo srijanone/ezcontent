@@ -3,15 +3,19 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.card_list
+    - field.field.paragraph.card.field_text_background_color
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
+    - field.field.paragraph.card.field_text_position
     - field.field.paragraph.card.field_title
+    - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
     - link
+    - text
 id: paragraph.card.card_list
 targetEntityType: paragraph
 bundle: card
@@ -57,7 +61,8 @@ content:
   field_summary:
     weight: 4
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
     type: basic_string
     region: content
@@ -69,4 +74,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_text_background_color: true
+  field_text_position: true
+  layout_selection: true
