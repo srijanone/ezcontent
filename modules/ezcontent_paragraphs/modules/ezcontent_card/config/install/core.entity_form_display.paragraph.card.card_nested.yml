@@ -9,11 +9,16 @@ dependencies:
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
+    - field.field.paragraph.card.field_text_background_color
+    - field.field.paragraph.card.field_text_position
     - field.field.paragraph.card.field_title
+    - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
+    - color_field
     - entity_browser
     - link
+    - text
 id: paragraph.card.card_nested
 targetEntityType: paragraph
 bundle: card
@@ -64,8 +69,20 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textarea
     region: content
+  field_text_background_color:
+    type: color_field_widget_html5
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_text_position:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_title:
     weight: 0
     settings:
@@ -76,5 +93,6 @@ content:
     region: content
 hidden:
   created: true
+  layout_selection: true
   status: true
   uid: true
