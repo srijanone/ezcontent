@@ -4,6 +4,7 @@ description: 'Provides card feature for promoting content.'
 package: EZContent Paragraphs
 core: 8.x
 dependencies:
+  - color_field
   - ezcontent_paragraphs
   - ezcontent_video
   - layout_builder_restrictions

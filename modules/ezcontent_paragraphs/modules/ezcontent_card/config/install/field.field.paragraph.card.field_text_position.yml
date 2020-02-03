@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_position
+    - paragraphs.paragraphs_type.card
+  module:
+    - options
+id: paragraph.card.field_text_position
+field_name: field_text_position
+entity_type: paragraph
+bundle: card
+label: 'Text Position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string
