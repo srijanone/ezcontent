@@ -1,0 +1,6 @@
+ezcontent_card.hero_media_display:
+  css:
+    theme:
+      css/card.css: {}
+      css/hero_media.css: {}
+

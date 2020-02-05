@@ -1,0 +1,3 @@
+services:
+  ezcontent_hero_media.hex2rgba:
+    class: Drupal\ezcontent_hero_media\HexToRgba
