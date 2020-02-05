@@ -1,0 +1,153 @@
+.paragraph--type--hero-media .paragraph--type--card .field--name-field-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-family: 'ProximaNovaT-Thin',  sans-serif;
+  color: black;
+}
+@media only screen and (min-width: 37.5em) {
+  .paragraph--type--hero-media .paragraph--type--card .field--name-field-title {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}.paragraph--type--hero-media {
+  padding: 0;
+}
+.paragraph--type--hero-media .slick-arrow::before {
+  color: #3367d6;
+  opacity: 1;
+}
+.paragraph--type--hero-media .slick-arrow:hover::before {
+  color: #3367d6;
+}
+.paragraph--type--hero-media .slick-arrow.slick-prev {
+  left: -35px;
+}
+.paragraph--type--hero-media .slick-arrow.slick-next {
+  right: -35px;
+}
+.paragraph--type--hero-media .paragraph--type--card.paragraph--view-mode--hero-media .field--name-field-media-image {
+  padding: 0;
+}
+.paragraph--type--hero-media .paragraph--type--card {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.paragraph--type--hero-media .paragraph--type--card::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.paragraph--type--hero-media .paragraph--type--card .hero_media_content {
+  background-color: rgba(0, 0, 0, 0.37);
+  border-width: 0;
+  color: #fff;
+  letter-spacing: 0;
+  line-height: 20px;
+  margin: 0;
+  opacity: 1;
+  display: block;
+  height: auto;
+  left: 0;
+  padding: 5px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%
+}
+.paragraph--type--hero-media .paragraph--type--card .hero_media_content.center {
+  text-align: center;
+}
+.paragraph--type--hero-media .paragraph--type--card .hero_media_content.left {
+  text-align: left;
+}
+.paragraph--type--hero-media .paragraph--type--card .hero_media_content.right {
+  text-align: right;
+}
+.paragraph--type--hero-media .paragraph--type--card .blazy__caption {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  color: #fff;
+  display: none;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%
+}
+.paragraph--type--hero-media .paragraph--type--card .blazy__caption:empty {
+  display: none;
+}
+.paragraph--type--hero-media .paragraph--type--card .field--name-field-title {
+  letter-spacing: 1px;
+  line-height: 37px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 0;
+  color: white;
+}
+@media only screen and (max-width: 75em) {
+  .paragraph--type--hero-media .paragraph--type--card .field--name-field-title {
+    font-size: 25px;
+    line-height: 25px;
+    width: 100%
+}
+}.paragraph--type--hero-media .paragraph--type--card .field--name-field-short-title {
+  font-size: 18px;
+  padding: 5px 10px 0;
+  margin: 0;
+}
+@media only screen and (max-width: 75em) {
+  .paragraph--type--hero-media .paragraph--type--card .field--name-field-short-title {
+    font-size: 14px;
+  }
+}.paragraph--type--hero-media .paragraph--type--card .field--name-field-subhead {
+  border-color: transparent;
+  font-size: 16px;
+  padding: 5px 10px 0;
+}
+@media only screen and (max-width: 75em) {
+  .paragraph--type--hero-media .paragraph--type--card .field--name-field-subhead {
+    font-size: 14px;
+  }
+}.paragraph--type--hero-media .paragraph--type--card .field--name-field-summary {
+  border-color: transparent;
+  display: block;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+@media only screen and (max-width: 75em) {
+  .paragraph--type--hero-media .paragraph--type--card .field--name-field-summary {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}.paragraph--type--hero-media .paragraph--type--card .field--name-field-link {
+  padding: 0 10px;
+  text-align: right;
+}
+.paragraph--type--hero-media .paragraph--type--card .field--name-field-link a {
+  background: #3367d6;
+  border: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.42857143;
+  margin-bottom: 0;
+  padding: 7px 15px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 5px 10px;
+  min-width: 150px;
+}
+.paragraph--type--hero-media .paragraph--type--card .field--name-field-link a:hover {
+  background: #4285f4;
+  color: #fff;
+  text-decoration: none;
+}
+.paragraph--type--hero-media .paragraph--type--card .field--name-field-link a:focus {
+  background: #4285f4;
+  color: #fff;
+  text-decoration: none;
+}
+

@@ -8,6 +8,8 @@ dependencies:
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
+    - field.field.paragraph.card.field_text_background_color
+    - field.field.paragraph.card.field_text_position
     - field.field.paragraph.card.field_title
     - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
@@ -26,16 +28,17 @@ third_party_settings:
         - field_link
       parent_name: ''
       weight: 20
-      format_type: html_element
+      format_type: html_element_hero_media_display
       format_settings:
-        id: ''
-        classes: hero_media_content
+        label: 'Hero Media Content'
         element: div
-        show_label: false
+        show_label: '0'
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: hero_media_content
       label: 'Hero Media Content'
 id: paragraph.card.hero_media
 targetEntityType: paragraph
@@ -96,5 +99,6 @@ content:
     type: string
     region: content
 hidden:
+  field_text_background_color: true
+  field_text_position: true
   layout_selection: true
-
