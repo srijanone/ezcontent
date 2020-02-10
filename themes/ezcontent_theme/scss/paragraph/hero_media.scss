@@ -24,6 +24,7 @@
       right: -35px;
     }
   }
+
   .paragraph--type--card {
     &.paragraph--view-mode--hero-media {
       .field {
@@ -33,6 +34,7 @@
       }
     }
   }
+
   .paragraph--type--card {
     @include clearfix;
     background: transparent;
@@ -49,6 +51,20 @@
       position: absolute;
       bottom: 0;
       width: 100%;
+    }
+
+    // Handle dynamic text position.
+
+    .hero_media_content.center {
+      text-align: center;
+    }
+
+    .hero_media_content.left {
+      text-align: left;
+    }
+
+    .hero_media_content.right {
+      text-align: right;
     }
 
     .blazy__caption {

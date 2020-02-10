@@ -16,9 +16,9 @@ required: false
 translatable: false
 default_value:
   -
-    color: '#ffffff'
-    opacity: !!float 1
+    color: '#000000'
+    opacity: !!float 0.37
 default_value_callback: ''
 settings:
-  opacity: 1
+  opacity: 0.37
 field_type: color_field_type
