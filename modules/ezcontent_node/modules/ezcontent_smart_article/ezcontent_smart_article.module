@@ -9,6 +9,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\InvokeCommand;
 use Drupal\file\Entity\File;
+use Drupal\Component\Utility\Html;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -46,8 +47,25 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
         $form['body']['#attributes']['style'] = 'display:none;';
       }
     }
-
-    // Add a process to field_company_logo
+    // Check if smart summary exist.
+    if (isset($form['field_smart_text_summary']['widget'][0]['summary'])) {
+      $form['field_smart_text_summary']['widget'][0]['number_of_sentences']['#states']  = [
+        'visible' => [
+          ':input[name="field_smart_text_summary[0][summary_type]"]' => ['value' => 'extractive'],
+        ],
+      ];
+      $form['field_smart_text_summary']['widget'][0]['generate_smart_summary']['#ajax'] = [
+        'callback' => 'ezcontent_smart_summary_generate_callback',
+        'wrapper' => 'form-smart-summary-generate-wrapper',
+        'effect' => 'fade',
+        'event' => 'click',
+        'progress' => [
+          'type' => 'throbber',
+          'message' => 'Please wait...',
+        ],
+      ];
+    }
+    // Add a process to field_company_logo.
     if (!empty($form['field_company_logo'])) {
       $form['field_company_logo']['widget'][0]['#process'][] = 'ezcontent_smart_article_get_alt_title';
     }
@@ -56,7 +74,8 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
 }
 
 /**
- * Summary generator callback
+ * Summary generator callback.
+ *
  * @todo: Move to a service.
  */
 function ezcontent_smart_article_generate_callback(&$form, FormStateInterface $form_state) {
@@ -72,14 +91,35 @@ function ezcontent_smart_article_generate_callback(&$form, FormStateInterface $f
 }
 
 /**
+ * Summary generator callback.
+ *
+ * @todo: Move to a service.
+ */
+function ezcontent_smart_summary_generate_callback(&$form, FormStateInterface $form_state) {
+  $generate_summary = \Drupal::service('ezcontent_smart_article.generate_summary');
+  $summary_type = $form_state->getValue('field_smart_text_summary')[0]['summary_type'];
+  $number_of_sentences = $form_state->getValue('field_smart_text_summary')[0]['number_of_sentences'];
+  $article = Html::decodeEntities(strip_tags($form_state->getValue('field_smart_text_summary')[0]['value']));
+  $text = json_decode($generate_summary->generateSummary($article, $summary_type, $number_of_sentences));
+  $summary = $text->data->data->summary;
+
+  $response = new AjaxResponse();
+  $arguments = [$summary, 'edit-field-smart-text-summary-0-summary'];
+  $edit_summary_arguments = ['', '.link-edit-summary'];
+  $response->addCommand(new InvokeCommand(NULL, "update_summary_text", $arguments));
+  $response->addCommand(new InvokeCommand(NULL, 'update_edit_summary', $edit_summary_arguments));
+  return $response;
+}
+
+/**
  * Process callback: Adds the ALT title to image.
+ *
  * @todo: Move to a service.
  *
  * @param array $element
  *   Form API element.
  *
  * @return array $element
- *
  */
 function ezcontent_smart_article_get_alt_title(array $element, FormStateInterface $form_state, array &$form) {
   $item = $element['#value'];
