@@ -10,6 +10,7 @@ use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\InvokeCommand;
 use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
+use Drupal\Component\Serialization\Json;
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -100,8 +101,8 @@ function ezcontent_smart_summary_generate_callback(&$form, FormStateInterface $f
   $summary_type = $form_state->getValue('field_smart_text_summary')[0]['summary_type'];
   $number_of_sentences = $form_state->getValue('field_smart_text_summary')[0]['number_of_sentences'];
   $article = Html::decodeEntities(strip_tags($form_state->getValue('field_smart_text_summary')[0]['value']));
-  $text = json_decode($generate_summary->generateSummary($article, $summary_type, $number_of_sentences));
-  $summary = $text->data->data->summary;
+  $text = Json::decode($generate_summary->generateSummary($article, $summary_type, $number_of_sentences));
+  $summary = $text['data']['data']['summary'];
 
   $response = new AjaxResponse();
   $arguments = [$summary, 'edit-field-smart-text-summary-0-summary'];
