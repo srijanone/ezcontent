@@ -10,8 +10,8 @@ id: node.smart_article.field_smart_text_summary
 field_name: field_smart_text_summary
 entity_type: node
 bundle: smart_article
-label: 'smart Text Summary'
-description: ''
+label: 'Smart Text Summary'
+description: 'AI powered summary generation.'
 required: false
 translatable: false
 default_value: {  }
