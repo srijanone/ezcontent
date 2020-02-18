@@ -22,7 +22,6 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
   ])) {
     // Make Company name Autocomplete.
     $form['field_company_name']['widget'][0]['value']['#autocomplete_route_name'] = 'ezcontent_smart_article.autocomplete.companies';
-
     // Add a generate summary button and hide body field.
     $form['generate_summary'] = [
       '#type' => 'submit',
@@ -50,12 +49,12 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
     }
     // Check if smart summary exist.
     if (isset($form['field_smart_text_summary']['widget'][0]['summary'])) {
-      $form['field_smart_text_summary']['widget'][0]['number_of_sentences']['#states']  = [
+      $form['field_smart_text_summary']['widget'][0]['summary_container']['number_of_sentences']['#states'] = [
         'visible' => [
-          ':input[name="field_smart_text_summary[0][summary_type]"]' => ['value' => 'extractive'],
+          ':input[name="field_smart_text_summary[0][summary_container][summary_type]"]' => ['value' => 'extractive'],
         ],
       ];
-      $form['field_smart_text_summary']['widget'][0]['generate_smart_summary']['#ajax'] = [
+      $form['field_smart_text_summary']['widget'][0]['summary_container']['generate_smart_summary']['#ajax'] = [
         'callback' => 'ezcontent_smart_summary_generate_callback',
         'wrapper' => 'form-smart-summary-generate-wrapper',
         'effect' => 'fade',
@@ -65,6 +64,8 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
           'message' => 'Please wait...',
         ],
       ];
+      // Add submit handler to update summary.
+      $form['actions']['submit']['#submit'][] = 'update_summary_field_submit_handler';
     }
     // Add a process to field_company_logo.
     if (!empty($form['field_company_logo'])) {
@@ -98,18 +99,27 @@ function ezcontent_smart_article_generate_callback(&$form, FormStateInterface $f
  */
 function ezcontent_smart_summary_generate_callback(&$form, FormStateInterface $form_state) {
   $generate_summary = \Drupal::service('ezcontent_smart_article.generate_summary');
-  $summary_type = $form_state->getValue('field_smart_text_summary')[0]['summary_type'];
-  $number_of_sentences = $form_state->getValue('field_smart_text_summary')[0]['number_of_sentences'];
+  $summary_type = $form_state->getValue('field_smart_text_summary')[0]['summary_container']['summary_type'];
+  $number_of_sentences = $form_state->getValue('field_smart_text_summary')[0]['summary_container']['number_of_sentences'];
   $article = Html::decodeEntities(strip_tags($form_state->getValue('field_smart_text_summary')[0]['value']));
   $text = Json::decode($generate_summary->generateSummary($article, $summary_type, $number_of_sentences));
   $summary = $text['data']['data']['summary'];
 
   $response = new AjaxResponse();
-  $arguments = [$summary, 'edit-field-smart-text-summary-0-summary'];
-  $edit_summary_arguments = ['', '.link-edit-summary'];
+  $arguments = [$summary, 'edit-field-smart-text-summary-0-summary-container-summary-area'];
   $response->addCommand(new InvokeCommand(NULL, "update_summary_text", $arguments));
-  $response->addCommand(new InvokeCommand(NULL, 'update_edit_summary', $edit_summary_arguments));
   return $response;
+}
+/**
+ * Summary generator callback.
+ *
+ * @todo: Move to a service.
+ */
+function update_summary_field_submit_handler(&$form, FormStateInterface $form_state) {
+  $entity = $form_state->getFormObject()->getEntity();
+  $summary = $form_state->getValue('field_smart_text_summary')[0]['summary_container']['summary_area'];
+  $entity->get('field_smart_text_summary')->summary = $summary;
+  $entity->save();
 }
 
 /**

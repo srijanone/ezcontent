@@ -24,7 +24,27 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $element = parent::formElement($items, $delta, $element, $form, $form_state);
-    $element['summary_type'] = [
+    $element['summary']['#prefix'] = '<div class="text-summary-wrapper">';
+    $element['summary']['#attributes']['class'] = ['text-summary','visually-hidden'];
+    $element['summary_container'] = [
+      '#type' => 'details',
+      '#title' => t('Generate Summary'),
+      '#description' => t('Generate summary from text entered in body field above.'),
+      '#weight' => 1,
+      '#open' => FALSE,
+      // Controls the HTML5 'open' attribute. Defaults to FALSE.
+    ];
+    $element['summary_container']['summary_area'] = [
+      '#type' => 'textarea',
+      '#title' => t('Summary'),
+      '#default_value' => $items[$delta]->summary,
+      '#rows' => $this->getSetting('summary_rows'),
+      '#description' => t('Leave blank to use trimmed value of full text as the summary.'),
+      '#attributes' => ['class' => ['text-summary']],
+      '#prefix' => '<div class="text-summary-wrapper">',
+      '#suffix' => '</div>',
+    ];
+    $element['summary_container']['summary_type'] = [
       '#type' => 'radios',
       '#title' => t("Summary type"),
       '#options' => [
@@ -32,21 +52,17 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
         'extractive' => 'Extractive',
       ],
       '#default_value' => 'abstractive',
-      '#weight' => -9,
     ];
-    $element['number_of_sentences'] = [
+    $element['summary_container']['number_of_sentences'] = [
       '#type' => 'number',
       '#title' => t("Number of sentences"),
       '#min' => 1,
       '#default_value' => 5,
-      '#weight' => -8,
     ];
-    $element['generate_smart_summary'] = [
+    $element['summary_container']['generate_smart_summary'] = [
       '#type' => 'button',
       '#name' => 'generate_smart_summary',
       '#value' => t('Generate Smart Summary'),
-      '#weight' => -7,
-      '#attributes' => ['class' => ['link',]],
     ];
     return $element;
   }
