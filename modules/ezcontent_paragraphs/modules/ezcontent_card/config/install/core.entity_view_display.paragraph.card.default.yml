@@ -29,8 +29,8 @@ third_party_settings:
         layout_id: layout_onecol
         layout_settings: {  }
         components:
-          40c44252-9858-47f8-bd58-dd6700261c21:
-            uuid: 40c44252-9858-47f8-bd58-dd6700261c21
+          6c4f253d-0f04-4d7e-a428-21471dba377a:
+            uuid: 6c4f253d-0f04-4d7e-a428-21471dba377a
             region: content
             configuration:
               label_display: '0'
@@ -46,8 +46,8 @@ third_party_settings:
                 type: entity_reference_entity_view
             additional: {  }
             weight: 0
-          920a7b11-c2d1-46cc-95a6-06f7d8cac21f:
-            uuid: 920a7b11-c2d1-46cc-95a6-06f7d8cac21f
+          d9152f04-7aef-49e1-b668-d0772cf74b6e:
+            uuid: d9152f04-7aef-49e1-b668-d0772cf74b6e
             region: content
             configuration:
               label_display: '0'
@@ -62,8 +62,8 @@ third_party_settings:
                 type: string
             additional: {  }
             weight: 1
-          fcda339f-cc61-40f3-a929-81712fd685a8:
-            uuid: fcda339f-cc61-40f3-a929-81712fd685a8
+          b571cb67-6b30-4503-98de-e4bdcd4329c8:
+            uuid: b571cb67-6b30-4503-98de-e4bdcd4329c8
             region: content
             configuration:
               label_display: '0'
@@ -78,8 +78,8 @@ third_party_settings:
                 type: string
             additional: {  }
             weight: 2
-          c1f337ef-aaf3-43c4-a891-d435f352f8ee:
-            uuid: c1f337ef-aaf3-43c4-a891-d435f352f8ee
+          e5081d88-4b9b-4286-a30e-855bacb11e02:
+            uuid: e5081d88-4b9b-4286-a30e-855bacb11e02
             region: content
             configuration:
               label_display: '0'
@@ -94,8 +94,8 @@ third_party_settings:
                 type: string
             additional: {  }
             weight: 3
-          d0c0a25b-c51b-4a2a-baf6-0e27b2c3e549:
-            uuid: d0c0a25b-c51b-4a2a-baf6-0e27b2c3e549
+          edf99052-1987-49e9-91c5-2f3980e7a9fd:
+            uuid: edf99052-1987-49e9-91c5-2f3980e7a9fd
             region: content
             configuration:
               label_display: '0'
@@ -109,8 +109,8 @@ third_party_settings:
                 type: basic_string
             additional: {  }
             weight: 4
-          bbb0db43-404e-4157-acf0-6355194730e8:
-            uuid: bbb0db43-404e-4157-acf0-6355194730e8
+          5060abba-09c0-49ef-8e3e-969a18c864e2:
+            uuid: 5060abba-09c0-49ef-8e3e-969a18c864e2
             region: content
             configuration:
               label_display: '0'
@@ -129,8 +129,8 @@ third_party_settings:
                 type: link
             additional: {  }
             weight: 5
-          76d81cb0-4167-4bf6-ab26-ba85786b1fd5:
-            uuid: 76d81cb0-4167-4bf6-ab26-ba85786b1fd5
+          ce3e5f73-a4ec-42bb-93e9-2f9cb4fff9b4:
+            uuid: ce3e5f73-a4ec-42bb-93e9-2f9cb4fff9b4
             region: content
             configuration:
               label_display: '0'
@@ -146,8 +146,8 @@ third_party_settings:
                 type: color_field_formatter_text
             additional: {  }
             weight: 6
-          75df6b39-ae62-4713-a8b8-7801a479a693:
-            uuid: 75df6b39-ae62-4713-a8b8-7801a479a693
+          d90cfa44-3e77-4d3d-a649-1ba8a9b14b31:
+            uuid: d90cfa44-3e77-4d3d-a649-1ba8a9b14b31
             region: content
             configuration:
               label_display: '0'
@@ -172,13 +172,7 @@ third_party_settings:
         Help: {  }
         'Inline blocks': {  }
         'Lists (Views)': {  }
-        'Paragraph fields':
-          - 'field_block:paragraph:card:field_link'
-          - 'field_block:paragraph:card:field_media'
-          - 'field_block:paragraph:card:field_short_title'
-          - 'field_block:paragraph:card:field_subhead'
-          - 'field_block:paragraph:card:field_summary'
-          - 'field_block:paragraph:card:field_title'
+        'Paragraph fields': {  }
         System: {  }
         User: {  }
         'User fields': {  }
