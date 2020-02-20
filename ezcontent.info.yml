@@ -32,6 +32,7 @@ install:
   - ezcontent_user
   - field_ui
   - file
+  - gin_login
   - google_analytics
   - help
   - history
