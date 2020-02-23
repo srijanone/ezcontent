@@ -72,12 +72,12 @@ content:
     region: content
   field_text_background_color:
     type: color_field_widget_html5
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_text_position:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -93,7 +93,7 @@ content:
   layout_selection:
     type: options_select
     region: content
-    weight: 6
+    weight: 8
     settings: {  }
     third_party_settings: {  }
 hidden:
