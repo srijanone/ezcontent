@@ -19,7 +19,7 @@ function ezcontent_listing_preprocess_block(&$variables) {
       switch ($block_view_mode) {
         case 'full':
           $content_list_data = $helper_block_service->getContentListingBlock($block);
-          $variables['content_listing_data'] = $content_list_data;
+          $variables['content'] = array_merge($variables['content'], $content_list_data);
           break;
       }
     }
