@@ -26,7 +26,7 @@
     "drupal/adminimal_theme": "^1.5",
     "drupal/allowed_formats": "^1.1",
     "drupal/autocomplete_deluxe": "^1.0@beta",
-    "drupal/blazy": ">=2.0-rc3 <2.0-rc7",
+    "drupal/blazy": "^2.0.0-rc6",
     "drupal/block_blacklist": "^1.0",
     "drupal/bootstrap_barrio": "^4.22",
     "drupal/color_field": "^2.2",
