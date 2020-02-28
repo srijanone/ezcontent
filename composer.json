@@ -26,7 +26,6 @@
     "drupal/adminimal_theme": "^1.5",
     "drupal/allowed_formats": "^1.1",
     "drupal/autocomplete_deluxe": "^1.0@beta",
-    "drupal/blazy": ">=2.0-rc3 <2.0-rc7",
     "drupal/block_blacklist": "^1.0",
     "drupal/bootstrap_barrio": "^4.22",
     "drupal/color_field": "^2.2",
@@ -75,8 +74,8 @@
     "drupal/simple_gmap": "^1.4",
     "drupal/simple_oauth": "^3.16",
     "drupal/simple_sitemap": "^3.3",
-    "drupal/slick": ">=2.0-rc3 <2.1",
-    "drupal/slick_entityreference": "2.x",
+    "drupal/slick": "2.0",
+    "drupal/slick_entityreference": "^2.0",
     "drupal/slick_media": "^2.0-alpha2",
     "drupal/slick_paragraphs": "2.x",
     "drupal/svg_image": "^1.9",
@@ -84,7 +83,8 @@
     "drupal/viewsreference": "2.x-dev",
     "drupal/webform": "^5.4",
     "drupal/yoast_seo": "^1.5",
-    "oomphinc/composer-installers-extender": "^1.1"
+    "oomphinc/composer-installers-extender": "^1.1",
+    "vardot/blazy": "^1.8"
   },
   "require-dev": {
     "drush/drush": "~9",
