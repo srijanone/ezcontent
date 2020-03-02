@@ -13,15 +13,14 @@
     attach: function (context, settings) {
       $('.tag-field-wrapper .tag-wrapper li', context).click(function(e) {
         var tagName = $(this).text();
-        var tagFieldWrapper = $('.tag-field-wrapper').prev().attr('id');
-        var existingTags = $("#"+tagFieldWrapper+"-target-id").val();
+        var existingTags = $('.tags-link-field .ui-autocomplete-input').val();
         var finalTags = '';
         if(existingTags == '') {
           finalTags = existingTags + tagName;
         } else {
           finalTags = existingTags + ', ' + tagName;
         }
-        $("#"+tagFieldWrapper+"-target-id").val(finalTags);
+        $('.tags-link-field .ui-autocomplete-input').val(finalTags);
       });
     }
   };
