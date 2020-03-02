@@ -10,7 +10,7 @@ use Drupal\Core\Logger\LoggerChannelFactory;
 /**
  * Defines a route controller for watches autocomplete form elements.
  */
-class GenerateSmarttags {
+class GenerateSmartTags {
 
   /**
    * The config object.
@@ -62,20 +62,19 @@ class GenerateSmarttags {
   /**
    * Get data from Endpoint.
    *
-   * @param string $entity
-   *   The entity name.
-   * @param string $type
-   *   The bundle name.
+   * @param string $value
+   *   The field value.
    *
    * @return mixed
+   *   The tags generated from the above field value.
    */
-  public function getData($value = '') {
+  public function getTags($value = '') {
     $url = $this->config->get('smart_tags_api_url') . '/process_article';
 
     $request = $this->httpClient->post($url, [
       'json' => [
-	'article'=> $value,
-      ]
+        'article' => $value,
+      ],
     ]);
 
     if ($request->getStatusCode() == 200) {
@@ -96,19 +95,24 @@ class GenerateSmarttags {
   /**
    * Finds all term reference fields for a given entity type.
    *
+   * @param object $fieldDefinitions
+   *   The field definition.
    * @param string $entityType
    *   The entity type name.
+   * @param string $bundleName
+   *   The bundle name.
    *
    * @return array
    *   The term reference fields keyed by their respective bundle.
    */
   public function findTermReferenceFieldsForEntityType($fieldDefinitions, $entityType, $bundleName) {
-      $referenceFields = [];
-      foreach ($fieldDefinitions as $fieldDefinition) {
-        if ($fieldDefinition->getType() == 'ezcontent_smart_tags' && $fieldDefinition->getSetting('target_type') == 'taxonomy_term') {
-          $referenceFields[$bundleName][] = $fieldDefinition->getName();
-        }
+    $referenceFields = [];
+    foreach ($fieldDefinitions as $fieldDefinition) {
+      if ($fieldDefinition->getType() == 'ezcontent_smart_tags' && $fieldDefinition->getSetting('target_type') == 'taxonomy_term') {
+        $referenceFields[$bundleName][] = $fieldDefinition->getName();
+        break;
       }
+    }
 
     return $referenceFields;
   }
