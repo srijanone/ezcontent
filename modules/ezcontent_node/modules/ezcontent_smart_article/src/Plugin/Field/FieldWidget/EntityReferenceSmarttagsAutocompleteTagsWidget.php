@@ -2,7 +2,6 @@
 
 namespace Drupal\ezcontent_smart_article\Plugin\Field\FieldWidget;
 
-use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\Plugin\Field\FieldWidget\EntityReferenceAutocompleteTagsWidget;
 use Drupal\Component\Utility\NestedArray;
@@ -21,21 +20,6 @@ use Drupal\Component\Utility\NestedArray;
  * )
  */
 class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAutocompleteTagsWidget {
-
-  /**
-   * {@inheritdoc}
-   */
-  public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
-    $widget = array(
-      '#attributes' => ['class' => ['form--inline', 'clearfix']],
-      '#theme_wrappers' => ['container']
-    );
-    // Add target_id exactly as EntityReferenceAutocompleteWidget has it.
-
-    $widget += parent::formElement($items, $delta, $element, $form, $form_state);
-
-    return $widget;
-  }
 
   /**
    * {@inheritdoc}

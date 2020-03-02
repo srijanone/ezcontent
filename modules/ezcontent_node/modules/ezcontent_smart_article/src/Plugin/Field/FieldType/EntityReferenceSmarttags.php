@@ -8,7 +8,6 @@ use Drupal\Core\TypedData\DataDefinition;
 use Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\FieldItemBase;
-use Drupal\field\FieldConfigInterface;
 
 /**
  * Plugin implementation of the 'ezcontent_smart_tags' field type.
@@ -21,7 +20,6 @@ use Drupal\field\FieldConfigInterface;
  *   default_widget = "ezcontent_smart_tags_autocomplete_tags",
  *   default_formatter = "ezcontent_smart_tags_entity",
  *   list_class = "\Drupal\Core\Field\EntityReferenceFieldItemList" * )
- *
  */
 class EntityReferenceSmarttags extends EntityReferenceItem {
 
@@ -42,11 +40,11 @@ class EntityReferenceSmarttags extends EntityReferenceItem {
    */
   public static function schema(FieldStorageDefinitionInterface $field_definition) {
     $schema = parent::schema($field_definition);
-    $schema['columns']['long_text_fields'] = array(
+    $schema['columns']['long_text_fields'] = [
       'type' => 'varchar',
       'length' => 255,
       'not null' => FALSE,
-    );
+    ];
     return $schema;
   }
 
@@ -54,9 +52,9 @@ class EntityReferenceSmarttags extends EntityReferenceItem {
    * {@inheritdoc}
    */
   public static function defaultFieldSettings() {
-    return array(
+    return [
       'long_text_fields' => NULL,
-    ) + parent::defaultFieldSettings();
+    ] + parent::defaultFieldSettings();
   }
 
   /**
@@ -67,56 +65,29 @@ class EntityReferenceSmarttags extends EntityReferenceItem {
 
     $entity = FieldItemBase::getEntity();
     $fields = [];
-    $types = array('text_with_summary', 'text_long', 'string_long');
-    foreach($entity as $key => $value) {
+    $types = ['text_with_summary', 'text_long', 'string_long'];
+    foreach ($entity as $key => $value) {
       $field_type = $entity->get($key)->getFieldDefinition()->getType();
-      if(strpos($key, 'field_') !== false){
-        if(in_array($field_type, $types)) {
+      if (strpos($key, 'field_') !== FALSE) {
+        if (in_array($field_type, $types)) {
           $fields[$key] = $entity->$key->getFieldDefinition()->getLabel();
         }
-      } else if($key == 'body') {
-        if(in_array($field_type, $types)) {
+      }
+      elseif ($key == 'body') {
+        if (in_array($field_type, $types)) {
           $fields[$key] = $entity->$key->getFieldDefinition()->getLabel();
         }
       }
     }
     $elements['handler']['long_text_fields'] = [
       '#type' => 'select',
-      '#title' => t('Long Text Fields'),
+      '#title' => $this->t('Long Text Fields'),
       '#options' => $fields,
       '#default_value' => $this->getSetting('long_text_fields'),
-      '#description' => t('List of text fields(Long Text, Long Text with Summary) used in the content type.'),
-      '#required' => true,
+      '#description' => $this->t('List of text fields(Long Text, Long Text with Summary) used in the content type.'),
+      '#required' => TRUE,
     ];
     return $elements;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public static function getPreconfiguredOptions() {
-    // In the base EntityReference class, this is used to populate the
-    // list of field-types with options for each destination entity type.
-    // Too much work, we'll just make people fill that out later.
-    // Also, keeps the field type dropdown from getting too cluttered.
-    return array();
-  }
-
-  public static function contentTypeFields($contentType) {
-    $entityManager = \Drupal::service('entity.manager');
-    $fields = [];
-
-    if(!empty($contentType)) {
-        $fields = array_filter(
-            $entityManager->getFieldDefinitions('node', $contentType), 
-                function ($field_definition) {
-                   return 
-                       $field_definition instanceof FieldConfigInterface;
-                }
-        );
-    }
-
-    return $fields;      
   }
 
 }

@@ -97,15 +97,13 @@ class GenerateSmartTags {
    *
    * @param object $fieldDefinitions
    *   The field definition.
-   * @param string $entityType
-   *   The entity type name.
    * @param string $bundleName
    *   The bundle name.
    *
    * @return array
    *   The term reference fields keyed by their respective bundle.
    */
-  public function findTermReferenceFieldsForEntityType($fieldDefinitions, $entityType, $bundleName) {
+  public function findTermReferenceFieldsForEntityType($fieldDefinitions, $bundleName) {
     $referenceFields = [];
     foreach ($fieldDefinitions as $fieldDefinition) {
       if ($fieldDefinition->getType() == 'ezcontent_smart_tags' && $fieldDefinition->getSetting('target_type') == 'taxonomy_term') {
