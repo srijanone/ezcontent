@@ -1,28 +1,22 @@
-#tag-field-wrapper ul.tag-wrapper {
-    float: left;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+.tag-field-wrapper ul.tag-wrapper {
+  float: left;
+  padding: 0;
+  margin: 0;
 }
 
-#tag-field-wrapper ul.tag-wrapper li {
-    float: left;
-    margin-right: 10px;
-    list-style: none;
-    padding: 5px 20px;
-    border: 1px solid #a6a6a6;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: #333;
+.tag-field-wrapper ul.tag-wrapper li {
+  float: left;
+  margin-right: 10px;
+  list-style: none;
+  padding: 5px 20px;
+  border: 1px solid #a6a6a6;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #333;
 }
 
-#tag-field-wrapper ul.tag-wrapper li:hover {
-    background: #0071b8;
-    color: #fff;
-    cursor: pointer;
+.tag-field-wrapper ul.tag-wrapper li:hover {
+  background: #0071b8;
+  color: #fff;
+  cursor: pointer;
 }
-
-input#edit-smart-tags-submit {
-    margin: 0;
-}
-

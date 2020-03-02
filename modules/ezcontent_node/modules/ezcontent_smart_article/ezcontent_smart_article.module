@@ -77,51 +77,48 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
 
   }
 
-  // Smarttags process
+  // Smarttags process.
   $bundle = '';
   $entityType = '';
   $form_object = $form_state->getFormObject();
   if ($form_object instanceof ContentEntityForm) {
     $bundle = $form_object->getEntity()->bundle();
     $entityType = $form_object->getEntity()->getEntityTypeId();
-    $targetId = $form_object->getEntity();
   }
   $form['#attached']['library'][] = 'ezcontent_smart_article/ezcontent_smart_article_libs';
-  if(!empty($entityType) && !empty($bundle)) {
+  if (!empty($entityType) && !empty($bundle)) {
     $fieldDefinitions = \Drupal::service('entity_field.manager')->getFieldDefinitions($entityType, $bundle);
     $results = \Drupal::service('ezcontent_smart_article.generate_smarttags');
     $termReferenceField = $results->findTermReferenceFieldsForEntityType($fieldDefinitions, $entityType, $bundle);
-    if(!empty($termReferenceField)) {
-      foreach($termReferenceField as $termFieldKey => $termFieldValue) {
-        foreach($termFieldValue as $termKey => $termValue) {
-          $refTagField = $fieldDefinitions[$termValue];
-          $refTagFieldSettings = $refTagField->getSettings('long_text_fields');
-          $form['message'] = array(
-            '#type' => 'markup',
-            '#weight' => -10,
-            '#markup' => '<span class="validate-message"></span>'
-          );
-          if(isset($form[$termValue])) {
-            $form[$termValue]['link_field'] = array(
-              '#type' => 'hidden',
-              '#value' => $refTagFieldSettings['long_text_fields']
-            );
-            $form[$termValue]['auto_tags'] = array (
-              '#prefix' => '<div id="auto-tags">',
-              '#suffix' => '</div>',
-              '#weight' => 0
-            );
-            $form[$termValue]['smart_tags_submit'] = array(
-              '#type' => 'submit',
-              '#value' => t('Generate Tags'),
-              '#weight' => 1,
-              '#ajax' => array(
+    if (!empty($termReferenceField)) {
+      $termFieldValue = reset($termReferenceField);
+      $termValue = reset($termFieldValue);
+      $refTagField = $fieldDefinitions[$termValue];
+      $refTagFieldSettings = $refTagField->getSettings('long_text_fields');
+      $form['message'] = [
+        '#type' => 'markup',
+        '#weight' => -10,
+        '#markup' => '<span class="validate-message"></span>',
+      ];
+      if (isset($form[$termValue])) {
+        $form[$termValue]['link_field'] = [
+          '#type' => 'hidden',
+          '#value' => $refTagFieldSettings['long_text_fields'],
+        ];
+        $form[$termValue]['auto_tags'] = [
+          '#prefix' => '<div id="auto-tags">',
+          '#suffix' => '</div>',
+          '#weight' => 0,
+        ];
+        $form[$termValue]['smart_tags_submit'] = [
+          '#type' => 'submit',
+          '#value' => t('Generate Tags'),
+          '#weight' => 1,
+          '#ajax' => [
             'callback' => 'generate_tags_form_submit',
-            'wrapper' => 'generate-tags'
-        ),
-            );
-          }
-        }
+            'wrapper' => 'generate-tags',
+          ],
+        ];
       }
     }
   }
@@ -162,6 +159,7 @@ function ezcontent_smart_summary_generate_callback(&$form, FormStateInterface $f
   $response->addCommand(new InvokeCommand(NULL, "update_summary_text", $arguments));
   return $response;
 }
+
 /**
  * Summary generator callback.
  *
@@ -216,7 +214,7 @@ function generate_tags_form_submit(array $form, FormStateInterface $form_state) 
   $linkField = $form_state->getValue('link_field');
   $linkFieldLable = $node->$linkField->getFieldDefinition()->getLabel();
   $field = $form_state->getValue($linkField);
-  if(empty($field[0]['value'])){
+  if (empty($field[0]['value'])) {
     \Drupal::messenger()->addMessage(t("$linkFieldLable field required."), 'error', TRUE);
     $message = [
       '#theme' => 'status_messages',
@@ -227,26 +225,42 @@ function generate_tags_form_submit(array $form, FormStateInterface $form_state) 
     $linkFieldId = str_replace('_', '-', $linkField);
     $response->addCommand(new HtmlCommand('.validate-message', $messages));
     $response->addCommand(new InvokeCommand("#edit-$linkFieldId-0-value", 'addClass', [$class]));
-  } else {
+  }
+  else {
     $results = \Drupal::service('ezcontent_smart_article.generate_smarttags');
-    $tags = $results->getData($field[0]['value']);
+    $tags = $results->getTags($field[0]['value']);
     if ($tags) {
-      $tagsData = '<ul class="tag-wrapper">';
-      foreach($tags as $tagKey => $tagValue) {
+      /*$tagsData = '<ul class="tag-wrapper">';
+      foreach ($tags as $tagKey => $tagValue) {
         $tagsData .= "<li>$tagValue</li>";
       }
       $tagsData .= '</ul>';
       $autoTags = [
-        '#title'=>'Auto Tags',
-        '#type'=>'markup',
-        '#name'=>'autotags',
-        '#markup'=> $tagsData,
-        '#prefix' => '<div id="tag-field-wrapper">',
-        '#suffix' => '</div>'
+        '#title' => 'Auto Tags',
+        '#type' => 'markup',
+        '#name' => 'autotags',
+        '#markup' => $tagsData,
+        '#prefix' => '<div class="tag-field-wrapper">',
+        '#suffix' => '</div>',
+      ];*/
+      $autoTags = [
+        '#theme' => 'smarttag_template',
+        '#tags' => $tags,
       ];
       $renderedField = $renderer->render($autoTags);
       $response->addCommand(new ReplaceCommand('#auto-tags', $renderedField));
     }
   }
   return $response;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ezcontent_smart_article_theme($existing, $type, $theme, $path) {
+  return [
+    'smarttag_template' => [
+      'variables' => ['tags' => []],
+    ],
+  ];
 }

@@ -1,0 +1,9 @@
+{% if tags %}
+  <div class="tag-field-wrapper">
+    <ul class="tag-wrapper">
+      {% for tag in tags %}
+        <li>{{tag}}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
