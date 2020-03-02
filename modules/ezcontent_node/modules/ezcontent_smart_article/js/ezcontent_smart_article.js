@@ -11,18 +11,17 @@
    */
   Drupal.behaviors.ezcontent_smart_article = {
     attach: function (context, settings) {
-      $('#tag-field-wrapper .tag-wrapper li', context).click(function(e) {
-        //e.preventDefault();
-        var text = $(this).text();
-        var x = $('#tag-field-wrapper').prev().attr('id');
-        var panel= $("#"+x+"-target-id").val();
-        var conc = '';
-        if(panel == '') {
-          conc = panel + text;
+      $('.tag-field-wrapper .tag-wrapper li', context).click(function(e) {
+        var tagName = $(this).text();
+        var tagFieldWrapper = $('.tag-field-wrapper').prev().attr('id');
+        var existingTags = $("#"+tagFieldWrapper+"-target-id").val();
+        var finalTags = '';
+        if(existingTags == '') {
+          finalTags = existingTags + tagName;
         } else {
-          conc = panel + ', ' + text;
+          finalTags = existingTags + ', ' + tagName;
         }
-        $("#"+x+"-target-id").val(conc);
+        $("#"+tagFieldWrapper+"-target-id").val(finalTags);
       });
     }
   };
