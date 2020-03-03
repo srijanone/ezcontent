@@ -5,7 +5,7 @@ dependencies:
     - field.field.media.gallery.field_media_slideshow
     - media.type.gallery
   module:
-    - slick_media
+    - media_entity_slideshow
 id: media.gallery.default
 targetEntityType: media
 bundle: gallery
@@ -15,7 +15,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      optionset: ezcontent_setting
+      optionset: ezcontent_thumbnail
       optionset_thumbnail: ezcontent_thumbnail
       skin: default
       skin_thumbnail: asnavfor
@@ -90,7 +90,6 @@ content:
       id: ''
       overlay: ''
     third_party_settings: {  }
-    type: slick_media
     region: content
 hidden:
   created: true
