@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_smart_tags
+    - node.type.smart_article
+    - taxonomy.vocabulary.tags
+  module:
+    - ezcontent_smart_article
+id: node.smart_article.field_smart_tags
+field_name: field_smart_tags
+entity_type: node
+bundle: smart_article
+label: 'Smart Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: 1
+    auto_create_bundle: ''
+  long_text_fields: field_smart_text_summary
+field_type: ezcontent_smart_tags

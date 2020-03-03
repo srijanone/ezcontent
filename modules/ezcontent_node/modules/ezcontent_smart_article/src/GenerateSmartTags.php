@@ -68,8 +68,8 @@ class GenerateSmartTags {
    * @return mixed
    *   The tags generated from the above field value.
    */
-  public function getTags($value = '') {
-    $url = $this->config->get('smart_tags_api_url') . '/process_article';
+  public function getTags(string $value = '') {
+    $url = $this->config->get('smart_tags_api_url');
 
     $request = $this->httpClient->post($url, [
       'json' => [
@@ -93,26 +93,21 @@ class GenerateSmartTags {
   }
 
   /**
-   * Finds all term reference fields for a given entity type.
+   * Fetch ezcontent_smart_tags taxonomy_term reference field from given
+   * FieldDefinitions list.
    *
    * @param object $fieldDefinitions
-   *   The field definition.
-   * @param string $bundleName
-   *   The bundle name.
+   *   The list of field definition.
    *
-   * @return array
-   *   The term reference fields keyed by their respective bundle.
+   * @return mixed
+   *   Machine name of the term reference field.
    */
-  public function findTermReferenceFieldsForEntityType($fieldDefinitions, $bundleName) {
-    $referenceFields = [];
+  public function findTermReferenceFieldsForEntityType($fieldDefinitions) {
     foreach ($fieldDefinitions as $fieldDefinition) {
       if ($fieldDefinition->getType() == 'ezcontent_smart_tags' && $fieldDefinition->getSetting('target_type') == 'taxonomy_term') {
-        $referenceFields[$bundleName][] = $fieldDefinition->getName();
-        break;
+        return $fieldDefinition->getName();
       }
     }
-
-    return $referenceFields;
   }
 
 }
