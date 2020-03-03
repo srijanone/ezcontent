@@ -15,9 +15,10 @@
         var tagName = $(this).text();
         var existingTags = $('.tags-link-field .ui-autocomplete-input').val();
         var finalTags = '';
-        if(existingTags == '') {
+        if (existingTags === '') {
           finalTags = existingTags + tagName;
-        } else {
+        }
+        else {
           finalTags = existingTags + ', ' + tagName;
         }
         $('.tags-link-field .ui-autocomplete-input').val(finalTags);

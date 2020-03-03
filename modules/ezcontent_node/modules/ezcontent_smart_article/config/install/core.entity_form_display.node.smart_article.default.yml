@@ -5,11 +5,13 @@ dependencies:
     - field.field.node.smart_article.body
     - field.field.node.smart_article.field_company_logo
     - field.field.node.smart_article.field_company_name
+    - field.field.node.smart_article.field_smart_tags
     - field.field.node.smart_article.field_smart_text_summary
     - image.style.thumbnail
     - node.type.smart_article
   module:
     - content_moderation
+    - ezcontent_smart_article
     - path
     - scheduler
     - svg_image
@@ -49,6 +51,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_smart_tags:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: ezcontent_smart_tags_autocomplete_tags
     region: content
   field_smart_text_summary:
     weight: 26
