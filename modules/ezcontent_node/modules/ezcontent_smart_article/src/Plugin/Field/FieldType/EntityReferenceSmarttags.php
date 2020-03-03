@@ -19,9 +19,17 @@ use Drupal\Core\Field\FieldItemBase;
  *   category = @Translation("Reference"),
  *   default_widget = "ezcontent_smart_tags_autocomplete_tags",
  *   default_formatter = "ezcontent_smart_tags_entity",
- *   list_class = "\Drupal\Core\Field\EntityReferenceFieldItemList" * )
+ *   list_class = "\Drupal\Core\Field\EntityReferenceFieldItemList"
+ * )
  */
 class EntityReferenceSmarttags extends EntityReferenceItem {
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function getPreconfiguredOptions() {
+    return [];
+  }
 
   /**
    * {@inheritdoc}
@@ -65,7 +73,7 @@ class EntityReferenceSmarttags extends EntityReferenceItem {
 
     $entity = FieldItemBase::getEntity();
     $fields = [];
-    $types = ['text_with_summary', 'text_long', 'string_long'];
+    $types = ['text_with_summary', 'text_long', 'string_long', 'smart_text_with_summary'];
     foreach ($entity as $key => $value) {
       $field_type = $entity->get($key)->getFieldDefinition()->getType();
       if (strpos($key, 'field_') !== FALSE) {
