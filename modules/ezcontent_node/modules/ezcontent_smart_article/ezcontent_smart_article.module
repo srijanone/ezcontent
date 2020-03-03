@@ -101,24 +101,13 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
         '#markup' => '<span class="validate-message"></span>',
       ];
       if (isset($form[$termValue])) {
-        $form[$termValue]['#attributes']['class'][] = 'tags-link-field';
         $form[$termValue]['link_field'] = [
           '#type' => 'hidden',
           '#value' => $refTagFieldSettings['long_text_fields'],
         ];
-        $form[$termValue]['auto_tags'] = [
-          '#prefix' => '<div id="auto-tags">',
-          '#suffix' => '</div>',
-          '#weight' => 0,
-        ];
-        $form[$termValue]['smart_tags_submit'] = [
-          '#type' => 'submit',
-          '#value' => t('Generate Tags'),
-          '#weight' => 1,
-          '#ajax' => [
-            'callback' => 'generate_tags_form_submit',
-            'wrapper' => 'generate-tags',
-          ],
+        $form[$termValue]['widget']['smart_tags_submit']['#ajax'] = [
+          'callback' => 'generate_tags_form_submit',
+          'wrapper' => 'generate-tags',
         ];
       }
     }

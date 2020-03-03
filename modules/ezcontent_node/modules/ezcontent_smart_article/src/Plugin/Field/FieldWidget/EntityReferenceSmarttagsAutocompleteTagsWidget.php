@@ -3,6 +3,7 @@
 namespace Drupal\ezcontent_smart_article\Plugin\Field\FieldWidget;
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\Plugin\Field\FieldWidget\EntityReferenceAutocompleteTagsWidget;
 use Drupal\Component\Utility\NestedArray;
 
@@ -20,6 +21,27 @@ use Drupal\Component\Utility\NestedArray;
  * )
  */
 class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAutocompleteTagsWidget {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
+    $element = parent::formElement($items, $delta, $element, $form, $form_state);
+    $element['#prefix'] = '<div class="tags-link-field">';
+    $element['#suffix'] = '</div>';
+    $element['auto_tags'] = [
+      '#prefix' => '<div id="auto-tags">',
+      '#suffix' => '</div>',
+      '#weight' => 0,
+    ];
+    $element['smart_tags_submit'] = [
+      '#type' => 'submit',
+      '#name' => 'smart_tags_submit',
+      '#value' => t('Generate Tags'),
+      '#weight' => 1,
+    ];
+    return $element;
+  }
 
   /**
    * {@inheritdoc}
