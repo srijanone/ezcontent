@@ -76,7 +76,6 @@
     "drupal/simple_sitemap": "^3.3",
     "drupal/slick": "2.0",
     "drupal/slick_entityreference": "^2.0",
-    "drupal/slick_media": "^2.0-alpha2",
     "drupal/slick_paragraphs": "2.x",
     "drupal/svg_image": "^1.9",
     "drupal/video_embed_field": "^2.2",
@@ -108,6 +107,9 @@
       "drupal/core": "-p2"
     },
     "patches": {
+      "drupal/page_manager" : {
+        "An exception occurs after site installation as route not fount exception": "https://www.drupal.org/files/issues/2876880-page-varient-cache-2.patch"
+      },
       "drupal/panels": {
         "3030976 - Panels should check if there is an icon map before setting the no preview icon": "https://www.drupal.org/files/issues/2019-02-06/initial.patch",
         "2878684 - Use String.match to correlate regions when switching Layouts in Panels IPE": "https://www.drupal.org/files/issues/panels-ipe-2878684-3.patch"

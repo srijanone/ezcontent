@@ -5,7 +5,7 @@ package: EZContent Media
 core: 8.x
 dependencies:
   - blazy
+  - slick
   - ezcontent_media
   - ezcontent_image
   - media_entity_slideshow
-  - slick_media
