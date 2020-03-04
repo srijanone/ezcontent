@@ -24,8 +24,7 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $element = parent::formElement($items, $delta, $element, $form, $form_state);
-    $element['summary']['#prefix'] = '<div class="text-summary-wrapper">';
-    $element['summary']['#attributes']['class'] = ['text-summary','visually-hidden'];
+    $element['summary']['#prefix'] =  '<div class="visually-hidden">';
     $element['summary_container'] = [
       '#type' => 'details',
       '#title' => t('Generate Summary'),
