@@ -6,7 +6,7 @@
  * @param $variables
  * @param $hook
  */
-function ezcontent_hero_media_preprocess_paragraph__hero_media(&$variables) {
+function ezcontent_hero_media_preprocess_paragraph__card(&$variables) {
   if ($variables['view_mode'] === "hero_media") {
     $variables['#attached']['library'][] = 'ezcontent_hero_media/ezcontent_card.hero_media_display';
   }

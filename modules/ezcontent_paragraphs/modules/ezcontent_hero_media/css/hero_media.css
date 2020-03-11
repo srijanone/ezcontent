@@ -55,13 +55,13 @@
   bottom: 0;
   width: 100%
 }
-.paragraph--type--hero-media .paragraph--type--card .hero_media_content.center {
+.paragraph--type--card .hero_media_content.center {
   text-align: center;
 }
-.paragraph--type--hero-media .paragraph--type--card .hero_media_content.left {
+.paragraph--type--card .hero_media_content.left {
   text-align: left;
 }
-.paragraph--type--hero-media .paragraph--type--card .hero_media_content.right {
+.paragraph--type--card .hero_media_content.right {
   text-align: right;
 }
 .paragraph--type--hero-media .paragraph--type--card .blazy__caption {
