@@ -34,7 +34,9 @@
       }
     }
   }
-  &.paragraph--view-mode--default {
+
+  &.paragraph--view-mode--default,
+  &.paragraph--view-mode--cards-grid {
     .field {
 
       &--name-field-card {
@@ -43,6 +45,14 @@
       }
       &--name-field-short-title{
         font-size: 16px;
+      }
+    }
+  }
+
+  &.paragraph--view-mode--cards-grid {
+    .field {
+      &--name-field-title {
+        text-align: left;
       }
     }
   }
