@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image_browser
+    - core.entity_view_mode.paragraph.cards_grid
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
@@ -14,79 +14,90 @@ dependencies:
     - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
-    - color_field
-    - entity_browser
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
     - link
     - text
-id: paragraph.card.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  layout_library:
+    enable: true
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_blocks:
+        'Custom block types': {  }
+        Forms: {  }
+        Help: {  }
+        'Inline blocks': {  }
+        'Lists (Views)': {  }
+        'Paragraph fields': {  }
+        System: {  }
+        User: {  }
+        'User fields': {  }
+        core: {  }
+      allowed_layouts: {  }
+id: paragraph.card.cards_grid
 targetEntityType: paragraph
 bundle: card
-mode: default
+mode: cards_grid
 content:
   field_link:
     weight: 5
+    label: hidden
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    type: link_default
+    type: link
     region: content
   field_media:
-    weight: 2
+    weight: 0
+    label: hidden
     settings:
-      entity_browser: image_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      open: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
-      field_widget_replace: false
+      view_mode: card_list
+      link: false
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: entity_reference_entity_view
     region: content
   field_short_title:
-    weight: 1
+    weight: 2
+    label: hidden
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_subhead:
     weight: 3
+    label: hidden
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
   field_summary:
     weight: 4
+    label: hidden
     settings:
-      rows: 5
-      placeholder: ''
+      trim_length: 600
     third_party_settings: {  }
-    type: text_textarea
+    type: text_trimmed
     region: content
   field_title:
-    weight: 0
+    weight: 1
+    label: hidden
     settings:
-      size: 60
-      placeholder: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: string_textfield
+    type: string
     region: content
-  layout_selection:
-    type: options_select
-    region: content
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
 hidden:
-  created: true
   field_text_background_color: true
   field_text_position: true
-  status: true
-  uid: true
+  layout_selection: true
