@@ -118,7 +118,8 @@
         "Expose Layout Builder data to REST and JSON:API": "https://www.drupal.org/files/issues/2019-11-21/layout_builder-export-content-2942975-67.patch",
         "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2019-11-20/2999491-42.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch",
-        "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch"
+        "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch",
+        "JSON:API module through exception when installing as argument missing": "https://www.drupal.org/files/issues/2019-12-03/2996114-99.patch"
       },
       "drupal/jsonapi_extras": {
         "Link enhancer to add Aliased URL for internal links": "https://www.drupal.org/files/issues/2019-03-08/jsonapi_extras-Field-enhancer-for-URL-alias-2942851-24.patch"
@@ -128,6 +129,9 @@
       },
       "drupal/bootstrap_barrio": {
         "Display Suite classes breaks Layout Builder if Display Suite is not installed": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
+      },
+      "drupal/slick": {
+        "Slick module through a warning as field_type missing": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
       }
     },
     "installer-paths": {
