@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.paragraph.card_list
     - field.field.paragraph.card_list.field_card
+    - field.field.paragraph.card_list.field_link
     - field.field.paragraph.card_list.field_title
     - paragraphs.paragraphs_type.card_list
   module:

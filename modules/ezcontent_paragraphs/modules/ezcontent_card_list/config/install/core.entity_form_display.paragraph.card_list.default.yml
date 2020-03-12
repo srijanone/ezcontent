@@ -3,10 +3,12 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card_list.field_card
+    - field.field.paragraph.card_list.field_link
     - field.field.paragraph.card_list.field_title
+    - field.field.paragraph.card_list.view_mode_selection
     - paragraphs.paragraphs_type.card_list
   module:
-    - paragraphs
+    - paragraphs_previewer
 id: paragraph.card_list.default
 targetEntityType: paragraph
 bundle: card_list
@@ -39,7 +41,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  view_mode_selection:
+    type: options_select
+    region: content
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
+  field_link: true
   status: true
   uid: true

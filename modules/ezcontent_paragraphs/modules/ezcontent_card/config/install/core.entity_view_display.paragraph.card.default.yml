@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.card.field_text_background_color
     - field.field.paragraph.card.field_link
     - field.field.paragraph.card.field_media
     - field.field.paragraph.card.field_short_title
     - field.field.paragraph.card.field_subhead
     - field.field.paragraph.card.field_summary
+    - field.field.paragraph.card.field_text_background_color
     - field.field.paragraph.card.field_text_position
     - field.field.paragraph.card.field_title
     - field.field.paragraph.card.layout_selection
@@ -129,38 +129,6 @@ third_party_settings:
                 type: link
             additional: {  }
             weight: 5
-          ce3e5f73-a4ec-42bb-93e9-2f9cb4fff9b4:
-            uuid: ce3e5f73-a4ec-42bb-93e9-2f9cb4fff9b4
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:paragraph:card:field_text_background_color'
-              formatter:
-                label: above
-                settings:
-                  format: hex
-                  opacity: '1'
-                third_party_settings: {  }
-                type: color_field_formatter_text
-            additional: {  }
-            weight: 6
-          d90cfa44-3e77-4d3d-a649-1ba8a9b14b31:
-            uuid: d90cfa44-3e77-4d3d-a649-1ba8a9b14b31
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:paragraph:card:field_text_position'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: list_default
-            additional: {  }
-            weight: 7
         third_party_settings: {  }
   layout_library:
     enable: true
@@ -183,15 +151,6 @@ targetEntityType: paragraph
 bundle: card
 mode: default
 content:
-  field_text_background_color:
-    weight: 6
-    label: above
-    settings:
-      format: hex
-      opacity: '1'
-    third_party_settings: {  }
-    type: color_field_formatter_text
-    region: content
   field_link:
     weight: 5
     label: hidden
@@ -235,6 +194,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_text_background_color:
+    weight: 6
+    label: above
+    settings:
+      format: hex
+      opacity: '1'
+    third_party_settings: {  }
+    type: color_field_formatter_text
     region: content
   field_text_position:
     weight: 7
