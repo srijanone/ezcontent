@@ -127,6 +127,9 @@
       "drupal/metatag": {
         "Support JSON API, REST, GraphQL and custom normalizations": "https://www.drupal.org/files/issues/2020-02-23/2945817-87.patch"
       },
+      "drupal/slick": {
+        "Slick patch": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
+      },
       "drupal/bootstrap_barrio": {
         "Display Suite classes breaks Layout Builder if Display Suite is not installed": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
       }
