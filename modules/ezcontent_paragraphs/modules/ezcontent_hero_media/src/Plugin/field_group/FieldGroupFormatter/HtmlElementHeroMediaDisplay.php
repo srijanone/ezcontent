@@ -51,7 +51,17 @@ class HtmlElementHeroMediaDisplay extends HtmlElement {
     // Add the classes to the attributes array.
     $classes = $this->getClasses();
     array_push($classes, $paragraph->field_text_position->value);
-    $bg = $paragraph->get("field_text_background_color")->first()->getValue();
+    // Intialize $bg as an array with default values.
+    $bg = [];
+    $bg_color_field_config = \Drupal::entityTypeManager()
+      ->getStorage('field_config')
+      ->load('paragraph.card.field_text_background_color');
+    $default_value = 'default_value';
+    $bg_defaults = $bg_color_field_config->get($default_value);
+    $bg = $bg_defaults[0];
+    if (!empty($paragraph->get("field_text_background_color")->first())) {
+      $bg = $paragraph->get("field_text_background_color")->first()->getValue();
+    }
     // @todo use DI instead of global service container.
     $hex2rgba = \Drupal::service('ezcontent_hero_media.hex2rgba');
     $bg_color = $hex2rgba->hex2rgba($bg['color'], $bg['opacity']);
