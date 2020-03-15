@@ -14,7 +14,6 @@ dependencies:
     - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
-    - color_field
     - entity_browser
     - link
     - text
@@ -70,18 +69,6 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_text_background_color:
-    type: color_field_widget_html5
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_text_position:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_title:
     weight: 0
     settings:
@@ -93,10 +80,12 @@ content:
   layout_selection:
     type: options_select
     region: content
-    weight: 8
+    weight: 6
     settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
+  field_text_background_color: true
+  field_text_position: true
   status: true
   uid: true
