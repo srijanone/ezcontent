@@ -14,7 +14,6 @@ dependencies:
     - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
-    - color_field
     - entity_browser
     - link
     - text
