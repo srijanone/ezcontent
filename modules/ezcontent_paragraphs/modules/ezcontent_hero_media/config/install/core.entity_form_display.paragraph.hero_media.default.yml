@@ -21,7 +21,7 @@ content:
       autocollapse: none
       closed_mode_threshold: 0
       add_mode: dropdown
-      form_display_mode: card_nested
+      form_display_mode: hero_media
       default_paragraph_type: card
       features:
         duplicate: duplicate
