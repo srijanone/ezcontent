@@ -9,7 +9,7 @@ field_name: view_mode_selection
 entity_type: paragraph
 bundle: card_list
 label: 'View Mode'
-description: ''
+description: 'While using, unselect any layout / view mode being used in cards.'
 required: false
 translatable: true
 default_value: {  }
