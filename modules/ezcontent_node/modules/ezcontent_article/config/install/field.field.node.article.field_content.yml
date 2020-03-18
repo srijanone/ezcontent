@@ -22,8 +22,6 @@ settings:
     negate: 1
     target_bundles:
       card: card
-      faq_qa: faq_qa
-      form: form
     target_bundles_drag_drop:
       text:
         weight: -35
