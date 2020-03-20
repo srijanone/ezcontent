@@ -6,3 +6,7 @@ services:
   ezcontent_smart_article.generate_summary:
     class: Drupal\ezcontent_smart_article\GenerateSummary
     arguments: ['@config.factory', '@http_client', '@serialization.json', '@logger.factory']
+
+  ezcontent_smart_article.generate_smarttags:
+    class: Drupal\ezcontent_smart_article\GenerateSmartTags
+    arguments: ['@config.factory', '@http_client', '@serialization.json', '@logger.factory']

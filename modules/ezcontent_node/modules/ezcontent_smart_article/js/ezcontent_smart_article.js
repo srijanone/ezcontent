@@ -2,9 +2,29 @@
  * @file
  */
 
-(function ($) {
+(function ($, Drupal, drupalSettings) {
 
   "use strict";
+
+  /**
+   * Attaches the JS test behavior to to weight div.
+   */
+  Drupal.behaviors.ezcontent_smart_article = {
+    attach: function (context, settings) {
+      $('.tag-field-wrapper .tag-wrapper li', context).click(function(e) {
+        var tagName = $(this).text();
+        var existingTags = $('.tags-link-field .ui-autocomplete-input').val();
+        var finalTags = '';
+        if (existingTags === '') {
+          finalTags = existingTags + tagName;
+        }
+        else {
+          finalTags = existingTags + ', ' + tagName;
+        }
+        $('.tags-link-field .ui-autocomplete-input').val(finalTags);
+      });
+    }
+  };
 
   /**
    * Places the content in the text editor.
@@ -19,4 +39,4 @@
     $('#' + target_editor).val(data);
   };
 
-})(jQuery, drupalSettings);
+})(jQuery, Drupal, drupalSettings);

@@ -143,6 +143,12 @@ class ConfigForm extends ConfigFormBase {
       '#description' => $this->t('Provide the API URL.'),
       '#default_value' => $config->get('extractive_summary_api_url')
     ];
+    $form['smart_tags_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Smart Tags API URL'),
+      '#description' => $this->t('Provide the API URL.'),
+      '#default_value' => $config->get('smart_tags_api_url'),
+    ];
     return parent::buildForm($form, $form_state);
   }
 
