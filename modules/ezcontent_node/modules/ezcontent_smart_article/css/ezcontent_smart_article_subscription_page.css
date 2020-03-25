@@ -1,0 +1,18 @@
+body {
+  background-color: #733b0e !important;
+}
+
+.subcription-msg-container {
+  margin: 159px auto;
+  text-align: center;
+}
+
+.subcription-msg-items {
+  margin-top: 30px;
+}
+
+.subcription-msg-items p {
+  font-size: 90%;
+  font-weight: 900;
+  color: #f7f4f4;
+}

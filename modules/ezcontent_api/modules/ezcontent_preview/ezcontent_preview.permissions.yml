@@ -1,9 +1,0 @@
-'EZContent preview config':
-  title: 'EZContent config preview'
-  description: 'EZContent config permission'
-  restrict access: true
-  
-'EZContent view preview':
-  title: 'EZContent view preview'
-  description: 'EZContent view preview permission'
-  restrict access: true
