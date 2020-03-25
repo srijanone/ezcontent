@@ -8,3 +8,8 @@ ezcontent_smart_article_libs:
   dependencies:
     - core/jquery
     - core/drupalSettings
+
+ezcontent_smart_article_subscription_page_libs:
+  css:
+    theme:
+      css/ezcontent_smart_article_subscription_page.css: {}

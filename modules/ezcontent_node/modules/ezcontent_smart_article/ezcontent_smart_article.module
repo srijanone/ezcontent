@@ -23,6 +23,16 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
     'node_smart_article_edit_form',
     'node_smart_article_form',
   ])) {
+    $summary_config = \Drupal::config('summary_generator.settings');
+    if (empty($summary_config->get('summary_generator_api_url')) ||
+      empty($summary_config->get('summary_generator_data_file')) ||
+      empty($summary_config->get('image_captioning_api_url')) ||
+      empty($summary_config->get('abstractive_summary_api_url')) ||
+      empty($summary_config->get('extractive_summary_api_url')) ||
+      empty($summary_config->get('smart_tags_api_url'))) {
+      \Drupal::messenger()
+        ->addError(t('Smart Article is proprietary, license-based with Srijan. Click <a href="https://www.srijan.net/">here</a> to know more.'));
+    }
     // Make Company name Autocomplete.
     $form['field_company_name']['widget'][0]['value']['#autocomplete_route_name'] = 'ezcontent_smart_article.autocomplete.companies';
     // Add a generate summary button and hide body field.
@@ -31,6 +41,9 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       '#name' => 'generate_summary',
       '#value' => t('Generate Summary'),
       '#weight' => 11,
+      '#attributes' => empty($summary_config->get('summary_generator_api_url')) ? [
+        'disabled' => 'disabled'
+      ] : [],
       '#ajax' => [
         'callback' => 'ezcontent_smart_article_generate_callback',
         'wrapper' => 'form-summary-generate-wrapper',
@@ -67,6 +80,10 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
           'message' => 'Please wait...',
         ],
       ];
+      // Disable summary generate button if subscription keys not available.
+      $form['field_smart_text_summary']['widget'][0]['summary_container']['generate_smart_summary']['#attributes']
+        = (empty($summary_config->get('abstractive_summary_api_url')) || empty($summary_config->get('extractive_summary_api_url')))
+        ? ['disabled' => 'disabled'] : [];
       // Add submit handler to update summary.
       $form['actions']['submit']['#submit'][] = 'update_summary_field_submit_handler';
     }
@@ -74,7 +91,8 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
     if (!empty($form['field_company_logo'])) {
       $form['field_company_logo']['widget'][0]['#process'][] = 'ezcontent_smart_article_get_alt_title';
     }
-
+    // Disable auto caption feature if subscription keys not available.
+    $form['field_company_logo']['widget'][0]['#attributes'] = empty($summary_config->get('image_captioning_api_url')) ? ['disabled' => 'disabled'] : [];
     // Code for Smart Tags.
     $bundle = $entity_type = '';
     $form_object = $form_state->getFormObject();
@@ -101,6 +119,8 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
               'callback' => 'generate_tags_form_submit',
               'wrapper' => 'generate-tags',
             ];
+            // Disable smart tag button if subscription keys not available.
+            $form[$term_reference_field]['widget']['smart_tags_submit']['#attributes'] = empty($summary_config->get('smart_tags_api_url')) ? ['disabled' => 'disabled'] : [];
           }
         }
       }
@@ -234,5 +254,8 @@ function ezcontent_smart_article_theme($existing, $type, $theme, $path) {
     'smarttag_template' => [
       'variables' => ['tags' => []],
     ],
+    'smart_article_get_subscription_landing_page' => [
+      'variables' => [],
+    ]
   ];
 }

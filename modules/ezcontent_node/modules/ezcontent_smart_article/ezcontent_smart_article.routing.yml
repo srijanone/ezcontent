@@ -13,3 +13,10 @@ ezcontent_smart_article.autocomplete.companies:
     _format: json
   requirements:
     _access: 'TRUE'
+
+ezcontent_smart_article.get_subscription:
+  path: '/ezcontent-smart-article/get-subscription'
+  defaults:
+    _controller: '\Drupal\ezcontent_smart_article\Controller\EzcontentSmartArticleServicesSubscriber::getSubscription'
+  requirements:
+    _access: 'TRUE'
