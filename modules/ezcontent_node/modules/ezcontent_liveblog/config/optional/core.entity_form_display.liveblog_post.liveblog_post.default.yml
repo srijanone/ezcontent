@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.liveblog_post.liveblog_post.field_content
+  module:
+    - liveblog
+    - paragraphs
+id: liveblog_post.liveblog_post.default
+targetEntityType: liveblog_post
+bundle: liveblog_post
+mode: default
+content:
+  field_content:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: '0'
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  highlight: true
+  liveblog: true
+  location: true
+  source: true
+  status: true
+  uid: true

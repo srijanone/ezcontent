@@ -4,9 +4,10 @@ description: 'Provides shared node fields for other node-based features.'
 package: EZContent Node
 core: 8.x
 dependencies:
-  - field_group
-  - metatag
-  - paragraphs_previewer
-  - pathauto
-  - scheduler
-  - yoast_seo
+  - drupal:datetime
+  - field_group:field_group
+  - metatag:metatag
+  - paragraphs_previewer:paragraphs_previewer
+  - pathauto:pathauto
+  - scheduler:scheduler
+  - yoast_seo:yoast_seo

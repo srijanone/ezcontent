@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.liveblog.body
+    - field.field.node.liveblog.field_end_date
+    - field.field.node.liveblog.field_highlights
+    - field.field.node.liveblog.field_posts_load_limit
+    - field.field.node.liveblog.field_posts_number_initial
+    - field.field.node.liveblog.field_short_title
+    - field.field.node.liveblog.field_start_date
+    - field.field.node.liveblog.field_status
+    - node.type.liveblog
+  module:
+    - text
+    - user
+id: node.liveblog.teaser
+targetEntityType: node
+bundle: liveblog
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_status:
+    type: boolean
+    weight: 0
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_end_date: true
+  field_highlights: true
+  field_posts_load_limit: true
+  field_posts_number_initial: true
+  field_short_title: true
+  field_start_date: true
+  langcode: true
+  liveblog_posts: true

@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.liveblog_post.field_content
+    - paragraphs.paragraphs_type.assets
+    - paragraphs.paragraphs_type.embed
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+    - liveblog
+id: liveblog_post.liveblog_post.field_content
+field_name: field_content
+entity_type: liveblog_post
+bundle: liveblog_post
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      text: text
+      assets: assets
+      embed: embed
+      quote: quote
+    target_bundles_drag_drop:
+      text:
+        enabled: true
+        weight: -19
+      assets:
+        enabled: true
+        weight: -18
+      embed:
+        enabled: true
+        weight: -17
+      quote:
+        enabled: true
+        weight: -16
+      card:
+        weight: -15
+        enabled: false
+      from_library:
+        weight: -14
+        enabled: false
+      hero_media:
+        weight: -13
+        enabled: false
+      map:
+        weight: -12
+        enabled: false
+      social_media:
+        weight: -11
+        enabled: false
+field_type: entity_reference_revisions
