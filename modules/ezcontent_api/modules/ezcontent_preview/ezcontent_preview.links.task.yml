@@ -1,3 +1,0 @@
-ezcontent_preview.local_tasks:
-  deriver: \Drupal\ezcontent_preview\Plugin\Derivative\DynamicLocalTasks
-  weight: 100
