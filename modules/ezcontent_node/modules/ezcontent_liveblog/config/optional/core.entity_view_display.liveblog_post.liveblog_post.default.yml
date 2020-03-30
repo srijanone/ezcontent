@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.liveblog_post.liveblog_post.field_content
+  module:
+    - entity_reference_revisions
+    - liveblog
+    - user
+id: liveblog_post.liveblog_post.default
+targetEntityType: liveblog_post
+bundle: liveblog_post
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp_ago
+    weight: 2
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+    region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: 0
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  uid:
+    label: hidden
+    type: author
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  body: true
+  changed: true
+  highlight: true
+  liveblog: true
+  location: true
+  source: true

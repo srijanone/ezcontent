@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * The install file.
+ */
+
+use Drupal\Core\Installer\InstallerKernel;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+
+/**
+ * Implements hook_install().
+ */
+function ezcontent_liveblog_install() {
+  // Don't display the message during site installation.
+  if (!InstallerKernel::installationAttempted() && \Drupal::service('module_handler')->moduleExists('liveblog_pusher')) {
+    \Drupal::messenger()->addMessage(
+      t("To configure Liveblog Pusher, go to 'admin/config/content/liveblog' and specify the pusher plugin settings obtained from @pusher.", [
+        '@pusher' => Link::fromTextAndUrl(t('pusher.com'), Url::fromUri('external:https://pusher.com', ['attributes' => ['target' => '_blank']]))->toRenderable()
+      ])
+    );
+  }
+}
+
+/**
+ * Delete the liveblog provided config, as these are provided by this module.
+ */
+function ezcontent_liveblog_module_preinstall($module) {
+  if ('ezcontent_liveblog' == $module) {
+    $configs = [
+      'core.entity_form_display.node.liveblog.default',
+      'core.entity_form_display.liveblog_post.liveblog_post.default',
+      'core.entity_view_display.liveblog_post.liveblog_post.default',
+      'core.entity_view_display.node.liveblog.default',
+      'core.entity_view_display.node.liveblog.teaser',
+    ];
+    $configFactory = \Drupal::configFactory();
+    foreach ($configs as $config) {
+      $configFactory->getEditable($config)->delete();
+    }
+  }
+}
