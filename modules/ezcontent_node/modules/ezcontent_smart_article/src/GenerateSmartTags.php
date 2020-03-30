@@ -4,7 +4,6 @@ namespace Drupal\ezcontent_smart_article;
 
 use Drupal\Core\Config\ConfigFactoryInterface;
 use GuzzleHttp\ClientInterface;
-use Drupal\Component\Serialization\SerializationInterface;
 use Drupal\Core\Logger\LoggerChannelFactory;
 
 /**
@@ -27,13 +26,6 @@ class GenerateSmartTags {
   protected $httpClient;
 
   /**
-   * The JSON serialization class to use.
-   *
-   * @var \Drupal\Component\Serialization\SerializationInterface
-   */
-  protected $serializer;
-
-  /**
    * The channel logger object.
    *
    * @var \Drupal\Core\Logger\LoggerChannelFactory
@@ -47,15 +39,12 @@ class GenerateSmartTags {
    *   The config factory.
    * @param \GuzzleHttp\ClientInterface $httpClient
    *   An http client.
-   * @param \Drupal\Component\Serialization\SerializationInterface $serializer
-   *   The JSON serialization class to use.
    * @param \Drupal\Core\Logger\LoggerChannelFactory $logger
    *   The channel logger object.
    */
-  public function __construct(ConfigFactoryInterface $configFactory, ClientInterface $httpClient, SerializationInterface $serializer, LoggerChannelFactory $logger) {
+  public function __construct(ConfigFactoryInterface $configFactory, ClientInterface $httpClient, LoggerChannelFactory $logger) {
     $this->config = $configFactory->get('summary_generator.settings');
     $this->httpClient = $httpClient;
-    $this->serializer = $serializer;
     $this->logger = $logger;
   }
 
@@ -68,7 +57,7 @@ class GenerateSmartTags {
    * @return mixed
    *   The tags generated from the above field value.
    */
-  public function getTags(string $value = '') {
+  public function getTags($value = '') {
     $url = $this->config->get('smart_tags_api_url');
 
     $request = $this->httpClient->post($url, [
