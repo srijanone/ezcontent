@@ -233,7 +233,7 @@ function generate_tags_form_submit(array $form, FormStateInterface $form_state) 
   }
   else {
     $smart_tags = \Drupal::service('ezcontent_smart_article.generate_smarttags');
-    $tags = $smart_tags->getTags(strip_tags($field[0]['value']));
+    $tags = $smart_tags->getTags(Json::encode($field[0]['value']));
     if ($tags) {
       $auto_tags = [
         '#theme' => 'smarttag_template',
