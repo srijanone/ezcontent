@@ -5,4 +5,3 @@ package: EZContent Media
 core: 8.x
 dependencies:
   - ezcontent_media
-  - svg_image

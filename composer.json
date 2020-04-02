@@ -79,7 +79,6 @@
     "drupal/slick": "2.0",
     "drupal/slick_entityreference": "^2.0",
     "drupal/slick_paragraphs": "2.x",
-    "drupal/svg_image": "^1.9",
     "drupal/video_embed_field": "^2.2",
     "drupal/viewsreference": "2.x-dev",
     "drupal/webform": "^5.4",
