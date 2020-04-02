@@ -14,7 +14,6 @@ dependencies:
     - ezcontent_smart_article
     - path
     - scheduler
-    - svg_image
     - text
 id: node.smart_article.default
 targetEntityType: node
