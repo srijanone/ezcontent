@@ -31,7 +31,7 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       empty($summary_config->get('extractive_summary_api_url')) ||
       empty($summary_config->get('smart_tags_api_url'))) {
       \Drupal::messenger()
-        ->addError(t('Smart Article is proprietary, license-based with <a href="@link"> Srijan</a>.Please contact at <a href="@mailtolink">businees@srijan.net</a> for more information.',
+        ->addError(t('Smart Article is proprietary, license-based with <a href="@link"> Srijan</a>.Please contact at <a href="@mailtolink">business@srijan.net</a> for more information.',
           ['@link' => 'https://www.srijan.net/','@mailtolink'=> 'mailto:business@srijan.net']));
     }
     // Make Company name Autocomplete.
