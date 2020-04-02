@@ -8,7 +8,6 @@ dependencies:
   module:
     - entity_browser
     - media
-    - svg_image
     - user
 id: asset_browser
 label: 'Asset Browser'

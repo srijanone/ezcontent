@@ -7,7 +7,6 @@ dependencies:
   module:
     - entity_browser
     - media
-    - svg_image
     - user
 id: image_browser
 label: 'Image Browser'
