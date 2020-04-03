@@ -89,7 +89,7 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       $form['actions']['submit']['#submit'][] = 'update_summary_field_submit_handler';
     }
     // Add a process to field_company_logo.
-    if (!empty($form['field_company_logo'])) {
+    if (!empty($form['field_company_logo']) && !empty($summary_config->get('image_captioning_api_url'))) {
       $form['field_company_logo']['widget'][0]['#process'][] = 'ezcontent_smart_article_get_alt_title';
     }
     // Disable auto caption feature if subscription keys not available.
