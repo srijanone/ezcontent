@@ -166,7 +166,7 @@ class ConfigForm extends ConfigFormBase {
 
     // Upload file on api endpoint.
     $fid = $form_state->getValue('summary_generator_data_file');
-    if (!empty($fid)) {
+    if (!empty($fid) && !empty($form_state->getValue('summary_generator_api_url'))) {
       $file = $this->fileStorage->load($fid[0]);
       if ($this->uploadServer($file) == 200) {
         $this->messenger->addStatus("File successfully uploaded");
