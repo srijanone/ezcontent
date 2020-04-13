@@ -1,0 +1,147 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/card"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
+            {
+                "href": "http:\/\/default\/media\/1\/edit?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 1
+        }
+    ],
+    "uuid": [
+        {
+            "value": "49ee2785-94cd-4d6f-9013-501eb20004dc"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 1
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "card"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-09T08:45:12+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "block_content"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_card"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_link": [
+        {
+            "uri": "internal:#",
+            "title": "Learn More",
+            "options": []
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/1\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "263142b2-8ef4-49de-b559-413ceefe01eb"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "field_short_title": [
+        {
+            "value": "Good to have you."
+        }
+    ],
+    "field_subhead": [
+        {
+            "value": "One-Stop Drupal solution for Media & Publishing Enterprises"
+        }
+    ],
+    "field_summary": [
+        {
+            "value": "<p>An AI and ML-powered solution to deliver engaging digital experiences quickly and easily.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>An AI and ML-powered solution to deliver engaging digital experiences quickly and easily.<\/p>"
+        }
+    ],
+    "field_text_background_color": [
+        {
+            "color": "#FF9300",
+            "opacity": 0.37
+        }
+    ],
+    "field_text_position": [
+        {
+            "value": "left"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "Welcome to EzContent"
+        }
+    ]
+}

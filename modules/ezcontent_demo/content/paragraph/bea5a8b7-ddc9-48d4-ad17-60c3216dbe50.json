@@ -1,0 +1,130 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/card"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
+            {
+                "href": "http:\/\/default\/media\/5\/edit?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 5
+        }
+    ],
+    "uuid": [
+        {
+            "value": "bea5a8b7-ddc9-48d4-ad17-60c3216dbe50"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 30
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "card"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-09T08:52:24+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "8"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_card"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/5\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "39367a21-ce84-414c-8436-4f66b15c130c"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "field_summary": [
+        {
+            "value": "<p>Retain traditional CMS functions such as a drag &amp; drop page builder and content preview with EzContent de-coupled support. A nimble solution to drop all your dependencies from developers while managing content on-the-go. Deploy whenever and wherever you want.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Retain traditional CMS functions such as a drag &amp; drop page builder and content preview with EzContent de-coupled support. A nimble solution to drop all your dependencies from developers while managing content on-the-go. Deploy whenever and wherever you want.<\/p>"
+        }
+    ],
+    "field_text_background_color": [
+        {
+            "color": "#000000",
+            "opacity": 0.37
+        }
+    ],
+    "field_text_position": [
+        {
+            "value": "left"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "De-Coupled CMS"
+        }
+    ],
+    "layout_selection": [
+        {
+            "target_id": "card_right_media",
+            "lang": "en"
+        }
+    ]
+}
