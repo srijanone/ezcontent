@@ -1,0 +1,94 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/faq_qa"
+        }
+    },
+    "id": [
+        {
+            "value": 14
+        }
+    ],
+    "uuid": [
+        {
+            "value": "e735598c-2063-44a5-ab43-a2b6e55648c2"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 14
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "faq_qa"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-09T09:22:45+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "17"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_faq_items"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_answer": [
+        {
+            "value": "<p>A headless commerce architecture is the separation of the frontend of your e-commerce experience from the backend. Doing so allows for a greater architectural flexibility, allowing your front end developers to solely focus on customer interactions, without worrying about the impact on critical backend systems.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>A headless commerce architecture is the separation of the frontend of your e-commerce experience from the backend. Doing so allows for a greater architectural flexibility, allowing your front end developers to solely focus on customer interactions, without worrying about the impact on critical backend systems.<\/p>"
+        }
+    ],
+    "field_question": [
+        {
+            "value": "What is a Headless Commerce Architecture?",
+            "lang": "en"
+        }
+    ]
+}
