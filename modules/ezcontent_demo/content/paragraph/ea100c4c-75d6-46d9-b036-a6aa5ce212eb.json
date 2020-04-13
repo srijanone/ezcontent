@@ -1,0 +1,144 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/faq"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/faq\/field_faq_items": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 17
+        }
+    ],
+    "uuid": [
+        {
+            "value": "ea100c4c-75d6-46d9-b036-a6aa5ce212eb"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 17
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "faq"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-09T09:22:45+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "1"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/faq\/field_faq_items": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/faq_qa"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e735598c-2063-44a5-ab43-a2b6e55648c2"
+                    }
+                ],
+                "target_revision_id": "14"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/faq_qa"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "14eed524-9c04-469e-968d-27b9df4de089"
+                    }
+                ],
+                "target_revision_id": "15"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/faq_qa"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "6d03552a-d080-4276-b654-06e2d31e1f23"
+                    }
+                ],
+                "target_revision_id": "16"
+            }
+        ]
+    }
+}
