@@ -1,0 +1,130 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/card"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
+            {
+                "href": "http:\/\/default\/media\/3\/edit?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 3
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3818c55a-1e6a-4176-80a5-ca10cda83afd"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 28
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "card"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-09T08:50:10+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "8"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_card"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/3\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "9251b79a-bfb8-4450-a018-709097153ad8"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "field_summary": [
+        {
+            "value": "<p>Lets&nbsp;editors create visual layouts for displaying content without dependency on the developer. With Drupal\u2019s layout builder functionality, editors can drag and drop site-wide blocks and content fields. Manage blocks using reusable components and add regions on the fly.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Lets\u00a0editors create visual layouts for displaying content without dependency on the developer. With Drupal\u2019s layout builder functionality, editors can drag and drop site-wide blocks and content fields. Manage blocks using reusable components and add regions on the fly.<\/p>"
+        }
+    ],
+    "field_text_background_color": [
+        {
+            "color": "#000000",
+            "opacity": 0.37
+        }
+    ],
+    "field_text_position": [
+        {
+            "value": "left"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "Powerful Landing Page Builder"
+        }
+    ],
+    "layout_selection": [
+        {
+            "target_id": "card_right_media",
+            "lang": "en"
+        }
+    ]
+}

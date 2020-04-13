@@ -1,0 +1,94 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/faq_qa"
+        }
+    },
+    "id": [
+        {
+            "value": 15
+        }
+    ],
+    "uuid": [
+        {
+            "value": "14eed524-9c04-469e-968d-27b9df4de089"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 15
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "faq_qa"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-09T09:23:10+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "17"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_faq_items"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_answer": [
+        {
+            "value": "<p>Here\u2019s a look at the various features that differentiate headless commerce from traditional commerce, or make it a better choice<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Here\u2019s a look at the various features that differentiate headless commerce from traditional commerce, or make it a better choice<\/p>"
+        }
+    ],
+    "field_question": [
+        {
+            "value": "How is it Different From Traditional Commerce?",
+            "lang": "en"
+        }
+    ]
+}
