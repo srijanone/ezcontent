@@ -3,9 +3,11 @@ status: true
 dependencies:
   config:
     - field.field.media.gallery.field_media_slideshow
+    - image.style.gallery
+    - image.style.hero_media
     - media.type.gallery
   module:
-    - media_entity_slideshow
+    - slick
 id: media.gallery.default
 targetEntityType: media
 bundle: gallery
@@ -15,55 +17,39 @@ content:
     weight: 0
     label: hidden
     settings:
-      optionset: ezcontent_thumbnail
-      optionset_thumbnail: ezcontent_thumbnail
+      style: ''
+      optionset: ezcontent_setting
+      optionset_thumbnail: ezcontent_dots
       skin: default
       skin_thumbnail: asnavfor
       image_style: hero_media
-      thumbnail_style: gallery
       thumbnail_effect: grid
       thumbnail_position: ''
       media_switch: ''
-      box_style: ''
-      box_media_style: ''
-      box_caption: ''
-      box_caption_custom: ''
       background: true
+      box_style: ''
+      thumbnail_style: gallery
+      box_media_style: ''
+      ratio: fluid
+      box_caption: ''
       view_mode: slick
-      ratio: enforced
-      iframe_lazy: true
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
       image: ''
       title: ''
       link: ''
       layout: ''
       class: ''
       cache: 0
-      sizes: ''
-      breakpoints:
-        xs:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        sm:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        md:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        lg:
-          image_style: ''
-          width: ''
-          breakpoint: ''
-        xl:
-          image_style: ''
-          width: ''
-          breakpoint: ''
       current_view_mode: default
       vanilla: false
       caption:
-        field_media_image: '0'
+        title: '0'
+        alt: '0'
+      preserve_keys: false
       override: false
       overridables:
         arrows: '0'
@@ -75,22 +61,21 @@ content:
         randomize: '0'
         variableWidth: '0'
       thumbnail: ''
-      preserve_keys: false
       thumbnail_caption: ''
-      visible_items: 0
       skin_arrows: ''
       skin_dots: ''
-      style: ''
+      fx: ''
       icon: ''
       responsive_image_style: ''
-      grid: 0
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
       grid_header: ''
-      grid_medium: 0
-      grid_small: 0
       id: ''
       overlay: ''
     third_party_settings: {  }
     region: content
+    type: slick_media
 hidden:
   created: true
   name: true
