@@ -1,0 +1,90 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+        }
+    },
+    "id": [
+        {
+            "value": 30
+        }
+    ],
+    "uuid": [
+        {
+            "value": "fde95509-84f6-4a3c-9541-1ae32f3df14f"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 40
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "text"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-14T13:38:57+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "6"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_body": [
+        {
+            "value": "<h3><strong>Drupal 9<\/strong><\/h3>\r\n\r\n<p>Will be released in 2020<\/p>\r\n\r\n<p>Built on the same core as D8, and a set of new features with backward-compatible code, Drupal 9 will emerge out of Drupal 8.<\/p>\r\n\r\n<p>Key points of the release of Drupal 9 are:<\/p>\r\n\r\n<ul>\r\n\t<li>Core developers need at least one year to prepare Drupal 9.<\/li>\r\n\t<li>It won't be that complex to move from 8 to 9 compared to how it was from 7 to 8.<\/li>\r\n\t<li>As long as contributed modules won't use deprecated APIs, they should work well with Drupal 9, while being compatible with Drupal 8.<\/li>\r\n\t<li>Site owners will get one year to migrate from Drupal 8 to Drupal 9.<\/li>\r\n<\/ul>\r\n\r\n<h3><strong>Drupal 8<\/strong><\/h3>\r\n\r\n<p><strong>End-of-life by November 2021 with Symfony 3<\/strong><\/p>\r\n\r\n<p>Since Drupal 8 is working so well with its minor releases and innovative model, the release of Drupal 9 doesn\u2019t look meaningful. However, that\u2019s not the case because Drupal 9 won\u2019t be reliant on Symfony 3. Drupal 8\u2019s end-of-life has been aligned with that of Symfony 3, in November 2021. However, between now and then, that will be two more minor releases for Drupal 8 that is Drupal 8.8 and Drupal 8.9.<\/p>\r\n\r\n<h3><strong>Drupal 7<\/strong><\/h3>\r\n\r\n<p><strong>End-of-life extended till November 2021<\/strong><\/p>\r\n\r\n<p>While ideally, Drupal 7 end-of-life would have been soon after the release of Drupal 9, it\u2019s been extended till November 2021. It\u2019s also announced that Drupal 7 will have a commercial long-term support program for vendors even after end-of-life.<\/p>\r\n\r\n<p><strong>Another important question is since the end of life of Drupal 7 &amp; Drupal 8 will happen together, so those who have Drupal 7 need to move to Drupal 8 before moving to Drupal 9?<\/strong><\/p>\r\n\r\n<p>Though we can definitely take a jump from Drupal 7 to Drupal 9, it won't be an unadorned upgrade. Drupal 9 is built on the same underlying frameworks as Drupal 8. It is also planned that before end-of-life, Drupal 7 will be made compatible with newer versions of PHP according to their release schedules and contributed and custom modules will be updated too.<\/p>\r\n\r\n<p>Reforms like this will definitely affect both community-driven modules and any custom code you may have as well.<\/p>\r\n\r\n<p>So If we want to continue with Drupal 7, we should focus more on user experience.<\/p>\r\n\r\n<p>If your enterprise digital experiences are built with Drupal 7 or 8, and you wish a get a head start on Drupal 9, our expert teams can help. Just&nbsp;<a href=\"https:\/\/www.srijan.net\/contact\" rel=\"noopener\" target=\"_blank\">drop us a line<\/a>, and our teams will be in touch.<\/p>\r\n",
+            "format": "full_html",
+            "processed": "<h3><strong>Drupal 9<\/strong><\/h3>\n\n<p>Will be released in 2020<\/p>\n\n<p>Built on the same core as D8, and a set of new features with backward-compatible code, Drupal 9 will emerge out of Drupal 8.<\/p>\n\n<p>Key points of the release of Drupal 9 are:<\/p>\n\n<ul>\n\t<li>Core developers need at least one year to prepare Drupal 9.<\/li>\n\t<li>It won't be that complex to move from 8 to 9 compared to how it was from 7 to 8.<\/li>\n\t<li>As long as contributed modules won't use deprecated APIs, they should work well with Drupal 9, while being compatible with Drupal 8.<\/li>\n\t<li>Site owners will get one year to migrate from Drupal 8 to Drupal 9.<\/li>\n<\/ul>\n\n<h3><strong>Drupal 8<\/strong><\/h3>\n\n<p><strong>End-of-life by November 2021 with Symfony 3<\/strong><\/p>\n\n<p>Since Drupal 8 is working so well with its minor releases and innovative model, the release of Drupal 9 doesn\u2019t look meaningful. However, that\u2019s not the case because Drupal 9 won\u2019t be reliant on Symfony 3. Drupal 8\u2019s end-of-life has been aligned with that of Symfony 3, in November 2021. However, between now and then, that will be two more minor releases for Drupal 8 that is Drupal 8.8 and Drupal 8.9.<\/p>\n\n<h3><strong>Drupal 7<\/strong><\/h3>\n\n<p><strong>End-of-life extended till November 2021<\/strong><\/p>\n\n<p>While ideally, Drupal 7 end-of-life would have been soon after the release of Drupal 9, it\u2019s been extended till November 2021. It\u2019s also announced that Drupal 7 will have a commercial long-term support program for vendors even after end-of-life.<\/p>\n\n<p><strong>Another important question is since the end of life of Drupal 7 &amp; Drupal 8 will happen together, so those who have Drupal 7 need to move to Drupal 8 before moving to Drupal 9?<\/strong><\/p>\n\n<p>Though we can definitely take a jump from Drupal 7 to Drupal 9, it won't be an unadorned upgrade. Drupal 9 is built on the same underlying frameworks as Drupal 8. It is also planned that before end-of-life, Drupal 7 will be made compatible with newer versions of PHP according to their release schedules and contributed and custom modules will be updated too.<\/p>\n\n<p>Reforms like this will definitely affect both community-driven modules and any custom code you may have as well.<\/p>\n\n<p>So If we want to continue with Drupal 7, we should focus more on user experience.<\/p>\n\n<p>If your enterprise digital experiences are built with Drupal 7 or 8, and you wish a get a head start on Drupal 9, our expert teams can help. Just\u00a0<a href=\"https:\/\/www.srijan.net\/contact\" rel=\"noopener\" target=\"_blank\">drop us a line<\/a>, and our teams will be in touch.<\/p>\n",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

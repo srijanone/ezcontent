@@ -1,0 +1,90 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+        }
+    },
+    "id": [
+        {
+            "value": 31
+        }
+    ],
+    "uuid": [
+        {
+            "value": "bf73aaa9-fe2f-4645-8092-64769c20cfae"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 41
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "text"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-14T13:44:52+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "7"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_body": [
+        {
+            "value": "<p>Remember how 2015 was filled with anticipation in the run up to the release of Drupal 8? Well, 2020 is all set to be a repeat of that - the same rush, excitement, innovative work will be happening around Drupal 9. But that\u2019s not the only thing to look forward to for Drupalers in 2020.<\/p>\r\n\r\n<p>From charting new growth paths, to ensuring an enhanced experience and easier adoption of Drupal for beginners, to creating closer integration with other technology frameworks - 2020 has a lot in store for Drupal. And here are the ones we are most excited about.<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<h2>Drupal 9<\/h2>\r\n\r\n<p>Well that\u2019s an obvious one and will definitely be at the top of the list everyone in the Drupal community.&nbsp;<\/p>\r\n\r\n<p>Drupal 9 is all set to release on 3 June 2020. The big deal with Drupal 9 is that it shouldn\u2019t be a big deal. And that thinking is exactly what is new.<\/p>\r\n\r\n<p>That\u2019s because Drupal 9 is not being built on a new core, but rather within Drupal 8. Here\u2019s how:<\/p>\r\n\r\n<ul>\r\n\t<li>New features and functionalities will be added to D8 as backward-compatible code. These will start being available to D8 users as experimental features, that can be used and modified. All this while, older D8 features will work without a hitch.<\/li>\r\n\t<li>Once these new features are stable, their older counterparts will be deprecated.&nbsp;<\/li>\r\n\t<li>And finally, 3rd party dependencies, like those with Symfony and Twig, will be updated to offer support for their latest versions.<\/li>\r\n<\/ul>\r\n\r\n<p>This collection of new stable features and updated 3rd party dependencies will be what forms Drupal 9.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Remember how 2015 was filled with anticipation in the run up to the release of Drupal 8? Well, 2020 is all set to be a repeat of that - the same rush, excitement, innovative work will be happening around Drupal 9. But that\u2019s not the only thing to look forward to for Drupalers in 2020.<\/p>\n\n<p>From charting new growth paths, to ensuring an enhanced experience and easier adoption of Drupal for beginners, to creating closer integration with other technology frameworks - 2020 has a lot in store for Drupal. And here are the ones we are most excited about.<\/p>\n\n<p>\u00a0<\/p>\n\n<h2>Drupal 9<\/h2>\n\n<p>Well that\u2019s an obvious one and will definitely be at the top of the list everyone in the Drupal community.\u00a0<\/p>\n\n<p>Drupal 9 is all set to release on 3 June 2020. The big deal with Drupal 9 is that it shouldn\u2019t be a big deal. And that thinking is exactly what is new.<\/p>\n\n<p>That\u2019s because Drupal 9 is not being built on a new core, but rather within Drupal 8. Here\u2019s how:<\/p>\n\n<ul>\n\t<li>New features and functionalities will be added to D8 as backward-compatible code. These will start being available to D8 users as experimental features, that can be used and modified. All this while, older D8 features will work without a hitch.<\/li>\n\t<li>Once these new features are stable, their older counterparts will be deprecated.\u00a0<\/li>\n\t<li>And finally, 3rd party dependencies, like those with Symfony and Twig, will be updated to offer support for their latest versions.<\/li>\n<\/ul>\n\n<p>This collection of new stable features and updated 3rd party dependencies will be what forms Drupal 9.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

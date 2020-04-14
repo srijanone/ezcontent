@@ -47,7 +47,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-04-09T09:42:38+00:00",
+            "value": "2020-04-14T13:23:01+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -88,7 +88,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "52c43877-4f28-439b-8312-12acf2286103"
+                        "value": "45ce9228-f71a-4999-80bb-db061bba0635"
                     }
                 ],
                 "lang": "en",
@@ -122,23 +122,6 @@
     "revision_translation_affected": [
         {
             "value": true,
-            "lang": "en"
-        }
-    ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| EZContent"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "| EZContent"
-            },
             "lang": "en"
         }
     ],

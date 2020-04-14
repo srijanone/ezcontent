@@ -143,32 +143,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "Privacy Policy | EZContent",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget dolor morbi non arcu risus quis varius quam quisque. Congue quisque egestas diam in arcu cursus euismod. Nunc id cursus metus aliquam eleifend mi in nulla posuere. Dictum sit amet justo donec enim diam. Velit egestas dui id ornare arcu odio ut sem."
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "Privacy Policy | EZContent"
-            },
-            "lang": "en"
-        },
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "description",
-                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget dolor morbi non arcu risus quis varius quam quisque. Congue quisque egestas diam in arcu cursus euismod. Nunc id cursus metus aliquam eleifend mi in nulla posuere. Dictum sit amet justo donec enim diam. Velit egestas dui id ornare arcu odio ut sem."
-            },
-            "lang": "en"
-        }
-    ],
     "path": [
         {
             "alias": "\/page\/privacy-policy",

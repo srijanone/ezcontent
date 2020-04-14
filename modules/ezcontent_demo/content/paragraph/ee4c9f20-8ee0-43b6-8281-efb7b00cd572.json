@@ -9,6 +9,12 @@
         "http:\/\/drupal.org\/rest\/relation\/paragraph\/referenced_card\/field_article": [
             {
                 "href": "http:\/\/default\/article\/should-your-enterprise-go-headless-commerce-architecture?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/article\/future-drupal-7-8-or-just-drupal-9?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/article\/drupal-2020-what-do-you-need-expect?_format=hal_json"
             }
         ]
     },
@@ -24,7 +30,7 @@
     ],
     "revision_id": [
         {
-            "value": 34
+            "value": 44
         }
     ],
     "langcode": [
@@ -97,6 +103,36 @@
                 "uuid": [
                     {
                         "value": "9ba70a85-f19f-4b0f-813e-e39ac1b5ad02"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/article\/future-drupal-7-8-or-just-drupal-9?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/article"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5b78be6f-3132-4c84-8bd3-4d6df00a9aad"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/article\/drupal-2020-what-do-you-need-expect?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/node\/article"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "33e2e077-35d5-4772-bff4-6a2c9b02f855"
                     }
                 ]
             }

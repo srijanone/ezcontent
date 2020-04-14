@@ -99,23 +99,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| EZContent"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "| EZContent"
-            },
-            "lang": "en"
-        }
-    ],
     "body": [
         {
             "value": "<p>We are a digital transformation company helping enterprises build and modernize their digital systems.<\/p>\r\n",
