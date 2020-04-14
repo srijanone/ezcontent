@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_author
-field_name: field_author
+id: paragraph.field_source
+field_name: field_source
 entity_type: paragraph
 type: string
 settings:
