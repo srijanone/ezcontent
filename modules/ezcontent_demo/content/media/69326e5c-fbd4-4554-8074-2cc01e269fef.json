@@ -53,7 +53,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-04-09T09:40:34+00:00",
+            "value": "2020-04-14T13:23:01+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -156,23 +156,6 @@
     "revision_translation_affected": [
         {
             "value": true,
-            "lang": "en"
-        }
-    ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| EZContent"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "| EZContent"
-            },
             "lang": "en"
         }
     ],

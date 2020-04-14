@@ -121,22 +121,5 @@
             "value": true,
             "lang": "en"
         }
-    ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| EZContent"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "| EZContent"
-            },
-            "lang": "en"
-        }
     ]
 }

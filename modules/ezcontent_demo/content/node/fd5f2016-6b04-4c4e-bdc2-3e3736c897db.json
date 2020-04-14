@@ -131,23 +131,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "Home | EZContent"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "Home | EZContent"
-            },
-            "lang": "en"
-        }
-    ],
     "path": [
         {
             "alias": "\/home",

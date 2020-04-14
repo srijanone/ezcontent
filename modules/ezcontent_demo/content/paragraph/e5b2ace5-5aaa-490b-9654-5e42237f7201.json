@@ -1,0 +1,90 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+        }
+    },
+    "id": [
+        {
+            "value": 33
+        }
+    ],
+    "uuid": [
+        {
+            "value": "e5b2ace5-5aaa-490b-9654-5e42237f7201"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 43
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "text"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-04-14T13:46:13+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "7"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_body": [
+        {
+            "value": "<p>So let\u2019s move on to the other interesting developments slated for 2020.<\/p>\r\n\r\n<h2>Drupal 9 Product Tracks<\/h2>\r\n\r\n<p>The launch of Drupal 9 is also significant because this is the first time the community has a strategic roadmap for how we want Drupal 9 to grow. Dries\u2019 State of Drupal address in Drupal Amsterdam outlined the four product tracks envisioned for D9:<\/p>\r\n\r\n<ul>\r\n\t<li><strong>Reduce the cost and effort i<\/strong>nvolved in managing a Drupal 9 website. So the focus will be on introducing new features and functionalities that simplify website support, maintenance and updates - configuration management, automated updates and more.<\/li>\r\n\t<li><strong>Enhance the beginners\u2019 experience<\/strong>&nbsp;with Drupal by making it simpler to install and get it running out of the box. The first two initiatives in this track are two new themes - Olivero for the frontend and Claro for admins.<\/li>\r\n\t<li>Work towards ensuring an&nbsp;<strong>Open Web<\/strong>&nbsp;that\u2019s accessible, secure, inclusive and interoperable. In the next decade, the Drupal community will collectively ensure that their work - project, websites, solutions - consistently meet these standards<\/li>\r\n\t<li>Prepare Drupal to be one of the&nbsp;<strong>best structured data and content repositories<\/strong>, ready to work seamlessly with a range of devices and delivery channels<\/li>\r\n<\/ul>\r\n\r\n<p>2020 will see these product tracks being actively discussed within the community and work starting on several new initiatives.<\/p>\r\n\r\n<h2>Drupal 8.8<\/h2>\r\n\r\n<p>Drupal 8.8 was released on 4 December 2019 and sites on Drupal 8 can look forward to harnessing great new features and functionalities in 2020. Some of the key upgrades are:<\/p>\r\n\r\n<ul>\r\n\t<li><strong>Media Library<\/strong>&nbsp;being marked as stable, so content writers and editors can add media content right from the WYSIWYG editor<\/li>\r\n\t<li><strong>Official support for Composer out-of-the-box<\/strong>, meaning Drupal is simple and easy to install and update with Composer taking care of updating all third-party dependencies<\/li>\r\n\t<li>The&nbsp;<strong>Automatic Update module<\/strong>&nbsp;is available in early alpha stage and has a set of very convenient features. It allows you to configure your site to display PSA messages for required updates or mail them directly to the site admins. You can check if your site is ready for update, with all requisite file permissions, and update your site with just a click, if all prerequisites are in place.<\/li>\r\n\t<li>The&nbsp;<strong>JSON:API Explorer<\/strong>&nbsp;which is an interactive query builder to explore your JSON:API server, strengthening Drupal\u2019s positioning as an effective decoupled solution.<\/li>\r\n<\/ul>\r\n\r\n<h2>Decoupled Drupal<\/h2>\r\n\r\n<p>Yes, Decoupled Drupal has been talked about for quite a few years now, but 2020 and the following decade will be when it becomes extremely commonplace. This will be primarily due to the growth of a complete ecosystem of features and solutions that make it easier to pull off decoupled Drupal solutions.&nbsp;<\/p>\r\n\r\n<p>While the API-first initiative and the project around building a reusable component library are key to great decoupled Drupal implementations, there are also third-party frameworks and solutions launched in 2019 that will drive decoupled Drupal in 2020:<\/p>\r\n\r\n<ul>\r\n\t<li><strong><a href=\"https:\/\/www.srijan.net\/blog\/delivering-caas-acquia-content-cloud\">Acquia Content Cloud<\/a>:<\/strong>&nbsp;A platform that allows content creators to write, edit, and review content independent of the channel where it will be published. The content created here can be pushed to multiple different channels simultaneously or at different times, and will be automatically formatted to best fit the channel.&nbsp;<\/li>\r\n\t<li><strong><a href=\"https:\/\/www.srijan.net\/blog\/why-decoupling-drupal-with-gatsbyjs-is-a-great-choice\">GatsbyJS<\/a>:<\/strong>&nbsp;A React-based site generator that offers the perfect JAMstack for a headless Drupal architecture. GatsbyJS drives greater site performance and smooth user experience. It offers a full plugin library to allow almost any kind of content to be pulled in for site creation, via GraphQL. The not-so-steep learning curve and growing community of developers means GatsbyJS will see higher adoption as enterprises try to get more done with Drupal.&nbsp;<\/li>\r\n<\/ul>\r\n\r\n<h2>Growing the Drupal Community<\/h2>\r\n\r\n<p>This decade is going to be special for us as well as Srijan puts in concerted efforts to grow the Drupal community in India and Asia at large. As a part of this, we plan to:<\/p>\r\n\r\n<ul>\r\n\t<li>Commit greater number of resources to contributing to Drupal, working across a diverse range on ongoing initiatives and Drupal 9.<\/li>\r\n\t<li>Drive the Drupal India Association to bring structure and increased participation of different firms and developers in the Indian Drupal community.<\/li>\r\n<\/ul>\r\n\r\n<p>Much like the last decade, 2020 and beyond will be marked by exciting new developments in Drupal. But unlike before, these developments will not just be around core Drupal, but rather focussed on how Drupal will interact and operate with other technology solutions and frameworks to solve key enterprise challenges.&nbsp;<\/p>\r\n\r\n<p>What are you most excited about Drupal's future in 2020?<\/p>\r\n\r\n<p>And if you are wondering how Drupal can help you solve a particular challenge at your organization,&nbsp;<a href=\"http:\/\/srijan.net\/contact\" rel=\" noopener\">just drop us a line<\/a>&nbsp;and our Drupal experts will be in touch.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>So let\u2019s move on to the other interesting developments slated for 2020.<\/p>\n\n<h2>Drupal 9 Product Tracks<\/h2>\n\n<p>The launch of Drupal 9 is also significant because this is the first time the community has a strategic roadmap for how we want Drupal 9 to grow. Dries\u2019 State of Drupal address in Drupal Amsterdam outlined the four product tracks envisioned for D9:<\/p>\n\n<ul>\n\t<li><strong>Reduce the cost and effort i<\/strong>nvolved in managing a Drupal 9 website. So the focus will be on introducing new features and functionalities that simplify website support, maintenance and updates - configuration management, automated updates and more.<\/li>\n\t<li><strong>Enhance the beginners\u2019 experience<\/strong>\u00a0with Drupal by making it simpler to install and get it running out of the box. The first two initiatives in this track are two new themes - Olivero for the frontend and Claro for admins.<\/li>\n\t<li>Work towards ensuring an\u00a0<strong>Open Web<\/strong>\u00a0that\u2019s accessible, secure, inclusive and interoperable. In the next decade, the Drupal community will collectively ensure that their work - project, websites, solutions - consistently meet these standards<\/li>\n\t<li>Prepare Drupal to be one of the\u00a0<strong>best structured data and content repositories<\/strong>, ready to work seamlessly with a range of devices and delivery channels<\/li>\n<\/ul>\n\n<p>2020 will see these product tracks being actively discussed within the community and work starting on several new initiatives.<\/p>\n\n<h2>Drupal 8.8<\/h2>\n\n<p>Drupal 8.8 was released on 4 December 2019 and sites on Drupal 8 can look forward to harnessing great new features and functionalities in 2020. Some of the key upgrades are:<\/p>\n\n<ul>\n\t<li><strong>Media Library<\/strong>\u00a0being marked as stable, so content writers and editors can add media content right from the WYSIWYG editor<\/li>\n\t<li><strong>Official support for Composer out-of-the-box<\/strong>, meaning Drupal is simple and easy to install and update with Composer taking care of updating all third-party dependencies<\/li>\n\t<li>The\u00a0<strong>Automatic Update module<\/strong>\u00a0is available in early alpha stage and has a set of very convenient features. It allows you to configure your site to display PSA messages for required updates or mail them directly to the site admins. You can check if your site is ready for update, with all requisite file permissions, and update your site with just a click, if all prerequisites are in place.<\/li>\n\t<li>The\u00a0<strong>JSON:API Explorer<\/strong>\u00a0which is an interactive query builder to explore your JSON:API server, strengthening Drupal\u2019s positioning as an effective decoupled solution.<\/li>\n<\/ul>\n\n<h2>Decoupled Drupal<\/h2>\n\n<p>Yes, Decoupled Drupal has been talked about for quite a few years now, but 2020 and the following decade will be when it becomes extremely commonplace. This will be primarily due to the growth of a complete ecosystem of features and solutions that make it easier to pull off decoupled Drupal solutions.\u00a0<\/p>\n\n<p>While the API-first initiative and the project around building a reusable component library are key to great decoupled Drupal implementations, there are also third-party frameworks and solutions launched in 2019 that will drive decoupled Drupal in 2020:<\/p>\n\n<ul>\n\t<li><strong><a href=\"https:\/\/www.srijan.net\/blog\/delivering-caas-acquia-content-cloud\">Acquia Content Cloud<\/a>:<\/strong>\u00a0A platform that allows content creators to write, edit, and review content independent of the channel where it will be published. The content created here can be pushed to multiple different channels simultaneously or at different times, and will be automatically formatted to best fit the channel.\u00a0<\/li>\n\t<li><strong><a href=\"https:\/\/www.srijan.net\/blog\/why-decoupling-drupal-with-gatsbyjs-is-a-great-choice\">GatsbyJS<\/a>:<\/strong>\u00a0A React-based site generator that offers the perfect JAMstack for a headless Drupal architecture. GatsbyJS drives greater site performance and smooth user experience. It offers a full plugin library to allow almost any kind of content to be pulled in for site creation, via GraphQL. The not-so-steep learning curve and growing community of developers means GatsbyJS will see higher adoption as enterprises try to get more done with Drupal.\u00a0<\/li>\n<\/ul>\n\n<h2>Growing the Drupal Community<\/h2>\n\n<p>This decade is going to be special for us as well as Srijan puts in concerted efforts to grow the Drupal community in India and Asia at large. As a part of this, we plan to:<\/p>\n\n<ul>\n\t<li>Commit greater number of resources to contributing to Drupal, working across a diverse range on ongoing initiatives and Drupal 9.<\/li>\n\t<li>Drive the Drupal India Association to bring structure and increased participation of different firms and developers in the Indian Drupal community.<\/li>\n<\/ul>\n\n<p>Much like the last decade, 2020 and beyond will be marked by exciting new developments in Drupal. But unlike before, these developments will not just be around core Drupal, but rather focussed on how Drupal will interact and operate with other technology solutions and frameworks to solve key enterprise challenges.\u00a0<\/p>\n\n<p>What are you most excited about Drupal's future in 2020?<\/p>\n\n<p>And if you are wondering how Drupal can help you solve a particular challenge at your organization,\u00a0<a href=\"http:\/\/srijan.net\/contact\" rel=\" noopener\">just drop us a line<\/a>\u00a0and our Drupal experts will be in touch.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}
