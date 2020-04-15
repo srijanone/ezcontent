@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cards
+    - field.field.block_content.cards.field_card
+    - field.field.block_content.cards.field_link
+    - field.field.block_content.cards.field_title
+    - field.field.block_content.cards.view_mode_selection
+  module:
+    - entity_reference_revisions
+    - link
+id: block_content.cards.default
+targetEntityType: block_content
+bundle: cards
+mode: default
+content:
+  field_card:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_link:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_title:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  view_mode_selection: true
