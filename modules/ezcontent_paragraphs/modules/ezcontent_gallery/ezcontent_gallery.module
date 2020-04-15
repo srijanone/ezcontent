@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ezcontent_gallery_preprocess_paragraph__gallery(&$variables) {
+  $variables['#attached']['library'][] = 'ezcontent_gallery/ezcontent_gallery_css';
+}

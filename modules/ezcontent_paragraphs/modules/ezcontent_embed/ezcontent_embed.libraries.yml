@@ -1,0 +1,4 @@
+ezcontent_embed_css:
+  css:
+    theme:
+      css/embed.css: {}
