@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.cards_grid_3xn
+label: 'Cards Grid (3xn)'
+targetEntityType: block_content
+cache: true
