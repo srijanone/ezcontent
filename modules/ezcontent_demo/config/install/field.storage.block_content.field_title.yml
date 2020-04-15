@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   module:
-    - paragraphs
-id: paragraph.field_author
-field_name: field_author
-entity_type: paragraph
+    - block_content
+id: block_content.field_title
+field_name: field_title
+entity_type: block_content
 type: string
 settings:
   max_length: 255

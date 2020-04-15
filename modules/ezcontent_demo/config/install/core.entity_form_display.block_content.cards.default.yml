@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cards
+    - field.field.block_content.cards.field_card
+    - field.field.block_content.cards.field_link
+    - field.field.block_content.cards.field_title
+    - field.field.block_content.cards.view_mode_selection
+  module:
+    - paragraphs_previewer
+id: block_content.cards.default
+targetEntityType: block_content
+bundle: cards
+mode: default
+content:
+  field_card:
+    type: paragraphs_previewer
+    weight: 2
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: card
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode_selection:
+    type: options_select
+    region: content
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_link: true
