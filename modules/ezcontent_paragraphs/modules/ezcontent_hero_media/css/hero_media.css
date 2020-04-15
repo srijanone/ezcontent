@@ -1,15 +1,4 @@
- .paragraph--type--card .field--name-field-title {
-  font-size: 20px;
-  line-height: 24px;
-  font-family: 'ProximaNovaT-Thin',  sans-serif;
-  color: black;
-}
-@media only screen and (min-width: 37.5em) {
-  .paragraph--type--card .field--name-field-title {
-    font-size: 26px;
-    line-height: 30px;
-  }
-}.paragraph--type--hero-media {
+.paragraph--type--hero-media {
   padding: 0;
 }
  .slick-arrow::before {
@@ -77,7 +66,9 @@
 .paragraph--type--card .blazy__caption:empty {
   display: none;
 }
-.paragraph--type--card .field--name-field-title {
+
+.paragraph--type--hero-media .field--name-field-title {
+  font-size: 20px;
   letter-spacing: 1px;
   line-height: 37px;
   padding: 0 10px;
@@ -85,69 +76,26 @@
   margin: 0;
   color: white;
 }
-@media only screen and (max-width: 75em) {
-  .paragraph--type--card .field--name-field-title {
-    font-size: 25px;
-    line-height: 25px;
-    width: 100%
-}
-}.paragraph--type--card .field--name-field-short-title {
+
+.paragraph--type--hero-media .field--name-field-short-title {
   font-size: 18px;
   padding: 5px 10px 0;
   margin: 0;
 }
-@media only screen and (max-width: 75em) {
- .paragraph--type--card .field--name-field-short-title {
-    font-size: 14px;
-  }
-}.paragraph--type--card .field--name-field-subhead {
+.paragraph--type--hero-media .field--name-field-subhead {
   border-color: transparent;
   font-size: 16px;
   padding: 5px 10px 0;
 }
-@media only screen and (max-width: 75em) {
-   .paragraph--type--card .field--name-field-subhead {
-    font-size: 14px;
-  }
-}.paragraph--type--card .field--name-field-summary {
+
+.paragraph--type--hero-media .field--name-field-summary {
   border-color: transparent;
   display: block;
   font-size: 14px;
   padding: 5px 10px;
 }
-@media only screen and (max-width: 75em) {
-  .paragraph--type--card .field--name-field-summary {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-}.paragraph--type--card .field--name-field-link {
+
+.paragraph--type--hero-media .field--name-field-link {
   padding: 0 10px;
   text-align: right;
 }
-.paragraph--type--card .field--name-field-link a {
-  background: #3367d6;
-  border: 0;
-  color: #fff;
-  display: inline-block;
-  font-size: 16px;
-  line-height: 1.42857143;
-  margin-bottom: 0;
-  padding: 7px 15px;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  padding: 5px 10px;
-  min-width: 150px;
-}
- .paragraph--type--card .field--name-field-link a:hover {
-  background: #4285f4;
-  color: #fff;
-  text-decoration: none;
-}
-.paragraph--type--card .field--name-field-link a:focus {
-  background: #4285f4;
-  color: #fff;
-  text-decoration: none;
-}
-
