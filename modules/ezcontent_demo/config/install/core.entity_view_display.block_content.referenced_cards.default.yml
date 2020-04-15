@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.referenced_cards
+    - field.field.block_content.referenced_cards.field_article
+id: block_content.referenced_cards.default
+targetEntityType: block_content
+bundle: referenced_cards
+mode: default
+content:
+  field_article:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: card
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }
