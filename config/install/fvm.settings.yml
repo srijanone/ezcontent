@@ -34,3 +34,7 @@ paragraph__embed__view_modes:
 paragraph__hero_media: 0
 paragraph__hero_media__view_modes:
   preview: 0
+block_content__cards: 1
+block_content__cards__view_modes:
+  cards_grid_3xn: cards_grid_3xn
+  preview: preview
