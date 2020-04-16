@@ -1,0 +1,8 @@
+name: Embed Block
+type: module
+description: "Provides Embed Block Types Based Features."
+package: EZContent Block
+core: 8.x
+dependencies:
+  - ezcontent_block
+  - ezcontent_embed
