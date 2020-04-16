@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/media\/17\/edit?_format=hal_json"
+            "href": "http:\/\/default\/media\/18\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
@@ -27,17 +27,17 @@
     },
     "mid": [
         {
-            "value": 17
+            "value": 18
         }
     ],
     "uuid": [
         {
-            "value": "1c06614e-bc8d-45b5-b6fd-b9acbc5e3240"
+            "value": "302c46b0-c84a-4021-9531-52921204193c"
         }
     ],
     "vid": [
         {
-            "value": 17
+            "value": 18
         }
     ],
     "langcode": [
@@ -53,7 +53,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-04-09T11:29:04+00:00",
+            "value": "2020-04-14T13:30:07+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -94,14 +94,14 @@
                 },
                 "uuid": [
                     {
-                        "value": "f6bf6493-0b27-469b-8bf6-fe9d373e0ecf"
+                        "value": "055ecec7-d267-4b06-bd37-178b4be030bf"
                     }
                 ],
                 "lang": "en",
                 "alt": null,
                 "title": null,
-                "width": "880",
-                "height": "670"
+                "width": "800",
+                "height": "806"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
@@ -116,33 +116,33 @@
                 },
                 "uuid": [
                     {
-                        "value": "f6bf6493-0b27-469b-8bf6-fe9d373e0ecf"
+                        "value": "055ecec7-d267-4b06-bd37-178b4be030bf"
                     }
                 ],
                 "lang": "en",
                 "alt": null,
                 "title": null,
-                "width": "880",
-                "height": "670"
+                "width": "800",
+                "height": "806"
             }
         ]
     },
     "name": [
         {
-            "value": "male-avatar.png",
+            "value": "drupal-7-8-9_0.png",
             "lang": "en"
         }
     ],
     "created": [
         {
-            "value": "2020-04-09T11:29:04+00:00",
+            "value": "2020-04-14T13:30:07+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2020-04-09T11:29:04+00:00",
+            "value": "2020-04-14T13:30:07+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }

@@ -29,7 +29,7 @@
     ],
     "revision_id": [
         {
-            "value": 6
+            "value": 7
         }
     ],
     "langcode": [
@@ -45,7 +45,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-04-09T10:30:20+00:00",
+            "value": "2020-04-14T13:48:15+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -82,7 +82,7 @@
                         "value": "ee4c9f20-8ee0-43b6-8281-efb7b00cd572"
                     }
                 ],
-                "target_revision_id": "34"
+                "target_revision_id": "44"
             }
         ]
     },
@@ -100,7 +100,7 @@
     ],
     "changed": [
         {
-            "value": "2020-04-09T10:30:20+00:00",
+            "value": "2020-04-14T13:48:15+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -119,23 +119,6 @@
     "revision_translation_affected": [
         {
             "value": true,
-            "lang": "en"
-        }
-    ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| EZContent"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "| EZContent"
-            },
             "lang": "en"
         }
     ]

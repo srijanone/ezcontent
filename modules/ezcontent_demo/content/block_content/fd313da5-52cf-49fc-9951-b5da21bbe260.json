@@ -99,23 +99,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| EZContent"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "| EZContent"
-            },
-            "lang": "en"
-        }
-    ],
     "field_script": [
         {
             "value": "<!--[if lte IE 8]>\r\n<script charset=\"utf-8\" type=\"text\/javascript\" src=\"\/\/js.hsforms.net\/forms\/v2-legacy.js\"><\/script>\r\n<![endif]-->\r\n<script charset=\"utf-8\" type=\"text\/javascript\" src=\"\/\/js.hsforms.net\/forms\/v2.js\"><\/script>\r\n<script>\r\n  hbspt.forms.create({\r\n    portalId: \"2322889\",\r\n    formId: \"1b52c48b-c298-45fc-9fdb-b89ed124c30a\"\r\n});\r\n<\/script>",

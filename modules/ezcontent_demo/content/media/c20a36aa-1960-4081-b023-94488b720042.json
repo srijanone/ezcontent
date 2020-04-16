@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/media\/17\/edit?_format=hal_json"
+            "href": "http:\/\/default\/media\/19\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
@@ -27,17 +27,17 @@
     },
     "mid": [
         {
-            "value": 17
+            "value": 19
         }
     ],
     "uuid": [
         {
-            "value": "1c06614e-bc8d-45b5-b6fd-b9acbc5e3240"
+            "value": "c20a36aa-1960-4081-b023-94488b720042"
         }
     ],
     "vid": [
         {
-            "value": 17
+            "value": 19
         }
     ],
     "langcode": [
@@ -53,7 +53,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-04-09T11:29:04+00:00",
+            "value": "2020-04-14T13:38:50+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -94,14 +94,14 @@
                 },
                 "uuid": [
                     {
-                        "value": "f6bf6493-0b27-469b-8bf6-fe9d373e0ecf"
+                        "value": "c36ccda3-6976-4088-a715-269058f1f840"
                     }
                 ],
                 "lang": "en",
                 "alt": null,
                 "title": null,
-                "width": "880",
-                "height": "670"
+                "width": "512",
+                "height": "291"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
@@ -116,33 +116,33 @@
                 },
                 "uuid": [
                     {
-                        "value": "f6bf6493-0b27-469b-8bf6-fe9d373e0ecf"
+                        "value": "c36ccda3-6976-4088-a715-269058f1f840"
                     }
                 ],
                 "lang": "en",
                 "alt": null,
                 "title": null,
-                "width": "880",
-                "height": "670"
+                "width": "512",
+                "height": "291"
             }
         ]
     },
     "name": [
         {
-            "value": "male-avatar.png",
+            "value": "future-of-drupal-7-8-9-srijan-technologies.png",
             "lang": "en"
         }
     ],
     "created": [
         {
-            "value": "2020-04-09T11:29:04+00:00",
+            "value": "2020-04-14T13:38:50+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2020-04-09T11:29:04+00:00",
+            "value": "2020-04-14T13:38:50+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }

@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-  - field.field.node.page.body
-  - field.field.node.page.field_meta_tags
-  - node.type.page
+    - field.field.node.page.body
+    - field.field.node.page.field_meta_tags
+    - node.type.page
   module:
-  - metatag
-  - text
-  - user
+    - metatag
+    - text
+    - user
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -16,26 +16,26 @@ mode: default
 content:
   body:
     weight: 102
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   content_moderation_control:
     weight: -20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_meta_tags:
     weight: 101
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
