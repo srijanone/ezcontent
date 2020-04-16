@@ -161,32 +161,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "Male User | EZContent",
-                "description": "Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Pellentesque elit eget gravida cum sociis. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Risus pretium quam vulputate dignissim suspendisse. At lectus urna duis convallis convallis tellus. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Sed risus pretium quam vulputate dignissim suspendisse in est. Ut tortor pretium viverra suspendisse potenti. Nulla at volutpat diam ut venenatis tellus."
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "Male User | EZContent"
-            },
-            "lang": "en"
-        },
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "description",
-                "content": "Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Pellentesque elit eget gravida cum sociis. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam. Risus pretium quam vulputate dignissim suspendisse. At lectus urna duis convallis convallis tellus. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Sed risus pretium quam vulputate dignissim suspendisse in est. Ut tortor pretium viverra suspendisse potenti. Nulla at volutpat diam ut venenatis tellus."
-            },
-            "lang": "en"
-        }
-    ],
     "path": [
         {
             "alias": "\/author\/male-user",

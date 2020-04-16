@@ -59,25 +59,6 @@
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
-    "changed": [
-        {
-            "value": "2020-04-09T08:43:14+00:00",
-            "lang": "en",
-            "format": "Y-m-d\\TH:i:sP"
-        }
-    ],
-    "access": [
-        {
-            "value": "2020-04-09T11:35:09+00:00",
-            "format": "Y-m-d\\TH:i:sP"
-        }
-    ],
-    "login": [
-        {
-            "value": "2020-04-09T08:43:35+00:00",
-            "format": "Y-m-d\\TH:i:sP"
-        }
-    ],
     "init": [
         {
             "value": "test-admin@ezcontent.srijan.net"
@@ -91,32 +72,6 @@
     "default_langcode": [
         {
             "value": true,
-            "lang": "en"
-        }
-    ],
-    "metatag": [
-        {
-            "value": {
-                "title": "test-admin | EZContent",
-                "description": "EZContent"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "test-admin | EZContent"
-            },
-            "lang": "en"
-        },
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "description",
-                "content": "EZContent"
-            },
             "lang": "en"
         }
     ],
