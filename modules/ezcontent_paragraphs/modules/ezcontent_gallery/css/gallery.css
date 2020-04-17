@@ -1,0 +1,4 @@
+.paragraph--type--gallery .field--name-field-media-items {
+  display: flex;
+  flex-wrap: wrap;
+}
