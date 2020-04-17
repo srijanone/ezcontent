@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Install ezcontent demo content.
+ */
+function ezcontent_demo_install() {
+
+  // Set home page.
+  \Drupal::configFactory()->getEditable('system.site')
+    ->set('page.front', '/node/2')
+    ->save(TRUE);
+
+}
