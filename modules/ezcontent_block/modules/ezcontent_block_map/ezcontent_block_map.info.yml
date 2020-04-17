@@ -1,0 +1,8 @@
+name: Map Block
+type: module
+description: "Provides Map Block Types Based Features."
+package: EZContent Block
+core: 8.x
+dependencies:
+  - ezcontent_block
+  - simple_gmap

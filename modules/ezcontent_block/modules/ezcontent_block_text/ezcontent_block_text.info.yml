@@ -1,0 +1,7 @@
+name: Text Block
+type: module
+description: "Provides Text Block Types Based Features."
+package: EZContent Block
+core: 8.x
+dependencies:
+  - ezcontent_block
