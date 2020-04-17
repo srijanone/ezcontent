@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ezcontent_referenced_card_preprocess_paragraph__referenced_card(&$variables) {
+  $variables['#attached']['library'][] = 'ezcontent_referenced_card/ezcontent_referenced_card_css';
+}

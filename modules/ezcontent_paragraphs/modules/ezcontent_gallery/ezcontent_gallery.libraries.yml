@@ -1,0 +1,4 @@
+ezcontent_gallery_css:
+  css:
+    theme:
+      css/gallery.css: {}

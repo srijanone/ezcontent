@@ -1,0 +1,4 @@
+ezcontent_referenced_card_css:
+  css:
+    theme:
+      css/referenced-card.css: {}
