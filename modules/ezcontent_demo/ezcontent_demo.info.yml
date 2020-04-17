@@ -7,6 +7,14 @@ dependencies:
   - better_normalizers:better_normalizers
   - default_content:default_content
   - ezcontent:ezcontent_block
+  - ezcontent:ezcontent_block_cards
+  - ezcontent:ezcontent_block_embed
+  - ezcontent:ezcontent_block_hero_media
+  - ezcontent:ezcontent_block_map
+  - ezcontent:ezcontent_block_referenced_cards
+  - ezcontent:ezcontent_block_social_media
+  - ezcontent:ezcontent_block_text
+  - ezcontent:ezcontent_listing
   - ezcontent:ezcontent_media
   - ezcontent:ezcontent_image
   - ezcontent:ezcontent_media_gallery

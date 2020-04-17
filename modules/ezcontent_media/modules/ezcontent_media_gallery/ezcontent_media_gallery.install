@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function ezcontent_media_gallery_install() {
+  $slick_view_mode = \Drupal::configFactory()->get('core.entity_view_mode.media.slick')->get('uuid');
+  if (empty($slick_view_mode)) {
+    $slick_view_mode_config_data = [
+      'langcode' => 'en',
+      'status' => 'true',
+      'dependencies' => [
+        'enforced' => [
+          'module' => ['slick'],
+        ],
+        'module' => ['media'],
+      ],
+      'id' => 'media.slick',
+      'label' => 'Slick carousel',
+      'targetEntityType' => 'media',
+      'cache' => 'true'
+    ];
+    \Drupal::configFactory()->getEditable('core.entity_view_mode.media.slick')
+      ->setData($slick_view_mode_config_data)
+      ->save();
+  }
+}
