@@ -1,0 +1,34 @@
+dist: trusty
+
+language: php
+cache:
+  bundler: true
+  directories:
+    - "$HOME/.composer/cache"
+    - "$HOME/.drush/cache"
+
+php:
+  - 7.3
+
+before_install:
+  - composer self-update
+  - composer --version
+
+  # Composer Configurations.
+  - export PATH="$HOME/.composer/vendor/bin:$TRAVIS_BUILD_DIR/bin:$PATH"
+  - export COMPOSER_EXIT_ON_PATCH_FAILURE=1
+  - export COMPOSER_MEMORY_LIMIT=-1
+
+install:
+  - git checkout $TRAVIS_COMMIT
+  - composer install
+
+script:
+  - cd profiles
+  - wget https://github.com/srijanone/ezcontent/archive/8.x.zip
+  - unzip 8.x.zip
+  - rm -rf 8.x.zip
+  - cd ..
+  - ./vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer/
+  - ./vendor/bin/phpcs --standard=Drupal profiles
+  - ./vendor/bin/phpcs --standard=DrupalPractice profiles

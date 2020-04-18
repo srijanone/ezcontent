@@ -101,13 +101,6 @@
       "drupal/core": "dist"
     }
   },
-  "scripts": {
-    "post-install-cmd": [
-      "@composer drupal-scaffold",
-      "./import.sh"
-    ],
-    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
-  },
   "extra": {
     "patchLevel": {
       "drupal/core": "-p2"
