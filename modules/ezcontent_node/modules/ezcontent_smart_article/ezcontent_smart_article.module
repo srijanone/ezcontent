@@ -37,10 +37,10 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
     // Make Company name Autocomplete.
     $form['field_company_name']['widget'][0]['value']['#autocomplete_route_name'] = 'ezcontent_smart_article.autocomplete.companies';
     // Add a generate summary button and hide body field.
-    $form['generate_summary'] = [
+    $form['field_company_name']['generate_summary'] = [
       '#type' => 'submit',
       '#name' => 'generate_summary',
-      '#value' => t('Generate Content'),
+      '#value' => t('Generate Article Content'),
       '#weight' => 11,
       '#attributes' => empty($summary_config->get('summary_generator_api_url')) ? [
         'disabled' => 'disabled'

@@ -8,7 +8,7 @@ id: node.smart_article.field_company_name
 field_name: field_company_name
 entity_type: node
 bundle: smart_article
-label: 'Company Name'
+label: 'Choose Company from Sample Excel Sheet'
 description: ''
 required: false
 translatable: false

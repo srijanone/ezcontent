@@ -10,7 +10,7 @@ id: node.smart_article.body
 field_name: body
 entity_type: node
 bundle: smart_article
-label: Body
+label: 'Auto Generated Article Content'
 description: ''
 required: false
 translatable: true
