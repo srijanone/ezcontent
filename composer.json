@@ -31,7 +31,6 @@
     "drupal/bootstrap_barrio": "^4.22",
     "drupal/color_field": "^2.2",
     "drupal/colorbox": "^1.4",
-    "drupal/decoupled_router": "^1.11",
     "drupal/default_content": "^1.0@alpha",
     "drupal/dropzonejs": "^2.0",
     "drupal/email_registration": "^1.0@RC",
@@ -114,16 +113,12 @@
         "Langcode cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
       },
       "drupal/core": {
-        "Expose Layout Builder data to REST and JSON:API": "https://www.drupal.org/files/issues/2019-11-21/layout_builder-export-content-2942975-67.patch",
         "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2019-11-20/2999491-42.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch",
         "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch"
       },
       "drupal/jsonapi_extras": {
         "Link enhancer to add Aliased URL for internal links": "https://www.drupal.org/files/issues/2019-03-08/jsonapi_extras-Field-enhancer-for-URL-alias-2942851-24.patch"
-      },
-      "drupal/metatag": {
-        "Support JSON API, REST, GraphQL and custom normalizations": "https://www.drupal.org/files/issues/2020-02-23/2945817-87.patch"
       },
       "drupal/slick": {
         "Slick patch": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
