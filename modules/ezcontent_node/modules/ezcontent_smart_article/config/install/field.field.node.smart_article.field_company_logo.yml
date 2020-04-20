@@ -10,8 +10,8 @@ id: node.smart_article.field_company_logo
 field_name: field_company_logo
 entity_type: node
 bundle: smart_article
-label: 'Company Logo'
-description: ''
+label: 'Image'
+description: 'Upload an image to see auto generated image caption'
 required: false
 translatable: false
 default_value: {  }
