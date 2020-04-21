@@ -1,4 +1,3 @@
-uuid: 036d3848-b23c-44f5-abd0-750d306aa1fb
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.faq
   module:
     - paragraphs
-_core:
-  default_config_hash: jlf0T7aJYzUW1JzSU1iXlEkfmBPRMjljhlXHA8irIJw
 id: paragraph.faq.default
 targetEntityType: paragraph
 bundle: faq
