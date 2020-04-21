@@ -6,6 +6,7 @@ core: 8.x
 dependencies:
   - better_normalizers:better_normalizers
   - default_content:default_content
+  - ezcontent_api:ezcontent_preview
   - ezcontent:ezcontent_block
   - ezcontent:ezcontent_block_cards
   - ezcontent:ezcontent_block_embed
