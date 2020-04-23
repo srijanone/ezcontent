@@ -1,14 +1,11 @@
 .paragraph--type--embed {
   padding:0
 }
-.paragraph--type--embed .field--name-field-script {
-  text-align:center
-}
-.paragraph--type--embed iframe {
+iframe {
   margin:30px auto;
   max-width:100%
 }
-.paragraph--type--embed iframe::after {
+iframe::after {
   clear:both;
   content:"";
   display:table
