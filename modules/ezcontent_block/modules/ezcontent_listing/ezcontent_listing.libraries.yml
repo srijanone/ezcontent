@@ -1,0 +1,4 @@
+ezcontent_listing_css:
+  css:
+    theme:
+      css/content-listing-component.css: {}

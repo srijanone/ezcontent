@@ -13,6 +13,7 @@ function ezcontent_listing_preprocess_block(&$variables) {
     $block = $variables['content']['#block_content'];
     $block_type = $block->bundle();
     if ($block_type == 'content_listing_component') {
+      $variables['#attached']['library'][] = 'ezcontent_listing/ezcontent_listing_css';
       $block_view_mode = $variables['content']['#view_mode'];
       $helper_block_service = \Drupal::service('ezcontent_listing.helper_block');
 
