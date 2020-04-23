@@ -2,6 +2,7 @@
 
 namespace Drupal\ezcontent_smart_article\Plugin\Field\FieldWidget;
 
+use Drupal\Core\Field\FieldFilteredMarkup;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\Plugin\Field\FieldWidget\EntityReferenceAutocompleteTagsWidget;
@@ -30,7 +31,7 @@ class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAuto
     $element['#prefix'] = '<div class="tags-link-field">';
     $element['#suffix'] = '</div>';
     $element['auto_tags'] = [
-      '#prefix' => '<div id="auto-tags">',
+      '#prefix' => '<div class="tag-field-wrapper" id="auto-tags">',
       '#suffix' => '</div>',
       '#weight' => 0,
     ];

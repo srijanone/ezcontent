@@ -11,7 +11,7 @@ field_name: field_smart_text_summary
 entity_type: node
 bundle: smart_article
 label: 'Article Body'
-description: 'AI powered summary generation.'
+description: ''
 required: false
 translatable: false
 default_value: {  }
