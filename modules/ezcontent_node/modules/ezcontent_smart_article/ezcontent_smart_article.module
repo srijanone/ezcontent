@@ -213,6 +213,7 @@ function ezcontent_smart_article_get_alt_title(array $element, FormStateInterfac
  * Implements form submit handler for smarttags.
  */
 function generate_tags_form_submit(array $form, FormStateInterface $form_state) {
+  $tags = [];
   $response = new AjaxResponse();
   $renderer = \Drupal::service('renderer');
   $node = $form_state->getFormObject()->getEntity();
@@ -235,15 +236,13 @@ function generate_tags_form_submit(array $form, FormStateInterface $form_state) 
   else {
     $smart_tags = \Drupal::service('ezcontent_smart_article.generate_smarttags');
     $tags = $smart_tags->getTags(Json::encode($field[0]['value']));
-    if ($tags) {
-      $auto_tags = [
-        '#theme' => 'smarttag_template',
-        '#tags' => $tags,
-      ];
-      $rendered_field = $renderer->render($auto_tags);
-      $response->addCommand(new ReplaceCommand('#auto-tags', $rendered_field));
-    }
   }
+  $auto_tags = [
+    '#theme' => 'smarttag_template',
+    '#tags' => $tags,
+  ];
+  $rendered_field = $renderer->render($auto_tags);
+  $response->addCommand(new ReplaceCommand('#auto-tags', $rendered_field));
   return $response;
 }
 
