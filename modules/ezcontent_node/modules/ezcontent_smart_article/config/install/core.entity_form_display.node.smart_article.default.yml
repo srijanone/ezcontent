@@ -35,16 +35,29 @@ third_party_settings:
     group_auto_generate_summary:
       children:
         - field_smart_text_summary
+        - group_generate_tags
       parent_name: ''
       weight: 14
       format_type: fieldset
       format_settings:
-        label: 'Auto Generate Summary for Article Body'
-        description: ''
+        label: 'Auto Generate Summary and Tags for Article Body'
+        description: 'AI powered summary generation and tags suggestions.'
         required_fields: true
         id: ''
         classes: ''
-      label: 'Auto Generate Summary for Article Body'
+      label: 'Auto Generate Summary and Tags for Article Body'
+    group_generate_tags:
+      children:
+        - field_smart_tags
+      parent_name: group_auto_generate_summary
+      weight: 20
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Generate Tags'
 id: node.smart_article.default
 targetEntityType: node
 bundle: smart_article
@@ -83,7 +96,7 @@ content:
     type: string_textfield
     region: content
   field_smart_tags:
-    weight: 16
+    weight: 17
     settings:
       match_operator: CONTAINS
       match_limit: 10

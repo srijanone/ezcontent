@@ -11,7 +11,7 @@ id: node.smart_article.field_smart_tags
 field_name: field_smart_tags
 entity_type: node
 bundle: smart_article
-label: 'Smart Tags'
+label: 'Article Tags'
 description: ''
 required: false
 translatable: false
