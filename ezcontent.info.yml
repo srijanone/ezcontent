@@ -1,14 +1,7 @@
 name: EZ Content
 type: profile
-description: 'A Feature rich stater profile from Srijan.'
+description: 'A Feature rich starter profile from Srijan.'
 core: 8.x
-
-# Optional: Declare your installation profile as a distribution
-# This will make the installer auto-select this installation profile.
-# The distribution_name property is used in the installer and other places as
-# a label for the software being installed.
-distribution:
-  name: EZ Content
 
 # Modules to install to support the profile.
 install:
