@@ -20,8 +20,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 1
-    target_bundles:
-      card: card
+    target_bundles: null
     target_bundles_drag_drop:
       text:
         weight: -35
@@ -65,13 +64,4 @@ settings:
       view:
         weight: -22
         enabled: false
-      card:
-        enabled: true
-        weight: -21
-      faq_qa:
-        enabled: true
-        weight: -20
-      form:
-        enabled: true
-        weight: -19
 field_type: entity_reference_revisions
