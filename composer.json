@@ -21,7 +21,6 @@
     "bower-asset/slick-carousel": "^1.8",
     "cweagans/composer-patches": "~1",
     "drupal/core-composer-scaffold": "^8.8",
-    "drupal/access_unpublished": "^1.0@alpha",
     "drupal/admin_toolbar": "^1.27",
     "drupal/adminimal_theme": "^1.5",
     "drupal/allowed_formats": "^1.1",
