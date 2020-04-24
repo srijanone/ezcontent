@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install, update/uninstall functions for the ezontent_faq.
+ */
+
+/**
  * Implements hook_install().
  */
 function ezcontent_faq_install() {
@@ -10,7 +15,7 @@ function ezcontent_faq_install() {
     $negate_bundles['faq_qa'] = 'faq_qa';
     $negate_bundles_drag_drop = $article_content_field_config->get('settings.handler_settings.target_bundles_drag_drop');
     $negate_bundles_drag_drop['faq_qa'] = [
-      'enabled' => true,
+      'enabled' => TRUE,
       'weight' => -20,
     ];
     \Drupal::configFactory()->getEditable('field.field.node.article.field_content')

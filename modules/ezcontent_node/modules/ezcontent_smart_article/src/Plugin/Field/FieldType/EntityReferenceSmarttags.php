@@ -73,7 +73,12 @@ class EntityReferenceSmarttags extends EntityReferenceItem {
 
     $entity = FieldItemBase::getEntity();
     $fields = [];
-    $types = ['text_with_summary', 'text_long', 'string_long', 'smart_text_with_summary'];
+    $types = [
+      'text_with_summary',
+      'text_long',
+      'string_long',
+      'smart_text_with_summary',
+    ];
     foreach ($entity as $key => $value) {
       $field_type = $entity->get($key)->getFieldDefinition()->getType();
       if (strpos($key, 'field_') !== FALSE) {

@@ -2,7 +2,6 @@
 
 namespace Drupal\ezcontent_smart_article\Plugin\Field\FieldWidget;
 
-use Drupal\Core\Field\FieldFilteredMarkup;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\Plugin\Field\FieldWidget\EntityReferenceAutocompleteTagsWidget;

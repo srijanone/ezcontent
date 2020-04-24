@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for ezcontent_media_gallery.
+ */
+
+/**
  * Implements hook_install().
  */
 function ezcontent_media_gallery_install() {
@@ -18,7 +23,7 @@ function ezcontent_media_gallery_install() {
       'id' => 'media.slick',
       'label' => 'Slick carousel',
       'targetEntityType' => 'media',
-      'cache' => 'true'
+      'cache' => 'true',
     ];
     \Drupal::configFactory()->getEditable('core.entity_view_mode.media.slick')
       ->setData($slick_view_mode_config_data)
