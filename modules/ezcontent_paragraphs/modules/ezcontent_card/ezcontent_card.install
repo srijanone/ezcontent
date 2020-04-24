@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install, update/uninstall functions for the ezontent_card.
+ */
+
+/**
  * Implements hook_install().
  */
 function ezcontent_card_install() {
@@ -10,7 +15,7 @@ function ezcontent_card_install() {
     $negate_bundles['card'] = 'card';
     $negate_bundles_drag_drop = $article_content_field_config->get('settings.handler_settings.target_bundles_drag_drop');
     $negate_bundles_drag_drop['card'] = [
-      'enabled' => true,
+      'enabled' => TRUE,
       'weight' => -21,
     ];
     \Drupal::configFactory()->getEditable('field.field.node.article.field_content')

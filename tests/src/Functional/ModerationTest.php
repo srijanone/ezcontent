@@ -5,6 +5,8 @@ namespace Drupal\Tests\ezcontent\Functional;
 use Drupal\Tests\BrowserTestBase;
 
 /**
+ * Functional test case for ezcontent.
+ *
  * @group ezcontent
  */
 class ModerationTest extends BrowserTestBase {
@@ -15,8 +17,9 @@ class ModerationTest extends BrowserTestBase {
   protected $profile = 'ezcontent';
 
   /**
-   * Remove from ezcontent.info file email_registration and gin_login
-   *   module before running functional tests.
+   * Remove from ezcontent.info file email_registration and gin_login.
+   *
+   * Module before running functional tests.
    *
    * @todo: Make this work with gin_login and email_registration module.
    */
@@ -42,7 +45,8 @@ class ModerationTest extends BrowserTestBase {
   public function testContentTypeArticle() {
     $this->drupalGet('/node/add/article');
     $this->assertSession()->statusCodeEquals(200);
-    // Assert that the image thumbnail and add paragraph button is present in the HTML.
+    // Assert that the image thumbnail and add paragraph
+    // button is present in the HTML.
     $this->assertRaw('id="edit-field-thumbnail-entity-browser-entity-browser-open-modal"');
     $this->assertRaw('id="edit-field-content-add-more-add-modal-form-area-add-more"');
   }
@@ -61,7 +65,8 @@ class ModerationTest extends BrowserTestBase {
   public function testContentTypeAuthor() {
     $this->drupalGet('/node/add/author');
     $this->assertSession()->statusCodeEquals(200);
-    // Assert that the image thumbnail and add paragraph button is present in the HTML.
+    // Assert that the image thumbnail and add paragraph
+    // button is present in the HTML.
     $this->assertRaw('id="edit-field-thumbnail-wrapper"');
     $this->assertFieldByName('body[0][value]');
   }

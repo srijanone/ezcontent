@@ -135,13 +135,13 @@ class ConfigForm extends ConfigFormBase {
       '#type' => 'textfield',
       '#title' => $this->t('Abstractive Summary API URL'),
       '#description' => $this->t('Provide the API URL.'),
-      '#default_value' => $config->get('abstractive_summary_api_url')
+      '#default_value' => $config->get('abstractive_summary_api_url'),
     ];
     $form['extractive_summary_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Extractive Summary API URL'),
       '#description' => $this->t('Provide the API URL.'),
-      '#default_value' => $config->get('extractive_summary_api_url')
+      '#default_value' => $config->get('extractive_summary_api_url'),
     ];
     $form['smart_tags_api_url'] = [
       '#type' => 'textfield',
@@ -163,7 +163,6 @@ class ConfigForm extends ConfigFormBase {
     }
     $config->save();
 
-
     // Upload file on api endpoint.
     $fid = $form_state->getValue('summary_generator_data_file');
     if (!empty($fid) && !empty($form_state->getValue('summary_generator_api_url'))) {
@@ -175,12 +174,12 @@ class ConfigForm extends ConfigFormBase {
   }
 
   /**
-   * Upload file to api server
+   * Upload file to api server.
    */
   public function uploadServer($file) {
     $fileRealPath = $this->fileSystem->realpath($file->getFileUri());
     $url = $this->config(static::SETTINGS)
-        ->get('summary_generator_api_url') . '/upload';
+      ->get('summary_generator_api_url') . '/upload';
 
     $response = $this->httpClient->request('POST', $url, [
       'headers' => [

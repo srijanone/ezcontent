@@ -7,7 +7,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
- *
+ * Checks subscriptions for smart_article API keys.
  */
 class SmartArticleCheckSubscriptionEvent implements EventSubscriberInterface {
 
@@ -27,7 +27,8 @@ class SmartArticleCheckSubscriptionEvent implements EventSubscriberInterface {
    *  * ['eventName' => ['methodName', $priority]]
    *  * ['eventName' => [['methodName1', $priority], ['methodName2']]]
    *
-   * @return array The event names to listen to
+   * @return array
+   *    The event names to listen to.
    */
   public static function getSubscribedEvents() {
     // Implement getSubscribedEvents() method.
@@ -43,8 +44,10 @@ class SmartArticleCheckSubscriptionEvent implements EventSubscriberInterface {
       ->getRequestUri() == "/node/add/smart_article") {
       $summary_config = \Drupal::config('summary_generator.settings');
       if (empty($summary_config->get('summary_generator_api_url'))) {
-        // @todo: Uncomment the below line to redirect it to subscription page once its design is ready.
-        // $event->setResponse(new RedirectResponse(\Drupal::url('ezcontent_smart_article.get_subscription'), 301, []));
+        // @todo: Uncomment the below line to redirect it
+        // to subscription page once its design is ready.
+        // $event->setResponse(new RedirectResponse(\Drupal::
+        // url('ezcontent_smart_article.get_subscription'), 301, []));
       }
 
     }

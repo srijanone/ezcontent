@@ -6,6 +6,7 @@ use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormState;
 use Drupal\Core\Template\Attribute;
 use Drupal\field_group\Plugin\field_group\FieldGroupFormatter\HtmlElement;
+use Drupal\field_group\Element\HtmlElement as HtmlElementFormatter;
 
 /**
  * Plugin implementation of the 'html_element_hero_media_display' formatter.
@@ -70,7 +71,8 @@ class HtmlElementHeroMediaDisplay extends HtmlElement {
       if (!isset($element_attributes['class'])) {
         $element_attributes['class'] = [];
       }
-      // If user also entered class in the attributes textfield, force it to an array.
+      // If user also entered class in the attributes textfield,
+      // force it to an array.
       else {
         $element_attributes['class'] = [$element_attributes['class']];
       }
@@ -84,11 +86,11 @@ class HtmlElementHeroMediaDisplay extends HtmlElement {
     $element['#attributes'] = $element_attributes;
     if ($this->getSetting('show_label')) {
       $element['#title_element'] = $this->getSetting('label_element');
-      $element['#title'] = Html::escape($this->t($this->getLabel()));
+      $element['#title'] = Html::escape($this->getLabel());
     }
 
     $form_state = new FormState();
-    \Drupal\field_group\Element\HtmlElement::processHtmlElement($element, $form_state);
+    HtmlElementFormatter::processHtmlElement($element, $form_state);
 
     if ($this->getSetting('required_fields')) {
       $element['#attributes']['class'][] = 'field-group-html-element';
@@ -96,4 +98,5 @@ class HtmlElementHeroMediaDisplay extends HtmlElement {
       $element['#attached']['library'][] = 'field_group/core';
     }
   }
+
 }
