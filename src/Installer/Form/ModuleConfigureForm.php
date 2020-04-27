@@ -130,4 +130,5 @@ class ModuleConfigureForm extends ConfigFormBase {
   protected function getEditableConfigNames() {
     return [];
   }
+
 }

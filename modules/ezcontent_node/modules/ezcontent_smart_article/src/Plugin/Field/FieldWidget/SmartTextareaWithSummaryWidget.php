@@ -26,7 +26,7 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
     $element = parent::formElement($items, $delta, $element, $form, $form_state);
     // Removed js-text-summary class to hide edit summary link.
     $element['summary']['#attributes']['class'] = ["text-summary"];
-    $element['summary']['#prefix'] =  '<div class="visually-hidden">';
+    $element['summary']['#prefix'] = '<div class="visually-hidden">';
     $element['summary_container'] = [
       '#type' => 'details',
       '#title' => t('Generate Summary'),

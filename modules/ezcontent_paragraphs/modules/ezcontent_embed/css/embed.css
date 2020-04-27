@@ -1,12 +1,12 @@
 .paragraph--type--embed {
-  padding:0
+  padding: 0;
 }
 iframe {
-  margin:30px auto;
-  max-width:100%
+  margin: 30px auto;
+  max-width: 100%;
 }
 iframe::after {
-  clear:both;
-  content:"";
-  display:table
+  clear: both;
+  content: "";
+  display: table;
 }

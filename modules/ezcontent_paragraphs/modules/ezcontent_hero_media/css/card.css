@@ -30,11 +30,11 @@
   margin: 0 auto;
 }
 .paragraph--type--card .layout .layout__region .block-field-blockparagraphcardfield-media {
-  height: 100%
+  height: 100%;
 }
 .paragraph--type--card .layout .layout__region .block-field-blockparagraphcardfield-media div,
 .paragraph--type--card .layout .layout__region .block-field-blockparagraphcardfield-media section {
-  height: 100%
+  height: 100%;
 }
 .paragraph--type--card .field--name-field-title {
   font-family: "ProximaNovaT-Thin", sans-serif;
@@ -64,7 +64,7 @@
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  width: 100%
+  width: 100%;
 }
 .paragraph--type--card .field--name-field-link {
   text-align: right;

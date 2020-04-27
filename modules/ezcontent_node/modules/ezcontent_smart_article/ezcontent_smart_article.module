@@ -32,7 +32,7 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       empty($summary_config->get('smart_tags_api_url'))) {
       \Drupal::messenger()
         ->addError(t('Smart Article is proprietary, license-based with <a href="@link"> Srijan</a>.Please contact at <a href="@mailtolink">business@srijan.net</a> for more information.',
-          ['@link' => 'https://www.srijan.net/','@mailtolink'=> 'mailto:business@srijan.net']));
+          ['@link' => 'https://www.srijan.net/', '@mailtolink' => 'mailto:business@srijan.net']));
     }
     // Make Company name Autocomplete.
     $form['field_company_name']['widget'][0]['value']['#autocomplete_route_name'] = 'ezcontent_smart_article.autocomplete.companies';
@@ -43,7 +43,7 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       '#value' => t('Generate Article Content'),
       '#weight' => 11,
       '#attributes' => empty($summary_config->get('summary_generator_api_url')) ? [
-        'disabled' => 'disabled'
+        'disabled' => 'disabled',
       ] : [],
       '#ajax' => [
         'callback' => 'ezcontent_smart_article_generate_callback',
@@ -180,12 +180,13 @@ function update_summary_field_submit_handler(&$form, FormStateInterface $form_st
 /**
  * Process callback: Adds the ALT title to image.
  *
- * @todo: Move to a service.
- *
  * @param array $element
  *   Form API element.
  *
- * @return array $element
+ * @todo: Move to a service.
+ *
+ * @return array
+ *    Image alt title.
  */
 function ezcontent_smart_article_get_alt_title(array $element, FormStateInterface $form_state, array &$form) {
   $item = $element['#value'];
@@ -225,7 +226,7 @@ function generate_tags_form_submit(array $form, FormStateInterface $form_state) 
     $drupal_messenger->addError(t('@link_field_label field required.', ['@link_field_label' => $link_field_label]));
     $message = [
       '#theme' => 'status_messages',
-      '#message_list' => $drupal_messenger->all()
+      '#message_list' => $drupal_messenger->all(),
     ];
     $messages = $renderer->render($message);
     $drupal_messenger->deleteByType('error');
@@ -256,6 +257,6 @@ function ezcontent_smart_article_theme($existing, $type, $theme, $path) {
     ],
     'smart_article_get_subscription_landing_page' => [
       'variables' => [],
-    ]
+    ],
   ];
 }

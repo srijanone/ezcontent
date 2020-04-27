@@ -1,22 +1,22 @@
 .paragraph--type--card {
-  margin-bottom:30px;
-  padding:0
+  margin-bottom: 30px;
+  padding: 0;
 }
 .paragraph--type--card::after {
-  clear:both;
-  content:"";
-  display:table
+  clear: both;
+  content: "";
+  display: table;
 }
 .paragraph--type--card .media--type-image {
   overflow: hidden;
 }
 .paragraph--type--card .field--name-field-media-image {
-  -webkit-box-align:center;
-  -ms-flex-align:center;
-  align-items:center;
-  display:-webkit-box;
-  display:-ms-flexbox;
-  display:flex;
-  margin:0 auto;
-  width:100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
 }

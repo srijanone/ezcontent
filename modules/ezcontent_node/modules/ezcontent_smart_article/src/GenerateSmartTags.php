@@ -82,7 +82,8 @@ class GenerateSmartTags {
   }
 
   /**
-   * Fetch ezcontent_smart_tags taxonomy_term reference field from given
+   * Fetch ezcontent_smart_tags taxonomy_term reference field from given.
+   *
    * FieldDefinitions list.
    *
    * @param object $fieldDefinitions
