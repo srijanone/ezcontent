@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Module file for ezcontent_user.
+ */
+
 use Drupal\Core\Form\FormStateInterface;
 
 /**

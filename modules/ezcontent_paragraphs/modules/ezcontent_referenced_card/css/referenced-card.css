@@ -1,33 +1,33 @@
 .paragraph--type--referenced-card .block-field-blocknodearticletitle {
-  color:black
+  color: black;
 }
 .paragraph--type--referenced-card {
-  margin-bottom:30px
+  margin-bottom: 30px;
 }
-.paragraph--type--referenced-card .field--name-field-article>.field__item{
-  margin-bottom:30px;
-  -webkit-box-flex:0;
-  -ms-flex:0 0 100%;
-  flex:0 0 100%
+.paragraph--type--referenced-card .field--name-field-article>.field__item {
+  margin-bottom: 30px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 .paragraph--type--referenced-card .field--name-field-article>.field__item .layout__region {
-  width:100%;
-  -webkit-box-flex:0;
-  -ms-flex:0 0 100%;
-  flex:0 0 100%
+  width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 @media only screen and (min-width: 37.5em) {
   .paragraph--type--referenced-card .field--name-field-article {
-    display:-webkit-box;
-    display:-ms-flexbox;
-    display:flex;
-    -ms-flex-wrap:wrap;
-    flex-wrap:wrap
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .paragraph--type--referenced-card .field--name-field-article>.field__item:nth-child(3n+2) {
-    margin:0 20px
+    margin: 0 20px;
   }
   .paragraph--type--referenced-card .field--name-field-article>.field__item {
-    max-width:calc(33% - 20px)
+    max-width: calc(33% - 20px);
   }
 }

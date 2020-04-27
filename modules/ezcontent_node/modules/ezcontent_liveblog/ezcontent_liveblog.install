@@ -17,7 +17,7 @@ function ezcontent_liveblog_install() {
   if (!InstallerKernel::installationAttempted() && \Drupal::service('module_handler')->moduleExists('liveblog_pusher')) {
     \Drupal::messenger()->addMessage(
       t("To configure Liveblog Pusher, go to 'admin/config/content/liveblog' and specify the pusher plugin settings obtained from @pusher.", [
-        '@pusher' => Link::fromTextAndUrl(t('pusher.com'), Url::fromUri('external:https://pusher.com', ['attributes' => ['target' => '_blank']]))->toRenderable()
+        '@pusher' => Link::fromTextAndUrl(t('pusher.com'), Url::fromUri('external:https://pusher.com', ['attributes' => ['target' => '_blank']]))->toRenderable(),
       ])
     );
   }

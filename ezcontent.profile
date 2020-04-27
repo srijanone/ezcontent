@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Enables modules and site configuration for a standard site installation.
@@ -9,17 +10,19 @@
  */
 function ezcontent_install_tasks(&$install_state) {
   $tasks = [];
-//  if (empty($install_state['config_install_path'])) {
-//    $tasks['ezcontent_module_configure_form'] = [
-//      'display_name' => t('Configure additional modules'),
-//      'type' => 'form',
-//      'function' => 'Drupal\ezcontent\Installer\Form\ModuleConfigureForm',
-//    ];
-//    $tasks['ezcontent_module_install'] = [
-//      'display_name' => t('Install additional modules'),
-//      'type' => 'batch',
-//    ];
-//  }
+  /*
+  If (empty($install_state['config_install_path'])) {
+  $tasks['ezcontent_module_configure_form'] = [
+  'display_name' => t('Configure additional modules'),
+  'type' => 'form',
+  'function' => 'Drupal\ezcontent\Installer\Form\ModuleConfigureForm',
+  ];
+  $tasks['ezcontent_module_install'] = [
+  'display_name' => t('Install additional modules'),
+  'type' => 'batch',
+  ];
+  }
+   */
   return $tasks;
 }
 

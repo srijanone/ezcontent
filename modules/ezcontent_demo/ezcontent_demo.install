@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for ezcontent_demo.
+ */
+
+/**
  * Implements hook_install().
  */
 function ezcontent_demo_install() {
