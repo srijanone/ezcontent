@@ -37,7 +37,7 @@ class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAuto
     $element['smart_tags_submit'] = [
       '#type' => 'submit',
       '#name' => 'smart_tags_submit',
-      '#value' => t('Generate Tags'),
+      '#value' => $this->t('Generate Tags'),
       '#weight' => 1,
     ];
     return $element;
