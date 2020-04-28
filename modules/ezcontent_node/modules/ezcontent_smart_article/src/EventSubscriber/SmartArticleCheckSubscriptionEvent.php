@@ -28,7 +28,7 @@ class SmartArticleCheckSubscriptionEvent implements EventSubscriberInterface {
    *  * ['eventName' => [['methodName1', $priority], ['methodName2']]]
    *
    * @return array
-   *    The event names to listen to.
+   *   The event names to listen to.
    */
   public static function getSubscribedEvents() {
     // Implement getSubscribedEvents() method.

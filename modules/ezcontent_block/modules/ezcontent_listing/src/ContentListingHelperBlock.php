@@ -29,9 +29,9 @@ class ContentListingHelperBlock {
   /**
    * Content Listing constructor.
    *
-   * @param EntityTypeManager $entityTypeManager
+   * @param \Drupal\Core\Entity\EntityTypeManager $entityTypeManager
    *   Entity Type manager.
-   * @param ViewExecutableFactory $viewExecutable
+   * @param \Drupal\views\ViewExecutableFactory $viewExecutable
    *   A view executable instance, from the loaded entity.
    */
   public function __construct(EntityTypeManager $entityTypeManager, ViewExecutableFactory $viewExecutable) {

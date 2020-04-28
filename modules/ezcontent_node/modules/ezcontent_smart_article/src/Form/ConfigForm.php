@@ -116,7 +116,7 @@ class ConfigForm extends ConfigFormBase {
     $form['summary_generator_data_file'] = [
       '#type' => 'managed_file',
       '#name' => 'data_file',
-      '#title' => t('Data file'),
+      '#title' => $this->t('Data file'),
       '#size' => 20,
       '#description' => $this->t('File to be uploaded to API. Only upload Excel file.'),
       '#upload_validators' => [
