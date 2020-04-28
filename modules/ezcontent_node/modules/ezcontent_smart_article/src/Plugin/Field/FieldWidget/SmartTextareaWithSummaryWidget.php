@@ -49,8 +49,8 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
       '#type' => 'radios',
       '#title' => $this->t("Summary type"),
       '#options' => [
-        'abstractive' => 'Abstractive',
-        'extractive' => 'Extractive',
+        'abstractive' => $this->t('Abstractive'),
+        'extractive' => $this->t('Extractive'),
       ],
       '#default_value' => 'abstractive',
     ];

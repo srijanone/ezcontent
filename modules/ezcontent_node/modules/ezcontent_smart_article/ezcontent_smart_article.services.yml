@@ -13,5 +13,6 @@ services:
 
   ezcontent_smart_article.event_subscriber:
     class: Drupal\ezcontent_smart_article\EventSubscriber\SmartArticleCheckSubscriptionEvent
+    arguments: ['@config.factory']
     tags:
       - { name: event_subscriber }
