@@ -11,7 +11,7 @@
    */
   Drupal.behaviors.ezcontent_smart_article = {
     attach: function (context, settings) {
-      $('.tag-field-wrapper .tag-wrapper li', context).click(function(e) {
+      $('.tag-field-wrapper .tag-wrapper li', context).click(function (e) {
         var tagName = $(this).text();
         var existingTags = $('.tags-link-field .ui-autocomplete-input').val();
         var finalTags = '';
