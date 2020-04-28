@@ -8,7 +8,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'administer display modes'
-  - 'configure any layout'
   - 'use text format restricted_html'
   - 'view media'
   - 'view search api pages'
