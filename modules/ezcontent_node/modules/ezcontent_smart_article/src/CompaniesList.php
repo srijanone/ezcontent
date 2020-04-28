@@ -68,7 +68,7 @@ class CompaniesList {
    *   The bundle name.
    *
    * @return mixed
-   *    Summary based on company name.
+   *   Summary based on company name.
    */
   public function getData($entity = '', $type = '') {
     $url = $this->config->get('summary_generator_api_url') . '/fetchcontent';
