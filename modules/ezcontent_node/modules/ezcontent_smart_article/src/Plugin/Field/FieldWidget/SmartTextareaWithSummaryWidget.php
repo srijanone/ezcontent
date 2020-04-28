@@ -29,7 +29,7 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
     $element['summary']['#prefix'] = '<div class="visually-hidden">';
     $element['summary_container'] = [
       '#type' => 'details',
-      '#title' => t('Generate Summary'),
+      '#title' => $this->t('Generate Summary'),
       '#description' => $this->t('Generate summary from text entered in body field above.'),
       '#weight' => 1,
       '#open' => FALSE,
@@ -40,7 +40,7 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
       '#title' => $this->t('Summary'),
       '#default_value' => $items[$delta]->summary,
       '#rows' => $this->getSetting('summary_rows'),
-      '#description' => t('Leave blank to use trimmed value of full text as the summary.'),
+      '#description' => $this->t('Leave blank to use trimmed value of full text as the summary.'),
       '#attributes' => ['class' => ['text-summary']],
       '#prefix' => '<div class="text-summary-wrapper">',
       '#suffix' => '</div>',
