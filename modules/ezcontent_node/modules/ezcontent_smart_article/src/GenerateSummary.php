@@ -66,6 +66,8 @@ class GenerateSummary {
    *   The entity name.
    * @param string $type
    *   The summary type name.
+   * @param int $sent_count
+   *   The number of sentences.
    */
   public function generateSummary($text = '', $type = 'abstractive', $sent_count = 5) {
     $abstractive_api_endpoint = $this->config->get('abstractive_summary_api_url');

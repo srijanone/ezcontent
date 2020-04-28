@@ -30,14 +30,14 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
     $element['summary_container'] = [
       '#type' => 'details',
       '#title' => t('Generate Summary'),
-      '#description' => t('Generate summary from text entered in body field above.'),
+      '#description' => $this->t('Generate summary from text entered in body field above.'),
       '#weight' => 1,
       '#open' => FALSE,
       // Controls the HTML5 'open' attribute. Defaults to FALSE.
     ];
     $element['summary_container']['summary_area'] = [
       '#type' => 'textarea',
-      '#title' => t('Summary'),
+      '#title' => $this->t('Summary'),
       '#default_value' => $items[$delta]->summary,
       '#rows' => $this->getSetting('summary_rows'),
       '#description' => t('Leave blank to use trimmed value of full text as the summary.'),
@@ -47,7 +47,7 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
     ];
     $element['summary_container']['summary_type'] = [
       '#type' => 'radios',
-      '#title' => t("Summary type"),
+      '#title' => $this->t("Summary type"),
       '#options' => [
         'abstractive' => 'Abstractive',
         'extractive' => 'Extractive',
@@ -56,14 +56,14 @@ class SmartTextareaWithSummaryWidget extends TextareaWithSummaryWidget {
     ];
     $element['summary_container']['number_of_sentences'] = [
       '#type' => 'number',
-      '#title' => t("Number of sentences"),
+      '#title' => $this->t("Number of sentences"),
       '#min' => 1,
       '#default_value' => 5,
     ];
     $element['summary_container']['generate_smart_summary'] = [
       '#type' => 'button',
       '#name' => 'generate_smart_summary',
-      '#value' => t('Generate Smart Summary'),
+      '#value' => $this->t('Generate Smart Summary'),
     ];
     return $element;
   }

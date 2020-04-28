@@ -118,7 +118,7 @@ class ConfigForm extends ConfigFormBase {
       '#name' => 'data_file',
       '#title' => t('Data file'),
       '#size' => 20,
-      '#description' => t('File to be uploaded to API. Only upload Excel file.'),
+      '#description' => $this->t('File to be uploaded to API. Only upload Excel file.'),
       '#upload_validators' => [
         'file_validate_extensions' => ['xls xlsx'],
       ],
