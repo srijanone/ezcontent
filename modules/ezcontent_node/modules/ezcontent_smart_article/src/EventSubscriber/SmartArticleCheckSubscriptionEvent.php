@@ -2,6 +2,7 @@
 
 namespace Drupal\ezcontent_smart_article\EventSubscriber;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
@@ -10,6 +11,23 @@ use Symfony\Component\HttpKernel\KernelEvents;
  * Checks subscriptions for smart_article API keys.
  */
 class SmartArticleCheckSubscriptionEvent implements EventSubscriberInterface {
+
+  /**
+   * The config object.
+   *
+   * @var \Drupal\Core\Config\ConfigFactoryInterface
+   */
+  protected $config;
+
+  /**
+   * Constructs this factory object.
+   *
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   *   The config factory.
+   */
+  public function __construct(ConfigFactoryInterface $configFactory) {
+    $this->config = $configFactory->get('summary_generator.settings');
+  }
 
   /**
    * Returns an array of event names this subscriber wants to listen to.
@@ -42,8 +60,7 @@ class SmartArticleCheckSubscriptionEvent implements EventSubscriberInterface {
   public function checkSubscription(Event $event) {
     if (!$event->getRequest()->isXmlHttpRequest() && $event->getRequest()
       ->getRequestUri() == "/node/add/smart_article") {
-      $summary_config = \Drupal::config('summary_generator.settings');
-      if (empty($summary_config->get('summary_generator_api_url'))) {
+      if (empty($this->config->get('summary_generator_api_url'))) {
         // @todo: Uncomment the below line to redirect it
         // to subscription page once its design is ready.
         // $event->setResponse(new RedirectResponse(\Drupal::
