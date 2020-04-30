@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.token
     - field.field.media.image.field_media_image
+    - image.style.image_token
     - media.type.image
   module:
     - image
@@ -21,7 +22,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: image_token
     third_party_settings: {  }
     type: image_url
     region: content

@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.crop_16_9
+  module:
+    - crop
+name: image_token
+label: 'Image Token'
+effects:
+  85c7e4c8-ebb9-4fd3-a880-0c47212f93e1:
+    uuid: 85c7e4c8-ebb9-4fd3-a880-0c47212f93e1
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: crop_16_9
