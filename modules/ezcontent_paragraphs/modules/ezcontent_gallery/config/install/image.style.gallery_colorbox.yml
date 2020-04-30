@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.crop_16_9
+  module:
+    - crop
+name: gallery_colorbox
+label: 'Gallery Colorbox'
+effects:
+  f06a8fc4-f5d3-457d-b9b8-82637ba0dc65:
+    uuid: f06a8fc4-f5d3-457d-b9b8-82637ba0dc65
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: crop_16_9
