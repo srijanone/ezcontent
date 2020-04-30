@@ -15,6 +15,7 @@ install:
   - contact
   - content_moderation
   - contextual
+  - crop
   - dblog
   - editor
   - email_registration
@@ -30,6 +31,7 @@ install:
   - help
   - history
   - image
+  - image_widget_crop
   - linkit
   - schema_metatag
   - moderation_dashboard

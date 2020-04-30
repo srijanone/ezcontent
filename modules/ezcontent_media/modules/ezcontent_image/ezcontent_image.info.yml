@@ -4,4 +4,5 @@ description: 'Provides Image Media type for image based features.'
 package: EZContent Media
 core: 8.x
 dependencies:
-  - ezcontent_media
+  - ezcontent_media:ezcontent_media
+  - image_widget_crop:image_widget_crop
