@@ -126,7 +126,6 @@
         "Slick patch": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
       },
       "drupal/moderation_dashboard": {
-        "Pass tests with Drupal 9": "https://www.drupal.org/files/issues/2020-04-14/3127337-8.patch",
         "User schedule tab throw 500 error": "https://www.drupal.org/files/issues/2020-04-30/user_load_moderation_dashboard_updated_with_dependency_injection_3048782.patch"
       },
       "drupal/bootstrap_barrio": {
