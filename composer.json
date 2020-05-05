@@ -41,6 +41,7 @@
     "drupal/environment_indicator": "^3.7",
     "drupal/field_group": "^1.0",
     "drupal/fvm": "^1.1",
+    "drupal/gatsby": "^1.0@beta",
     "drupal/gin_login": "^1.0@alpha",
     "drupal/google_analytics": "^3.0",
     "drupal/image_widget_crop": "^2.3",
