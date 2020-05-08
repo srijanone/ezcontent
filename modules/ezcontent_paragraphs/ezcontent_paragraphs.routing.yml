@@ -1,0 +1,10 @@
+ezcontent_paragraphs.display:
+  path: '/paragraph-view/{paragraph}/{view_mode}'
+  defaults:
+    _controller: '\Drupal\ezcontent_paragraphs\Controller\EZContentParagraphsController::build'
+  requirements:
+    _entity_access: 'paragraph.view'
+  options:
+    parameters:
+      paragraph:
+        type: 'entity:paragraph'

@@ -9,3 +9,7 @@ paragraph__gallery: 1
 paragraph__gallery__view_modes:
   gallery: gallery
   gallery_carousel: gallery_carousel
+paragraph__cards_gallery: 1
+paragraph__cards_gallery__view_modes:
+  gallery: gallery
+  gallery_carousel: gallery_carousel

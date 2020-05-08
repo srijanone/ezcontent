@@ -1,0 +1,80 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.gallery_carousel
+    - field.field.paragraph.cards_gallery.field_body
+    - field.field.paragraph.cards_gallery.field_card
+    - field.field.paragraph.cards_gallery.field_link
+    - field.field.paragraph.cards_gallery.field_title
+    - field.field.paragraph.cards_gallery.view_mode_selection
+    - paragraphs.paragraphs_type.cards_gallery
+  module:
+    - layout_builder
+    - link
+    - slick_paragraphs
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.cards_gallery.gallery_carousel
+targetEntityType: paragraph
+bundle: cards_gallery
+mode: gallery_carousel
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_card:
+    weight: 1
+    label: hidden
+    settings:
+      optionset: ezcontent_setting
+      skin: default
+      view_mode: hero_media
+      cache: 0
+      current_view_mode: gallery_carousel
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      style: ''
+    third_party_settings: {  }
+    type: slick_paragraphs_vanilla
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  view_mode_selection: true
