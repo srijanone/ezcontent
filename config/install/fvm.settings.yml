@@ -1,40 +1,11 @@
-hide_layout_builder_field: 0
-media__image: 0
-media__image__view_modes:
-  card_list: 0
-  media_library: 0
-  slick: 0
-  thumbnail: 0
-  token: 0
-node__article: 0
-node__article__view_modes:
-  teaser: 0
-node__author: 0
-node__author__view_modes:
-  teaser: 0
-node__landing_page: 0
-node__landing_page__view_modes:
-  teaser: 0
-paragraphs_library_item__paragraphs_library_item: 0
-paragraphs_library_item__paragraphs_library_item__view_modes:
-  summary: 0
-paragraph__card: 0
-paragraph__card__view_modes:
-  cards_grid: 0
-  card_list: 0
-  hero_media: 0
-  preview: 0
 paragraph__card_list: 1
 paragraph__card_list__view_modes:
   cards_grid: cards_grid
-  preview: 0
-paragraph__embed: 0
-paragraph__embed__view_modes:
-  preview: 0
-paragraph__hero_media: 0
-paragraph__hero_media__view_modes:
-  preview: 0
 block_content__cards: 1
 block_content__cards__view_modes:
   cards_grid_3xn: cards_grid_3xn
   preview: preview
+paragraph__gallery: 1
+paragraph__gallery__view_modes:
+  gallery: gallery
+  gallery_carousel: gallery_carousel

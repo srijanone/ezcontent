@@ -4,11 +4,14 @@ dependencies:
   config:
     - entity_browser.browser.image_browser
     - field.field.paragraph.gallery.field_body
+    - field.field.paragraph.gallery.field_link
     - field.field.paragraph.gallery.field_media_items
     - field.field.paragraph.gallery.field_title
+    - field.field.paragraph.gallery.view_mode_selection
     - paragraphs.paragraphs_type.gallery
   module:
     - entity_browser
+    - link
     - text
 id: paragraph.gallery.default
 targetEntityType: paragraph
@@ -21,24 +24,33 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_media_items:
+    type: entity_browser_entity_reference
     weight: 1
+    region: content
     settings:
       entity_browser: image_browser
       field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: thumbnail
       field_widget_edit: true
       field_widget_remove: true
       open: true
       selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
       field_widget_replace: false
     third_party_settings: {  }
-    type: entity_browser_entity_reference
-    region: content
   field_title:
     weight: 0
     settings:
@@ -47,6 +59,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  view_mode_selection:
+    type: options_select
+    region: content
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

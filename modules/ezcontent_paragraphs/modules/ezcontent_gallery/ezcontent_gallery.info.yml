@@ -4,6 +4,7 @@ description: 'Provides gallery feature.'
 package: EZContent Paragraphs
 core: 8.x
 dependencies:
-  - ezcontent_assets
-  - libraries
-  - colorbox
+  - ezcontent:ezcontent_assets
+  - libraries:libraries
+  - colorbox:colorbox
+  - slick:slick
