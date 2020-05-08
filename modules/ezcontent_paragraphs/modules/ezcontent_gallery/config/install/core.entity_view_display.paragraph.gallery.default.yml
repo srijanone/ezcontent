@@ -3,10 +3,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.gallery.field_body
+    - field.field.paragraph.gallery.field_link
     - field.field.paragraph.gallery.field_media_items
     - field.field.paragraph.gallery.field_title
+    - field.field.paragraph.gallery.view_mode_selection
     - paragraphs.paragraphs_type.gallery
   module:
+    - link
     - text
 id: paragraph.gallery.default
 targetEntityType: paragraph
@@ -14,21 +17,33 @@ bundle: gallery
 mode: default
 content:
   field_body:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_media_items:
-    weight: 2
+  field_link:
+    weight: 3
     label: hidden
     settings:
-      view_mode: gallery
-      link: false
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: link
     region: content
+  field_media_items:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
   field_title:
     weight: 0
     label: hidden
@@ -37,4 +52,5 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  view_mode_selection: true

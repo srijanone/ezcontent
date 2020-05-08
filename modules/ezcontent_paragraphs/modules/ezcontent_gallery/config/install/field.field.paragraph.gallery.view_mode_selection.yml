@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.view_mode_selection
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.view_mode_selection
+field_name: view_mode_selection
+entity_type: paragraph
+bundle: gallery
+label: 'View Mode'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: field_view_mode
+  handler_settings: {  }
+field_type: entity_reference

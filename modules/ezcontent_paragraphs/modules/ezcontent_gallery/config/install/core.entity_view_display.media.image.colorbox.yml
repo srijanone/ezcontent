@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.colorbox
+    - field.field.media.image.field_media_image
+    - image.style.gallery
+    - image.style.gallery_colorbox
+    - media.type.image
+  module:
+    - colorbox
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: media.image.colorbox
+targetEntityType: media
+bundle: image
+mode: colorbox
+content:
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      colorbox_node_style: gallery
+      colorbox_node_style_first: gallery
+      colorbox_image_style: gallery_colorbox
+      colorbox_gallery: field_page
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings: {  }
+    type: colorbox
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

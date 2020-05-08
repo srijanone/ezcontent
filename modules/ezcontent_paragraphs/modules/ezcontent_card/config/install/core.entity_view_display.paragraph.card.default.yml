@@ -146,6 +146,9 @@ third_party_settings:
         'User fields': {  }
         core: {  }
       allowed_layouts: {  }
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+    allowed_block_categories: {  }
 id: paragraph.card.default
 targetEntityType: paragraph
 bundle: card
