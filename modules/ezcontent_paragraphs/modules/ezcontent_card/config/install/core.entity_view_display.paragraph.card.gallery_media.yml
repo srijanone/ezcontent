@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.gallery_media
+    - field.field.paragraph.card.field_link
+    - field.field.paragraph.card.field_media
+    - field.field.paragraph.card.field_short_title
+    - field.field.paragraph.card.field_subhead
+    - field.field.paragraph.card.field_summary
+    - field.field.paragraph.card.field_text_background_color
+    - field.field.paragraph.card.field_text_position
+    - field.field.paragraph.card.field_title
+    - field.field.paragraph.card.layout_selection
+    - paragraphs.paragraphs_type.card
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.card.gallery_media
+targetEntityType: paragraph
+bundle: card
+mode: gallery_media
+content:
+  field_media:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: gallery
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  field_link: true
+  field_short_title: true
+  field_subhead: true
+  field_summary: true
+  field_text_background_color: true
+  field_text_position: true
+  field_title: true
+  layout_selection: true

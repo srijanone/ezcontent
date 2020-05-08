@@ -1,0 +1,73 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.gallery_with_carousel
+    - entity_browser.browser.image_browser
+    - field.field.paragraph.card.field_link
+    - field.field.paragraph.card.field_media
+    - field.field.paragraph.card.field_short_title
+    - field.field.paragraph.card.field_subhead
+    - field.field.paragraph.card.field_summary
+    - field.field.paragraph.card.field_text_background_color
+    - field.field.paragraph.card.field_text_position
+    - field.field.paragraph.card.field_title
+    - field.field.paragraph.card.layout_selection
+    - paragraphs.paragraphs_type.card
+  module:
+    - entity_browser
+    - link
+    - text
+id: paragraph.card.gallery_with_carousel
+targetEntityType: paragraph
+bundle: card
+mode: gallery_with_carousel
+content:
+  field_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_media:
+    weight: 1
+    settings:
+      entity_browser: image_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      field_widget_replace: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_summary:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_short_title: true
+  field_subhead: true
+  field_text_background_color: true
+  field_text_position: true
+  layout_selection: true
+  status: true
+  uid: true

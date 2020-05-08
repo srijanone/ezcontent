@@ -1,0 +1,103 @@
+<?php
+
+/**
+ * @file
+ * Module file for ezcontent_cards_gallery.
+ */
+
+use Drupal\Component\Utility\Crypt;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ezcontent_cards_gallery_preprocess_paragraph__cards_gallery(&$variables) {
+  $variables['#attached']['library'][] = 'ezcontent_cards_gallery/ezcontent_cards_gallery_css';
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ezcontent_cards_gallery_theme($existing, $type, $theme, $path) {
+  return [
+    'ezcontent_colorbox_view_mode_formatter' => [
+      'variables' => [
+        'item' => NULL,
+        'content' => NULL,
+        'modal' => NULL,
+        'item_attributes' => NULL,
+        'entity' => NULL,
+        'field_name' => NULL,
+        'settings' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function ezcontent_cards_gallery_preprocess_ezcontent_colorbox_view_mode_formatter(&$variables) {
+  static $gallery_token = NULL;
+
+  /** @var \Drupal\Core\Entity\EntityInterface $item */
+  $item = $variables['item'];
+  /** @var \Drupal\Core\Entity\EntityInterface $entity */
+  $entity = $variables['entity'];
+  $field_name = $variables['field_name'];
+  $settings = $variables['settings'];
+
+  $config = \Drupal::config('colorbox.settings');
+
+  // Build the gallery id.
+  $entity_type = $entity->getEntityTypeId();
+  $entity_bundle = $entity->bundle();
+  $id = $entity->id();
+  $entity_id = !empty($id) ? $entity_bundle . '-' . $id : 'entity-id';
+
+  switch ($settings['colorbox_gallery']) {
+    case 'post':
+      $gallery_id = 'gallery-' . $entity_id;
+      break;
+
+    case 'page':
+      $gallery_id = 'gallery-all';
+      break;
+
+    case 'field_post':
+      $gallery_id = 'gallery-' . $entity_id . '-' . $field_name;
+      break;
+
+    case 'field_page':
+      $gallery_id = 'gallery-' . $field_name;
+      break;
+
+    case 'custom':
+      $token_service = \Drupal::token();
+      $gallery_id = $token_service->replace($settings['colorbox_gallery_custom'], [$entity_type => $entity, 'entity' => $item], ['clear' => TRUE]);
+      break;
+
+    default:
+      $gallery_id = '';
+  }
+
+  // If gallery id is not empty add unique per-request token to avoid
+  // images being added manually to galleries.
+  if (!empty($gallery_id) && $config->get('advanced.unique_token')) {
+    // Check if gallery token has already been set, we need to reuse
+    // the token for the whole request.
+    if ($gallery_token === NULL) {
+      // We use a short token since randomness is not critical.
+      $gallery_token = Crypt::randomBytesBase64(8);
+    }
+    $gallery_id = $gallery_id . '-' . $gallery_token;
+  }
+  $variables['url'] = NULL;
+  $item_type = $item->getEntityTypeId();
+  if ($item_type === 'paragraph') {
+    $variables['url'] = Url::fromRoute('ezcontent_paragraphs.display')->setRouteParameters(['paragraph' => $item->id(), 'view_mode' => $variables['modal']['#view_mode']]);
+  }
+  $variables['attributes']['title'] = isset($entity->field_title) && $entity->field_title->value ? $entity->field_title->value : $entity->getParentEntity()->getTitle();
+  $variables['attributes']['data-colorbox-gallery'] = $gallery_id;
+  $variables['attributes']['class'] = ['colorbox'];
+}

@@ -1,0 +1,73 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.cards_gallery.field_body
+    - field.field.paragraph.cards_gallery.field_card
+    - field.field.paragraph.cards_gallery.field_link
+    - field.field.paragraph.cards_gallery.field_title
+    - field.field.paragraph.cards_gallery.view_mode_selection
+    - paragraphs.paragraphs_type.cards_gallery
+  module:
+    - link
+    - paragraphs_previewer
+    - text
+id: paragraph.cards_gallery.default
+targetEntityType: paragraph
+bundle: cards_gallery
+mode: default
+content:
+  field_body:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_card:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: dropdown
+      form_display_mode: gallery_with_carousel
+      default_paragraph_type: card
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+    third_party_settings: {  }
+    type: paragraphs_previewer
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  view_mode_selection:
+    type: options_select
+    region: content
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
