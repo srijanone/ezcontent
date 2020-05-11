@@ -1,0 +1,4 @@
+ezcontent_cards_gallery_css:
+  css:
+    theme:
+      css/cards-gallery.css: {}

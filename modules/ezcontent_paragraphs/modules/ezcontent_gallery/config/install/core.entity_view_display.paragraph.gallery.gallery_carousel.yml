@@ -1,0 +1,120 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.gallery_carousel
+    - field.field.paragraph.gallery.field_body
+    - field.field.paragraph.gallery.field_link
+    - field.field.paragraph.gallery.field_media_items
+    - field.field.paragraph.gallery.field_title
+    - field.field.paragraph.gallery.view_mode_selection
+    - image.style.gallery
+    - image.style.hero_media
+    - paragraphs.paragraphs_type.gallery
+  module:
+    - layout_builder
+    - link
+    - slick
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.gallery.gallery_carousel
+targetEntityType: paragraph
+bundle: gallery
+mode: gallery_carousel
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media_items:
+    type: slick_media
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      style: ''
+      optionset: ezcontent_setting
+      optionset_thumbnail: ezcontent_dots
+      skin: default
+      skin_thumbnail: asnavfor
+      image_style: hero_media
+      thumbnail_effect: grid
+      thumbnail_position: ''
+      media_switch: ''
+      background: true
+      box_style: ''
+      thumbnail_style: gallery
+      box_media_style: ''
+      ratio: fluid
+      box_caption: ''
+      view_mode: slick
+      box_caption_custom: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      image: ''
+      title: ''
+      link: ''
+      layout: ''
+      thumbnail_caption: ''
+      class: ''
+      cache: 0
+      current_view_mode: gallery_carousel
+      vanilla: false
+      caption:
+        field_description: '0'
+        title: '0'
+        alt: '0'
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      responsive_image_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      id: ''
+      overlay: ''
+    third_party_settings: {  }
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  view_mode_selection: true
