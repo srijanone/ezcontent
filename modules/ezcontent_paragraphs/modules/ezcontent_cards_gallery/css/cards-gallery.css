@@ -1,0 +1,7 @@
+.paragraph--type--cards-gallery .field--name-field-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+.paragraph--type--cards-gallery .field--name-field-card .field__item {
+  padding: 2px;
+}
