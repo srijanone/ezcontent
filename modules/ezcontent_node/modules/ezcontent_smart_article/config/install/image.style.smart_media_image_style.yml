@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.crop_16_9
+  module:
+    - crop
+name: smart_media_image_style
+label: 'Smart Media Image Style'
+effects:
+  3cb201bb-fe3e-4bbd-bc95-52bed685ea15:
+    uuid: 3cb201bb-fe3e-4bbd-bc95-52bed685ea15
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: crop_16_9

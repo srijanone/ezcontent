@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_smart_media_image
+    - media.type.smart_media_image
+    - node.type.smart_article
+id: node.smart_article.field_smart_media_image
+field_name: field_smart_media_image
+entity_type: node
+bundle: smart_article
+label: 'Smart Media Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      smart_media_image: smart_media_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

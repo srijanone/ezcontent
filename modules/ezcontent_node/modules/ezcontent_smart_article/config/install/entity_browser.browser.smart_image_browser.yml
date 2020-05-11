@@ -2,42 +2,42 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media.type.image
-    - views.view.image_browser
+    - media.type.smart_media_image
+    - views.view.smart_image_browser
   module:
     - dropzonejs_eb_widget
     - media
     - views
-name: image_browser
-label: 'Image Browser'
+name: smart_image_browser
+label: 'Smart Image Browser'
 display: modal
 display_configuration:
   width: ''
   height: ''
-  link_text: 'Select image(s)'
+  link_text: 'Select image'
   auto_open: false
 selection_display: no_display
 selection_display_configuration: {  }
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  aa5910c2-a8f5-43b6-8349-bf09bf25b360:
+  04420777-d7b4-48a6-860f-b2f706df7a4b:
     settings:
-      view: image_browser
+      view: smart_image_browser
       view_display: media_browser_all
-      submit_text: 'Select image(s)'
+      submit_text: 'Select image'
       auto_select: false
-    uuid: aa5910c2-a8f5-43b6-8349-bf09bf25b360
+    uuid: 04420777-d7b4-48a6-860f-b2f706df7a4b
     weight: 1
     label: Library
     id: view
-  8473b0e2-9517-45e2-a165-d2cbd8b6d66c:
+  f737d44f-2dc9-416f-bb7a-ae91c0d009bf:
     settings:
       form_mode: media_library
-      media_type: image
+      media_type: smart_media_image
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drop files here to upload them'
-      max_filesize: 8M
+      max_filesize: 32M
       extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
       clientside_resize: false
       resize_width: null
@@ -45,8 +45,8 @@ widgets:
       resize_quality: !!float 1
       resize_method: contain
       thumbnail_method: contain
-      submit_text: 'Select image(s)'
-    uuid: 8473b0e2-9517-45e2-a165-d2cbd8b6d66c
+      submit_text: 'Select images'
+    uuid: f737d44f-2dc9-416f-bb7a-ae91c0d009bf
     weight: 3
     label: Upload
     id: dropzonejs_media_entity_inline_entity_form

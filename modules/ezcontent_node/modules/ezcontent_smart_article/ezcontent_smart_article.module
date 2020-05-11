@@ -94,6 +94,10 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
     }
     // Disable auto caption feature if subscription keys not available.
     $form['field_company_logo']['widget'][0]['#attributes'] = empty($summary_config->get('image_captioning_api_url')) ? ['disabled' => 'disabled'] : [];
+    if (empty($summary_config->get('image_generate_tags_api_url'))) {
+      // Disable image tage if api url not present.
+      $form['field_smart_media_image']['#attributes']['class'] = ['disable-element'];
+    }
     // Code for Smart Tags.
     $bundle = $entity_type = '';
     $form_object = $form_state->getFormObject();
