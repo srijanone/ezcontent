@@ -131,6 +131,12 @@ class ConfigForm extends ConfigFormBase {
       '#description' => $this->t('Provide the API URL.'),
       '#default_value' => $config->get('image_captioning_api_url'),
     ];
+    $form['image_generate_tags_api_url'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Image Generate Tags API URL'),
+      '#description' => $this->t('Provide the API URL to generate image tags.'),
+      '#default_value' => $config->get('image_generate_tags_api_url'),
+    ];
     $form['abstractive_summary_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Abstractive Summary API URL'),

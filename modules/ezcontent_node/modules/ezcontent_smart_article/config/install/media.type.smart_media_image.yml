@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: smart_media_image
+label: 'Smart Media Image'
+description: 'Smart media image with auto caption and tagging.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

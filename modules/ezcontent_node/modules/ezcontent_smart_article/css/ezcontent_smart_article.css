@@ -1,3 +1,8 @@
+/* Declare variable */
+:root {
+  --grey-color: #808080;
+}
+
 .tag-field-wrapper ul.tag-wrapper {
   float: left;
   padding: 0;
@@ -13,10 +18,23 @@
   margin-bottom: 10px;
   text-transform: uppercase;
   color: #333;
+  border-radius: 7px;
 }
 
 .tag-field-wrapper ul.tag-wrapper li:hover {
   background: #0071b8;
   color: #fff;
   cursor: pointer;
+}
+
+.tag-field-wrapper ul.tag-wrapper li.list-disabled {
+  color: var(--grey-color);
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.disable-element {
+  pointer-events: none;
+  background-color: var(--grey-color);
+  opacity: 0.4;
 }

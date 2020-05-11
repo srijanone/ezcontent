@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.smart_media_image.field_media_image
+    - field.field.media.smart_media_image.field_smart_image_tags
+    - image.style.smart_media_image_style
+    - media.type.smart_media_image
+  module:
+    - image
+id: media.smart_media_image.media_library
+targetEntityType: media
+bundle: smart_media_image
+mode: media_library
+content:
+  field_media_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: smart_media_image_style
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_smart_image_tags: true
+  name: true
+  thumbnail: true
+  uid: true

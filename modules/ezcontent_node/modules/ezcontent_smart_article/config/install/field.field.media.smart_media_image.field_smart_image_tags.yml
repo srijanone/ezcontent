@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_smart_image_tags
+    - media.type.smart_media_image
+    - taxonomy.vocabulary.tags
+  module:
+    - ezcontent_smart_article
+id: media.smart_media_image.field_smart_image_tags
+field_name: field_smart_image_tags
+entity_type: media
+bundle: smart_media_image
+label: 'Smart Image Tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: 1
+    auto_create_bundle: ''
+  image_fields: field_media_image
+field_type: ezcontent_smart_image_tags
