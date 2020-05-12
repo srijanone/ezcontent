@@ -39,6 +39,7 @@
     "drupal/entity_embed": "^1.0",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/environment_indicator": "^3.7",
+    "drupal/ezcontent_api": "8.x-dev",
     "drupal/field_group": "^1.0",
     "drupal/fvm": "^1.1",
     "drupal/gin_login": "^1.0@alpha",
@@ -88,7 +89,6 @@
     "drupal/yoast_seo": "^1.5",
     "oomphinc/composer-installers-extender": "^1.1",
     "srijanone/ezcontent_admin": "8.x-dev",
-    "srijanone/ezcontent_api": "8.x-dev",
     "srijanone/ezcontent_theme": "8.x-dev",
     "vardot/blazy": "^1.8"
   },
