@@ -2,15 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.smart_image_browser
     - field.field.node.smart_article.body
     - field.field.node.smart_article.field_company_logo
     - field.field.node.smart_article.field_company_name
+    - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
     - field.field.node.smart_article.field_smart_text_summary
     - image.style.thumbnail
     - node.type.smart_article
   module:
     - content_moderation
+    - entity_browser
     - ezcontent_smart_article
     - field_group
     - image
@@ -37,7 +40,7 @@ third_party_settings:
         - field_smart_text_summary
         - group_generate_tags
       parent_name: ''
-      weight: 14
+      weight: 15
       format_type: fieldset
       format_settings:
         label: 'Auto Generate Summary and Tags for Article Body'
@@ -94,6 +97,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_smart_media_image:
+    type: entity_browser_entity_reference
+    weight: 14
+    settings:
+      entity_browser: smart_image_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
     region: content
   field_smart_tags:
     weight: 17

@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.smart_media_image.field_media_image
+    - field.field.media.smart_media_image.field_smart_image_tags
+    - image.style.smart_media_image_style
+    - media.type.smart_media_image
+  module:
+    - image
+id: media.smart_media_image.default
+targetEntityType: media
+bundle: smart_media_image
+mode: default
+content:
+  field_media_image:
+    label: hidden
+    weight: 0
+    settings:
+      image_style: smart_media_image_style
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  field_smart_image_tags: true
+  name: true
+  thumbnail: true
+  uid: true
