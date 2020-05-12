@@ -184,7 +184,7 @@ class EZContentColorboxEntityReferenceRevisionsFormatter extends EntityReference
     if (\Drupal::moduleHandler()->moduleExists('token')) {
       $element['colorbox_token_gallery'] = [
         '#type' => 'fieldset',
-        '#title' => t('Replacement patterns'),
+        '#title' => $this->t('Replacement patterns'),
         '#theme' => 'token_tree_link',
         '#token_types' => [$form['#entity_type'], 'file'],
         '#states' => [
@@ -315,7 +315,7 @@ class EZContentColorboxEntityReferenceRevisionsFormatter extends EntityReference
 
     $target_type = $this->getFieldSetting('target_type');
     $view_mode_storage = $this->entityTypeManager->getStorage('entity_view_mode');
-    foreach ($view_modes as $setting => $view_mode_id) {
+    foreach ($view_modes as $view_mode_id) {
       $view_mode = $view_mode_storage->load($target_type . '.' . $view_mode_id);
       if ($view_mode) {
         // If this formatter uses a valid view modes to display the image, add
