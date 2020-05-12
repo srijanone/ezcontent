@@ -115,11 +115,11 @@ class EZContentColorboxEntityReferenceRevisionsFormatter extends EntityReference
    */
   public static function defaultSettings() {
     return [
-        'colorbox_view_mode' => '',
-        'colorbox_modal_view_mode' => '',
-        'colorbox_gallery' => 'post',
-        'colorbox_gallery_custom' => '',
-      ] + parent::defaultSettings();
+      'colorbox_view_mode' => '',
+      'colorbox_modal_view_mode' => '',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+    ] + parent::defaultSettings();
   }
 
   /**
@@ -141,8 +141,8 @@ class EZContentColorboxEntityReferenceRevisionsFormatter extends EntityReference
       '#default_value' => $this->getSetting('colorbox_view_mode'),
       '#options' => $view_modes,
       '#description' => $description_link->toRenderable() + [
-          '#access' => $this->currentUser->hasPermission('administer display modes'),
-        ],
+        '#access' => $this->currentUser->hasPermission('administer display modes'),
+      ],
     ];
     $element['colorbox_modal_view_mode'] = [
       '#title' => $this->t('View mode for Colorbox'),
@@ -150,8 +150,8 @@ class EZContentColorboxEntityReferenceRevisionsFormatter extends EntityReference
       '#default_value' => $this->getSetting('colorbox_modal_view_mode'),
       '#options' => $view_modes,
       '#description' => $description_link->toRenderable() + [
-          '#access' => $this->currentUser->hasPermission('administer display modes'),
-        ],
+        '#access' => $this->currentUser->hasPermission('administer display modes'),
+      ],
     ];
 
     $gallery = [
