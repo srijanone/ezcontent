@@ -29,6 +29,7 @@ script:
   - unzip 8.x.zip
   - rm -rf 8.x.zip
   - cd ..
-  - ./vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer/
+  - composer require dealerdirect/phpcodesniffer-composer-installer
+  - ./vendor/bin/phpcs --config-set installed_paths docroot/modules/contrib/coder/coder_sniffer
   - ./vendor/bin/phpcs --standard=Drupal profiles
   - ./vendor/bin/phpcs --standard=DrupalPractice profiles
