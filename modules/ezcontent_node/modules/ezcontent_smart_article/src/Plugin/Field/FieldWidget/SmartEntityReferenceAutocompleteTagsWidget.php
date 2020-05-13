@@ -88,7 +88,7 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
     ];
     $element['generate_image_tags'] = [
       '#type' => 'submit',
-      '#value' => t('Generate Image Tags'),
+      '#value' => $this->t('Generate Image Tags'),
       '#weight' => 11,
       '#data' => $uuid,
       '#image_field_name' => $image_field_name,

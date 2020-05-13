@@ -44,7 +44,10 @@
           }
         });
       });
-
+      // Handle hidden field on submit.
+      $('.entity-browser-smart-image-browser-form .is-entity-browser-submit').click(function () {
+        $("#smart_tag_hidden-text-id input").val("hidden");
+      });
       $('.field--type-ezcontent-smart-tags .tag-field-wrapper .tag-wrapper li', context).click(function (e) {
         var tagName = $(this).text();
         var existingTags = $('.field--type-ezcontent-smart-tags .tags-link-field .ui-autocomplete-input').val();
@@ -76,7 +79,6 @@
    */
   $.fn.update_image_tags = function (data, target_editor) {
     var tag_input = $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input');
-    $("#smart_tag_hidden-text-id input").val("hidden");
     tag_input.mouseenter();
     tag_input.mouseleave();
   };
