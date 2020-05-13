@@ -16,6 +16,21 @@ use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\Core\Ajax\ReplaceCommand;
 
 /**
+ * Implements hook_views_data_alter().
+ */
+function ezcontent_smart_article_views_data_alter(array &$data) {
+  $data['media__field_smart_image_tags']['media_type_filter'] = [
+    'title' => t('Filter by smart image tags'),
+    'filter' => [
+      'title' => t('Filter by smart image tags'),
+      'help' => t('Provides a custom filter for smart image media by tags.'),
+      'field' => 'field_smart_image_tags_target_id',
+      'id' => 'taxonomy_index_tid',
+    ],
+  ];
+}
+
+/**
  * Implements hook_form_FORM_ID_alter().
  */
 function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface $form_state) {
