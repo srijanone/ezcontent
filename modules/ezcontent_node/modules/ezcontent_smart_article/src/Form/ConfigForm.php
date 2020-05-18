@@ -80,25 +80,19 @@ class ConfigForm extends ConfigFormBase {
    *   An http client.
    * @param \Drupal\Core\Messenger\Messenger $messenger
    *   A messenger object.
-   * @param \Drupal\ezcontent_smart_article\EzcontentImageCaptioningManager $image_captioning_manager
+   * @param \Drupal\ezcontent_smart_article\EzcontentImageCaptioningManager $imageCaptioningManager
    *    A image captioning Manager object.
-   * @param \Drupal\ezcontent_smart_article\EzcontentImageTaggingManager $image_tagging_manager
+   * @param \Drupal\ezcontent_smart_article\EzcontentImageTaggingManager $imageTaggingManager
    *    A image tagging Manager object.
    */
-  public function __construct(ConfigFactoryInterface $config_factory,
-  EntityTypeManagerInterface $entityTypeManager,
-                              FileSystem $fileSystem,
-  ClientInterface $httpClient,
-  Messenger $messenger,
-                              EzcontentImageCaptioningManager $image_captioning_manager,
-  EzcontentImageTaggingManager $image_tagging_manager) {
+  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager) {
     parent::__construct($config_factory);
     $this->fileStorage = $entityTypeManager->getStorage('file');
     $this->fileSystem = $fileSystem;
     $this->httpClient = $httpClient;
     $this->messenger = $messenger;
-    $this->imageCaptioningManager = $image_captioning_manager;
-    $this->imageTaggingManager = $image_tagging_manager;
+    $this->imageCaptioningManager = $imageCaptioningManager;
+    $this->imageTaggingManager = $imageTaggingManager;
   }
 
   /**
@@ -137,17 +131,17 @@ class ConfigForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config(static::SETTINGS);
-    $plugin_definitions_image_captioning = $this->imageCaptioningManager->getDefinitions();
-    $plugin_definitions_image_tagging = $this->imageTaggingManager->getDefinitions();
+    $pluginDefinitionsImageCaptioning = $this->imageCaptioningManager->getDefinitions();
+    $pluginDefinitionsImageTagging = $this->imageTaggingManager->getDefinitions();
     // Prepare options for image captioning service types.
-    $image_captioning_options = [];
-    foreach ($plugin_definitions_image_captioning as $plugin_definition) {
-      $image_captioning_options[$plugin_definition['id']] = $plugin_definition['label'];
+    $imageCaptioningOptions = [];
+    foreach ($pluginDefinitionsImageCaptioning as $pluginDefinition) {
+      $imageCaptioningOptions[$pluginDefinition['id']] = $pluginDefinition['label'];
     }
     // Prepare options for image tagging service types.
-    $image_tagging_options = [];
-    foreach ($plugin_definitions_image_tagging as $plugin_definition) {
-      $image_tagging_options[$plugin_definition['id']] = $plugin_definition['label'];
+    $imageTaggingOptions = [];
+    foreach ($pluginDefinitionsImageTagging as $pluginDefinition) {
+      $imageTaggingOptions[$pluginDefinition['id']] = $pluginDefinition['label'];
     }
     $form['summary_generator_api_url'] = [
       '#type' => 'textfield',
@@ -169,15 +163,15 @@ class ConfigForm extends ConfigFormBase {
     ];
     // Select plugin type for image captioning.
     $form['image_captioning_service'] = [
-      '#title' => t('Image Captioning Service'),
+      '#title' => $this->t('Image Captioning Service'),
       '#type' => 'select',
       '#description' => $this->t('Please choose image captioning service type.'),
-      '#options' => $image_captioning_options,
+      '#options' => $imageCaptioningOptions,
       '#default_value' => $config->get('image_captioning_service'),
     ];
     $form['image_captioning_api_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Srijan Image Captioning API URL'),
+      '#title' => $this->t('EZContent Smart Image Captioning API URL'),
       '#description' => $this->t('Provide the API URL to generate image caption.'),
       '#default_value' => $config->get('image_captioning_api_url'),
       '#states' => [
@@ -186,15 +180,15 @@ class ConfigForm extends ConfigFormBase {
     ];
     // Select plugin type for image tagging.
     $form['image_tagging_service'] = [
-      '#title' => t('Image Tagging Service'),
+      '#title' => $this->t('Image Tagging Service'),
       '#type' => 'select',
       '#description' => $this->t('Please choose image tagging service type.'),
-      '#options' => $image_tagging_options,
+      '#options' => $imageTaggingOptions,
       '#default_value' => $config->get('image_tagging_service'),
     ];
     $form['image_generate_tags_api_url'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Srijan Image Generate Tags API URL'),
+      '#title' => $this->t('EZContent Smart Image Generate Tags API URL'),
       '#description' => $this->t('Provide the API URL to generate image tags.'),
       '#default_value' => $config->get('image_generate_tags_api_url'),
       '#states' => [
