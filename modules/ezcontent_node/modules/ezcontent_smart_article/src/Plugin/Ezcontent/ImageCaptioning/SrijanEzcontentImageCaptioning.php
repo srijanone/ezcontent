@@ -24,7 +24,7 @@ class SrijanEzcontentImageCaptioning extends EzcontentImageCaptioningPluginBase 
   public function getImageCaption(File $file) {
     $caption = '';
     if ($file) {
-      $image_file = file_get_contents(\Drupal::service('file_system')
+      $imageFile = file_get_contents(\Drupal::service('file_system')
         ->realpath($file->getFileUri()));
       $url = \Drupal::config('summary_generator.settings')
         ->get('image_captioning_api_url');
@@ -32,7 +32,7 @@ class SrijanEzcontentImageCaptioning extends EzcontentImageCaptioningPluginBase 
         'headers' => [
           'content-type' => $file->getMimeType(),
         ],
-        'body' => $image_file,
+        'body' => $imageFile,
       ]);
       if ($response->getStatusCode() == 200) {
         $body = \Drupal::service('serialization.json')
