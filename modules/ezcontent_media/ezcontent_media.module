@@ -9,7 +9,10 @@
  * Implements hook_preprocess_views_view().
  */
 function ezcontent_media_preprocess_views_view(&$variables) {
-  if ($variables['view']->id() === 'image_browser' || $variables['view']->id() === 'smart_image_browser') {
-    $variables['view_array']['#attached']['library'][] = 'media_entity_browser/view';
+  switch($variables['view']->id()) {
+    case 'image_browser:
+    case 'smart_image_browser':
+       $variables['view_array']['#attached']['library'][] = 'media_entity_browser/view';
+       break;
   }
 }
