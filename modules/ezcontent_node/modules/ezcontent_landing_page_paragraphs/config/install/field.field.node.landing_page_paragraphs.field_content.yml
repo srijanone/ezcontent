@@ -1,0 +1,96 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.landing_page_paragraphs
+    - paragraphs.paragraphs_type.assets
+    - paragraphs.paragraphs_type.card_list
+    - paragraphs.paragraphs_type.embed
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.gallery_carousel
+    - paragraphs.paragraphs_type.hero_media
+    - paragraphs.paragraphs_type.map
+    - paragraphs.paragraphs_type.referenced_card
+    - paragraphs.paragraphs_type.social_media
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.landing_page_paragraphs.field_content
+field_name: field_content
+entity_type: node
+bundle: landing_page_paragraphs
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      assets: assets
+      card_list: card_list
+      embed: embed
+      gallery: gallery
+      gallery_carousel: gallery_carousel
+      hero_media: hero_media
+      map: map
+      referenced_card: referenced_card
+      social_media: social_media
+      text: text
+    target_bundles_drag_drop:
+      assets:
+        enabled: true
+        weight: 18
+      card:
+        weight: 19
+        enabled: false
+      card_list:
+        enabled: true
+        weight: 20
+      embed:
+        enabled: true
+        weight: 21
+      faq:
+        weight: 22
+        enabled: false
+      faq_qa:
+        weight: 23
+        enabled: false
+      form:
+        weight: 24
+        enabled: false
+      from_library:
+        weight: 25
+        enabled: false
+      gallery:
+        enabled: true
+        weight: 26
+      gallery_carousel:
+        enabled: true
+        weight: 27
+      hero_media:
+        enabled: true
+        weight: 28
+      map:
+        enabled: true
+        weight: 29
+      quote:
+        weight: 30
+        enabled: false
+      referenced_card:
+        enabled: true
+        weight: 31
+      social_media:
+        enabled: true
+        weight: 32
+      text:
+        enabled: true
+        weight: 33
+      view:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions
