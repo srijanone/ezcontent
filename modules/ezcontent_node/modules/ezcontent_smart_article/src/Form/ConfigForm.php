@@ -81,9 +81,9 @@ class ConfigForm extends ConfigFormBase {
    * @param \Drupal\Core\Messenger\Messenger $messenger
    *   A messenger object.
    * @param \Drupal\ezcontent_smart_article\EzcontentImageCaptioningManager $imageCaptioningManager
-   *    A image captioning Manager object.
+   *   A image captioning Manager object.
    * @param \Drupal\ezcontent_smart_article\EzcontentImageTaggingManager $imageTaggingManager
-   *    A image tagging Manager object.
+   *   A image tagging Manager object.
    */
   public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager) {
     parent::__construct($config_factory);
