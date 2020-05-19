@@ -24,6 +24,7 @@ install:
   - composer install
 
 script:
+  - composer require drupal/coder
   - cd profiles
   - wget https://github.com/srijanone/ezcontent/archive/8.x.zip
   - unzip 8.x.zip
