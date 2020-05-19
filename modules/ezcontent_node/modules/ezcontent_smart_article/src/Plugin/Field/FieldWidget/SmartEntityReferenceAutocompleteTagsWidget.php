@@ -5,11 +5,16 @@ namespace Drupal\ezcontent_smart_article\Plugin\Field\FieldWidget;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\InvokeCommand;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Field\Plugin\Field\FieldWidget\EntityReferenceAutocompleteTagsWidget;
+use Drupal\ezcontent_smart_article\EzcontentImageTaggingManager;
 use Drupal\file\Entity\File;
 use Drupal\Core\Ajax\HtmlCommand;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Render\Renderer;
 
 /**
  * Plugin implementation of the 'entity_reference_autocomplete_tags' widget.
@@ -25,6 +30,84 @@ use Drupal\Core\Ajax\HtmlCommand;
  * )
  */
 class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocompleteTagsWidget {
+
+  /**
+   * The field definition.
+   *
+   * @var \Drupal\Core\Field\FieldDefinitionInterface
+   */
+  protected $fieldDefinition;
+
+  /**
+   * The widget settings.
+   *
+   * @var array
+   */
+  protected $settings;
+
+  /**
+   * Configuration Factory.
+   *
+   * @var \Drupal\Core\Config\ConfigFactory
+   */
+  protected $configFactory;
+
+  /**
+   * A image tagging Manager object.
+   *
+   * @var \Drupal\ezcontent_smart_article\EzcontentImageTaggingManager
+   */
+  protected $imageTaggingManager;
+
+  /**
+   * A renderer object.
+   *
+   * @var \Drupal\Core\Render\Renderer
+   */
+  protected $renderer;
+
+  /**
+   * Constructs a WidgetBase object.
+   *
+   * @param string $plugin_id
+   *   The plugin_id for the widget.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param \Drupal\Core\Field\FieldDefinitionInterface $field_definition
+   *   The definition of the field to which the widget is associated.
+   * @param array $settings
+   *   The widget settings.
+   * @param array $third_party_settings
+   *   Any third party settings.
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
+   *   Any config factory object.
+   * @param \Drupal\ezcontent_smart_article\EzcontentImageTaggingManager $imageTaggingManager
+   *   An image taggig manager object.
+   * @param \Drupal\Core\Render\Renderer $renderer
+   *   A renderer service object.
+   */
+  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, array $third_party_settings, ConfigFactoryInterface $configFactory, EzcontentImageTaggingManager $imageTaggingManager, Renderer $renderer) {
+    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $third_party_settings);
+    $this->configFactory = $configFactory;
+    $this->imageTaggingManager = $imageTaggingManager;
+    $this->renderer = $renderer;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $plugin_id,
+      $plugin_definition,
+      $configuration['field_definition'],
+      $configuration['settings'],
+      $configuration['third_party_settings'],
+      $container->get('config.factory'),
+      $container->get('plugin.manager.image_tagging'),
+      $container->get('renderer')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -117,19 +200,17 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
     if (!empty($fid)) {
       // @todo: fetch file object from form_state.
       $file = File::load($fid);
-      $imageTaggingManager = \Drupal::service('plugin.manager.image_tagging');
-      $serviceType = \Drupal::config('summary_generator.settings')
+      $serviceType = $this->configFactory->get('summary_generator.settings')
         ->get('image_tagging_service');
-      $plugin = $imageTaggingManager->createInstance($serviceType);
+      $plugin = $this->imageTaggingManager->createInstance($serviceType);
       $tags = $plugin->getImageTags($file);
       if ($tags) {
         $response = new AjaxResponse();
-        $renderer = \Drupal::service('renderer');
         $auto_tags = [
           '#theme' => 'smarttag_template',
           '#tags' => $tags,
         ];
-        $rendered_field = $renderer->render($auto_tags);
+        $rendered_field = $this->renderer->render($auto_tags);
         $response->addCommand(new HtmlCommand('#auto-image-tags', $rendered_field));
         $arguments = [NULL, ''];
         $response->addCommand(new InvokeCommand(NULL, "update_image_tags", $arguments));
