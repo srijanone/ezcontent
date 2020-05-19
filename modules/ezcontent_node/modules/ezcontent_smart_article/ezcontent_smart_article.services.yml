@@ -16,3 +16,11 @@ services:
     arguments: ['@config.factory']
     tags:
       - { name: event_subscriber }
+
+  plugin.manager.image_captioning:
+    class: Drupal\ezcontent_smart_article\EzcontentImageCaptioningManager
+    parent: default_plugin_manager
+
+  plugin.manager.image_tagging:
+    class: Drupal\ezcontent_smart_article\EzcontentImageTaggingManager
+    parent: default_plugin_manager
