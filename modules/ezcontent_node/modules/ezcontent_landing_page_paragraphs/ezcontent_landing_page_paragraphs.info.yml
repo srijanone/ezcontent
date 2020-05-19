@@ -1,0 +1,19 @@
+name: Landing Page Paragraphs Feature
+type: module
+description: 'Provides landing page paragraphs content type.'
+package: EZContent Node
+core: 8.x
+dependencies:
+  - ezcontent:ezcontent_node
+  - ezcontent:ezcontent_assets
+  - ezcontent:ezcontent_card
+  - ezcontent:ezcontent_card_list
+  - ezcontent:ezcontent_embed
+  - ezcontent:ezcontent_gallery
+  - ezcontent:ezcontent_gallery_carousel
+  - ezcontent:ezcontent_hero_media
+  - ezcontent:ezcontent_map
+  - ezcontent:ezcontent_referenced_card
+  - ezcontent:ezcontent_social_media_embed
+  - ezcontent:ezcontent_text
+  - ezcontent:ezcontent_article
