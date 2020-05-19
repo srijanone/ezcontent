@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page_paragraphs.field_content
+    - node.type.landing_page_paragraphs
+  module:
+    - entity_reference_revisions
+    - user
+id: node.landing_page_paragraphs.default
+targetEntityType: node
+bundle: landing_page_paragraphs
+mode: default
+content:
+  field_content:
+    weight: 102
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
