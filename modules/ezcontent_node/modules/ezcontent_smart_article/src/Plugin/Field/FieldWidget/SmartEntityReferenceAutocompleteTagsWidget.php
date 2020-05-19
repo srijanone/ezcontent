@@ -37,13 +37,6 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
   }
 
   /**
-   * {@inheritdoc}
-   */
-  public static function defaultSettings() {
-    return parent::defaultSettings();
-  }
-
-  /**
    * Set a form error if there are duplicate entity ids.
    */
   public static function validateNoDuplicates(array &$element, FormStateInterface $form_state, array &$complete_form) {
@@ -124,21 +117,13 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
     if (!empty($fid)) {
       // @todo: fetch file object from form_state.
       $file = File::load($fid);
-      $image_file = file_get_contents(\Drupal::service('file_system')
-        ->realpath($file->getFileUri()));
-      $url = \Drupal::config('summary_generator.settings')
-        ->get('image_generate_tags_api_url');
-      $response = \Drupal::service('http_client')->request('POST', $url, [
-        'headers' => [
-          'content-type' => $file->getMimeType(),
-        ],
-        'body' => $image_file,
-      ]);
-      if ($response->getStatusCode() == 200) {
-        $body = \Drupal::service('serialization.json')
-          ->decode($response->getBody()->getContents());
+      $imageTaggingManager = \Drupal::service('plugin.manager.image_tagging');
+      $serviceType = \Drupal::config('summary_generator.settings')
+        ->get('image_tagging_service');
+      $plugin = $imageTaggingManager->createInstance($serviceType);
+      $tags = $plugin->getImageTags($file);
+      if ($tags) {
         $response = new AjaxResponse();
-        $tags = $body['data']['objects'];
         $renderer = \Drupal::service('renderer');
         $auto_tags = [
           '#theme' => 'smarttag_template',

@@ -50,22 +50,14 @@ class SmartImageCropWidget extends ImageCropWidget {
     if (!empty($fid[0])) {
       // @todo: get file object directly form_state.
       $file = File::load($fid[0]);
-      $image_file = file_get_contents(\Drupal::service('file_system')
-        ->realpath($file->getFileUri()));
-      $url = \Drupal::config('summary_generator.settings')
-        ->get('image_captioning_api_url');
-      $response = \Drupal::service('http_client')->request('POST', $url, [
-        'headers' => [
-          'content-type' => $file->getMimeType(),
-        ],
-        'body' => $image_file,
-      ]);
-      if ($response->getStatusCode() == 200) {
-        $body = \Drupal::service('serialization.json')
-          ->decode($response->getBody()->getContents());
-        $element['alt']['#default_value'] = $body['data']['caption'];
+      $imageCaptioningManager = \Drupal::service('plugin.manager.image_captioning');
+      $serviceType = \Drupal::config('summary_generator.settings')
+        ->get('image_captioning_service');
+      $plugin = $imageCaptioningManager->createInstance($serviceType);
+      $caption = $plugin->getImageCaption($file);
+      if ($caption) {
+        $element['alt']['#default_value'] = $caption;
       }
-
     }
     return $element;
   }
