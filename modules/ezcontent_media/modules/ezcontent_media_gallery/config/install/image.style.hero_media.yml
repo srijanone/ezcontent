@@ -8,16 +8,17 @@ dependencies:
 name: hero_media
 label: 'Hero Media'
 effects:
-  221b95ae-6fff-4598-b560-2c2b1972f07d:
-    uuid: 221b95ae-6fff-4598-b560-2c2b1972f07d
-    id: image_resize
-    weight: -9
-    data:
-      width: 1600
-      height: 600
   b37b2cfd-52db-4c60-a64e-74abdf413b45:
     uuid: b37b2cfd-52db-4c60-a64e-74abdf413b45
     id: crop_crop
     weight: -10
     data:
       crop_type: crop_16_9
+  ce9370a4-9da2-4176-a569-c7ab2cd414b2:
+    uuid: ce9370a4-9da2-4176-a569-c7ab2cd414b2
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 1600
+      height: 600
+      anchor: center-center
