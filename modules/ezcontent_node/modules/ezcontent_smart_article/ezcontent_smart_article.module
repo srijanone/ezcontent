@@ -205,7 +205,7 @@ function update_summary_field_submit_handler(&$form, FormStateInterface $form_st
  * @todo: Move to a service.
  *
  * @return array
- *    Image alt title.
+ *   Image alt title.
  */
 function ezcontent_smart_article_get_alt_title(array $element, FormStateInterface $form_state, array &$form) {
   $item = $element['#value'];
