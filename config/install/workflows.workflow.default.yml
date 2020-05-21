@@ -13,7 +13,7 @@ type_settings:
   states:
     archived:
       published: false
-      default_revision: false
+      default_revision: true
       label: Archived
       weight: -2
     draft:
