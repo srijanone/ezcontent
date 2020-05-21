@@ -10,6 +10,11 @@ cache:
 php:
   - 7.3
 
+# safelist
+branches:
+  only:
+  - 8.x
+
 before_install:
   - composer self-update
   - composer --version
