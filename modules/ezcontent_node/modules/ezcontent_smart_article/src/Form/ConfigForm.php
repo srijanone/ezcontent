@@ -12,6 +12,9 @@ use GuzzleHttp\ClientInterface;
 use Drupal\Core\Messenger\Messenger;
 use Drupal\ezcontent_smart_article\EzcontentImageCaptioningManager;
 use Drupal\ezcontent_smart_article\EzcontentImageTaggingManager;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
+use Drupal\Core\Render\Renderer;
 
 /**
  * Class that configures forms module settings.
@@ -65,7 +68,15 @@ class ConfigForm extends ConfigFormBase {
    *
    * @var \Drupal\ezcontent_smart_article\EzcontentImageTaggingManager
    */
+
   protected $imageTaggingManager;
+
+  /**
+   * A image tagging Manager object.
+   *
+   * @var \Drupal\Core\Render\Renderer
+   */
+  protected $renderer;
 
   /**
    * Constructs a \Drupal\fvm\Form\FvmSettingsForm object.
@@ -84,8 +95,10 @@ class ConfigForm extends ConfigFormBase {
    *   A image captioning Manager object.
    * @param \Drupal\ezcontent_smart_article\EzcontentImageTaggingManager $imageTaggingManager
    *   A image tagging Manager object.
+   * @param \Drupal\Core\Render\Renderer $renderer
+   *   An rendere object.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager) {
+  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager, Renderer $renderer) {
     parent::__construct($config_factory);
     $this->fileStorage = $entityTypeManager->getStorage('file');
     $this->fileSystem = $fileSystem;
@@ -93,6 +106,7 @@ class ConfigForm extends ConfigFormBase {
     $this->messenger = $messenger;
     $this->imageCaptioningManager = $imageCaptioningManager;
     $this->imageTaggingManager = $imageTaggingManager;
+    $this->renderer = $renderer;
   }
 
   /**
@@ -106,7 +120,8 @@ class ConfigForm extends ConfigFormBase {
       $container->get('http_client'),
       $container->get('messenger'),
       $container->get('plugin.manager.image_captioning'),
-      $container->get('plugin.manager.image_tagging')
+      $container->get('plugin.manager.image_tagging'),
+      $container->get('renderer')
     );
   }
 
@@ -195,6 +210,53 @@ class ConfigForm extends ConfigFormBase {
         'visible' => ['select[name="image_tagging_service"]' => ['value' => 'srijan_image_tagging']],
       ],
     ];
+    $form['gcm_secret_key_image_tags'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Enter Secret Key'),
+      '#description' => $this->t('Provide the google vision api secret key to generate image tags.'),
+      '#default_value' => $config->get('gcm_secret_key_image_tags'),
+      '#states' => [
+        'visible' => ['select[name="image_tagging_service"]' => ['value' => 'google_image_tagging']],
+      ],
+    ];
+    $form['gcm_max_count_image_tags'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Number of tags'),
+      '#description' => $this->t('Provide the maximum number of tag to be generated default is 12.'),
+      '#min' => 6,
+      '#default_value' => $config->get('gcm_max_count_image_tags'),
+      '#states' => [
+        'visible' => ['select[name="image_tagging_service"]' => ['value' => 'google_image_tagging']],
+      ],
+    ];
+    $form['aws_access_key_image_tags'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Enter Aws Access Key'),
+      '#description' => $this->t('Provide the aws access key to generate image tags.'),
+      '#default_value' => $config->get('aws_access_key_image_tags'),
+      '#states' => [
+        'visible' => ['select[name="image_tagging_service"]' => ['value' => 'aws_image_tagging']],
+      ],
+    ];
+    $form['aws_secret_key_image_tags'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Enter Aws Secret Key'),
+      '#description' => $this->t('Provide the aws secret key to generate image tags.'),
+      '#default_value' => $config->get('aws_secret_key_image_tags'),
+      '#states' => [
+        'visible' => ['select[name="image_tagging_service"]' => ['value' => 'aws_image_tagging']],
+      ],
+    ];
+    $form['aws_max_count_image_tags'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Number of tags'),
+      '#description' => $this->t('Provide the maximum number of tag to be generated default is 12.'),
+      '#min' => 6,
+      '#default_value' => $config->get('aws_max_count_image_tags'),
+      '#states' => [
+        'visible' => ['select[name="image_tagging_service"]' => ['value' => 'aws_image_tagging']],
+      ],
+    ];
     $form['abstractive_summary_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Abstractive Summary API URL'),
@@ -214,6 +276,38 @@ class ConfigForm extends ConfigFormBase {
       '#default_value' => $config->get('smart_tags_api_url'),
     ];
     return parent::buildForm($form, $form_state);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    parent::submitForm($form, $form_state);
+    $imageTaggingService = $form_state->getValue('image_tagging_service');
+    // Validate gcm secret key field.
+    if ($imageTaggingService === 'google_image_tagging') {
+      $gcmSecretKey = $form_state->getValue('gcm_secret_key_image_tags');
+      if (empty($gcmSecretKey)) {
+        $form_state->setError($form['gcm_secret_key_image_tags'], t("Field @field_title is required.", ['@field_title' => $form['gcm_secret_key_image_tags']['#title']]));
+      }
+    }
+    // Check if aws sdk exist.
+    elseif ($imageTaggingService === 'aws_image_tagging') {
+      $awsAcessKey = $form_state->getValue('aws_access_key_image_tags');
+      $awsSecretKey = $form_state->getValue('aws_secret_key_image_tags');
+      if (!class_exists('\Aws\Rekognition\RekognitionClient')) {
+        $link = Link::fromTextAndUrl('here', Url::fromUri('https://github.com/aws/aws-sdk-php'));
+        $link = $link->toRenderable();
+        $link = $this->renderer->render($link);
+        $form_state->setError($form['image_tagging_service'], t("Aws sdk library is missing, please download it from @link", ['@link' => $link]));
+      }
+      elseif (empty($awsAcessKey)) {
+        $form_state->setError($form['aws_access_key_image_tags'], t("Field @field_title is required.", ['@field_title' => $form['aws_access_key_image_tags']['#title']]));
+      }
+      elseif (empty($awsSecretKey)) {
+        $form_state->setError($form['aws_secret_key_image_tags'], t("Field @field_title is required.", ['@field_title' => $form['aws_secret_key_image_tags']['#title']]));
+      }
+    }
   }
 
   /**
