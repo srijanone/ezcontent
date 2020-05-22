@@ -73,3 +73,26 @@ function _ezcontent_install_module_batch($module, $module_name, $form_values, &$
   $context['results'][] = $module;
   $context['message'] = t('Installed %module_name modules.', ['%module_name' => $module_name]);
 }
+
+/**
+ * Implements hook_themes_installed().
+ */
+function ezcontent_themes_installed($theme_list) {
+  if (in_array('ezcontent_amp', $theme_list)) {
+    // Install AMP module.
+    \Drupal::service('module_installer')->install(['amp'], TRUE);
+
+    \Drupal::configFactory()
+      ->getEditable('amp.settings')
+      ->set('process_full_html', TRUE)
+      ->save(TRUE);
+
+    // Use EZContent AMP theme as the theme in AMP settings.
+    $amp_theme_config = \Drupal::configFactory()->getEditable('amp.theme');
+    $amp_theme = $amp_theme_config->get('amptheme');
+    if (empty($amp_theme) || $amp_theme !== 'ezcontent_amp') {
+      $amp_theme_config->set('amptheme', 'ezcontent_amp')
+        ->save(TRUE);
+    }
+  }
+}
