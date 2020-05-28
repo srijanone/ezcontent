@@ -20,7 +20,6 @@
     "bower-asset/dropzone": "^5.1",
     "bower-asset/slick-carousel": "^1.8",
     "cweagans/composer-patches": "~1",
-    "drupal/core-composer-scaffold": "^8.8",
     "drupal/access_unpublished": "^1.0@alpha",
     "drupal/admin_toolbar": "^1.27",
     "drupal/adminimal_theme": "^1.5",
@@ -31,6 +30,7 @@
     "drupal/bootstrap_barrio": "^4.22",
     "drupal/color_field": "^2.2",
     "drupal/colorbox": "^1.4",
+    "drupal/core-composer-scaffold": "^8.8",
     "drupal/crop": "^2.1",
     "drupal/default_content": "^1.0@alpha",
     "drupal/dropzonejs": "^2.0",
@@ -50,6 +50,7 @@
     "drupal/layout_builder_modal": "^1.0",
     "drupal/layout_builder_restrictions": "^2.1",
     "drupal/layout_library": "^1.0-beta1",
+    "drupal/lb_direct_add": "^1.0",
     "drupal/length_indicator": "^1.0",
     "drupal/libraries": "3.0-alpha1",
     "drupal/linkit": "~5.0",
@@ -89,8 +90,8 @@
     "drupal/yoast_seo": "^1.5",
     "oomphinc/composer-installers-extender": "^1.1",
     "srijanone/ezcontent_admin": "8.x-dev",
-    "srijanone/ezcontent_theme": "8.x-dev",
     "srijanone/ezcontent_amp": "8.x-dev",
+    "srijanone/ezcontent_theme": "8.x-dev",
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
