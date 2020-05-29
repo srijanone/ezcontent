@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_lock
+id: block_content_break_lock_action
+label: 'Break lock block_content'
+type: block_content
+plugin: 'entity:break_lock:block_content'
+configuration: {  }
