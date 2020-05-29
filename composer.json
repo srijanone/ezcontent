@@ -31,7 +31,6 @@
     "drupal/color_field": "^2.2",
     "drupal/colorbox": "^1.4",
     "drupal/core-composer-scaffold": "^8.8",
-    "drupal/crop": "^2.1",
     "drupal/default_content": "^1.0@alpha",
     "drupal/dropzonejs": "^2.0",
     "drupal/email_registration": "^1.0@RC",
