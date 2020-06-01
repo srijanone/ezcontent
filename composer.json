@@ -129,6 +129,9 @@
       },
       "drupal/bootstrap_barrio": {
         "Display Suite classes breaks Layout Builder if Display Suite is not installed": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
+      },
+      "drupal/libraries": {
+        "Drupal 9 Deprecated Code Report": "https://www.drupal.org/files/issues/2020-05-26/3119010-14_0.patch"
       }
     },
     "installer-paths": {
