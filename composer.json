@@ -1,5 +1,5 @@
 {
-  "name": "srijanone/ezcontent",
+  "name": "vinay15/ezcontent",
   "description": "A Feature rich stater profile from Srijan.",
   "type": "drupal-profile",
   "license": "GPL-2.0-or-later",
@@ -30,7 +30,7 @@
     "drupal/bootstrap_barrio": "^4.22",
     "drupal/color_field": "^2.2",
     "drupal/colorbox": "^1.4",
-    "drupal/core-composer-scaffold": "^8.8",
+    "drupal/core-composer-scaffold": "^9",
     "drupal/default_content": "^1.0@alpha",
     "drupal/dropzonejs": "^2.0",
     "drupal/email_registration": "^1.0@RC",
