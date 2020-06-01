@@ -38,7 +38,6 @@
     "drupal/entity_embed": "^1.0",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/environment_indicator": "^3.7",
-    "drupal/ezcontent_api": "8.x-dev",
     "drupal/field_group": "^1.0",
     "drupal/fvm": "^1.1",
     "drupal/gin_login": "^1.0@alpha",
@@ -89,7 +88,8 @@
     "srijanone/ezcontent_admin": "8.x-dev",
     "srijanone/ezcontent_amp": "8.x-dev",
     "srijanone/ezcontent_theme": "8.x-dev",
-    "vardot/blazy": "^1.8"
+    "vardot/blazy": "^1.8",
+    "vinay15/ezcontent_api": "8.x-dev"
   },
   "require-dev": {
     "drush/drush": "~9",
