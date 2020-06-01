@@ -65,7 +65,6 @@
     "drupal/openapi_ui": "^1.0@RC",
     "drupal/openapi_ui_redoc": "^1.0@RC",
     "drupal/openapi_ui_swagger": "^1.0@RC",
-    "drupal/panels": "4.4",
     "drupal/paragraphs": "^1.9",
     "drupal/paragraphs_edit": "^2.0@alpha",
     "drupal/paragraphs_jquery_ui_accordion": "^1.3",
