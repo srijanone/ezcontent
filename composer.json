@@ -79,7 +79,7 @@
     "srijanone/ezcontent_amp": "8.x-dev",
     "srijanone/ezcontent_theme": "8.x-dev",
     "vardot/blazy": "^1.8",
-    "vinay15/ezcontent_api": "8.x-dev"
+    "vinay15/ezcontent_api": "9.x-dev"
   },
   "require-dev": {
     "drush/drush": "~9",
