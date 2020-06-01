@@ -23,7 +23,6 @@
     "drupal/access_unpublished": "^1.0@alpha",
     "drupal/admin_toolbar": "^1.27",
     "drupal/allowed_formats": "^1.1",
-    "drupal/autocomplete_deluxe": "^1.0@beta",
     "drupal/better_normalizers": "^1.0@beta",
     "drupal/block_blacklist": "^1.0",
     "drupal/bootstrap_barrio": "^4.22",
