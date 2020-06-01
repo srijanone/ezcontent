@@ -22,7 +22,6 @@
     "cweagans/composer-patches": "~1",
     "drupal/access_unpublished": "^1.0@alpha",
     "drupal/admin_toolbar": "^1.27",
-    "drupal/adminimal_theme": "^1.5",
     "drupal/allowed_formats": "^1.1",
     "drupal/autocomplete_deluxe": "^1.0@beta",
     "drupal/better_normalizers": "^1.0@beta",
