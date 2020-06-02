@@ -4,7 +4,6 @@ description: 'Provides article content type.'
 package: EZContent Node
 core: 8.x
 dependencies:
-  - autocomplete_deluxe
   - ezcontent_author
   - ezcontent_node
   - ezcontent_image
