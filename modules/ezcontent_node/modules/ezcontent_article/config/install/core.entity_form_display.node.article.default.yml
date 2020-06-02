@@ -13,8 +13,8 @@ dependencies:
     - field.field.node.article.field_thumbnail
     - field.field.node.article.field_yoast_seo
     - node.type.article
+    - workflows.workflow.default
   module:
-    - autocomplete_deluxe
     - content_moderation
     - entity_browser
     - field_group
@@ -99,21 +99,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_author:
-    weight: -2
+    weight: 124
     settings:
-      limit: '10'
-      min_length: '0'
-      delimiter: ''
-      not_found_message_allow: '1'
-      not_found_message: 'Author ''@term'' could not be found.'
-      no_empty_message: 'No Author found.'
-      new_terms: 0
       match_operator: CONTAINS
-      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      match_limit: 10
       size: 60
-      selection_handler: default
+      placeholder: ''
     third_party_settings: {  }
-    type: autocomplete_deluxe
+    type: entity_reference_autocomplete
     region: content
   field_content:
     type: paragraphs
@@ -129,8 +122,8 @@ content:
       autocollapse: none
       closed_mode_threshold: 0
       features:
-        duplicate: duplicate
         collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
     region: content
   field_meta_tags:
@@ -164,21 +157,14 @@ content:
     type: string_textarea
     region: content
   field_tags:
-    weight: 15
+    weight: 125
     settings:
-      limit: '10'
-      min_length: '0'
-      delimiter: ''
-      not_found_message_allow: '1'
-      not_found_message: 'The term ''@term'' will be added'
-      new_terms: '1'
-      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
       match_operator: CONTAINS
-      autocomplete_route_name: autocomplete_deluxe.autocomplete
+      match_limit: 10
       size: 60
-      selection_handler: default
+      placeholder: ''
     third_party_settings: {  }
-    type: autocomplete_deluxe
+    type: entity_reference_autocomplete
     region: content
   field_thumbnail:
     weight: 122
@@ -267,6 +253,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   unpublish_on:
