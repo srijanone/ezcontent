@@ -248,12 +248,5 @@
         {
             "value": "With Drupal\u2019s commitment to reinventing itself to enable ambitious digital experiences, the community is getting ready for the launch of Drupal 9, and end-of-life for Drupal 7 and Drupal 8."
         }
-    ],
-    "field_yoast_seo": [
-        {
-            "status": "0",
-            "focus_keyword": "",
-            "lang": "en"
-        }
     ]
 }
