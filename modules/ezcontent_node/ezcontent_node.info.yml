@@ -10,4 +10,3 @@ dependencies:
   - paragraphs_previewer:paragraphs_previewer
   - pathauto:pathauto
   - scheduler:scheduler
-  - yoast_seo:yoast_seo
