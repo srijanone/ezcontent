@@ -257,9 +257,9 @@ content:
       length_indicator:
         indicator: true
         indicator_opt:
-          optimin: 20
-          optimax: 30
-          tolerance: 5
+          optimin: 50
+          optimax: 80
+          tolerance: 10
   uid:
     type: entity_reference_autocomplete
     weight: 5
