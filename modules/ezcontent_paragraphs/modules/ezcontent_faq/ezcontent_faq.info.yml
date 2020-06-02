@@ -5,4 +5,3 @@ package: EZContent Paragraphs
 core: 8.x
 dependencies:
   - ezcontent_paragraphs
-  - paragraphs_jquery_ui_accordion
