@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
     - field.field.node.article.field_thumbnail
-    - field.field.node.article.field_yoast_seo
     - node.type.article
     - workflows.workflow.default
   module:
@@ -23,7 +22,6 @@ dependencies:
     - paragraphs
     - path
     - scheduler
-    - yoast_seo
 third_party_settings:
   field_group:
     group_basic:
@@ -180,13 +178,6 @@ content:
       field_widget_replace: false
     third_party_settings: {  }
     type: entity_browser_entity_reference
-    region: content
-  field_yoast_seo:
-    weight: 123
-    settings:
-      body: field_summary
-    third_party_settings: {  }
-    type: yoast_seo_widget
     region: content
   moderation_state:
     type: moderation_state_default
