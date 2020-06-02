@@ -5,6 +5,5 @@ package: EZContent Paragraphs
 core: 8.x
 dependencies:
   - ezcontent:ezcontent_assets
-  - libraries:libraries
   - colorbox:colorbox
   - slick:slick
