@@ -38,7 +38,6 @@ settings:
     frontpage: 0
     image_browser: 0
     media: 0
-    media_entity_browser: 0
     media_library: 0
     moderated_content: 0
     paragraphs_library: 0
