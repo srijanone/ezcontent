@@ -18,7 +18,6 @@ install:
   - crop
   - dblog
   - editor
-  - email_registration
   - entity_embed
   - ezcontent_article
   - ezcontent_basic_page
