@@ -14,11 +14,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  google_analytics:
-    weight: 2
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   language:
     weight: 1
     region: content
