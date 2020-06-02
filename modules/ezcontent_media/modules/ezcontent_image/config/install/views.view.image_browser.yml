@@ -2,7 +2,7 @@ langcode: und
 status: true
 dependencies:
   config:
-    - image.style.media_entity_browser_thumbnail
+    - image.style.ezcontent_media_entity_browser_thumbnail
     - media.type.image
   module:
     - entity_browser
@@ -134,7 +134,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: media_entity_browser_thumbnail
+            image_style: ezcontent_media_entity_browser_thumbnail
             image_link: ''
           group_column: ''
           group_columns: {  }

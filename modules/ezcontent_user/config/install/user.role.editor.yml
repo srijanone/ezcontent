@@ -13,8 +13,6 @@ permissions:
   - 'access contextual links'
   - 'access image_browser entity browser pages'
   - 'access media overview'
-  - 'access media_entity_browser entity browser pages'
-  - 'access media_entity_browser_modal entity browser pages'
   - 'access paragraphs_library_items entity browser pages'
   - 'access responsive preview'
   - 'access taxonomy overview'
