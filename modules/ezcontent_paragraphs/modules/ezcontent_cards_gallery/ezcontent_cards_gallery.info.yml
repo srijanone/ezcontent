@@ -6,7 +6,6 @@ core: 8.x
 dependencies:
   - ezcontent:ezcontent_assets
   - ezcontent:ezcontent_paragraphs
-  - libraries:libraries
   - colorbox:colorbox
   - paragraphs_previewer:paragraphs_previewer
   - slick_paragraphs:slick_paragraphs
