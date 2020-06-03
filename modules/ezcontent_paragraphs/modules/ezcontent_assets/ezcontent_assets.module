@@ -10,6 +10,6 @@
  */
 function ezcontent_assets_preprocess_views_view(&$variables) {
   if ($variables['view']->id() === 'asset_browser') {
-    $variables['view_array']['#attached']['library'][] = 'media_entity_browser/view';
+    $variables['view_array']['#attached']['library'][] = 'ezcontent_media/view';
   }
 }
