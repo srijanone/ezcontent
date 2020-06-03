@@ -2,7 +2,7 @@ name: Gallery Carousel Feature
 type: module
 description: "Provides gallery carousel feature."
 package: EZContent Paragraphs
-core: 8.x
+core_version_requirement: ^8 || ^9
 dependencies:
   - ezcontent_card
   - ezcontent_media_gallery
