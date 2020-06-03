@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: ezcontent_media_entity_browser_thumbnail
+label: 'EZContent Media Entity Browser thumbnail'
+effects:
+  cd035e5e-3a07-40c7-bb54-ec45a275b3d5:
+    uuid: cd035e5e-3a07-40c7-bb54-ec45a275b3d5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 200
+      anchor: center-center
