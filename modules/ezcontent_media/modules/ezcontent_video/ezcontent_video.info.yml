@@ -2,6 +2,6 @@ name: Video Feature
 type: module
 description: 'Provides Video Media type for remote video files.'
 package: EZContent Media
-core: 8.x
+core_version_requirement: ^8 || ^9
 dependencies:
   - ezcontent_media
