@@ -2,7 +2,7 @@ name: EZContent Demo
 type: module
 description: 'Contain configs for a Demo.'
 package: EZContent Demo
-core: 8.x
+core_version_requirement: ^8 || ^9
 dependencies:
   - better_normalizers:better_normalizers
   - default_content:default_content
