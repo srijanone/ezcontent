@@ -35,7 +35,7 @@
     "drupal/entity_embed": "^1.0",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/field_group": "^3.0",
-    "drupal/fvm": "^1.1",
+    "drupal/fvm": "^2.0",
     "drupal/gin_login": "^1.0@alpha",
     "drupal/google_tag": "^1.0",
     "drupal/image_widget_crop": "^2.3",
