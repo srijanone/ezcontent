@@ -76,7 +76,7 @@
     "drupal/webform": "~6.0.0",
     "oomphinc/composer-installers-extender": "^1.1",
     "srijanone/ezcontent_admin": "8.x-dev",
-    "srijanone/ezcontent_theme": "8.x-dev",
+    "srijanone/ezcontent_theme": "9.x-dev",
     "vardot/blazy": "^1.8",
     "vinay15/ezcontent_api": "9.x-dev"
   },
