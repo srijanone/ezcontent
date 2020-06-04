@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.article.field_tags
     - field.field.node.article.field_thumbnail
     - node.type.article
-    - workflows.workflow.default
   module:
     - content_moderation
     - entity_browser

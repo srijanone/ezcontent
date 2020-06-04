@@ -4,6 +4,7 @@ description: 'Provides Media assets paragraph feature.'
 package: EZContent Paragraphs
 core_version_requirement: ^8 || ^9
 dependencies:
+  - entity_browser_entity_form
   - ezcontent_paragraphs
   - ezcontent_image
   - ezcontent_video
