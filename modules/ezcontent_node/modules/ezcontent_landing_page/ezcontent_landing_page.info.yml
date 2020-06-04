@@ -9,4 +9,3 @@ dependencies:
   - layout_builder_modal:layout_builder_modal
   - layout_builder_restrictions:layout_builder_restrictions
   - layout_library:layout_library
-  - lb_direct_add:lb_direct_add

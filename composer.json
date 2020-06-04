@@ -43,7 +43,6 @@
     "drupal/layout_builder_modal": "^1.0",
     "drupal/layout_builder_restrictions": "^2.1",
     "drupal/layout_library": "^1.0-beta1",
-    "drupal/lb_direct_add": "^1.0",
     "drupal/length_indicator": "^1.0",
     "drupal/linkit": "~5.0",
     "drupal/liveblog": "1.x-dev",
