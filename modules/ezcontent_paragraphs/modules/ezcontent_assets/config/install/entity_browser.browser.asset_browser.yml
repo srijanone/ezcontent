@@ -32,8 +32,19 @@ widgets:
     weight: 1
     label: Library
     id: view
-  1bbd86bd-3905-4af5-84d4-db9dbd45dc95:
+  323e9c30-d1d2-47c1-be4d-90763424f3f8:
     settings:
+      entity_type: media
+      bundle: video
+      form_mode: inline
+      submit_text: 'Save Video'
+    uuid: 323e9c30-d1d2-47c1-be4d-90763424f3f8
+    weight: 3
+    label: 'Create Video'
+    id: entity_form
+  6c7da73d-1f15-446b-a4fa-e2d1ccf1f802:
+    settings:
+      form_mode: default
       media_type: image
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drop files here to upload them'
@@ -46,18 +57,7 @@ widgets:
       resize_method: contain
       thumbnail_method: contain
       submit_text: 'Select image(s)'
-      auto_select: false
-    uuid: 1bbd86bd-3905-4af5-84d4-db9dbd45dc95
-    weight: 2
-    label: 'Upload Image'
-    id: dropzonejs_media_entity
-  323e9c30-d1d2-47c1-be4d-90763424f3f8:
-    settings:
-      entity_type: media
-      bundle: video
-      form_mode: inline
-      submit_text: 'Save Video'
-    uuid: 323e9c30-d1d2-47c1-be4d-90763424f3f8
+    uuid: 6c7da73d-1f15-446b-a4fa-e2d1ccf1f802
     weight: 3
-    label: 'Create Video'
-    id: entity_form
+    label: 'Upload Image'
+    id: dropzonejs_media_entity_inline_entity_form
