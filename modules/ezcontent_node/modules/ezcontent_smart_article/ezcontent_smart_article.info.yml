@@ -6,3 +6,4 @@ core_version_requirement: ^8 || ^9
 configure: ezcontent_smart_article.config
 dependencies:
   - ezcontent_node
+  - config_rewrite

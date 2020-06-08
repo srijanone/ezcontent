@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - image.style.ezcontent_media_entity_browser_thumbnail
+    - media.type.image
     - media.type.smart_media_image
     - taxonomy.vocabulary.tags
   module:
@@ -11,8 +12,8 @@ dependencies:
     - media
     - taxonomy
     - user
-id: smart_image_browser
-label: 'Smart Image Browser'
+id: image_browser
+label: 'Image Browser'
 module: views
 description: 'Image entity browser'
 tag: ''
@@ -389,37 +390,43 @@ display:
           admin_label: ''
           operator: in
           value:
+            image: image
             smart_media_image: smart_media_image
           group: 1
           exposed: false
           expose:
             operator_id: bundle_op
-            label: Provider
+            label: 'Media type'
             description: ''
             use_operator: false
             operator: bundle_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: provider
+            identifier: bundle
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-            reduce: false
+              administrator: '0'
+              editor: '0'
+            reduce: true
           is_grouped: false
           group_info:
-            label: ''
-            description: ''
-            identifier: ''
+            label: 'Media type'
+            description: null
+            identifier: bundle
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
           entity_type: media
           entity_field: bundle
           plugin_id: bundle
@@ -436,10 +443,12 @@ display:
           exposed: true
           expose:
             operator_id: name_op
-            label: 'Media name'
+            label: Name
             description: ''
             use_operator: false
             operator: name_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: name
             required: false
             remember: false
@@ -447,8 +456,9 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-            operator_limit_selection: false
-            operator_list: {  }
+              administrator: '0'
+              editor: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -481,8 +491,6 @@ display:
             description: ''
             use_operator: false
             operator: langcode_op
-            operator_limit_selection: false
-            operator_list: {  }
             identifier: langcode
             required: false
             remember: false
@@ -490,9 +498,9 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
-              administrator: '0'
-              editor: '0'
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -582,7 +590,7 @@ display:
   media_browser_all:
     display_plugin: entity_browser
     id: media_browser_all
-    display_title: 'Smart Image browser'
+    display_title: 'Image browser'
     position: 1
     display_options:
       display_extenders: {  }
