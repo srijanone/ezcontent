@@ -1,0 +1,68 @@
+dependencies:
+  config:
+    - image.style.media_entity_browser_thumbnail
+    - media.type.image
+    - media.type.smart_media_image
+    - taxonomy.vocabulary.tags
+  module:
+    - entity_browser
+    - image
+    - media
+    - taxonomy
+    - user
+display:
+  default:
+    display_options:
+      filters:
+        bundle:
+          value:
+            image: image
+            smart_media_image: smart_media_image
+        media_type_filter:
+          id: media_type_filter
+          table: media__field_smart_image_tags
+          field: media_type_filter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: media_type_filter_op
+            label: Tags
+            description: ''
+            use_operator: false
+            operator: media_type_filter_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: media_type_filter
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: textfield
+          limit: true
+          vid: tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
