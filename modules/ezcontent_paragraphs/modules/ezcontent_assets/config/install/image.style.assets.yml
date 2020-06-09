@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.crop_16_9
+  module:
+    - crop
+name: assets
+label: Assets
+effects:
+  d97548df-41db-4943-900e-da64005b6f9e:
+    uuid: d97548df-41db-4943-900e-da64005b6f9e
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: crop_16_9
