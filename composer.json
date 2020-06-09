@@ -45,7 +45,6 @@
     "drupal/google_analytics": "^3.0",
     "drupal/image_widget_crop": "^2.3",
     "drupal/inline_entity_form": "^1.0@RC",
-    "drupal/jsonapi_extras": "^3.12",
     "drupal/layout_builder_modal": "^1.0",
     "drupal/layout_builder_restrictions": "^2.1",
     "drupal/layout_library": "^1.0-beta1",
@@ -119,9 +118,6 @@
         "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2019-11-20/2999491-42.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch",
         "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch"
-      },
-      "drupal/jsonapi_extras": {
-        "Link enhancer to add Aliased URL for internal links": "https://www.drupal.org/files/issues/2019-03-08/jsonapi_extras-Field-enhancer-for-URL-alias-2942851-24.patch"
       },
       "drupal/slick": {
         "Slick patch": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
