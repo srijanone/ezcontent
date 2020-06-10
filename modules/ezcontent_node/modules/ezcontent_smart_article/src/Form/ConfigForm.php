@@ -305,6 +305,15 @@ class ConfigForm extends ConfigFormBase {
         'visible' => ['select[name="text_tagging_service"]' => ['value' => 'srijan_text_tagging']],
       ],
     ];
+    $form['gcm_text_tag_api_key'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('GCM API Key For Tag Extraction'),
+      '#description' => $this->t('Provide the API Key.'),
+      '#default_value' => $config->get('gcm_text_tag_api_key'),
+      '#states' => [
+        'visible' => ['select[name="text_tagging_service"]' => ['value' => 'google_text_tagging']],
+      ],
+    ];
     return parent::buildForm($form, $form_state);
   }
 
