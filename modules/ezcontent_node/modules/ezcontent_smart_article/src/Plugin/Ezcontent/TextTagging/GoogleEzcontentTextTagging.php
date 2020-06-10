@@ -125,10 +125,7 @@ class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
           $tags[] = $entity['name'];
         }
       }
-
-      return array_unique($tags);
-
     }
+    return array_unique($tags);
   }
-
 }
