@@ -93,6 +93,8 @@ class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
    */
   public function getTags($text = '') {
     // @todo: Add google api call here and return tag array
+    // https://language.googleapis.com/v1beta2/documents:analyzeEntities?key=AIzaSyC_cHz64dflSo1mBlKkjqTn7WuU2aHQ_ME
+    return ["test", "asas"];
   }
 
 }
