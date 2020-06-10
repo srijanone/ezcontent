@@ -254,8 +254,12 @@ function generate_tags_form_submit(array $form, FormStateInterface $form_state) 
     $response->addCommand(new InvokeCommand("#edit-$link_field_id-0-value", 'addClass', ['error']));
   }
   else {
-    $smart_tags = \Drupal::service('ezcontent_smart_article.generate_smarttags');
-    $tags = $smart_tags->getTags(Json::encode($field[0]['value']));
+    $config = \Drupal::config('summary_generator.settings');
+    $imageTaggingManager = \Drupal::service('plugin.manager.text_tagging');
+    // Use plugin methods here.
+    $serviceType = $config->get('text_tagging_service');
+    $plugin = $imageTaggingManager->createInstance($serviceType);
+    $tags = $plugin->getTags(Json::encode($field[0]['value']));
   }
   $auto_tags = [
     '#theme' => 'smarttag_template',
