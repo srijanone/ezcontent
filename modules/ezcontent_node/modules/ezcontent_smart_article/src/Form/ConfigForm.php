@@ -12,6 +12,7 @@ use GuzzleHttp\ClientInterface;
 use Drupal\Core\Messenger\Messenger;
 use Drupal\ezcontent_smart_article\EzcontentImageCaptioningManager;
 use Drupal\ezcontent_smart_article\EzcontentImageTaggingManager;
+use Drupal\ezcontent_smart_article\EzcontentTextTaggingManager;
 use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Drupal\Core\Render\Renderer;
@@ -74,6 +75,14 @@ class ConfigForm extends ConfigFormBase {
   /**
    * A image tagging Manager object.
    *
+   * @var \Drupal\ezcontent_smart_article\EzcontentTextTaggingManager
+   */
+
+  protected $textTaggingManager;
+
+  /**
+   * A image tagging Manager object.
+   *
    * @var \Drupal\Core\Render\Renderer
    */
   protected $renderer;
@@ -95,10 +104,12 @@ class ConfigForm extends ConfigFormBase {
    *   A image captioning Manager object.
    * @param \Drupal\ezcontent_smart_article\EzcontentImageTaggingManager $imageTaggingManager
    *   A image tagging Manager object.
+   * @param \Drupal\ezcontent_smart_article\EzcontentTextTaggingManager $textTaggingManager
+   *   A text tagging Manager object.
    * @param \Drupal\Core\Render\Renderer $renderer
    *   An rendere object.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager, Renderer $renderer) {
+  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager, EzcontentTextTaggingManager $textTaggingManager, Renderer $renderer) {
     parent::__construct($config_factory);
     $this->fileStorage = $entityTypeManager->getStorage('file');
     $this->fileSystem = $fileSystem;
@@ -106,6 +117,7 @@ class ConfigForm extends ConfigFormBase {
     $this->messenger = $messenger;
     $this->imageCaptioningManager = $imageCaptioningManager;
     $this->imageTaggingManager = $imageTaggingManager;
+    $this->textTaggingManager = $textTaggingManager;
     $this->renderer = $renderer;
   }
 
@@ -121,6 +133,7 @@ class ConfigForm extends ConfigFormBase {
       $container->get('messenger'),
       $container->get('plugin.manager.image_captioning'),
       $container->get('plugin.manager.image_tagging'),
+      $container->get('plugin.manager.text_tagging'),
       $container->get('renderer')
     );
   }
@@ -148,6 +161,7 @@ class ConfigForm extends ConfigFormBase {
     $config = $this->config(static::SETTINGS);
     $pluginDefinitionsImageCaptioning = $this->imageCaptioningManager->getDefinitions();
     $pluginDefinitionsImageTagging = $this->imageTaggingManager->getDefinitions();
+    $pluginDefinitionsTextTagging = $this->textTaggingManager->getDefinitions();
     // Prepare options for image captioning service types.
     $imageCaptioningOptions = [];
     foreach ($pluginDefinitionsImageCaptioning as $pluginDefinition) {
@@ -157,6 +171,11 @@ class ConfigForm extends ConfigFormBase {
     $imageTaggingOptions = [];
     foreach ($pluginDefinitionsImageTagging as $pluginDefinition) {
       $imageTaggingOptions[$pluginDefinition['id']] = $pluginDefinition['label'];
+    }
+    // Prepare options for text tagging service types.
+    $textTaggingOptions = [];
+    foreach ($pluginDefinitionsTextTagging as $pluginDefinition) {
+      $textTaggingOptions[$pluginDefinition['id']] = $pluginDefinition['label'];
     }
     $form['summary_generator_api_url'] = [
       '#type' => 'textfield',
@@ -269,11 +288,22 @@ class ConfigForm extends ConfigFormBase {
       '#description' => $this->t('Provide the API URL.'),
       '#default_value' => $config->get('extractive_summary_api_url'),
     ];
+    // Select plugin type for text tagging.
+    $form['text_tagging_service'] = [
+      '#title' => $this->t('Text Tagging Service'),
+      '#type' => 'select',
+      '#description' => $this->t('Please choose text tagging service type.'),
+      '#options' => $textTaggingOptions,
+      '#default_value' => $config->get('text_tagging_service'),
+    ];
     $form['smart_tags_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Smart Tags API URL'),
       '#description' => $this->t('Provide the API URL.'),
       '#default_value' => $config->get('smart_tags_api_url'),
+      '#states' => [
+        'visible' => ['select[name="text_tagging_service"]' => ['value' => 'srijan_text_tagging']],
+      ],
     ];
     return parent::buildForm($form, $form_state);
   }

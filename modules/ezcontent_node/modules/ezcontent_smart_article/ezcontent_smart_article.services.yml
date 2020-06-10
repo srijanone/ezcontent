@@ -24,3 +24,7 @@ services:
   plugin.manager.image_tagging:
     class: Drupal\ezcontent_smart_article\EzcontentImageTaggingManager
     parent: default_plugin_manager
+
+  plugin.manager.text_tagging:
+    class: Drupal\ezcontent_smart_article\EzcontentTextTaggingManager
+    parent: default_plugin_manager
