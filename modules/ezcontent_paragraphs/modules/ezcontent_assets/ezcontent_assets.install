@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall hooks for the ezcontent_assets module.
+ */
+
+use Drupal\Core\File\FileSystemInterface;
+
+/**
+ * Implements hook_install().
+ */
+function ezcontent_assets_install() {
+  // Save icon image for Media paragraph.
+  $icon_uuid = 'd8a37fd7-9843-4f80-a3d5-85b9c7be4b87';
+  $output = file_get_contents(drupal_get_path('module', 'ezcontent_assets') . '/images/Assets.svg');
+  $file = file_save_data($output, 'public://paragraphs_type_icon/Assets.svg', FileSystemInterface::EXISTS_REPLACE);
+  $file->uuid = $icon_uuid;
+  $file->save();
+}
