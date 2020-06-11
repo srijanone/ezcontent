@@ -9,7 +9,6 @@ use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-
 /**
  * Plugin implementation of the 'google_text_tagging' text tagging.
  *
@@ -111,9 +110,7 @@ class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
           'content' => Json::decode($text),
         ],
       ];
-      
       $url = static::API_ENDPOINT . $secretKey;
-      
       $response = $this->httpClient->request('POST', $url, [
         RequestOptions::JSON => $data,
         RequestOptions::HEADERS => ['Content-Type' => 'application/json'],
