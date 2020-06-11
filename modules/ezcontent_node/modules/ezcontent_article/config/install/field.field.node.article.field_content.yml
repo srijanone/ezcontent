@@ -23,39 +23,30 @@ settings:
     target_bundles: null
     target_bundles_drag_drop:
       text:
-        weight: -35
-        enabled: false
-      assets:
-        weight: -34
-        enabled: false
-      gallery:
-        weight: -33
-        enabled: false
-      gallery_carousel:
         weight: -32
         enabled: false
-      embed:
+      assets:
         weight: -31
         enabled: false
-      social_media:
+      gallery:
         weight: -30
         enabled: false
+      gallery_carousel:
+        weight: -39
+        enabled: false
+      embed:
+        weight: -38
+        enabled: false
+      social_media:
+        weight: -37
+        enabled: false
       quote:
-        weight: -29
-        enabled: false
-      map:
-        weight: -28
-        enabled: false
-      faq:
-        weight: -27
-        enabled: false
-      hero_media:
         weight: -26
         enabled: false
-      card_list:
+      map:
         weight: -25
         enabled: false
-      referenced_card:
+      faq:
         weight: -24
         enabled: false
       from_library:

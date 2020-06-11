@@ -12,6 +12,7 @@ install:
   - color
   - comment
   - config
+  - config_rewrite
   - contact
   - content_lock_timeout
   - content_moderation
