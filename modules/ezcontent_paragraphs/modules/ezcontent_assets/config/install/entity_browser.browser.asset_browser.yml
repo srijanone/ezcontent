@@ -56,8 +56,8 @@ widgets:
       entity_type: media
       bundle: video
       form_mode: inline
-      submit_text: 'Save Video'
+      submit_text: 'Embed Video'
     uuid: 323e9c30-d1d2-47c1-be4d-90763424f3f8
     weight: 3
-    label: 'Create Video'
+    label: 'Embed Video'
     id: entity_form
