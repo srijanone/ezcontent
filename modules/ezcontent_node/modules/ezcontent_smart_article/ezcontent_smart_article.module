@@ -8,7 +8,6 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\InvokeCommand;
-use Drupal\file\Entity\File;
 use Drupal\Component\Utility\Html;
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Entity\ContentEntityForm;
@@ -103,16 +102,7 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       // Add submit handler to update summary.
       $form['actions']['submit']['#submit'][] = 'update_summary_field_submit_handler';
     }
-    // Add a process to field_company_logo.
-    if (!empty($form['field_company_logo']) && !empty($summary_config->get('image_captioning_api_url'))) {
-      $form['field_company_logo']['widget'][0]['#process'][] = 'ezcontent_smart_article_get_alt_title';
-    }
-    // Disable auto caption feature if subscription keys not available.
-    $form['field_company_logo']['widget'][0]['#attributes'] = empty($summary_config->get('image_captioning_api_url')) ? ['disabled' => 'disabled'] : [];
-    if (empty($summary_config->get('image_generate_tags_api_url'))) {
-      // Disable image tage if api url not present.
-      $form['field_smart_media_image']['#attributes']['class'] = ['disable-element'];
-    }
+
     // Code for Smart Tags.
     $bundle = $entity_type = '';
     $form_object = $form_state->getFormObject();
@@ -194,39 +184,6 @@ function update_summary_field_submit_handler(&$form, FormStateInterface $form_st
   $summary = $form_state->getValue('field_smart_text_summary')[0]['summary_container']['summary_area'];
   $entity->get('field_smart_text_summary')->summary = $summary;
   $entity->save();
-}
-
-/**
- * Process callback: Adds the ALT title to image.
- *
- * @param array $element
- *   Form API element.
- *
- * @todo: Move to a service.
- *
- * @return array
- *   Image alt title.
- */
-function ezcontent_smart_article_get_alt_title(array $element, FormStateInterface $form_state, array &$form) {
-  $item = $element['#value'];
-  if (!empty($item['fids'])) {
-    $file = File::load($item['fids'][0]);
-    $image_file = file_get_contents(\Drupal::service('file_system')->realpath($file->getFileUri()));
-
-    $url = \Drupal::config('summary_generator.settings')->get('image_captioning_api_url');
-    $response = \Drupal::service('http_client')->request('POST', $url, [
-      'headers' => [
-        'content-type' => $file->getMimeType(),
-      ],
-      'body' => $image_file,
-    ]);
-    if ($response->getStatusCode() == 200) {
-      $body = \Drupal::service('serialization.json')->decode($response->getBody()->getContents());
-      $element['alt']['#default_value'] = $body['data']['caption'];
-    }
-
-  }
-  return $element;
 }
 
 /**

@@ -4,7 +4,6 @@ dependencies:
   config:
     - entity_browser.browser.smart_image_browser
     - field.field.node.smart_article.body
-    - field.field.node.smart_article.field_company_logo
     - field.field.node.smart_article.field_company_name
     - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
@@ -82,14 +81,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_company_logo:
-    weight: 13
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_company_name:
     weight: 1
     settings:
