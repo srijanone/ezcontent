@@ -4,7 +4,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.smart_article.body
-    - field.field.node.smart_article.field_company_logo
     - field.field.node.smart_article.field_company_name
     - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
@@ -32,7 +31,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_company_logo: true
   field_company_name: true
   field_smart_media_image: true
   field_smart_tags: true

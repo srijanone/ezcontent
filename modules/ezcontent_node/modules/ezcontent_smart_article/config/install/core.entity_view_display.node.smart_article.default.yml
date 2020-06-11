@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.smart_article.body
-    - field.field.node.smart_article.field_company_logo
     - field.field.node.smart_article.field_company_name
     - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
@@ -25,15 +24,6 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_company_logo:
-    weight: 3
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
     region: content
   field_company_name:
     weight: 2
