@@ -118,7 +118,7 @@
         "Langcode cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
       },
       "drupal/core": {
-        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2019-11-20/2999491-42.patch",
+        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2020-06-10/reusable_inline_block_creation-2999491-50.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch",
         "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch"
       },
