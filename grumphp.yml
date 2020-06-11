@@ -1,0 +1,28 @@
+parameters:
+  ascii: ~
+  hide_circumvention_tip: true
+  tasks:
+    composer: ~
+    jsonlint: ~
+    phpcpd:
+      directory: ['./modules', './src', './tests']
+    phpcs:
+      standard:
+        - vendor/drupal/coder/coder_sniffer/Drupal
+        - vendor/drupal/coder/coder_sniffer/DrupalPractice
+      ignore_patterns:
+        - vendor
+      triggered_by:
+        - css
+        - inc
+        - info
+        - install
+        - md
+        - module
+        - php
+        - profile
+        - test
+        - txt
+    phplint: ~
+    twigcs: ~
+    yamllint: ~

@@ -88,6 +88,7 @@
     "drupal/webform": "^5.4",
     "drupal/yoast_seo": "^1.5",
     "oomphinc/composer-installers-extender": "^1.1",
+    "phpro/grumphp": "^0.18",
     "srijanone/ezcontent_admin": "8.x-dev",
     "srijanone/ezcontent_amp": "8.x-dev",
     "srijanone/ezcontent_theme": "8.x-dev",
