@@ -1,0 +1,18 @@
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.article
+    - paragraphs.paragraphs_type.form
+  module:
+    - entity_reference_revisions
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles:
+      form: form
+    target_bundles_drag_drop:
+      form:
+        enabled: true
+        weight: -19
+field_type: entity_reference_revisions

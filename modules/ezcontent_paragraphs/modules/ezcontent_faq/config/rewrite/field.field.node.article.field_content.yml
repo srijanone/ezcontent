@@ -1,0 +1,18 @@
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.article
+    - paragraphs.paragraphs_type.faq
+  module:
+    - entity_reference_revisions
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles:
+      faq: faq
+    target_bundles_drag_drop:
+      faq:
+        enabled: true
+        weight: -20
+field_type: entity_reference_revisions
