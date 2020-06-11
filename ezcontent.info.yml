@@ -13,6 +13,7 @@ install:
   - comment
   - config
   - contact
+  - content_lock_timeout
   - content_moderation
   - contextual
   - crop
@@ -26,6 +27,8 @@ install:
   - ezcontent_user
   - field_ui
   - file
+  - formtips
+  - fvm
   - gin_login
   - google_analytics
   - help
@@ -33,7 +36,6 @@ install:
   - image
   - image_widget_crop
   - linkit
-  - schema_metatag
   - moderation_dashboard
   - moderation_sidebar
   - options
@@ -44,15 +46,17 @@ install:
   - redirect
   - robotstxt
   - scheduler
+  - schema_metatag
   - search
   - shortcut
   - simple_sitemap
+  - smart_trim
   - taxonomy
   - toolbar
   - views
   - views_ui
+  - vertical_tabs_config
   - workflows
-  - fvm
 
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
