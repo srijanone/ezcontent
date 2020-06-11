@@ -82,7 +82,7 @@ class SrijanEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
    *   The config factory object.
    * @param \GuzzleHttp\Client $httpClient
    *   The guzzelhttp client object.
-   *   * @param \Drupal\Core\Logger\LoggerChannelFactory $logger
+   * @param \Drupal\Core\Logger\LoggerChannelFactory $logger
    *   The loggerChannelFactory client object.
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, ConfigFactoryInterface $configFactory, Client $httpClient, LoggerChannelFactory $logger) {

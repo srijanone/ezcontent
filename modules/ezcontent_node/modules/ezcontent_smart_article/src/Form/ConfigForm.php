@@ -318,7 +318,10 @@ class ConfigForm extends ConfigFormBase {
     if ($imageTaggingService === 'google_image_tagging') {
       $gcmSecretKey = $form_state->getValue('gcm_secret_key_image_tags');
       if (empty($gcmSecretKey)) {
-        $form_state->setError($form['gcm_secret_key_image_tags'], t("Field @field_title is required.", ['@field_title' => $form['gcm_secret_key_image_tags']['#title']]));
+        $form_state->setError($form['gcm_secret_key_image_tags'],
+          $this->t("Field @field_title is required.",
+            ['@field_title' => $form['gcm_secret_key_image_tags']['#title']]
+          ));
       }
     }
     // Check if aws sdk exist.
@@ -329,13 +332,22 @@ class ConfigForm extends ConfigFormBase {
         $link = Link::fromTextAndUrl('here', Url::fromUri('https://github.com/aws/aws-sdk-php'));
         $link = $link->toRenderable();
         $link = $this->renderer->render($link);
-        $form_state->setError($form['image_tagging_service'], t("Aws sdk library is missing, please download it from @link", ['@link' => $link]));
+        $form_state->setError($form['image_tagging_service'],
+          $this->t("Aws sdk library is missing, please download it from @link",
+            ['@link' => $link]
+          ));
       }
       elseif (empty($awsAcessKey)) {
-        $form_state->setError($form['aws_access_key_image_tags'], t("Field @field_title is required.", ['@field_title' => $form['aws_access_key_image_tags']['#title']]));
+        $form_state->setError($form['aws_access_key_image_tags'],
+          $this->t("Field @field_title is required.",
+            ['@field_title' => $form['aws_access_key_image_tags']['#title']]
+          ));
       }
       elseif (empty($awsSecretKey)) {
-        $form_state->setError($form['aws_secret_key_image_tags'], t("Field @field_title is required.", ['@field_title' => $form['aws_secret_key_image_tags']['#title']]));
+        $form_state->setError($form['aws_secret_key_image_tags'],
+          $this->t("Field @field_title is required.",
+            ['@field_title' => $form['aws_secret_key_image_tags']['#title']]
+          ));
       }
     }
   }
