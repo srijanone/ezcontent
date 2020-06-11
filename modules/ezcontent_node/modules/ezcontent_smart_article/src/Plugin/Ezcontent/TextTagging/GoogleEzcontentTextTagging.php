@@ -1,11 +1,12 @@
 <?php
 
 namespace Drupal\ezcontent_smart_article\Plugin\Ezcontent\TextTagging;
-
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\ezcontent_smart_article\EzcontentTextTaggingInterface;
 use Drupal\ezcontent_smart_article\EzcontentTextTaggingPluginBase;
 use GuzzleHttp\Client;
+use GuzzleHttp\RequestOptions;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -19,6 +20,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * )
  */
 class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implements EzcontentTextTaggingInterface {
+  
+  /**
+   * The base url of the Google Cloud Natural Language API.
+   */
+  const API_ENDPOINT = 'https://language.googleapis.com/v1beta2/documents:analyzeEntities?key=';
+
   /**
    * The plugin_id.
    *
@@ -92,7 +99,30 @@ class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
    * {@inheritdoc}
    */
   public function getTags($text = '') {
-    // @todo: Add google api call here and return tag array
+    $tags = [];
+    if ($text){
+      $config = $this->configFactory->get('summary_generator.settings');
+      $secretKey = $config->get('gcm_text_tag_api_key');
+      $data = [
+        'encodingType' => 'UTF8',
+        'document' => [
+          'type' => 'PLAIN_TEXT',
+          'content' => Json::decode($text),
+        ],
+      ];
+      $url = static::API_ENDPOINT . $secretKey;
+      $response = $this->httpClient->request('POST', $url, [
+        RequestOptions::JSON => $data,
+        RequestOptions::HEADERS => ['Content-Type' => 'application/json'],
+      ]);
+      
+      if ($response->getStatusCode() == 200) {
+        $result = Json::decode($response->getBody());
+        foreach ($result['entities'] as $entity) {
+          $tags[] = $entity['name'];
+        }
+      }
+    }
+    return array_unique($tags);
   }
-
 }
