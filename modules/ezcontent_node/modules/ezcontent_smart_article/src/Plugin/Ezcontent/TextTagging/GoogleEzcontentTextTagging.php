@@ -1,8 +1,10 @@
 <?php
 
 namespace Drupal\ezcontent_smart_article\Plugin\Ezcontent\TextTagging;
+
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Logger\LoggerChannelFactory;
 use Drupal\ezcontent_smart_article\EzcontentTextTaggingInterface;
 use Drupal\ezcontent_smart_article\EzcontentTextTaggingPluginBase;
 use GuzzleHttp\Client;
@@ -20,7 +22,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * )
  */
 class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implements EzcontentTextTaggingInterface {
-  
+
   /**
    * The base url of the Google Cloud Natural Language API.
    */
@@ -62,6 +64,13 @@ class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
   protected $configFactory;
 
   /**
+   * The channel logger object.
+   *
+   * @var \Drupal\Core\Logger\LoggerChannelFactory
+   */
+  protected $logger;
+
+  /**
    * GuzzleHttp.
    *
    * @var \GuzzleHttp\Client
@@ -81,18 +90,21 @@ class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
    *   The config factory object.
    * @param \GuzzleHttp\Client $httpClient
    *   The guzzelhttp client object.
+   * @param \Drupal\Core\Logger\LoggerChannelFactory $logger
+   *   The loggerChannelFactory client object.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, ConfigFactoryInterface $configFactory, Client $httpClient) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, ConfigFactoryInterface $configFactory, Client $httpClient, LoggerChannelFactory $logger) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->configFactory = $configFactory;
     $this->httpClient = $httpClient;
+    $this->logger = $logger;
   }
 
   /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
-    return new static($configuration, $plugin_id, $plugin_definition, $container->get('config.factory'), $container->get('http_client'));
+    return new static($configuration, $plugin_id, $plugin_definition, $container->get('config.factory'), $container->get('http_client'), $container->get('logger.factory'));
   }
 
   /**
@@ -100,13 +112,13 @@ class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
    */
   public function getTags($text = '') {
     $tags = [];
-    if ($text){
+    if ($text) {
       $config = $this->configFactory->get('summary_generator.settings');
       $secretKey = $config->get('gcm_text_tag_api_key');
       $data = [
         'encodingType' => 'UTF8',
         'document' => [
-          'type' => 'PLAIN_TEXT',
+          'type' => 'HTML',
           'content' => Json::decode($text),
         ],
       ];
@@ -115,14 +127,21 @@ class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
         RequestOptions::JSON => $data,
         RequestOptions::HEADERS => ['Content-Type' => 'application/json'],
       ]);
-      
+
       if ($response->getStatusCode() == 200) {
         $result = Json::decode($response->getBody());
         foreach ($result['entities'] as $entity) {
           $tags[] = $entity['name'];
         }
       }
+      else {
+        $this->logger->get('ezcontent_smart_article')->error('Call to API
+       endpoint failed. Reason: %reason.', [
+         '%reason' => $response->getReasonPhrase(),
+       ]);
+      }
     }
     return array_unique($tags);
   }
+
 }
