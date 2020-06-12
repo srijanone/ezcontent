@@ -1,0 +1,7 @@
+ezcontent_jsonapi_role_access.config:
+  path: '/admin/config/ezcontent-jsonapi-role-access/settings'
+  defaults:
+    _form: '\Drupal\ezcontent_jsonapi_role_access\Form\JsonapiRoleAccessSettingsForm'
+    _title: 'Jsonapi Role Based Access Settings'
+  requirements:
+    _permission: 'access content'

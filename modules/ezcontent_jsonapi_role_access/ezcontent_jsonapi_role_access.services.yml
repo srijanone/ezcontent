@@ -1,0 +1,6 @@
+services:
+  ezcontent_jsonapi_role_access.event_subscriber:
+    class: Drupal\ezcontent_jsonapi_role_access\EventSubscriber\CheckUserRolePermissionEvent
+    arguments: ['@config.factory']
+    tags:
+      - { name: event_subscriber }

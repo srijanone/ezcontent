@@ -1,0 +1,6 @@
+name: Jsonapi Role Based Access
+type: module
+description: 'Provides feature to give or restrict access to jsonapi resources.'
+package: Web services
+core_version_requirement: ^8 || ^9
+configure: ezcontent_jsonapi_role_access.config
