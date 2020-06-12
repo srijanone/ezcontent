@@ -21,12 +21,12 @@ bundle: article
 mode: default
 content:
   content_moderation_control:
-    weight: -20
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_author:
-    weight: 5
+    weight: 4
     label: above
     settings:
       link: false
@@ -36,7 +36,7 @@ content:
     region: content
   field_content:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 1
     region: content
     label: hidden
     settings:
@@ -44,34 +44,20 @@ content:
       link: ''
     third_party_settings: {  }
   field_meta_tags:
-    weight: 4
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
-  field_short_title:
-    type: string
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_subhead:
-    type: string
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
   links:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_short_title: true
+  field_subhead: true
   field_summary: true
   field_tags: true
   field_thumbnail: true
