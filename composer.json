@@ -83,7 +83,6 @@
     "drupal/simple_gmap": "^2.0",
     "drupal/simple_oauth": "^4.0",
     "drupal/simple_sitemap": "^3.3",
-    "drupal/slick": "2.0",
     "drupal/slick_entityreference": "^2.0",
     "drupal/slick_paragraphs": "2.x",
     "drupal/smart_trim": "^1.3",
