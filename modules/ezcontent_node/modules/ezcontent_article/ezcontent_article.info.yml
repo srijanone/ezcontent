@@ -5,6 +5,7 @@ package: EZContent Node
 core: 8.x
 dependencies:
   - autocomplete_deluxe
+  - diff
   - ezcontent_author
   - ezcontent_node
   - ezcontent_image
