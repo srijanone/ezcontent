@@ -23,7 +23,7 @@ content:
       box_style: ''
       box_caption: ''
       box_caption_custom: ''
-      ratio: enforced
+      ratio: ''
       caption:
         title: title
         alt: alt
@@ -51,12 +51,10 @@ content:
           breakpoint: ''
       current_view_mode: slick
       background: false
-      iframe_lazy: true
       icon: ''
       layout: ''
       view_mode: ''
       cache: 0
-      optionset: default
       skin: ''
       style: ''
       box_media_style: ''
