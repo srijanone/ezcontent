@@ -1,0 +1,147 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/card"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
+            {
+                "href": "http:\/\/default\/media\/23\/edit?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 34
+        }
+    ],
+    "uuid": [
+        {
+            "value": "7ef034f2-82b6-4380-8ca2-ed22ab5d48a8"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 45
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "card"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-14T16:00:38+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "35"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_card"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_link": [
+        {
+            "uri": "internal:\/",
+            "title": "CTA Link",
+            "options": []
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/23\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "2823895f-4403-47b2-9f1f-baccdb023e35"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "field_short_title": [
+        {
+            "value": "We Welcome you at Srijan"
+        }
+    ],
+    "field_subhead": [
+        {
+            "value": "Thank you for watching video"
+        }
+    ],
+    "field_summary": [
+        {
+            "value": "<p>Summary of the hero text can be added here.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Summary of the hero text can be added here.<\/p>"
+        }
+    ],
+    "field_text_background_color": [
+        {
+            "color": "#000000",
+            "opacity": 0.37
+        }
+    ],
+    "field_text_position": [
+        {
+            "value": "right"
+        }
+    ],
+    "field_title": [
+        {
+            "value": "Hero Banner Component Title"
+        }
+    ]
+}

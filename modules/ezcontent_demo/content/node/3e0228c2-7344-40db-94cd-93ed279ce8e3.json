@@ -1,0 +1,257 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/about-ezcontent-components?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/landing_page"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/landing_page\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/landing_page\/uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json",
+                "lang": "en"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 20
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3e0228c2-7344-40db-94cd-93ed279ce8e3"
+        }
+    ],
+    "vid": [
+        {
+            "value": 30
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "landing_page"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2020-06-14T19:10:24+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/landing_page\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b89a6aaa-c0f3-43a5-ad45-9fdb0aabac20"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/landing_page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b89a6aaa-c0f3-43a5-ad45-9fdb0aabac20"
+                    }
+                ],
+                "lang": "en"
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "About ezContent Components",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-14T19:03:26+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-06-14T19:10:24+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "About ezContent Components | EZ Content",
+                "description": "ezContent is an open-source Drupal distribution developed by Srijan Technologies. It provides easy to use standard built-in publishing features like scheduling, workflow-based content generation.\u00a0ezContent\u00a0is SEO ready providing features like Metatag generation, sitemap, and real-time SEO widget to test the content.\u00a0ezContent article components are built and maintained for Drupal front end (coupled) as well as for de-coupled front ends on Angular, React, and Gatsby."
+            }
+        }
+    ],
+    "metatag_normalized": [
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "title",
+                "content": "About ezContent Components | EZ Content"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "description",
+                "content": "ezContent is an open-source Drupal distribution developed by Srijan Technologies. It provides easy to use standard built-in publishing features like scheduling, workflow-based content generation.\u00a0ezContent\u00a0is SEO ready providing features like Metatag generation, sitemap, and real-time SEO widget to test the content.\u00a0ezContent article components are built and maintained for Drupal front end (coupled) as well as for de-coupled front ends on Angular, React, and Gatsby."
+            },
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/about-ezcontent-components",
+            "pid": 28,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>ezContent is an open-source <a href=\"http:\/\/drupal.org\/\">Drupal<\/a> distribution developed by <a href=\"https:\/\/www.srijan.net\/\">Srijan Technologies<\/a>. It provides easy to use standard built-in publishing features like scheduling, workflow-based content generation.&nbsp;ezContent&nbsp;is SEO ready providing features like Metatag generation, sitemap, and real-time SEO widget to test the content.&nbsp;ezContent article components are built and maintained for Drupal front end (coupled) as well as for de-coupled front ends on Angular, React, and Gatsby. It also provides AI-enabled editorial experience, helping editors generate auto tags and auto-summary.<\/p>\r\n\r\n<p>ezcontent provides ready to launch publishing website saving weeks of customer's time.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>ezContent is an open-source <a href=\"http:\/\/drupal.org\/\">Drupal<\/a> distribution developed by <a href=\"https:\/\/www.srijan.net\/\">Srijan Technologies<\/a>. It provides easy to use standard built-in publishing features like scheduling, workflow-based content generation.\u00a0ezContent\u00a0is SEO ready providing features like Metatag generation, sitemap, and real-time SEO widget to test the content.\u00a0ezContent article components are built and maintained for Drupal front end (coupled) as well as for de-coupled front ends on Angular, React, and Gatsby. It also provides AI-enabled editorial experience, helping editors generate auto tags and auto-summary.<\/p>\n\n<p>ezcontent provides ready to launch publishing website saving weeks of customer's time.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ],
+    "layout_builder__layout": [
+        {
+            "section": {
+                "layout_id": "layout_onecol",
+                "layout_settings": {
+                    "label": ""
+                },
+                "components": [
+                    {
+                        "uuid": "ef475ec8-2f6b-4d48-af12-f9766d224e37",
+                        "region": "content",
+                        "configuration": {
+                            "label_display": "0",
+                            "context_mapping": {
+                                "entity": "layout_builder.entity"
+                            },
+                            "id": "field_block:node:landing_page:body",
+                            "formatter": {
+                                "label": "hidden",
+                                "type": "text_default",
+                                "settings": [],
+                                "third_party_settings": []
+                            }
+                        },
+                        "additional": [],
+                        "weight": 2
+                    },
+                    {
+                        "uuid": "bbdd29db-0baf-44c7-956c-c892949eb609",
+                        "region": "content",
+                        "configuration": {
+                            "id": "field_block:node:landing_page:title",
+                            "label": "Title",
+                            "provider": "layout_builder",
+                            "label_display": 0,
+                            "formatter": {
+                                "label": "hidden",
+                                "type": "string",
+                                "settings": {
+                                    "link_to_entity": 0
+                                },
+                                "third_party_settings": []
+                            },
+                            "context_mapping": {
+                                "entity": "layout_builder.entity",
+                                "view_mode": "view_mode"
+                            }
+                        },
+                        "additional": [],
+                        "weight": 1
+                    },
+                    {
+                        "uuid": "28ae1a5d-59e2-4cc5-bafe-00f2faf5c852",
+                        "region": "content",
+                        "configuration": {
+                            "id": "inline_block:referenced_cards",
+                            "label": "EzContent Components ",
+                            "provider": "layout_builder",
+                            "label_display": "visible",
+                            "view_mode": "full",
+                            "block_revision_id": "9",
+                            "block_serialized": null,
+                            "context_mapping": [],
+                            "type": "referenced_cards",
+                            "uuid": "b02b8d46-3912-4eb3-a481-070205b7027f"
+                        },
+                        "additional": [],
+                        "weight": 3
+                    }
+                ],
+                "third_party_settings": []
+            }
+        }
+    ]
+}

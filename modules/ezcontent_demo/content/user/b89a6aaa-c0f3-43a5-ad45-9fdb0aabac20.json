@@ -53,12 +53,6 @@
             "value": true
         }
     ],
-    "created": [
-        {
-            "value": "2020-04-09T08:43:14+00:00",
-            "format": "Y-m-d\\TH:i:sP"
-        }
-    ],
     "init": [
         {
             "value": "test-admin@ezcontent.srijan.net"

@@ -1,0 +1,441 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/article\/hero-banner-component?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/article"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_content": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_thumbnail": [
+            {
+                "href": "http:\/\/default\/media\/22\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 8
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6735431b-ab78-47f7-8327-d4ed69c56dbd"
+        }
+    ],
+    "vid": [
+        {
+            "value": 16
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "article"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2020-06-14T16:12:39+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b89a6aaa-c0f3-43a5-ad45-9fdb0aabac20"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b89a6aaa-c0f3-43a5-ad45-9fdb0aabac20"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_content": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/hero_media"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "010cb07d-c843-4ff7-bce7-e8af7710eee5"
+                    }
+                ],
+                "target_revision_id": "49"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7547cbf3-3b1e-461b-a675-bda918beb7d5"
+                    }
+                ],
+                "target_revision_id": "50"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/embed"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e614073d-1e7a-4f42-a927-66061a5e85f5"
+                    }
+                ],
+                "target_revision_id": "51"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/faq"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "db2b0deb-e739-44a4-8179-10b2ad07bd66"
+                    }
+                ],
+                "target_revision_id": "56"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_thumbnail": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/22\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5490d380-0ef5-42d0-ba89-c47a81b53b21"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Hero Banner Component",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-14T15:54:15+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-06-14T16:12:39+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "moderation_state": [
+        {
+            "value": "published",
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_article_type": "Article",
+                "title": "Hero Banner Component | EZ Content",
+                "schema_article_name": "Hero Banner Component",
+                "schema_article_headline": "Hero Banner Component",
+                "canonical_url": "http:\/\/default\/article\/hero-banner-component",
+                "content_language": "en",
+                "schema_article_image": {
+                    "@type": "ImageObject",
+                    "width": "100",
+                    "height": "100"
+                },
+                "schema_article_date_published": "Sun, 06\/14\/2020 - 15:54",
+                "schema_article_is_accessible_for_free": "True",
+                "schema_article_date_modified": "Sun, 06\/14\/2020 - 16:12",
+                "schema_article_author_0": {
+                    "@type": "Person",
+                    "@id": "http:\/\/default\/user\/3",
+                    "name": "test-admin",
+                    "url": "http:\/\/default\/user\/3"
+                },
+                "schema_article_publisher": {
+                    "@type": "Person",
+                    "@id": "http:\/\/default\/user\/3",
+                    "name": "test-admin",
+                    "url": "http:\/\/default\/user\/3"
+                },
+                "schema_article_main_entity_of_page": "http:\/\/default\/article\/hero-banner-component"
+            }
+        }
+    ],
+    "metatag_normalized": [
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "@type",
+                "content": "Article",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "title",
+                "content": "Hero Banner Component | EZ Content"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "name",
+                "content": "Hero Banner Component",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "headline",
+                "content": "Hero Banner Component",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "link",
+            "attributes": {
+                "rel": "canonical",
+                "href": "http:\/\/default\/article\/hero-banner-component"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "http-equiv": "content-language",
+                "content": "en"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "image",
+                "content": {
+                    "@type": "ImageObject",
+                    "width": "100",
+                    "height": "100"
+                },
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "datePublished",
+                "content": "Sun, 06\/14\/2020 - 15:54",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "isAccessibleForFree",
+                "content": "True",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "dateModified",
+                "content": "Sun, 06\/14\/2020 - 16:12",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "author",
+                "content": {
+                    "@type": "Person",
+                    "@id": "http:\/\/default\/user\/3",
+                    "name": "test-admin",
+                    "url": "http:\/\/default\/user\/3"
+                },
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "publisher",
+                "content": {
+                    "@type": "Person",
+                    "@id": "http:\/\/default\/user\/3",
+                    "name": "test-admin",
+                    "url": "http:\/\/default\/user\/3"
+                },
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "mainEntityOfPage",
+                "content": "http:\/\/default\/article\/hero-banner-component",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/article\/hero-banner-component",
+            "pid": 16,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "field_summary": [
+        {
+            "value": "The hero image is often the first visual element a visitor encounters on the site; it presents an overview of the site's most important content.\r\n\r\nA hero component on ezContent consists of the featured image, title, and text. (e.g. a rotating list of images and\/or topics).\r\n\r\nThe text overlay of Hero is completely configurable including text position, text color, opacity etc."
+        }
+    ],
+    "field_yoast_seo": [
+        {
+            "status": "0",
+            "focus_keyword": "",
+            "lang": "en"
+        }
+    ]
+}

@@ -1,0 +1,90 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+        }
+    },
+    "id": [
+        {
+            "value": 83
+        }
+    ],
+    "uuid": [
+        {
+            "value": "dc33d023-0d9b-4962-a844-00f7812f70eb"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 102
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "text"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-14T16:41:36+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "15"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_content"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_body": [
+        {
+            "value": "<p>A content writer can add upload&nbsp;images &amp; videos&nbsp;(Youtube and Vimeo) from the entity browser.<\/p>\r\n\r\n<p>Content writer and an editor are provided with an easy media listing page, wherein media can be searched via tags, names.<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>A content writer can add upload\u00a0images &amp; videos\u00a0(Youtube and Vimeo) from the entity browser.<\/p>\n\n<p>Content writer and an editor are provided with an easy media listing page, wherein media can be searched via tags, names.<\/p>",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}
