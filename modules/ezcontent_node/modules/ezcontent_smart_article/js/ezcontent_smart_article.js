@@ -59,6 +59,8 @@
         }
         $('.field--type-ezcontent-smart-tags .tags-link-field .ui-autocomplete-input').val(finalTags);
       });
+      // Open invalid subscription dialog.
+      $('#edit-overlay-link').trigger('click');
     }
   };
 
