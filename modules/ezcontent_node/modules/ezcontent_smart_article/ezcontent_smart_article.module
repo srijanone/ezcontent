@@ -13,6 +13,7 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Ajax\HtmlCommand;
 use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_views_data_alter().
@@ -44,9 +45,19 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       empty($summary_config->get('abstractive_summary_api_url')) ||
       empty($summary_config->get('extractive_summary_api_url')) ||
       empty($summary_config->get('smart_tags_api_url'))) {
-      \Drupal::messenger()
-        ->addError(t('Smart Article is proprietary, license-based with <a href="@link"> Srijan</a>.Please contact at <a href="@mailtolink">business@srijan.net</a> for more information.',
-          ['@link' => 'https://www.srijan.net/', '@mailtolink' => 'mailto:business@srijan.net']));
+      $form['overlay_link'] = [
+        '#type' => 'link',
+        '#url' => Url::fromRoute('ezcontent_smart_article.invalid_subscription'),
+        '#attributes' => [
+          'class' => ['use-ajax'],
+          'data-dialog-type' => 'modal',
+          'data-dialog-options' => Json::encode([
+            'width' => 700,
+            'closeOnEscape' => FALSE,
+            'modal' => TRUE,
+          ]),
+        ],
+      ];
     }
     // Make Company name Autocomplete.
     $form['field_company_name']['widget'][0]['value']['#autocomplete_route_name'] = 'ezcontent_smart_article.autocomplete.companies';
@@ -236,6 +247,9 @@ function ezcontent_smart_article_theme($existing, $type, $theme, $path) {
       'variables' => ['tags' => []],
     ],
     'smart_article_get_subscription_landing_page' => [
+      'variables' => [],
+    ],
+    'smart_article_invalid_subscription_popup' => [
       'variables' => [],
     ],
   ];

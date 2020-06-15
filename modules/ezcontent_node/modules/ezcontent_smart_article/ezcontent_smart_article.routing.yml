@@ -20,3 +20,10 @@ ezcontent_smart_article.get_subscription:
     _controller: '\Drupal\ezcontent_smart_article\Controller\EzcontentSmartArticleServicesSubscriber::getSubscription'
   requirements:
     _access: 'TRUE'
+
+ezcontent_smart_article.invalid_subscription:
+  path: '/ezcontent-smart-article/invalid-subscription'
+  defaults:
+    _controller: '\Drupal\ezcontent_smart_article\Controller\EzcontentSmartArticleInvalidSubscription::showInvalidSubscriptionErrorPopup'
+  requirements:
+    _access: 'TRUE'
