@@ -1,0 +1,403 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/article\/reference-cards?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/article"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "href": "http:\/\/default\/user\/3?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_content": [
+            {
+                "href": ""
+            },
+            {
+                "href": ""
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_thumbnail": [
+            {
+                "href": "http:\/\/default\/media\/39\/edit?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 19
+        }
+    ],
+    "uuid": [
+        {
+            "value": "ed2d6edb-1809-44aa-b3ac-813f5807ee66"
+        }
+    ],
+    "vid": [
+        {
+            "value": 28
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "article"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2020-06-14T16:54:16+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b89a6aaa-c0f3-43a5-ad45-9fdb0aabac20"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/3?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "b89a6aaa-c0f3-43a5-ad45-9fdb0aabac20"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_content": [
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/text"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "605528de-8593-44c1-8990-40e2cb315f87"
+                    }
+                ],
+                "target_revision_id": "120"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": ""
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/faq"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "9035160c-335e-4987-a340-f182895a0e99"
+                    }
+                ],
+                "target_revision_id": "123"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_thumbnail": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/media\/39\/edit?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "bd353e40-52fe-4a37-b508-e99d17517c2d"
+                    }
+                ]
+            }
+        ]
+    },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Reference Cards",
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-14T16:52:37+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2020-06-14T16:54:16+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "moderation_state": [
+        {
+            "value": "published",
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "schema_article_type": "Article",
+                "title": "Reference Cards | EZ Content",
+                "schema_article_name": "Reference Cards",
+                "schema_article_headline": "Reference Cards",
+                "canonical_url": "http:\/\/default\/article\/reference-cards",
+                "content_language": "en",
+                "schema_article_image": {
+                    "@type": "ImageObject",
+                    "width": "100",
+                    "height": "100"
+                },
+                "schema_article_date_published": "Sun, 06\/14\/2020 - 16:52",
+                "schema_article_is_accessible_for_free": "True",
+                "schema_article_date_modified": "Sun, 06\/14\/2020 - 16:54",
+                "schema_article_author_0": {
+                    "@type": "Person",
+                    "@id": "http:\/\/default\/user\/3",
+                    "name": "test-admin",
+                    "url": "http:\/\/default\/user\/3"
+                },
+                "schema_article_publisher": {
+                    "@type": "Person",
+                    "@id": "http:\/\/default\/user\/3",
+                    "name": "test-admin",
+                    "url": "http:\/\/default\/user\/3"
+                },
+                "schema_article_main_entity_of_page": "http:\/\/default\/article\/reference-cards"
+            }
+        }
+    ],
+    "metatag_normalized": [
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "@type",
+                "content": "Article",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "title",
+                "content": "Reference Cards | EZ Content"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "name",
+                "content": "Reference Cards",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "headline",
+                "content": "Reference Cards",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "link",
+            "attributes": {
+                "rel": "canonical",
+                "href": "http:\/\/default\/article\/reference-cards"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "http-equiv": "content-language",
+                "content": "en"
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "image",
+                "content": {
+                    "@type": "ImageObject",
+                    "width": "100",
+                    "height": "100"
+                },
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "datePublished",
+                "content": "Sun, 06\/14\/2020 - 16:52",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "isAccessibleForFree",
+                "content": "True",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "dateModified",
+                "content": "Sun, 06\/14\/2020 - 16:54",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "author",
+                "content": {
+                    "@type": "Person",
+                    "@id": "http:\/\/default\/user\/3",
+                    "name": "test-admin",
+                    "url": "http:\/\/default\/user\/3"
+                },
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "publisher",
+                "content": {
+                    "@type": "Person",
+                    "@id": "http:\/\/default\/user\/3",
+                    "name": "test-admin",
+                    "url": "http:\/\/default\/user\/3"
+                },
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        },
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "mainEntityOfPage",
+                "content": "http:\/\/default\/article\/reference-cards",
+                "group": "schema_article",
+                "schema_metatag": true
+            },
+            "lang": "en"
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/article\/reference-cards",
+            "pid": 27,
+            "langcode": "en",
+            "lang": "en"
+        }
+    ],
+    "field_summary": [
+        {
+            "value": "Reference Cards: As the name says, any article page in ezConetnet has a summary and a teaser field. An editor can\u00a0highlight or link any article to the other using Reference Cards Paragraph. \r\n"
+        }
+    ],
+    "field_yoast_seo": [
+        {
+            "status": "0",
+            "focus_keyword": "",
+            "lang": "en"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "_links": {
+        "self": {
+            "href": ""
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/faq_qa"
+        }
+    },
+    "id": [
+        {
+            "value": 52
+        }
+    ],
+    "uuid": [
+        {
+            "value": "1e83ca27-ef4e-4d9d-aead-474f072a83d5"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 71
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "faq_qa"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "created": [
+        {
+            "value": "2020-06-14T16:22:32+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "54"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "paragraph"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_faq_items"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_answer": [
+        {
+            "value": "<p>Paragraph Type: Cards<\/p>\r\n\r\n<p><strong>Label:<\/strong>&nbsp;HCards&nbsp;<strong>Machine Name:&nbsp;<\/strong>card_list<\/p>\r\n\r\n<p><strong>Fields: <\/strong>Card, Layout, Link, Title, View Mode<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p>Paragraph Type: Cards<\/p>\n\n<p><strong>Label:<\/strong>\u00a0HCards\u00a0<strong>Machine Name:\u00a0<\/strong>card_list<\/p>\n\n<p><strong>Fields: <\/strong>Card, Layout, Link, Title, View Mode<\/p>"
+        }
+    ],
+    "field_question": [
+        {
+            "value": "Tech Notes",
+            "lang": "en"
+        }
+    ]
+}
