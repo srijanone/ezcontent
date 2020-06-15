@@ -74,30 +74,32 @@ class GenerateSummary {
     $extractive_api_endpoint = $this->config->get('extractive_summary_api_url');
     $end_point = $type === 'abstractive' ? $abstractive_api_endpoint : $extractive_api_endpoint;
     $payload = ($type === 'extractive') ? [
-      'text' => $text,
-      "sent_count" => $sent_count,
-    ] : ['text' => $text];
+      [
+        'name' => 'text',
+        'Content-type' => 'multipart/form-data',
+        'contents' => $text,
+      ],
+      [
+        'name' => 'sent_count',
+        'Content-type' => 'multipart/form-data',
+        'contents' => $sent_count,
+      ],
+
+    ] : [
+      [
+        'name' => 'text',
+        'Content-type' => 'multipart/form-data',
+        'contents' => $text,
+      ],
+    ];
     // Make api call to get summary based on type.
-    // @todo check how to make gazzel http request with form-data.
     try {
-      $curl = curl_init();
-      curl_setopt_array($curl, [
-        CURLOPT_URL => $end_point,
-        CURLOPT_RETURNTRANSFER => TRUE,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => TRUE,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => $payload,
-        CURLOPT_HTTPHEADER => [
-          "Content-Type: multipart/form-data; boundary=--------------------------284616023451159285842201",
-        ],
+      $request = $this->httpClient->post($end_point, [
+        'multipart' => $payload,
       ]);
-      $response = curl_exec($curl);
-      curl_close($curl);
-      return $response;
+      if ($request->getStatusCode() == 200) {
+        return $request->getBody();
+      }
     }
     catch (\Exception $e) {
       $this->logger->get('ezcontent_smart_article')->error('Call to API
