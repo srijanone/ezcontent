@@ -2,7 +2,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.article
-    - paragraphs.paragraphs_type.faq
+    - paragraphs.paragraphs_type.faq_qa
   module:
     - entity_reference_revisions
 settings:
@@ -10,9 +10,9 @@ settings:
   handler_settings:
     negate: 1
     target_bundles:
-      faq: faq
+      faq_qa: faq_qa
     target_bundles_drag_drop:
-      faq:
+      faq_qa:
         enabled: true
         weight: -20
 field_type: entity_reference_revisions
