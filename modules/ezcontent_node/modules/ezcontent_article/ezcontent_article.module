@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_modules_installed().
+ */
+function ezcontent_article_modules_installed($modules) {
+  $config = \Drupal::service('config.factory')->getEditable('metatag.metatag_defaults.node__article');
+  if (in_array('metatag_twitter_cards', $modules)) {
+    $config->set('tags.twitter_cards_image', '[node:field_thumbnail:entity:url]');
+    $config->set('tags.twitter_cards_page_url', '[node:url]');
+    $config->set('tags.twitter_cards_description', '[node:field_summary]');
+    $config->set('tags.twitter_cards_type', 'summary');
+    $config->set('tags.twitter_cards_title', '[node:title]');
+  } 
+  elseif (in_array('metatag_open_graph', $modules)) {
+    $config->set('tags.og_site_name', '[site:name]');
+    $config->set('tags.og_image', '[node:field_thumbnail]');
+    $config->set('tags.og_image_url', '[node:field_thumbnail:entity:url]');
+    $config->set('tags.og_title', '[node:title]');
+    $config->set('tags.og_type', '[node:content-type]');
+    $config->set('tags.og_url', '[node:url]');
+    $config->set('tags.og_description', '[node:field_summary]');
+    $config->set('tags.og_determiner', '[site:name]');  
+  }
+  $config->save();
+}
