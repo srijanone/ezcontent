@@ -5,6 +5,7 @@ dependencies:
     - entity_browser.browser.smart_image_browser
     - field.field.node.smart_article.body
     - field.field.node.smart_article.field_company_name
+    - field.field.node.smart_article.field_meta_tags
     - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
     - field.field.node.smart_article.field_smart_text_summary
@@ -16,6 +17,7 @@ dependencies:
     - ezcontent_smart_article
     - field_group
     - image
+    - metatag
     - path
     - scheduler
     - text
@@ -89,6 +91,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_meta_tags:
+    weight: 26
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content    
   field_smart_media_image:
     type: entity_browser_entity_reference
     weight: 14

@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: node__smart_article
+label: 'Content: Smart Article'
+tags:
+  title: '[node:title] | [site:name]'
+  keywords: '[node:field_smart_tags]'
+  description: '[node:field_smart_text_summary:summary]'
