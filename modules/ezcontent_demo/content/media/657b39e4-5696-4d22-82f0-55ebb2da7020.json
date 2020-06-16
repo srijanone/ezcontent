@@ -159,23 +159,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| EZ Content"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "| EZ Content"
-            },
-            "lang": "en"
-        }
-    ],
     "path": [
         {
             "alias": null,

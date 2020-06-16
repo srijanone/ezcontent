@@ -137,32 +137,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "About ezContent Components | EZ Content",
-                "description": "ezContent is an open-source Drupal distribution developed by Srijan Technologies. It provides easy to use standard built-in publishing features like scheduling, workflow-based content generation.\u00a0ezContent\u00a0is SEO ready providing features like Metatag generation, sitemap, and real-time SEO widget to test the content.\u00a0ezContent article components are built and maintained for Drupal front end (coupled) as well as for de-coupled front ends on Angular, React, and Gatsby."
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "About ezContent Components | EZ Content"
-            },
-            "lang": "en"
-        },
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "description",
-                "content": "ezContent is an open-source Drupal distribution developed by Srijan Technologies. It provides easy to use standard built-in publishing features like scheduling, workflow-based content generation.\u00a0ezContent\u00a0is SEO ready providing features like Metatag generation, sitemap, and real-time SEO widget to test the content.\u00a0ezContent article components are built and maintained for Drupal front end (coupled) as well as for de-coupled front ends on Angular, React, and Gatsby."
-            },
-            "lang": "en"
-        }
-    ],
     "path": [
         {
             "alias": "\/about-ezcontent-components",
