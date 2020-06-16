@@ -5,6 +5,7 @@ dependencies:
     - field.field.node.liveblog.body
     - field.field.node.liveblog.field_end_date
     - field.field.node.liveblog.field_highlights
+    - field.field.node.liveblog.field_meta_tags
     - field.field.node.liveblog.field_posts_load_limit
     - field.field.node.liveblog.field_posts_number_initial
     - field.field.node.liveblog.field_short_title
@@ -15,6 +16,7 @@ dependencies:
     - content_moderation
     - datetime
     - field_group
+    - metatag
     - path
     - scheduler
 third_party_settings:
@@ -48,6 +50,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_meta_tags:
+    weight: 124
+    settings:
+      sidebar: true
+    third_party_settings: {  }
+    type: metatag_firehose
     region: content
   field_short_title:
     weight: 9
