@@ -113,23 +113,6 @@
             "lang": "en"
         }
     ],
-    "metatag": [
-        {
-            "value": {
-                "title": "| EZ Content"
-            }
-        }
-    ],
-    "metatag_normalized": [
-        {
-            "tag": "meta",
-            "attributes": {
-                "name": "title",
-                "content": "| EZ Content"
-            },
-            "lang": "en"
-        }
-    ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/block_content\/referenced_cards\/field_article": [
             {
