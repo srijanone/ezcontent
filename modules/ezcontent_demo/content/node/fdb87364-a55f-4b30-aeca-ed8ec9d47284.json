@@ -46,7 +46,7 @@
     ],
     "vid": [
         {
-            "value": 21
+            "value": 39
         }
     ],
     "langcode": [
@@ -62,7 +62,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2020-06-14T16:35:22+00:00",
+            "value": "2020-06-17T08:20:45+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -117,7 +117,7 @@
                         "value": "ec27d3b7-701f-4a98-b678-35d4a68b3f39"
                     }
                 ],
-                "target_revision_id": "87"
+                "target_revision_id": "212"
             },
             {
                 "_links": {
@@ -133,7 +133,7 @@
                         "value": "52a5aad3-60f8-4040-bb4d-ff19fec0af90"
                     }
                 ],
-                "target_revision_id": "91"
+                "target_revision_id": "216"
             },
             {
                 "_links": {
@@ -149,7 +149,7 @@
                         "value": "4438dc97-2a1b-4ae9-b784-a4e1b3030c40"
                     }
                 ],
-                "target_revision_id": "92"
+                "target_revision_id": "217"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_thumbnail": [
@@ -191,7 +191,7 @@
     ],
     "changed": [
         {
-            "value": "2020-06-14T16:35:22+00:00",
+            "value": "2020-06-17T08:20:45+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -229,7 +229,7 @@
     "path": [
         {
             "alias": "\/article\/map-component",
-            "pid": 20,
+            "pid": 13,
             "langcode": "en",
             "lang": "en"
         }

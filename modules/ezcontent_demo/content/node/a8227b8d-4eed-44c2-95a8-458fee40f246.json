@@ -33,7 +33,7 @@
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_thumbnail": [
             {
-                "href": "http:\/\/default\/media\/24\/edit?_format=hal_json"
+                "href": "http:\/\/default\/media\/40\/edit?_format=hal_json"
             }
         ]
     },
@@ -49,7 +49,7 @@
     ],
     "vid": [
         {
-            "value": 17
+            "value": 36
         }
     ],
     "langcode": [
@@ -65,7 +65,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2020-06-14T16:19:55+00:00",
+            "value": "2020-06-17T07:53:06+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -120,7 +120,7 @@
                         "value": "8f24fedd-d3b4-489c-87da-971d5edc6af0"
                     }
                 ],
-                "target_revision_id": "57"
+                "target_revision_id": "187"
             },
             {
                 "_links": {
@@ -136,7 +136,7 @@
                         "value": "be4dae2f-14cd-4e09-8587-8621ba85bf1a"
                     }
                 ],
-                "target_revision_id": "61"
+                "target_revision_id": "191"
             },
             {
                 "_links": {
@@ -152,7 +152,7 @@
                         "value": "ac3ae367-c400-4c8a-879c-77841393a3e6"
                     }
                 ],
-                "target_revision_id": "62"
+                "target_revision_id": "192"
             },
             {
                 "_links": {
@@ -168,14 +168,14 @@
                         "value": "932e6651-eb89-4a01-9c09-4c2916b5b4d9"
                     }
                 ],
-                "target_revision_id": "63"
+                "target_revision_id": "193"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_thumbnail": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/media\/24\/edit?_format=hal_json"
+                        "href": "http:\/\/default\/media\/40\/edit?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
@@ -183,7 +183,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "9944e737-bdc4-4027-8235-fe1101f93397"
+                        "value": "98d11174-4189-459f-b668-d997b3dad707"
                     }
                 ]
             }
@@ -210,7 +210,7 @@
     ],
     "changed": [
         {
-            "value": "2020-06-14T16:19:55+00:00",
+            "value": "2020-06-17T07:53:06+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -248,7 +248,7 @@
     "path": [
         {
             "alias": "\/article\/gallery",
-            "pid": 17,
+            "pid": 10,
             "langcode": "en",
             "lang": "en"
         }

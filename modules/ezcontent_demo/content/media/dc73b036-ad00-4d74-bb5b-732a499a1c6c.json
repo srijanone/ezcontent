@@ -53,7 +53,7 @@
     ],
     "revision_created": [
         {
-            "value": "2020-06-14T16:48:59+00:00",
+            "value": "2020-06-15T10:24:40+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -94,7 +94,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "bdfd1b99-2500-484a-b6b9-c4a2d4f1f9d6"
+                        "value": "d7ea7562-de63-468f-8c63-73d4131b5b41"
                     }
                 ],
                 "lang": "en",
@@ -116,14 +116,14 @@
                 },
                 "uuid": [
                     {
-                        "value": "bdfd1b99-2500-484a-b6b9-c4a2d4f1f9d6"
+                        "value": "d7ea7562-de63-468f-8c63-73d4131b5b41"
                     }
                 ],
                 "lang": "en",
                 "alt": "library-component",
                 "title": "",
-                "width": "864",
-                "height": "468"
+                "width": "569",
+                "height": "318"
             }
         ]
     },
@@ -142,7 +142,7 @@
     ],
     "changed": [
         {
-            "value": "2020-06-14T16:48:52+00:00",
+            "value": "2020-06-17T08:23:44+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
