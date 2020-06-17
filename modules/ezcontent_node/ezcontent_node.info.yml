@@ -10,4 +10,5 @@ dependencies:
   - paragraphs_previewer:paragraphs_previewer
   - pathauto:pathauto
   - scheduler:scheduler
+  - social_media:social_media
   - yoast_seo:yoast_seo

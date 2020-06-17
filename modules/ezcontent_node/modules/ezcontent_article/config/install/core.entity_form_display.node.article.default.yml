@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.field_content
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_short_title
+    - field.field.node.article.field_social_sharing
     - field.field.node.article.field_subhead
     - field.field.node.article.field_summary
     - field.field.node.article.field_tags
@@ -23,6 +24,7 @@ dependencies:
     - paragraphs
     - path
     - scheduler
+    - social_media
     - yoast_seo
 third_party_settings:
   field_group:
@@ -129,8 +131,8 @@ content:
       autocollapse: none
       closed_mode_threshold: 0
       features:
-        duplicate: duplicate
         collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
     region: content
   field_meta_tags:
@@ -146,6 +148,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_social_sharing:
+    weight: 124
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: social_media_default
     region: content
   field_subhead:
     weight: -3
@@ -267,6 +276,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   unpublish_on:
