@@ -46,7 +46,7 @@
     ],
     "vid": [
         {
-            "value": 25
+            "value": 43
         }
     ],
     "langcode": [
@@ -62,7 +62,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2020-06-14T16:45:59+00:00",
+            "value": "2020-06-17T08:23:06+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -117,7 +117,7 @@
                         "value": "ddbd1056-5c89-4f82-91e6-a253cbcc70a4"
                     }
                 ],
-                "target_revision_id": "107"
+                "target_revision_id": "232"
             },
             {
                 "_links": {
@@ -133,7 +133,7 @@
                         "value": "6e5a9f70-4580-48a5-9ba5-39e25e0057fc"
                     }
                 ],
-                "target_revision_id": "108"
+                "target_revision_id": "233"
             },
             {
                 "_links": {
@@ -149,7 +149,7 @@
                         "value": "4720f21e-c95f-4017-a258-25dfc227b2a9"
                     }
                 ],
-                "target_revision_id": "112"
+                "target_revision_id": "237"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_thumbnail": [
@@ -191,7 +191,7 @@
     ],
     "changed": [
         {
-            "value": "2020-06-14T16:45:59+00:00",
+            "value": "2020-06-17T08:23:06+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -229,7 +229,7 @@
     "path": [
         {
             "alias": "\/article\/quote",
-            "pid": 24,
+            "pid": 17,
             "langcode": "en",
             "lang": "en"
         }

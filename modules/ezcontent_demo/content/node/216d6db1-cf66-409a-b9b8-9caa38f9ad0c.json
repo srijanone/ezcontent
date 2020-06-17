@@ -46,7 +46,7 @@
     ],
     "vid": [
         {
-            "value": 20
+            "value": 38
         }
     ],
     "langcode": [
@@ -62,7 +62,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2020-06-14T16:32:21+00:00",
+            "value": "2020-06-17T08:19:44+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -117,7 +117,7 @@
                         "value": "4b25c729-9570-4fb1-a926-5c6a483d2e1d"
                     }
                 ],
-                "target_revision_id": "81"
+                "target_revision_id": "206"
             },
             {
                 "_links": {
@@ -133,7 +133,7 @@
                         "value": "0143a8a5-caff-4d32-b83c-3c56f78f48bd"
                     }
                 ],
-                "target_revision_id": "85"
+                "target_revision_id": "210"
             },
             {
                 "_links": {
@@ -149,7 +149,7 @@
                         "value": "f3904524-a55b-4515-8d67-bc20ee5900a9"
                     }
                 ],
-                "target_revision_id": "86"
+                "target_revision_id": "211"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_thumbnail": [
@@ -191,7 +191,7 @@
     ],
     "changed": [
         {
-            "value": "2020-06-14T16:32:21+00:00",
+            "value": "2020-06-17T08:19:44+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -229,7 +229,7 @@
     "path": [
         {
             "alias": "\/article\/embed-component",
-            "pid": 19,
+            "pid": 12,
             "langcode": "en",
             "lang": "en"
         }
