@@ -1,0 +1,12 @@
+interval: 600
+active_on:
+  content_entity_forms: true
+  config_entity_forms: false
+notification:
+  active: true
+  message: 'Saving draft...'
+  delay: 1000
+allowed_content_entity_types:
+  node:
+    bundles:
+      article: article
