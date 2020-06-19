@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Contains ezcontent_landing_page hook implementations.
+ */
+
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\node\NodeInterface;
@@ -9,7 +14,7 @@ use Drupal\node\NodeInterface;
  */
 function ezcontent_landing_page_entity_view_alter(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display) {
   // Check if entity is a non-new node in either full or AMP view mode.
-  /** @var NodeInterface $entity */
+  /** @var \Drupal\node\NodeInterface $entity */
   if ($entity instanceof NodeInterface && $entity->bundle() === 'landing_page' && !$entity->isNew() && $build['#view_mode'] == 'amp') {
     // Get a list of available view modes for the current entity.
     $view_modes = \Drupal::service('entity_display.repository')
