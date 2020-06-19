@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert_banner
+    - field.storage.block_content.field_background_color
+  module:
+    - color_field
+id: block_content.alert_banner.field_background_color
+field_name: field_background_color
+entity_type: block_content
+bundle: alert_banner
+label: 'Background Color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#fd8208'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

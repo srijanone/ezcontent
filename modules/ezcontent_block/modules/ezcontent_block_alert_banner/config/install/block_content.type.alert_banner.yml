@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: alert_banner
+label: 'Alert Banner'
+revision: 1
+description: 'Create alert banner with configurable background color and WYSIWYG editor.'

@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.alert_banner
+    - field.field.block_content.alert_banner.body
+    - field.field.block_content.alert_banner.field_background_color
+  module:
+    - ezcontent_block_alert_banner
+id: block_content.alert_banner.default
+targetEntityType: block_content
+bundle: alert_banner
+mode: default
+content:
+  body:
+    label: hidden
+    type: alert_banner_text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_background_color: true
