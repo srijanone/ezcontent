@@ -4,4 +4,4 @@ dependencies: {  }
 id: cards
 label: Cards
 revision: 1
-description: ''
+description: 'Display Media and text with a configurable layout.'

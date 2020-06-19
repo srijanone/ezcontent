@@ -4,4 +4,4 @@ dependencies: {  }
 id: map_block
 label: 'Map Block'
 revision: 1
-description: ''
+description: 'A simple integration of GMaps without requiring any API keys. Just write the name of the place and you are ready to go.'

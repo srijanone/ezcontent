@@ -4,4 +4,4 @@ dependencies: {  }
 id: content_listing_component
 label: 'Content Listing Component'
 revision: 1
-description: 'A block type which contains value on base of which the article listing view will be filtered.'
+description: 'A list of all articles filterable by Tags and Authors.'

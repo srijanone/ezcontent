@@ -4,4 +4,4 @@ dependencies: {  }
 id: social_media
 label: 'Social Media'
 revision: 1
-description: ''
+description: 'Add Twitter and Instagram posts, directly via link, eliminating the need to find the Embed code.'
