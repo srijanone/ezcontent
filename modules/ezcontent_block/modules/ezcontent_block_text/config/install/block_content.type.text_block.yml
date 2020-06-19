@@ -4,4 +4,4 @@ dependencies: {  }
 id: text_block
 label: 'Text Block'
 revision: 1
-description: ''
+description: "A Basic Text component, that can be used to add any content."

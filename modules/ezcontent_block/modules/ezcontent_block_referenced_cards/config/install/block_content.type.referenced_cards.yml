@@ -4,4 +4,4 @@ dependencies: {  }
 id: referenced_cards
 label: 'Referenced Cards'
 revision: 1
-description: ''
+description: 'Add article nodes via a reference field.'

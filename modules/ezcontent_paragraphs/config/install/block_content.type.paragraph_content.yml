@@ -4,4 +4,4 @@ dependencies: {  }
 id: paragraph_content
 label: 'Paragraph Content'
 revision: 1
-description: ''
+description: 'Add any paragraph type from this block.'

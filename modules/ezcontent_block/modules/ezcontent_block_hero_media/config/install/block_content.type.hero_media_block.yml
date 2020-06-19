@@ -4,4 +4,4 @@ dependencies: {  }
 id: hero_media_block
 label: 'Hero Media Block'
 revision: 1
-description: ''
+description: 'A simple hero slider with text, which can be used as a banner as well.'
