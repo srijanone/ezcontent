@@ -49,10 +49,16 @@ settings:
       faq:
         weight: -24
         enabled: false
-      from_library:
+      card_list:
         weight: -23
         enabled: false
-      view:
+      hero_media:
         weight: -22
+        enabled: false
+      from_library:
+        weight: -21
+        enabled: false
+      view:
+        weight: -20
         enabled: false
 field_type: entity_reference_revisions
