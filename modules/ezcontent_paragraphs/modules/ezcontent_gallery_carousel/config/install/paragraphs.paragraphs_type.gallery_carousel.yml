@@ -4,5 +4,5 @@ dependencies: {  }
 id: gallery_carousel
 label: 'Gallery Carousel'
 icon_uuid: null
-description: ''
+description: 'Image rendered as slideshow.'
 behavior_plugins: {  }
