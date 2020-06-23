@@ -52,6 +52,7 @@ install:
   - shortcut
   - simple_sitemap
   - smart_trim
+  - social_media_links
   - taxonomy
   - toolbar
   - views
