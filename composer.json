@@ -77,6 +77,7 @@
     "drupal/pathauto": "^1.6",
     "drupal/redirect": "^1.4",
     "drupal/responsive_preview": "^1.0@beta",
+    "drupal/responsive_tables_filter": "^1.5",
     "drupal/robotstxt": "^1.2",
     "drupal/scheduler": "^1.1",
     "drupal/schema_metatag": "^1.4",
