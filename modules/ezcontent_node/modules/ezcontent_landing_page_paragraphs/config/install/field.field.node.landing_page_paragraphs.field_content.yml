@@ -8,7 +8,6 @@ dependencies:
     - paragraphs.paragraphs_type.card_list
     - paragraphs.paragraphs_type.embed
     - paragraphs.paragraphs_type.gallery
-    - paragraphs.paragraphs_type.gallery_carousel
     - paragraphs.paragraphs_type.hero_media
     - paragraphs.paragraphs_type.map
     - paragraphs.paragraphs_type.referenced_card
@@ -35,7 +34,6 @@ settings:
       card_list: card_list
       embed: embed
       gallery: gallery
-      gallery_carousel: gallery_carousel
       hero_media: hero_media
       map: map
       referenced_card: referenced_card
@@ -69,28 +67,25 @@ settings:
       gallery:
         enabled: true
         weight: 26
-      gallery_carousel:
-        enabled: true
-        weight: 27
       hero_media:
         enabled: true
-        weight: 28
+        weight: 27
       map:
         enabled: true
-        weight: 29
+        weight: 28
       quote:
-        weight: 30
+        weight: 29
         enabled: false
       referenced_card:
         enabled: true
-        weight: 31
+        weight: 30
       social_media:
         enabled: true
-        weight: 32
+        weight: 31
       text:
         enabled: true
-        weight: 33
+        weight: 32
       view:
-        weight: 34
+        weight: 33
         enabled: false
 field_type: entity_reference_revisions

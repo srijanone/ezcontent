@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - paragraphs
-id: paragraph.card_gallery
-label: 'Card Gallery'
-targetEntityType: paragraph
-cache: true

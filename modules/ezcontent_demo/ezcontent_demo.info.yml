@@ -36,7 +36,6 @@ dependencies:
   - ezcontent:ezcontent_faq
   - ezcontent:ezcontent_form
   - ezcontent:ezcontent_gallery
-  - ezcontent:ezcontent_gallery_carousel
   - ezcontent:ezcontent_hero_media
   - ezcontent:ezcontent_map
   - ezcontent:ezcontent_quote

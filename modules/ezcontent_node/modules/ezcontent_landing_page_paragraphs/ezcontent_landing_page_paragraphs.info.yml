@@ -10,7 +10,6 @@ dependencies:
   - ezcontent:ezcontent_card_list
   - ezcontent:ezcontent_embed
   - ezcontent:ezcontent_gallery
-  - ezcontent:ezcontent_gallery_carousel
   - ezcontent:ezcontent_hero_media
   - ezcontent:ezcontent_map
   - ezcontent:ezcontent_referenced_card

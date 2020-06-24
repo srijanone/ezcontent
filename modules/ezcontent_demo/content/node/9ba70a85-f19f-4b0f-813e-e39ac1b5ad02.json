@@ -59,9 +59,6 @@
             },
             {
                 "href": ""
-            },
-            {
-                "href": ""
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_tags": [
@@ -368,22 +365,6 @@
                     }
                 ],
                 "target_revision_id": "25"
-            },
-            {
-                "_links": {
-                    "self": {
-                        "href": ""
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/paragraph\/gallery_carousel"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "f6191042-a8ba-4dff-8b21-ba0ab1d90c28"
-                    }
-                ],
-                "target_revision_id": "26"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_tags": [
@@ -489,6 +470,11 @@
     "field_short_title": [
         {
             "value": "Headless Commerce Architecture"
+        }
+    ],
+    "field_social_sharing": [
+        {
+            "value": true
         }
     ],
     "field_subhead": [
