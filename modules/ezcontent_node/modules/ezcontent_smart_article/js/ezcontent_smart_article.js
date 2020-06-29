@@ -61,6 +61,10 @@
       });
       // Open invalid subscription dialog.
       $('#edit-overlay-link').trigger('click');
+      // Generate tags as soon as image is uploaded.
+      if (drupalSettings.imageTagOption == 'auto' && $(".image-preview")[0]) {
+        $('.generate-tags-button').trigger('click');
+      }
     }
   };
 
