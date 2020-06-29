@@ -140,8 +140,11 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
     $entity = $items->getEntity();
     $field_settings = $items->getFieldDefinition()->getSettings();
     $image_field_name = $field_settings['image_fields'];
+    $imageTaggingActionType = $this->configFactory->get('summary_generator.settings')
+      ->get('image_tagging_action_type');
     $uuid = $entity->uuid();
     $element['#attached']['library'][] = 'ezcontent_smart_article/ezcontent_smart_article_libs';
+    $element['#attached']['drupalSettings']['imageTagOption'] = $imageTaggingActionType;
     $element['status_messages'] = [
       '#type' => 'status_messages',
       '#weight' => -10,
@@ -170,6 +173,12 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
       '#image_field_name' => $image_field_name,
       '#prefix' => '<div>',
       '#suffix' => '</div>',
+      '#attributes' => [
+        'class' => [
+          'generate-tags-button',
+          $imageTaggingActionType == 'auto' ? 'hide' : '',
+        ],
+      ],
       '#ajax' => [
         'callback' => [$this, 'ezcontentSmartImageTagsGenerateCallback'],
         'wrapper' => 'auto-image-tags',

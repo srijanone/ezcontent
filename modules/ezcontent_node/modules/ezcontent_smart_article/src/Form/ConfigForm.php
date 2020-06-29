@@ -220,6 +220,16 @@ class ConfigForm extends ConfigFormBase {
       '#options' => $imageTaggingOptions,
       '#default_value' => $config->get('image_tagging_service'),
     ];
+    $form['image_tagging_action_type'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('Image Tagging Action Type'),
+      '#description' => $this->t('Select an action type.'),
+      '#options' => [
+        'auto' => $this->t('Generate image tags, automatically.'),
+        'button_click' => $this->t('Generate image tags, manually, by clicking a button.'),
+      ],
+      '#default_value' => $config->get('image_tagging_action_type') ? $config->get('image_tagging_action_type') : 'button_click',
+    ];
     $form['image_generate_tags_api_url'] = [
       '#type' => 'textfield',
       '#title' => $this->t('EZContent Smart Image Generate Tags API URL'),
