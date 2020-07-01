@@ -25,7 +25,7 @@
     "drupal/adminimal_theme": "^1.5",
     "drupal/allowed_formats": "^1.1",
     "drupal/autocomplete_deluxe": "^1.0@beta",
-    "drupal/autosave_form": "^1.2",
+    "drupal/autosave_form": "1.1",
     "drupal/better_normalizers": "^1.0@beta",
     "drupal/block_blacklist": "^1.0",
     "drupal/bootstrap_barrio": "^4.22",
