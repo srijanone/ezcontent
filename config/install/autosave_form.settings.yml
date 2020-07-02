@@ -1,4 +1,4 @@
-interval: 600
+interval: 10000
 active_on:
   content_entity_forms: true
   config_entity_forms: false
