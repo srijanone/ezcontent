@@ -1,0 +1,6 @@
+services:
+  ezcontent_amp_path_processor:
+    class: Drupal\ezcontent_node\PathProcessor\EZContentAmpOutboundPathProcessor
+    arguments: ['@module_handler']
+    tags:
+      - { name: path_processor_outbound }
