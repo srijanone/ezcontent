@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:fb9b0a98-4068-4f8f-bdba-460f193ddf7f'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: map
 label: Map
 icon_uuid: fb9b0a98-4068-4f8f-bdba-460f193ddf7f

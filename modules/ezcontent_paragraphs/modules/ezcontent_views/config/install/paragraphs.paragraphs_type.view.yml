@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:bca4cba0-6e99-4fc7-a4d4-db44c515b65a'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: view
 label: 'List View'
 icon_uuid: bca4cba0-6e99-4fc7-a4d4-db44c515b65a

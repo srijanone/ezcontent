@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:fd95a830-f2e2-49b8-92e6-26e42bff7ce0'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: embed
 label: Embed
 icon_uuid: fd95a830-f2e2-49b8-92e6-26e42bff7ce0

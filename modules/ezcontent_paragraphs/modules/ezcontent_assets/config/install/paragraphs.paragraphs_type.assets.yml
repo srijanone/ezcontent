@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:d8a37fd7-9843-4f80-a3d5-85b9c7be4b87'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: assets
 label: Media
 icon_uuid: d8a37fd7-9843-4f80-a3d5-85b9c7be4b87

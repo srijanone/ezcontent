@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:af13a51c-f68a-42bb-9a5b-18cb886969c4'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: text
 label: Text
 icon_uuid: af13a51c-f68a-42bb-9a5b-18cb886969c4

@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:be4734a7-0891-469e-b64b-10b46782b606'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: gallery
 label: Gallery
 icon_uuid: be4734a7-0891-469e-b64b-10b46782b606

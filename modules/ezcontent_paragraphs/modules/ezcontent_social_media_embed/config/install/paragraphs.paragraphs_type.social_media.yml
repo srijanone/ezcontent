@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:80cc7033-ae5b-4f58-8797-4763c677e1d7'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: social_media
 label: 'Social Media'
 icon_uuid: 80cc7033-ae5b-4f58-8797-4763c677e1d7

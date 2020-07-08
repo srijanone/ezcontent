@@ -6,9 +6,8 @@ dependencies:
 third_party_settings:
   paragraphs_library:
     allow_library_conversion: true
-id: cards_gallery
-label: 'Cards Gallery'
+id: gallery_carousel
+label: 'Gallery Carousel'
 icon_uuid: null
-icon_default: null
-description: ''
+description: 'Image rendered as slideshow.'
 behavior_plugins: {  }
