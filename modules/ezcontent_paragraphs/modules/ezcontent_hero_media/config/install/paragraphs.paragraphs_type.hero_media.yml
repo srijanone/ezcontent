@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:55bfda4f-5a7d-4dae-bfb7-8f21252250c8'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: hero_media
 label: 'Hero Media'
 icon_uuid: 55bfda4f-5a7d-4dae-bfb7-8f21252250c8

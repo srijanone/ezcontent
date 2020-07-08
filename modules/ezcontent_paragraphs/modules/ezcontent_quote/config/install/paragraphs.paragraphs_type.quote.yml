@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:a3e2b432-1996-42fe-8105-92117dfa0215'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: quote
 label: Quote
 icon_uuid: a3e2b432-1996-42fe-8105-92117dfa0215

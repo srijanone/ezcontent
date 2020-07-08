@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:acc718fc-4753-4fec-a973-1f2947a74b6b'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: faq_qa
 label: 'Q&A'
 icon_uuid: acc718fc-4753-4fec-a973-1f2947a74b6b

@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:cd1297e3-8a8b-4c4e-9c71-0336feba68c1'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: card
 label: Card
 icon_uuid: cd1297e3-8a8b-4c4e-9c71-0336feba68c1

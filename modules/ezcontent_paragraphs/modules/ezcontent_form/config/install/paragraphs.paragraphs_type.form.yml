@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:d930e042-1484-43bf-a4c1-f9bd64b66aef'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: form
 label: Form
 icon_uuid: d930e042-1484-43bf-a4c1-f9bd64b66aef

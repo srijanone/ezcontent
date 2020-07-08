@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:fde13d14-d05b-4ff1-876a-8af17cf662ff'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: referenced_card
 label: 'Referenced Card'
 icon_uuid: fde13d14-d05b-4ff1-876a-8af17cf662ff

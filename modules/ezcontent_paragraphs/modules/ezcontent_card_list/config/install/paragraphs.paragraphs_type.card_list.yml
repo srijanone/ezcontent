@@ -3,6 +3,11 @@ status: true
 dependencies:
   content:
     - 'file:file:b1396714-ae5f-4c1d-aec2-d57071ba6652'
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
 id: card_list
 label: Cards
 icon_uuid: b1396714-ae5f-4c1d-aec2-d57071ba6652
