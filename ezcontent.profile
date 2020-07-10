@@ -82,11 +82,6 @@ function ezcontent_themes_installed($theme_list) {
     // Install AMP module.
     \Drupal::service('module_installer')->install(['amp'], TRUE);
 
-    \Drupal::configFactory()
-      ->getEditable('amp.settings')
-      ->set('process_full_html', TRUE)
-      ->save(TRUE);
-
     // Use EZContent AMP theme as the theme in AMP settings.
     $amp_theme_config = \Drupal::configFactory()->getEditable('amp.theme');
     $amp_theme = $amp_theme_config->get('amptheme');
