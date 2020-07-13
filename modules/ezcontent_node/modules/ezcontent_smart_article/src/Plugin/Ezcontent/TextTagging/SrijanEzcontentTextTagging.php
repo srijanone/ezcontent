@@ -103,7 +103,7 @@ class SrijanEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
    * {@inheritdoc}
    */
   public function getTags($text = '') {
-    $config = $this->configFactory->get('summary_generator.settings');
+    $config = $this->configFactory->get('smart_article.settings');
     $url = $config->get('smart_tags_api_url');
     $request = $this->httpClient->post($url, [
       'json' => [

@@ -113,7 +113,7 @@ class GoogleEzcontentTextTagging extends EzcontentTextTaggingPluginBase implemen
   public function getTags($text = '') {
     $tags = [];
     if ($text) {
-      $config = $this->configFactory->get('summary_generator.settings');
+      $config = $this->configFactory->get('smart_article.settings');
       $secretKey = $config->get('gcm_text_tag_api_key');
       $data = [
         'encodingType' => 'UTF8',

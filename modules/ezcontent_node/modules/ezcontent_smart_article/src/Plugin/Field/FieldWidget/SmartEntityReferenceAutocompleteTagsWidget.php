@@ -140,7 +140,7 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
     $entity = $items->getEntity();
     $field_settings = $items->getFieldDefinition()->getSettings();
     $image_field_name = $field_settings['image_fields'];
-    $imageTaggingActionType = $this->configFactory->get('summary_generator.settings')
+    $imageTaggingActionType = $this->configFactory->get('smart_article.settings')
       ->get('image_tagging_action_type');
     $uuid = $entity->uuid();
     $element['#attached']['library'][] = 'ezcontent_smart_article/ezcontent_smart_article_libs';
@@ -209,7 +209,7 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
     if (!empty($fid)) {
       // @todo: fetch file object from form_state.
       $file = File::load($fid);
-      $serviceType = $this->configFactory->get('summary_generator.settings')
+      $serviceType = $this->configFactory->get('smart_article.settings')
         ->get('image_tagging_service');
       $plugin = $this->imageTaggingManager->createInstance($serviceType);
       $tags = $plugin->getImageTags($file);

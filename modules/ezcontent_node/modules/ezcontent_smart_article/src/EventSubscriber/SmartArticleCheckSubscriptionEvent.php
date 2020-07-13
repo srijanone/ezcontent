@@ -26,7 +26,7 @@ class SmartArticleCheckSubscriptionEvent implements EventSubscriberInterface {
    *   The config factory.
    */
   public function __construct(ConfigFactoryInterface $configFactory) {
-    $this->config = $configFactory->get('summary_generator.settings');
+    $this->config = $configFactory->get('smart_article.settings');
   }
 
   /**
