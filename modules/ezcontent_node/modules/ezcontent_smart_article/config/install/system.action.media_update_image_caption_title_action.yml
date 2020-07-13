@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media_update_image_caption_title_action
+label: 'Generate Image Caption and Title'
+type: media
+plugin: media_update_image_caption_title_action
+configuration: {  }

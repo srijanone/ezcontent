@@ -28,17 +28,23 @@ class SrijanEzcontentImageCaptioning extends EzcontentImageCaptioningPluginBase 
         ->realpath($file->getFileUri()));
       $url = \Drupal::config('smart_article.settings')
         ->get('image_captioning_api_url');
-      $response = \Drupal::service('http_client')->request('POST', $url, [
-        'headers' => [
-          'content-type' => $file->getMimeType(),
-        ],
-        'body' => $imageFile,
-      ]);
-      if ($response->getStatusCode() == 200) {
-        $body = \Drupal::service('serialization.json')
-          ->decode($response->getBody()->getContents());
-        $caption = $body['data']['caption'];
+      try {
+        $response = \Drupal::service('http_client')->request('POST', $url, [
+          'headers' => [
+            'content-type' => $file->getMimeType(),
+          ],
+          'body' => $imageFile,
+        ]);
+        if ($response->getStatusCode() == 200) {
+          $body = \Drupal::service('serialization.json')
+            ->decode($response->getBody()->getContents());
+          return $body['data']['caption'];
+        }
       }
+      catch (\Exception $e) {
+        \Drupal::logger('type')->error($e->getMessage());
+      }
+
     }
     return $caption;
   }
