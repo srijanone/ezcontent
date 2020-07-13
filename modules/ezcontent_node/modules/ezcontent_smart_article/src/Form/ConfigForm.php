@@ -27,7 +27,7 @@ class ConfigForm extends ConfigFormBase {
    *
    * @var string
    */
-  const SETTINGS = 'summary_generator.settings';
+  const SETTINGS = 'smart_article.settings';
 
   /**
    * File storage object.
@@ -151,7 +151,7 @@ class ConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'summary_generator_config';
+    return 'smart_article_config';
   }
 
   /**

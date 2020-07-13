@@ -43,7 +43,7 @@ class GenerateSmartTags {
    *   The channel logger object.
    */
   public function __construct(ConfigFactoryInterface $configFactory, ClientInterface $httpClient, LoggerChannelFactory $logger) {
-    $this->config = $configFactory->get('summary_generator.settings');
+    $this->config = $configFactory->get('smart_article.settings');
     $this->httpClient = $httpClient;
     $this->logger = $logger;
   }

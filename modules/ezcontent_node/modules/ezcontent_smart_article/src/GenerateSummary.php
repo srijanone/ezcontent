@@ -53,7 +53,7 @@ class GenerateSummary {
    *   The channel logger object.
    */
   public function __construct(ConfigFactoryInterface $configFactory, ClientInterface $httpClient, SerializationInterface $serializer, LoggerChannelFactory $logger) {
-    $this->config = $configFactory->get('summary_generator.settings');
+    $this->config = $configFactory->get('smart_article.settings');
     $this->httpClient = $httpClient;
     $this->serializer = $serializer;
     $this->logger = $logger;
