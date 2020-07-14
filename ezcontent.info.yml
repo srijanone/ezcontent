@@ -72,4 +72,4 @@ dependencies:
 # Note that this will not set any theme as the default theme.
 themes:
   - ezcontent_theme
-  - adminimal_theme
+  - ezcontent_admin
