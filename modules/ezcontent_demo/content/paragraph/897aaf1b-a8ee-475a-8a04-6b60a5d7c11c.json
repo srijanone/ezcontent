@@ -8,24 +8,24 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
             {
-                "href": "http:\/\/default\/media\/4\/edit?_format=hal_json",
+                "href": "http:\/\/default\/media\/5\/edit?_format=hal_json",
                 "lang": "en"
             }
         ]
     },
     "id": [
         {
-            "value": 4
+            "value": 108
         }
     ],
     "uuid": [
         {
-            "value": "49a0420e-ae21-432c-9a93-405273a9a9bb"
+            "value": "897aaf1b-a8ee-475a-8a04-6b60a5d7c11c"
         }
     ],
     "revision_id": [
         {
-            "value": 29
+            "value": 251
         }
     ],
     "langcode": [
@@ -47,19 +47,19 @@
     ],
     "created": [
         {
-            "value": "2020-04-09T08:51:32+00:00",
+            "value": "2020-07-15T05:13:07+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "parent_id": [
         {
-            "value": "8"
+            "value": "9"
         }
     ],
     "parent_type": [
         {
-            "value": "paragraph"
+            "value": "block_content"
         }
     ],
     "parent_field_name": [
@@ -78,12 +78,18 @@
             "lang": "en"
         }
     ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/media\/4\/edit?_format=hal_json"
+                        "href": "http:\/\/default\/media\/5\/edit?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
@@ -91,7 +97,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "c61c5291-d3b7-450d-9092-36294fdabe6a"
+                        "value": "39367a21-ce84-414c-8436-4f66b15c130c"
                     }
                 ],
                 "lang": "en"
@@ -100,9 +106,9 @@
     },
     "field_summary": [
         {
-            "value": "<p>Render dynamic articles and landing page using Drupal's front end template engine or using a Javascript framework of your choice (De-coupled CMS).<\/p>\r\n",
+            "value": "<p>Retain traditional CMS functions such as a drag &amp; drop page builder and content preview with EzContent de-coupled support. A nimble solution to drop all your dependencies from developers while managing content on-the-go. Deploy whenever and wherever you want.<\/p>\r\n",
             "format": "basic_html",
-            "processed": "<p>Render dynamic articles and landing page using Drupal's front end template engine or using a Javascript framework of your choice (De-coupled CMS).<\/p>"
+            "processed": "<p>Retain traditional CMS functions such as a drag &amp; drop page builder and content preview with EzContent de-coupled support. A nimble solution to drop all your dependencies from developers while managing content on-the-go. Deploy whenever and wherever you want.<\/p>"
         }
     ],
     "field_text_background_color": [
@@ -118,12 +124,12 @@
     ],
     "field_title": [
         {
-            "value": "Front-end technology of your choice"
+            "value": "De-Coupled CMS"
         }
     ],
     "layout_selection": [
         {
-            "target_id": "card_left_media",
+            "target_id": "card_right_media",
             "lang": "en"
         }
     ]

@@ -8,24 +8,24 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
             {
-                "href": "http:\/\/default\/media\/6\/edit?_format=hal_json",
+                "href": "http:\/\/default\/media\/7\/edit?_format=hal_json",
                 "lang": "en"
             }
         ]
     },
     "id": [
         {
-            "value": 6
+            "value": 110
         }
     ],
     "uuid": [
         {
-            "value": "f1714f0b-b166-4785-8a7b-34fcaa209fe8"
+            "value": "2e1a477a-bd40-4de0-8012-1f5578f218a3"
         }
     ],
     "revision_id": [
         {
-            "value": 31
+            "value": 253
         }
     ],
     "langcode": [
@@ -47,19 +47,19 @@
     ],
     "created": [
         {
-            "value": "2020-04-09T08:54:46+00:00",
+            "value": "2020-07-15T05:14:27+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "parent_id": [
         {
-            "value": "8"
+            "value": "9"
         }
     ],
     "parent_type": [
         {
-            "value": "paragraph"
+            "value": "block_content"
         }
     ],
     "parent_field_name": [
@@ -78,12 +78,18 @@
             "lang": "en"
         }
     ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/media\/6\/edit?_format=hal_json"
+                        "href": "http:\/\/default\/media\/7\/edit?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
@@ -91,7 +97,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "09937c2b-c953-48fd-a52a-56f8795268f2"
+                        "value": "5b0a73b7-968c-4636-a907-91184285cbc4"
                     }
                 ],
                 "lang": "en"
@@ -100,9 +106,9 @@
     },
     "field_summary": [
         {
-            "value": "<p>Having more than 100,000 Drupal enthusiasts actively contributing to the community with more than 2,000 commits per week, look no further. Our expertise can help you transform your users\u2019 digital experience. Take your site up a notch!<\/p>\r\n",
+            "value": "<p>Be one step ahead of your competitors with EzContent - modern AI and ML-based distribution that supports auto-tagging, content generation, and personalized messages. Makes it a breeze with the predictive intelligence feature to expedite ROI.<\/p>\r\n",
             "format": "basic_html",
-            "processed": "<p>Having more than 100,000 Drupal enthusiasts actively contributing to the community with more than 2,000 commits per week, look no further. Our expertise can help you transform your users\u2019 digital experience. Take your site up a notch!<\/p>"
+            "processed": "<p>Be one step ahead of your competitors with EzContent - modern AI and ML-based distribution that supports auto-tagging, content generation, and personalized messages. Makes it a breeze with the predictive intelligence feature to expedite ROI.<\/p>"
         }
     ],
     "field_text_background_color": [
@@ -118,12 +124,12 @@
     ],
     "field_title": [
         {
-            "value": "With supportive Drupal community"
+            "value": "AI powered content generation"
         }
     ],
     "layout_selection": [
         {
-            "target_id": "card_left_media",
+            "target_id": "card_right_media",
             "lang": "en"
         }
     ]

@@ -83,6 +83,23 @@
             "lang": "en"
         }
     ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Drupal | EZ Content"
+            }
+        }
+    ],
+    "metatag_normalized": [
+        {
+            "tag": "meta",
+            "attributes": {
+                "name": "title",
+                "content": "Drupal | EZ Content"
+            },
+            "lang": "en"
+        }
+    ],
     "path": [
         {
             "alias": null,

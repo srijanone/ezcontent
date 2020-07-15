@@ -8,24 +8,24 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
             {
-                "href": "http:\/\/default\/media\/7\/edit?_format=hal_json",
+                "href": "http:\/\/default\/media\/4\/edit?_format=hal_json",
                 "lang": "en"
             }
         ]
     },
     "id": [
         {
-            "value": 7
+            "value": 107
         }
     ],
     "uuid": [
         {
-            "value": "347d9bcd-c235-478f-8bea-40d7297628da"
+            "value": "ca916e5e-0c3b-418b-8b8b-a39c98f699a8"
         }
     ],
     "revision_id": [
         {
-            "value": 32
+            "value": 250
         }
     ],
     "langcode": [
@@ -47,19 +47,19 @@
     ],
     "created": [
         {
-            "value": "2020-04-09T08:56:25+00:00",
+            "value": "2020-07-15T05:12:26+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "parent_id": [
         {
-            "value": "8"
+            "value": "9"
         }
     ],
     "parent_type": [
         {
-            "value": "paragraph"
+            "value": "block_content"
         }
     ],
     "parent_field_name": [
@@ -78,12 +78,18 @@
             "lang": "en"
         }
     ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/media\/7\/edit?_format=hal_json"
+                        "href": "http:\/\/default\/media\/4\/edit?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
@@ -91,7 +97,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "5b0a73b7-968c-4636-a907-91184285cbc4"
+                        "value": "c61c5291-d3b7-450d-9092-36294fdabe6a"
                     }
                 ],
                 "lang": "en"
@@ -100,9 +106,9 @@
     },
     "field_summary": [
         {
-            "value": "<p>Be one step ahead of your competitors with EzContent - modern AI and ML-based distribution that supports auto-tagging, content generation, and personalized messages. Makes it a breeze with the predictive intelligence feature to expedite ROI.<\/p>\r\n",
+            "value": "<p>Render dynamic articles and landing page using Drupal's front end template engine or using a Javascript framework of your choice (De-coupled CMS).<\/p>\r\n",
             "format": "basic_html",
-            "processed": "<p>Be one step ahead of your competitors with EzContent - modern AI and ML-based distribution that supports auto-tagging, content generation, and personalized messages. Makes it a breeze with the predictive intelligence feature to expedite ROI.<\/p>"
+            "processed": "<p>Render dynamic articles and landing page using Drupal's front end template engine or using a Javascript framework of your choice (De-coupled CMS).<\/p>"
         }
     ],
     "field_text_background_color": [
@@ -118,12 +124,12 @@
     ],
     "field_title": [
         {
-            "value": "AI powered content generation"
+            "value": "Front-end technology of your choice"
         }
     ],
     "layout_selection": [
         {
-            "target_id": "card_right_media",
+            "target_id": "card_left_media",
             "lang": "en"
         }
     ]

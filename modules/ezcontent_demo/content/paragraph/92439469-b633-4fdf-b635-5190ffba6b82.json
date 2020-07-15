@@ -78,14 +78,14 @@
             "lang": "en"
         }
     ],
-    "field_source": [
-        {
-            "value": "CMS Expert"
-        }
-    ],
     "field_quote": [
         {
             "value": "A headless commerce architecture is the separation of the frontend of your e-commerce experience from the backend."
+        }
+    ],
+    "field_source": [
+        {
+            "value": "CMS Expert"
         }
     ]
 }
