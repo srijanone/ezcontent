@@ -7,8 +7,8 @@ dependencies:
     - ezcontent_theme
 id: messages
 theme: ezcontent_theme
-region: highlighted
-weight: 0
+region: breadcrumb
+weight: -1
 provider: null
 plugin: system_messages_block
 settings:
