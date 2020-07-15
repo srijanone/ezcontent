@@ -30,7 +30,7 @@
     ],
     "vid": [
         {
-            "value": 5
+            "value": 47
         }
     ],
     "langcode": [
@@ -46,7 +46,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2020-04-09T10:41:30+00:00",
+            "value": "2020-07-15T05:25:16+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -108,7 +108,7 @@
     ],
     "changed": [
         {
-            "value": "2020-04-09T10:41:30+00:00",
+            "value": "2020-07-15T05:25:16+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -131,10 +131,16 @@
             "lang": "en"
         }
     ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
     "path": [
         {
             "alias": "\/home",
-            "pid": 10,
+            "pid": 28,
             "langcode": "en",
             "lang": "en"
         }
@@ -146,8 +152,8 @@
                 "layout_settings": {
                     "label": ""
                 },
-                "components": {
-                    "09e95d66-624f-4f85-b06f-42be65b93325": {
+                "components": [
+                    {
                         "uuid": "09e95d66-624f-4f85-b06f-42be65b93325",
                         "region": "content",
                         "configuration": {
@@ -165,7 +171,7 @@
                         "additional": [],
                         "weight": 0
                     }
-                },
+                ],
                 "third_party_settings": []
             }
         },
@@ -175,26 +181,8 @@
                 "layout_settings": {
                     "label": ""
                 },
-                "components": {
-                    "9fd5f31a-5f0a-49be-9391-9be4d7cc031f": {
-                        "uuid": "9fd5f31a-5f0a-49be-9391-9be4d7cc031f",
-                        "region": "middle",
-                        "configuration": {
-                            "id": "block_content:1101da67-4218-49d8-9aac-2b2016ff1e0d",
-                            "label": "Homepage card list",
-                            "provider": "block_content",
-                            "label_display": 0,
-                            "status": true,
-                            "info": "",
-                            "view_mode": "full",
-                            "type": "paragraph_content",
-                            "uuid": "1101da67-4218-49d8-9aac-2b2016ff1e0d",
-                            "context_mapping": []
-                        },
-                        "additional": [],
-                        "weight": 0
-                    },
-                    "3a2dc725-b207-46ed-8d58-d2ae753f8233": {
+                "components": [
+                    {
                         "uuid": "3a2dc725-b207-46ed-8d58-d2ae753f8233",
                         "region": "middle",
                         "configuration": {
@@ -210,27 +198,45 @@
                             "context_mapping": []
                         },
                         "additional": [],
-                        "weight": 1
+                        "weight": "-9"
                     },
-                    "2eb99738-a3d7-4db6-8afc-676348ea6bef": {
-                        "uuid": "2eb99738-a3d7-4db6-8afc-676348ea6bef",
+                    {
+                        "uuid": "d94cdfed-96ff-4be2-b014-2fc321794f83",
                         "region": "middle",
                         "configuration": {
-                            "id": "block_content:c48166b0-675f-4dc5-9532-f7228b57ee41",
-                            "label": "Featured Insights",
+                            "id": "block_content:883f6ae1-b679-447f-a739-add1cdc7681a",
+                            "label": "Homepage card list",
+                            "provider": "block_content",
+                            "label_display": 0,
+                            "status": true,
+                            "info": "",
+                            "view_mode": "default",
+                            "context_mapping": [],
+                            "type": "cards",
+                            "uuid": "883f6ae1-b679-447f-a739-add1cdc7681a"
+                        },
+                        "additional": [],
+                        "weight": "-10"
+                    },
+                    {
+                        "uuid": "c306eb5d-55c5-4422-8f76-f42bc77818fa",
+                        "region": "middle",
+                        "configuration": {
+                            "id": "block_content:54d57f42-faaa-4976-a4d8-16867e3c88c8",
+                            "label": "Featured Insights block on Homepage",
                             "provider": "block_content",
                             "label_display": "visible",
                             "status": true,
                             "info": "",
                             "view_mode": "full",
-                            "type": "paragraph_content",
-                            "uuid": "c48166b0-675f-4dc5-9532-f7228b57ee41",
-                            "context_mapping": []
+                            "context_mapping": [],
+                            "type": "referenced_cards",
+                            "uuid": "54d57f42-faaa-4976-a4d8-16867e3c88c8"
                         },
                         "additional": [],
-                        "weight": 2
+                        "weight": -8
                     }
-                },
+                ],
                 "third_party_settings": []
             }
         },
@@ -240,8 +246,8 @@
                 "layout_settings": {
                     "label": ""
                 },
-                "components": {
-                    "892f9e85-44c1-4c63-83ce-61fcd1ca19ee": {
+                "components": [
+                    {
                         "uuid": "892f9e85-44c1-4c63-83ce-61fcd1ca19ee",
                         "region": "content",
                         "configuration": {
@@ -259,7 +265,7 @@
                         "additional": [],
                         "weight": 0
                     }
-                },
+                ],
                 "third_party_settings": []
             }
         }

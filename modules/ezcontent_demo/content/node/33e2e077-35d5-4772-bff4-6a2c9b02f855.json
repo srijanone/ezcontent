@@ -253,7 +253,7 @@
     "path": [
         {
             "alias": "\/article\/drupal-2020-what-do-you-need-expect",
-            "pid": 15,
+            "pid": 23,
             "langcode": "en",
             "lang": "en"
         }
@@ -261,6 +261,11 @@
     "field_short_title": [
         {
             "value": "Drupal 2020 - What Do You Need to Expect?"
+        }
+    ],
+    "field_social_sharing": [
+        {
+            "value": true
         }
     ],
     "field_subhead": [

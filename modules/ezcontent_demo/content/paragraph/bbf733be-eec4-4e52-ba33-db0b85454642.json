@@ -8,24 +8,24 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
             {
-                "href": "http:\/\/default\/media\/2\/edit?_format=hal_json",
+                "href": "http:\/\/default\/media\/3\/edit?_format=hal_json",
                 "lang": "en"
             }
         ]
     },
     "id": [
         {
-            "value": 2
+            "value": 106
         }
     ],
     "uuid": [
         {
-            "value": "86dcb8df-5f73-4cf5-ac4d-82fa8a0605af"
+            "value": "bbf733be-eec4-4e52-ba33-db0b85454642"
         }
     ],
     "revision_id": [
         {
-            "value": 27
+            "value": 249
         }
     ],
     "langcode": [
@@ -47,19 +47,19 @@
     ],
     "created": [
         {
-            "value": "2020-04-09T08:47:58+00:00",
+            "value": "2020-07-15T05:11:51+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "parent_id": [
         {
-            "value": "8"
+            "value": "9"
         }
     ],
     "parent_type": [
         {
-            "value": "paragraph"
+            "value": "block_content"
         }
     ],
     "parent_field_name": [
@@ -84,19 +84,12 @@
             "lang": "en"
         }
     ],
-    "field_link": [
-        {
-            "uri": "entity:node\/1",
-            "title": "See Sample Content",
-            "options": []
-        }
-    ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/paragraph\/card\/field_media": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/media\/2\/edit?_format=hal_json"
+                        "href": "http:\/\/default\/media\/3\/edit?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
@@ -104,7 +97,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "c846b679-dd14-43db-8c42-7dce7e7329c3"
+                        "value": "9251b79a-bfb8-4450-a018-709097153ad8"
                     }
                 ],
                 "lang": "en"
@@ -113,9 +106,9 @@
     },
     "field_summary": [
         {
-            "value": "<p>Content creation and publishing don\u2019t need to be chaotic. Build a rich content model with WYSIWYG, preview, layout builder, paragraphs, drag and drop the content wherever you like it.<br \/>\r\nCreate content with utmost ease!<\/p>\r\n",
+            "value": "<p>Lets&nbsp;editors create visual layouts for displaying content without dependency on the developer. With Drupal\u2019s layout builder functionality, editors can drag and drop site-wide blocks and content fields. Manage blocks using reusable components and add regions on the fly.<\/p>\r\n",
             "format": "basic_html",
-            "processed": "<p>Content creation and publishing don\u2019t need to be chaotic. Build a rich content model with WYSIWYG, preview, layout builder, paragraphs, drag and drop the content wherever you like it.<br \/>\nCreate content with utmost ease!<\/p>"
+            "processed": "<p>Lets\u00a0editors create visual layouts for displaying content without dependency on the developer. With Drupal\u2019s layout builder functionality, editors can drag and drop site-wide blocks and content fields. Manage blocks using reusable components and add regions on the fly.<\/p>"
         }
     ],
     "field_text_background_color": [
@@ -131,12 +124,12 @@
     ],
     "field_title": [
         {
-            "value": "Create and publish great content easily"
+            "value": "Powerful Landing Page Builder"
         }
     ],
     "layout_selection": [
         {
-            "target_id": "card_left_media",
+            "target_id": "card_right_media",
             "lang": "en"
         }
     ]
