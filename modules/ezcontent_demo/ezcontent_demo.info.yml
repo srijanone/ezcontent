@@ -29,6 +29,7 @@ dependencies:
   - ezcontent:ezcontent_landing_page
   - ezcontent:ezcontent_landing_page_paragraphs
   - ezcontent:ezcontent_paragraphs
+  - ezcontent_publish:ezcontent_publish
   - ezcontent:ezcontent_assets
   - ezcontent:ezcontent_card
   - ezcontent:ezcontent_card_list
