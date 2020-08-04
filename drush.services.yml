@@ -1,0 +1,5 @@
+services:
+  ezcontent.generate.subprofile:
+    class: Drupal\ezcontent\Generators\GenerateSubProfile
+    tags:
+      - { name: drush.generator }

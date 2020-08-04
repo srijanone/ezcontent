@@ -1,0 +1,22 @@
+name: {{ name }}
+type: profile
+base profile: ezcontent
+core_version_requirement: ^8 || ^9
+{% if themes %}
+themes:
+{% for theme in themes|split(',') %}
+  - {{ theme|lower|trim }}
+{% endfor %}
+{% endif %}
+{% if install %}
+install:
+{% for module in install|split(',') %}
+  - {{ module|lower|trim }}
+{% endfor %}
+{% endif %}
+{% if exclude %}
+exclude:
+{% for module in exclude|split(',') %}
+  - {{ module|lower|trim }}
+{% endfor %}
+{% endif %}
