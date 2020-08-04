@@ -1,4 +1,4 @@
 ezcontent_smart_article.config:
-  title: 'EZContent smart article settings'
+  title: 'EzContent Smart Article'
   route_name: ezcontent_smart_article.config
   parent: system.admin_config_system
