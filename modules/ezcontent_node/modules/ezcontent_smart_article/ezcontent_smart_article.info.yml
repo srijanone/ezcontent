@@ -5,4 +5,5 @@ package: EZContent Node
 core: 8.x
 configure: ezcontent_smart_article.config
 dependencies:
-  - ezcontent_node
+  - ezcontent:ezcontent_node
+  - ezcontent_media:ezcontent_audio

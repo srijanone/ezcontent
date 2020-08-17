@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.node.smart_article.body
     - field.field.node.smart_article.field_company_name
+    - field.field.node.smart_article.field_podcast
     - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
     - field.field.node.smart_article.field_smart_text_summary
@@ -32,6 +33,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_podcast:
+    weight: 7
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: smart_podcast_entity_view
     region: content
   field_smart_media_image:
     type: entity_reference_entity_view

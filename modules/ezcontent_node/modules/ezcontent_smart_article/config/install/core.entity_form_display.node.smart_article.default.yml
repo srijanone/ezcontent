@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.smart_article.body
     - field.field.node.smart_article.field_company_name
     - field.field.node.smart_article.field_meta_tags
+    - field.field.node.smart_article.field_podcast
     - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
     - field.field.node.smart_article.field_smart_text_summary
@@ -62,6 +63,19 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Generate Tags'
+    group_auto_generate_podcast:
+      children:
+        - field_podcast
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        label: 'Auto Generate Podcast'
+        description: 'AI powered Text to Speech'
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Auto Generate Podcast'
 id: node.smart_article.default
 targetEntityType: node
 bundle: smart_article
@@ -97,7 +111,17 @@ content:
       sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
-    region: content    
+    region: content
+  field_podcast:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: smart_podcast_entity_reference_widget
+    region: content
   field_smart_media_image:
     type: entity_browser_entity_reference
     weight: 14
