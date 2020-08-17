@@ -28,3 +28,7 @@ services:
   plugin.manager.text_tagging:
     class: Drupal\ezcontent_smart_article\EzcontentTextTaggingManager
     parent: default_plugin_manager
+
+  plugin.manager.ezcontent_text_to_speech:
+    class: Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager
+    parent: default_plugin_manager

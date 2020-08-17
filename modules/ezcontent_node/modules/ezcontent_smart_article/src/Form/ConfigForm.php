@@ -5,6 +5,7 @@ namespace Drupal\ezcontent_smart_article\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\File\FileSystem;
@@ -81,6 +82,14 @@ class ConfigForm extends ConfigFormBase {
   protected $textTaggingManager;
 
   /**
+   * Ezcontent Text to Speech Manager object.
+   *
+   * @var \Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager
+   */
+
+  protected $textToSpeechManager;
+
+  /**
    * A image tagging Manager object.
    *
    * @var \Drupal\Core\Render\Renderer
@@ -106,10 +115,12 @@ class ConfigForm extends ConfigFormBase {
    *   A image tagging Manager object.
    * @param \Drupal\ezcontent_smart_article\EzcontentTextTaggingManager $textTaggingManager
    *   A text tagging Manager object.
+   * @param \Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager $textToSpeechManager
+   *   Ezcontent text to speech manager object.
    * @param \Drupal\Core\Render\Renderer $renderer
    *   An rendere object.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager, EzcontentTextTaggingManager $textTaggingManager, Renderer $renderer) {
+  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager, EzcontentTextTaggingManager $textTaggingManager, EzcontentTextToSpeechManager $textToSpeechManager, Renderer $renderer) {
     parent::__construct($config_factory);
     $this->fileStorage = $entityTypeManager->getStorage('file');
     $this->fileSystem = $fileSystem;
@@ -118,6 +129,7 @@ class ConfigForm extends ConfigFormBase {
     $this->imageCaptioningManager = $imageCaptioningManager;
     $this->imageTaggingManager = $imageTaggingManager;
     $this->textTaggingManager = $textTaggingManager;
+    $this->textToSpeechManager = $textToSpeechManager;
     $this->renderer = $renderer;
   }
 
@@ -134,6 +146,7 @@ class ConfigForm extends ConfigFormBase {
       $container->get('plugin.manager.image_captioning'),
       $container->get('plugin.manager.image_tagging'),
       $container->get('plugin.manager.text_tagging'),
+      $container->get('plugin.manager.ezcontent_text_to_speech'),
       $container->get('renderer')
     );
   }
@@ -162,6 +175,7 @@ class ConfigForm extends ConfigFormBase {
     $pluginDefinitionsImageCaptioning = $this->imageCaptioningManager->getDefinitions();
     $pluginDefinitionsImageTagging = $this->imageTaggingManager->getDefinitions();
     $pluginDefinitionsTextTagging = $this->textTaggingManager->getDefinitions();
+    $pluginDefinitionsTextToSpeech = $this->textToSpeechManager->getDefinitions();
     // Prepare options for image captioning service types.
     $imageCaptioningOptions = [];
     foreach ($pluginDefinitionsImageCaptioning as $pluginDefinition) {
@@ -176,6 +190,11 @@ class ConfigForm extends ConfigFormBase {
     $textTaggingOptions = [];
     foreach ($pluginDefinitionsTextTagging as $pluginDefinition) {
       $textTaggingOptions[$pluginDefinition['id']] = $pluginDefinition['label'];
+    }
+    // Prepare options for text to speech service types.
+    $textToSpeechOptions = [];
+    foreach ($pluginDefinitionsTextToSpeech as $pluginDefinition) {
+      $textToSpeechOptions[$pluginDefinition['id']] = $pluginDefinition['label'];
     }
     $form['summary_generator_api_url'] = [
       '#type' => 'textfield',
@@ -324,6 +343,23 @@ class ConfigForm extends ConfigFormBase {
         'visible' => ['select[name="text_tagging_service"]' => ['value' => 'google_text_tagging']],
       ],
     ];
+    // Select plugin type for text to speech.
+    $form['text_to_speech_service'] = [
+      '#title' => $this->t('Text To Speech Service'),
+      '#type' => 'select',
+      '#description' => $this->t('Please choose text to speech service type.'),
+      '#options' => $textToSpeechOptions,
+      '#default_value' => $config->get('text_to_speech_service'),
+    ];
+    $form['gcp_text_to_speech_key'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('GCP API Key For Text to Speech'),
+      '#description' => $this->t('Provide the API key.'),
+      '#default_value' => $config->get('gcp_text_to_speech_key'),
+      '#states' => [
+        'visible' => ['select[name="text_to_speech_service"]' => ['value' => 'google_text_to_speech']],
+      ],
+    ];
     return parent::buildForm($form, $form_state);
   }
 
@@ -331,7 +367,6 @@ class ConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    parent::submitForm($form, $form_state);
     $imageTaggingService = $form_state->getValue('image_tagging_service');
     // Validate gcm secret key field.
     if ($imageTaggingService === 'google_image_tagging') {
@@ -368,6 +403,18 @@ class ConfigForm extends ConfigFormBase {
             ['@field_title' => $form['aws_secret_key_image_tags']['#title']]
           ));
       }
+    }
+    // Validate if api key is added for selected text to speech service.
+    $textToSpeechService = $form_state->getValue('text_to_speech_service');
+    switch ($textToSpeechService) {
+      case 'google_text_to_speech':
+        if (empty($form_state->getValue('gcp_text_to_speech_key'))) {
+          $form_state->setError($form['gcp_text_to_speech_key'],
+            $this->t("@field is required.",
+              ['@field' => $form['gcp_text_to_speech_key']['#title']]
+            ));
+        }
+        break;
     }
   }
 

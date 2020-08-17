@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.smart_article.body
     - field.field.node.smart_article.field_company_name
+    - field.field.node.smart_article.field_podcast
     - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
     - field.field.node.smart_article.field_smart_text_summary
@@ -32,6 +33,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_company_name: true
+  field_podcast: true
   field_smart_media_image: true
   field_smart_tags: true
   field_smart_text_summary: true

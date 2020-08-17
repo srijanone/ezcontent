@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_podcast
+    - media.type.audio
+    - node.type.smart_article
+  module:
+    - ezcontent_smart_article
+id: node.smart_article.field_podcast
+field_name: field_podcast
+entity_type: node
+bundle: smart_article
+label: Podcast
+description: 'To regenerate podcast, remove the content and check the checkbox below.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+    auto_create: 0
+    auto_create_bundle: ''
+  text_to_speech_fields:
+    content:
+      title: title
+      field_company_name: field_company_name
+      field_smart_text_summary: field_smart_text_summary
+      body: 0
+field_type: ezcontent_smart_podcast

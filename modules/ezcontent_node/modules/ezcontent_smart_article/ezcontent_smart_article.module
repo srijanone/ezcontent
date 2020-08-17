@@ -118,8 +118,9 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
     $bundle = $entity_type = '';
     $form_object = $form_state->getFormObject();
     if ($form_object instanceof ContentEntityForm) {
-      $bundle = $form_object->getEntity()->bundle();
-      $entity_type = $form_object->getEntity()->getEntityTypeId();
+      $entity = $form_object->getEntity();
+      $bundle = $entity->bundle();
+      $entity_type = $entity->getEntityTypeId();
       if (!empty($entity_type) && !empty($bundle)) {
         $field_definitions = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type, $bundle);
         $smart_tags = \Drupal::service('ezcontent_smart_article.generate_smarttags');
@@ -144,9 +145,143 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
             $form[$term_reference_field]['widget']['smart_tags_submit']['#attributes'] = empty($summary_config->get('smart_tags_api_url')) ? ['disabled' => 'disabled'] : [];
           }
         }
+
+        // Custom submit handler for Podcast.
+        foreach ($entity->getFieldDefinitions() as $field_definition) {
+          if ($field_definition->getType() === 'ezcontent_smart_podcast') {
+            // Submit handler for podcast.
+            $form['actions']['submit']['#submit'][] = 'ezcontent_smart_podcast_submit_handler';
+            break;
+          }
+        }
       }
     }
   }
+}
+
+/**
+ * Custom submit handler for podcast.
+ *
+ * @param array $form
+ *   The form object.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form state object.
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function ezcontent_smart_podcast_submit_handler(array &$form, FormStateInterface $form_state) {
+  $text = '';
+  $entity = $form_state->getFormObject()->getEntity();
+  foreach ($entity->getFieldDefinitions() as $field_definition) {
+    if ($field_definition->getType() === 'ezcontent_smart_podcast') {
+      $field_name = $field_definition->getName();
+      $text_to_speech_fields = $field_definition->getSettings()['text_to_speech_fields'];
+    }
+  }
+  if (isset($field_name) && isset($text_to_speech_fields)) {
+    if ($entity->$field_name->convert_text_to_speech && empty($entity->$field_name->target_id)) {
+      $entity_type_id = $entity->getEntityTypeId();
+      $entity_id = $entity->id();
+      $default_display_fields = \Drupal::entityTypeManager()
+        ->getStorage('entity_view_display')
+        ->load($entity_type_id . '.' . $entity->bundle() . '.default')
+        ->getComponents();
+      uasort($default_display_fields, function ($a, $b) {
+        if ($a['weight'] === $b['weight']) {
+          return 0;
+        }
+        return $a['weight'] < $b['weight'] ? -1 : 1;
+      });
+      $default_display_fields = array_keys($default_display_fields);
+      $text_to_speech_content_fields = array_filter($text_to_speech_fields['content']);
+      $text_to_speech_reference_fields = $text_to_speech_fields['paragraphs'];
+      foreach ($default_display_fields as $default_display_field) {
+        if (isset($text_to_speech_content_fields[$default_display_field])) {
+          if (isset($text_to_speech_reference_fields[$default_display_field])) {
+            if ($entity->$default_display_field->entity) {
+              foreach ($entity->$default_display_field->referencedEntities() as $key => $ref_entity) {
+                if (in_array($ref_entity->getType(), array_keys($text_to_speech_reference_fields[$default_display_field]))) {
+                  $text = $text . ' ' . ezcontent_smart_podcast_get_ref_text_to_speech_fields($ref_entity);
+                }
+              }
+            }
+          }
+          else {
+            if ($entity->$default_display_field->value) {
+              $stripped_value = strip_tags(trim($entity->$default_display_field->value));
+              if (!preg_match("/[.]$/", $stripped_value)) {
+                $stripped_value = $stripped_value . '.';
+              }
+              $text = $text . ' ' . $stripped_value;
+            }
+          }
+        }
+      }
+      $data['entity_type_id'] = $entity_type_id;
+      $data['entity_id'] = $entity_id;
+      $data['field_name'] = $field_name;
+      $data['text'] = $text;
+      $queue = \Drupal::queue('text_to_speech_queue');
+      $queue->createItem($data);
+    }
+  }
+}
+
+/**
+ * Helper function to fetch textual fields from given paragraph entity.
+ *
+ * @param object $entity
+ *   Paragraph entity.
+ *
+ * @return string
+ *   Text string from textual fields of the given entity.
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ *
+ * @todo Move to a service.
+ */
+function ezcontent_smart_podcast_get_ref_text_to_speech_fields($entity) {
+  $text = '';
+  $types = [
+    'string',
+    'string_long',
+    'text',
+    'text_default',
+    'text_long',
+    'text_with_summary',
+    'smart_text_with_summary',
+  ];
+  $default_display_fields = \Drupal::entityTypeManager()
+    ->getStorage('entity_view_display')
+    ->load($entity->getEntityTypeId() . '.' . $entity->getType() . '.default')
+    ->getComponents();
+  uasort($default_display_fields, function ($a, $b) {
+    if ($a['weight'] === $b['weight']) {
+      return 0;
+    }
+    return $a['weight'] < $b['weight'] ? -1 : 1;
+  });
+  foreach ($default_display_fields as $field => $value) {
+    $field_definition = $entity->getFieldDefinition($field);
+    $field_type = $field_definition->getType();
+    $field_name = $field_definition->getName();
+    if (in_array($field_type, $types)) {
+      if ($entity->$field_name->value) {
+        $stripped_value = strip_tags(trim($entity->$field_name->value));
+        if (!preg_match("/[.]$/", $stripped_value)) {
+          $stripped_value = $stripped_value . '.';
+        }
+        $text = $text . ' ' . $stripped_value;
+      }
+    }
+    if ($field_type === 'entity_reference_revisions') {
+      $ref_entity = $entity->$field_name->entity;
+      $text = $text . ' ' . ezcontent_smart_podcast_get_ref_text_to_speech_fields($ref_entity);
+    }
+  }
+  return $text;
 }
 
 /**
