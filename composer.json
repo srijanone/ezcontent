@@ -127,9 +127,6 @@
       },
       "drupal/entity_browser": {
         "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch"
-      },
-      "drupal/bootstrap_barrio": {
-        "Display Suite classes breaks Layout Builder if Display Suite is not installed": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
       }
     },
     "installer-paths": {
