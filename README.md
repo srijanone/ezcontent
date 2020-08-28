@@ -61,7 +61,7 @@ EzContent can be installed in two ways:
   EzContent profile, and all other dependencies necessary for the project
 
 ```bash 
-composer create-project srijanone/ezcontent-project:1.0.0-beta
+composer create-project srijanone/ezcontent-project
 MY_PROJECT --no-interaction 
 ```
 
@@ -69,7 +69,7 @@ In case you come across any memory issues, run this command -
 
 ```bash 
 php -d memory_limit=-1 /path/to/composer.phar create-project 
-srijanone/ezcontent-project:1.0.0-beta MY_PROJECT --no-interaction 
+srijanone/ezcontent-project MY_PROJECT --no-interaction 
 ```
 
 ### Via Acquia BLT
@@ -79,7 +79,7 @@ use the following commands -
 ```bash 
 composer create-project --no-interaction acquia/blt-project MY_PROJECT;
 cd MY_PROJECT;
-composer require srijanone/ezcontent:^1.0.0-beta;
+composer require srijanone/ezcontent:^1.0;
 ```
 
 #### Warning: 
