@@ -1,0 +1,50 @@
+core.entity_form_display.node.smart_article.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_podcast:
+          region: content
+          settings:
+            match_limit: 10
+            match_operator: CONTAINS
+            placeholder: ''
+            size: 60
+          third_party_settings: {  }
+          type: smart_podcast_entity_reference_widget
+          weight: 27
+      third_party_settings:
+        field_group:
+          group_auto_generate_podcast:
+            children:
+              - field_podcast
+            format_settings:
+              classes: ''
+              description: 'AI powered Text to Speech'
+              id: ''
+              label: 'Auto Generate Podcast'
+              required_fields: false
+            format_type: fieldset
+            label: 'Auto Generate Podcast'
+            parent_name: ''
+            weight: 20
+core.entity_view_display.node.smart_article.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      content:
+        field_podcast:
+          label: above
+          region: content
+          settings:
+            link: false
+            view_mode: default
+          third_party_settings: {  }
+          type: smart_podcast_entity_view
+          weight: 7
+core.entity_view_display.node.smart_article.teaser:
+  expected_config: {  }
+  update_actions:
+    change:
+      hidden:
+        field_podcast: true

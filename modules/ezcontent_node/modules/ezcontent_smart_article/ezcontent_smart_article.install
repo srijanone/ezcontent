@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Install file for ezcontent_smart_article.
+ */
+
+use Drupal\Core\Serialization\Yaml;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
+ * Added smart podcast field to smart article content type.
+ */
+function ezcontent_smart_article_update_8001() {
+  // Install ezcontent_audio module.
+  \Drupal::service('module_installer')->install(['ezcontent_audio'], TRUE);
+  // Get ezcontent_smart_article module path.
+  $module_path = \Drupal::moduleHandler()->getModule('ezcontent_smart_article')->getPath();
+
+  // Import podcast's storage field.
+  $storage_file = 'field.storage.node.field_podcast';
+  $config_path = file_get_contents(DRUPAL_ROOT . '/' . $module_path . '/config/install/' . $storage_file . '.yml');
+  $data = Yaml::decode($config_path);
+  $fieldStorage = FieldStorageConfig::create($data);
+  $fieldStorage->save();
+
+  // Import podcast's field instance.
+  $field = 'field.field.node.smart_article.field_podcast';
+  $config_path = file_get_contents(DRUPAL_ROOT . '/' . $module_path . '/config/install/' . $field . '.yml');
+  $data = Yaml::decode($config_path);
+  $field = FieldConfig::create($data);
+  $field->save();
+
+  /** @var \Drupal\update_helper\Updater $updateHelper */
+  $updateHelper = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updateHelper->executeUpdate('ezcontent_smart_article', 'ezcontent_smart_article_update_8001');
+
+  // Output logged messages to related channel of update execution.
+  return $updateHelper->logger()->output();
+}
