@@ -1,0 +1,50 @@
+core.entity_form_display.node.smart_article.default:
+  expected_config:
+    third_party_settings:
+      field_group:
+        group_auto_generate_podcast:
+          format_settings:
+            label: 'Auto Generate Podcast'
+        group_auto_generate_summary:
+          format_settings:
+            label: 'Auto Generate Summary and Tags for Article Body'
+  update_actions:
+    delete:
+      third_party_settings:
+        field_group:
+          group_auto_generate_podcast:
+            format_settings:
+              label: 'Auto Generate Podcast'
+          group_auto_generate_summary:
+            format_settings:
+              label: 'Auto Generate Summary and Tags for Article Body'
+    add:
+      third_party_settings:
+        field_group:
+          group_auto_generate_article_from:
+            region: content
+          group_auto_generate_podcast:
+            region: content
+          group_auto_generate_summary:
+            region: content
+          group_generate_tags:
+            region: content
+core.entity_view_display.paragraph.card.hero_media:
+  expected_config:
+    third_party_settings:
+      field_group:
+        group_hero_media_content:
+          format_settings:
+            label: 'Hero Media Content'
+  update_actions:
+    delete:
+      third_party_settings:
+        field_group:
+          group_hero_media_content:
+            format_settings:
+              label: 'Hero Media Content'
+    add:
+      third_party_settings:
+        field_group:
+          group_hero_media_content:
+            region: content
