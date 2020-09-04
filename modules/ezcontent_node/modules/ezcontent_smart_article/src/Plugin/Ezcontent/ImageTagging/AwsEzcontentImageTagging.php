@@ -98,7 +98,7 @@ class AwsEzcontentImageTagging extends EzcontentImageTaggingPluginBase implement
     $tags = [];
     if ($file && class_exists('\Aws\Rekognition\RekognitionClient')) {
       $imageFile = file_get_contents($this->fileSystem->realpath($file->getFileUri()));
-      $config = $this->configFactory->get('smart_article.settings');
+      $config = $this->configFactory->get('ezcontent_smart_article.settings');
       $accessKey = $config->get('aws_access_key_image_tags');
       $secretKey = $config->get('aws_secret_key_image_tags');
       $maxCount = $config->get('aws_max_count_image_tags') ? $config->get('aws_max_count_image_tags') : 12;

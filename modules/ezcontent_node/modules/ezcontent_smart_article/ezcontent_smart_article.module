@@ -38,7 +38,7 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
     'node_smart_article_edit_form',
     'node_smart_article_form',
   ])) {
-    $summary_config = \Drupal::config('smart_article.settings');
+    $summary_config = \Drupal::config('ezcontent_smart_article.settings');
     if (empty($summary_config->get('summary_generator_api_url')) ||
       empty($summary_config->get('summary_generator_data_file')) ||
       empty($summary_config->get('image_captioning_api_url')) ||
@@ -357,7 +357,7 @@ function generate_tags_form_submit(array $form, FormStateInterface $form_state) 
     $response->addCommand(new InvokeCommand("#edit-$link_field_id-0-value", 'addClass', ['error']));
   }
   else {
-    $config = \Drupal::config('smart_article.settings');
+    $config = \Drupal::config('ezcontent_smart_article.settings');
     $imageTaggingManager = \Drupal::service('plugin.manager.text_tagging');
     // Use plugin methods here.
     $serviceType = $config->get('text_tagging_service');

@@ -43,7 +43,7 @@ class GenerateSmartTags {
    *   The channel logger object.
    */
   public function __construct(ConfigFactoryInterface $configFactory, ClientInterface $httpClient, LoggerChannelFactory $logger) {
-    $this->config = $configFactory->get('smart_article.settings');
+    $this->config = $configFactory->get('ezcontent_smart_article.settings');
     $this->httpClient = $httpClient;
     $this->logger = $logger;
   }

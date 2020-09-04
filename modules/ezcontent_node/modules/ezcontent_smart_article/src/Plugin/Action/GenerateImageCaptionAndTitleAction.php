@@ -131,7 +131,7 @@ class GenerateImageCaptionAndTitleAction extends ActionBase implements Container
           if ($fieldConfig) {
             $isTitleRequired = $fieldConfig->getSettings()['title_field_required'];
           }
-          $serviceType = $this->configFactory->get('smart_article.settings')
+          $serviceType = $this->configFactory->get('ezcontent_smart_article.settings')
             ->get('image_captioning_service');
           $link = Link::createFromRoute('EzContent Smart Article', 'ezcontent_smart_article.config')
             ->toString();

@@ -26,7 +26,7 @@ class SrijanEzcontentImageCaptioning extends EzcontentImageCaptioningPluginBase 
     if ($file) {
       $imageFile = file_get_contents(\Drupal::service('file_system')
         ->realpath($file->getFileUri()));
-      $url = \Drupal::config('smart_article.settings')
+      $url = \Drupal::config('ezcontent_smart_article.settings')
         ->get('image_captioning_api_url');
       try {
         $response = \Drupal::service('http_client')->request('POST', $url, [

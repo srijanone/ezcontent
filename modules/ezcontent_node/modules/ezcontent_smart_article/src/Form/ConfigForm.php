@@ -28,7 +28,7 @@ class ConfigForm extends ConfigFormBase {
    *
    * @var string
    */
-  const SETTINGS = 'smart_article.settings';
+  const SETTINGS = 'ezcontent_smart_article.settings';
 
   /**
    * File storage object.
