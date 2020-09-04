@@ -72,14 +72,17 @@ content:
     type: text_textarea
     region: content
   field_text_background_color:
-    type: color_field_widget_html5
-    weight: 7
+    type: color_field_formatter_text
+    weight: 6
     region: content
-    settings: {  }
+    label: above
+    settings:
+      format: rgb
+      opacity: true
     third_party_settings: {  }
   field_text_position:
     type: options_select
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
