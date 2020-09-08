@@ -4,3 +4,14 @@ services:
     arguments: ['@module_handler']
     tags:
       - { name: path_processor_outbound }
+
+  ezcontent_node_normalizer.breadcrumb:
+    class: Drupal\ezcontent_node\Normalizer\EzcontentBreadcrumbNormalizer
+    arguments: ['@entity.manager']
+    tags:
+      - { name: normalizer, priority: 2 }
+
+  ezcontent_node_normalizer.ezcontent_breadcrumb:
+    class: Drupal\ezcontent_node\Breadcrumb\EzContentBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
