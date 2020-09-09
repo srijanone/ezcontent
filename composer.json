@@ -105,7 +105,7 @@
       "drupal/core": "-p2"
     },
     "patches-ignore": {
-      "drupal/lb_direct_add_patch": {
+      "drupal/lb_direct_add": {
         "3157440 - Make first option a label not link": "https://www.drupal.org/files/issues/2020-09-03/make-first-option-a-label-not-link-3157440_3_reroll_against_tag_8.x-1.2.patch"
       }
     },
