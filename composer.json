@@ -48,7 +48,7 @@
     "drupal/layout_builder_modal": "^1.0",
     "drupal/layout_builder_restrictions": "^2.1",
     "drupal/layout_library": "^1.0-beta1",
-    "drupal/lb_direct_add": "^1.0",
+    "drupal/lb_direct_add": "^1.2",
     "drupal/length_indicator": "^1.0",
     "drupal/libraries": "3.0-alpha1",
     "drupal/linkit": "~5.0",
@@ -129,7 +129,7 @@
         "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch"
       },
       "drupal/lb_direct_add": {
-        "3157440 - Make first option a label not link": "https://www.drupal.org/files/issues/2020-09-03/make-first-option-a-label-not-link-3157440_3_reroll_against_tag_8.x-1.2.patch"
+        "3157440 - Make first option a label not link": "https://www.drupal.org/files/issues/2020-09-09/make-first-option-a-label-not-link-3157440_3_reroll_updated_against_tag_8.x-1.2.patch"
       }
     },
     "installer-paths": {
