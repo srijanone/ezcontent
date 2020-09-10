@@ -56,6 +56,7 @@ install:
   - social_media_links
   - taxonomy
   - toolbar
+  - update_helper_checklist
   - views
   - views_ui
   - vertical_tabs_config
