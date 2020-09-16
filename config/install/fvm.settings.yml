@@ -13,3 +13,4 @@ paragraph__cards_gallery: 1
 paragraph__cards_gallery__view_modes:
   gallery: gallery
   gallery_carousel: gallery_carousel
+hide_layout_builder_field: 1
