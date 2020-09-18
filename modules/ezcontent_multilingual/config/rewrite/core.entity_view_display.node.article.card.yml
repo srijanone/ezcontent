@@ -1,0 +1,130 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.article.field_author
+    - field.field.node.article.field_content
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_short_title
+    - field.field.node.article.field_social_sharing
+    - field.field.node.article.field_subhead
+    - field.field.node.article.field_summary
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_thumbnail
+    - field.field.node.article.field_yoast_seo
+    - node.type.article
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - layout_library
+    - metatag
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 50-50
+        components:
+          -
+            uuid: 8ca2b633-5938-4da1-aa27-4103c953d758
+            region: first
+            configuration:
+              id: 'field_block:node:article:field_thumbnail'
+              label: Thumbnail
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: card_list
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          -
+            uuid: 51194073-f0b3-49b0-b233-f2d6944c821f
+            region: second
+            configuration:
+              id: 'field_block:node:article:field_summary'
+              label: Summary
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
+          -
+            uuid: c5850dfa-90c1-48ff-82c7-6f76a9ce3df0
+            region: second
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+id: node.article.card
+targetEntityType: node
+bundle: article
+mode: card
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_author: true
+  field_short_title: true
+  field_social_sharing: true
+  field_subhead: true
+  field_summary: true
+  field_tags: true
+  field_thumbnail: true
+  field_yoast_seo: true
+  langcode: true
