@@ -1,0 +1,5 @@
+ezcontent.settings_form:
+  title: 'EzContent Settings'
+  route_name: ezcontent.settings_form
+  description: 'Menu for EzContent settings form'
+  parent: system.admin_config_system

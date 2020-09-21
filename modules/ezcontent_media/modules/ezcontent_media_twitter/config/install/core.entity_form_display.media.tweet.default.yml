@@ -28,4 +28,5 @@ content:
     region: content
 hidden:
   created: true
+  path: true
   uid: true

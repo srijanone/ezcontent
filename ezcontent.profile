@@ -5,6 +5,10 @@
  * Enables modules and site configuration for a standard site installation.
  */
 
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media_entity\Entity\Media;
+
 /**
  * Implements hook_install_tasks().
  */
@@ -88,6 +92,19 @@ function ezcontent_themes_installed($theme_list) {
     if (empty($amp_theme) || $amp_theme !== 'ezcontent_amp') {
       $amp_theme_config->set('amptheme', 'ezcontent_amp')
         ->save(TRUE);
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function ezcontent_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  if ($form_state->getFormObject() instanceof EntityFormInterface) {
+    $entityType = $form_state->getFormObject()->getEntity()->bundle();
+    $entityHideObj = \Drupal::config('ezcontent.settings')->getRawData();
+    if ((bool)$entityHideObj[$entityType]) {
+      $form['revision_information']['#access'] = FALSE;
     }
   }
 }
