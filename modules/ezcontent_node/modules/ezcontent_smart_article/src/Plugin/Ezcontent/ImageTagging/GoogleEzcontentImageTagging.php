@@ -115,7 +115,7 @@ class GoogleEzcontentImageTagging extends EzcontentImageTaggingPluginBase implem
     $tags = [];
     if ($file) {
       $imageFile = $this->fileSystem->realpath($file->getFileUri());
-      $config = $this->configFactory->get('smart_article.settings');
+      $config = $this->configFactory->get('ezcontent_smart_article.settings');
       $secretKey = $config->get('gcm_secret_key_image_tags');
       $maxCount = $config->get('gcm_max_count_image_tags') ? $config->get('gcm_max_count_image_tags') : 12;
       $data = [

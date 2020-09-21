@@ -26,7 +26,7 @@ class SrijanEzcontentImageTagging extends EzcontentImageTaggingPluginBase implem
     if ($file) {
       $imageFile = file_get_contents(\Drupal::service('file_system')
         ->realpath($file->getFileUri()));
-      $url = \Drupal::config('smart_article.settings')
+      $url = \Drupal::config('ezcontent_smart_article.settings')
         ->get('image_generate_tags_api_url');
       $response = \Drupal::service('http_client')->request('POST', $url, [
         'headers' => [

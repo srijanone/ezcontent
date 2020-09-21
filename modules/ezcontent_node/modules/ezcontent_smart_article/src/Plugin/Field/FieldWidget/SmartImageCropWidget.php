@@ -51,7 +51,7 @@ class SmartImageCropWidget extends ImageCropWidget {
       // @todo: get file object directly form_state.
       $file = File::load($fid[0]);
       $imageCaptioningManager = \Drupal::service('plugin.manager.image_captioning');
-      $serviceType = \Drupal::config('smart_article.settings')
+      $serviceType = \Drupal::config('ezcontent_smart_article.settings')
         ->get('image_captioning_service');
       $plugin = $imageCaptioningManager->createInstance($serviceType);
       $caption = $plugin->getImageCaption($file);
