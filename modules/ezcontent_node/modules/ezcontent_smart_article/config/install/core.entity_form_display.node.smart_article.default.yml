@@ -37,6 +37,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Auto Generate Article from Data Points'
+      region: content
     group_auto_generate_summary:
       children:
         - field_smart_text_summary
@@ -45,12 +46,12 @@ third_party_settings:
       weight: 15
       format_type: fieldset
       format_settings:
-        label: 'Auto Generate Summary and Tags for Article Body'
         description: 'AI powered summary generation and tags suggestions.'
         required_fields: true
         id: ''
         classes: ''
       label: 'Auto Generate Summary and Tags for Article Body'
+      region: content
     group_generate_tags:
       children:
         - field_smart_tags
@@ -63,6 +64,7 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Generate Tags'
+      region: content
     group_auto_generate_podcast:
       children:
         - field_podcast
@@ -70,12 +72,12 @@ third_party_settings:
       weight: 20
       format_type: fieldset
       format_settings:
-        label: 'Auto Generate Podcast'
         description: 'AI powered Text to Speech'
         id: ''
         classes: ''
         required_fields: false
       label: 'Auto Generate Podcast'
+      region: content
 id: node.smart_article.default
 targetEntityType: node
 bundle: smart_article

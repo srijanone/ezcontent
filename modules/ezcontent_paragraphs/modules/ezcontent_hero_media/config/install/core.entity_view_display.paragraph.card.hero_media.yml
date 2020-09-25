@@ -30,7 +30,6 @@ third_party_settings:
       weight: 20
       format_type: html_element_hero_media_display
       format_settings:
-        label: 'Hero Media Content'
         element: div
         show_label: '0'
         label_element: h3
@@ -40,6 +39,7 @@ third_party_settings:
         id: ''
         classes: hero_media_content
       label: 'Hero Media Content'
+      region: content
 id: paragraph.card.hero_media
 targetEntityType: paragraph
 bundle: card
