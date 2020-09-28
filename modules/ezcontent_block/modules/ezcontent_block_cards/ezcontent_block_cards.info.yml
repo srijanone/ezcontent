@@ -4,5 +4,6 @@ description: "Provides Cards Block Types Based Features."
 package: EZContent Block
 core: 8.x
 dependencies:
+  - block_form_alter
   - ezcontent_block
   - ezcontent_card

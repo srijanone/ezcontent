@@ -25,6 +25,7 @@
     "drupal/autocomplete_deluxe": "^2.0",
     "drupal/better_normalizers": "^1.0@beta",
     "drupal/block_blacklist": "^1.0",
+    "drupal/block_form_alter": "^1.1",
     "drupal/color_field": "^2.2",
     "drupal/colorbox": "^1.4",
     "drupal/config_rewrite": "^1.3",

@@ -1,0 +1,8 @@
+ezcontent_block_cards:
+  version: 1.x
+  js:
+    js/ezcontent_block_cards.js: {}
+  
+  dependencies:
+    - core/drupal
+    - core/jquery
