@@ -1,0 +1,78 @@
+core.entity_form_display.node.article.default:
+  expected_config:
+    content:
+      field_content:
+        settings:
+          default_paragraph_type: _none
+  update_actions:
+    change:
+      content:
+        field_content:
+          settings:
+            default_paragraph_type: text
+field.field.node.article.field_content:
+  expected_config:
+    settings:
+      handler_settings:
+        target_bundles_drag_drop:
+          assets:
+            weight: -31
+          card:
+            enabled: true
+            weight: -22
+          card_list:
+            weight: -23
+          embed:
+            weight: -38
+          faq:
+            weight: -24
+          faq_qa:
+            enabled: true
+            weight: -20
+          form:
+            enabled: true
+            weight: -18
+          gallery:
+            weight: -30
+          hero_media:
+            weight: -22
+          map:
+            weight: -25
+          quote:
+            weight: -26
+          referenced_card:
+            enabled: true
+            weight: -28
+          social_media:
+            weight: -37
+          text:
+            weight: -32
+          view:
+            weight: -20
+  update_actions:
+    change:
+      settings:
+        handler_settings:
+          target_bundles_drag_drop:
+            assets:
+              weight: -32
+            card_list:
+              weight: -24
+            embed:
+              weight: -31
+            faq:
+              weight: -25
+            gallery:
+              weight: -29
+            hero_media:
+              weight: -23
+            map:
+              weight: -26
+            quote:
+              weight: -27
+            social_media:
+              weight: -30
+            text:
+              weight: -33
+            view:
+              weight: -19
