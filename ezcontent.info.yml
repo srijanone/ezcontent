@@ -16,7 +16,6 @@ install:
   - config_rewrite
   - contact
   - content_lock_timeout
-  - content_moderation
   - contextual
   - crop
   - dblog
@@ -47,7 +46,7 @@ install:
   - rdf
   - redirect
   - robotstxt
-  - scheduler
+  - scheduler_content_moderation_integration
   - schema_metatag
   - search
   - shortcut
