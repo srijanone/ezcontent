@@ -45,7 +45,8 @@ class EZContentAmpOutboundPathProcessor implements OutboundPathProcessorInterfac
       // maintain transition.
       $isAmpRoute = \Drupal::service('router.amp_context')->isAmpRoute();
       if (isset($options['route']) && $options['route'] instanceof Route) {
-        if (in_array($options['route']->getPath(), ['/', '/node/{node}']) && $isAmpRoute) {
+        if (in_array($options['route']->getPath(), ['/', '/node/{node}'])
+          && $isAmpRoute) {
           $options['query']['amp'] = TRUE;
         }
       }

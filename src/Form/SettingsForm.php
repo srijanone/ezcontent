@@ -10,7 +10,7 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 
 /**
- * Class SettingsForm.
+ * Create setting form for ezcontent.
  *
  * @package Drupal\ezcontent\Form
  */

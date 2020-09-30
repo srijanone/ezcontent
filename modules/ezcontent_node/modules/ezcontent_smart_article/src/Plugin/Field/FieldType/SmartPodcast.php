@@ -100,7 +100,8 @@ class SmartPodcast extends EntityReferenceItem {
       'smart_text_with_summary',
     ];
     foreach ($entity->getFieldDefinitions() as $key => $value) {
-      if (strpos($key, 'field_') !== FALSE || in_array($key, ['title', 'body'])) {
+      if (strpos($key, 'field_') !== FALSE ||
+        in_array($key, ['title', 'body'])) {
         if (in_array($value->getType(), $types)) {
           $fields[$key] = $value->getLabel();
         }

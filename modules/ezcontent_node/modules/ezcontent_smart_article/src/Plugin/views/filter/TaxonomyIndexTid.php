@@ -21,8 +21,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class TaxonomyIndexTid extends ManyToOne {
 
-  // Stores the exposed input for this filter.
-  public $validated_exposed_input = NULL;
+  /**
+   * Stores the exposed input for this filter.
+   *
+   * @var mixed
+   */
+  public $validatedExposedInput = NULL;
 
   /**
    * The vocabulary storage.
@@ -82,6 +86,9 @@ class TaxonomyIndexTid extends ManyToOne {
     }
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function hasExtraOptions() {
     return TRUE;
   }
@@ -93,6 +100,9 @@ class TaxonomyIndexTid extends ManyToOne {
     return $this->valueOptions;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   protected function defineOptions() {
     $options = parent::defineOptions();
 
@@ -105,6 +115,9 @@ class TaxonomyIndexTid extends ManyToOne {
     return $options;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function buildExtraOptionsForm(&$form, FormStateInterface $form_state) {
     $vocabularies = $this->vocabularyStorage->loadMultiple();
     $options = [];
@@ -133,7 +146,10 @@ class TaxonomyIndexTid extends ManyToOne {
     $form['type'] = [
       '#type' => 'radios',
       '#title' => $this->t('Selection type'),
-      '#options' => ['select' => $this->t('Dropdown'), 'textfield' => $this->t('Autocomplete')],
+      '#options' => [
+        'select' => $this->t('Dropdown'),
+        'textfield' => $this->t('Autocomplete'),
+      ],
       '#default_value' => $this->options['type'],
     ];
 
@@ -149,6 +165,9 @@ class TaxonomyIndexTid extends ManyToOne {
     ];
   }
 
+  /**
+   * {@inheritdoc}
+   */
   protected function valueForm(&$form, FormStateInterface $form_state) {
     $vocabulary = $this->vocabularyStorage->load($this->options['vid']);
     if (empty($vocabulary) && $this->options['limit']) {
@@ -182,7 +201,10 @@ class TaxonomyIndexTid extends ManyToOne {
         if ($tree) {
           foreach ($tree as $term) {
             $choice = new \stdClass();
-            $choice->option = [$term->id() => str_repeat('-', $term->depth) . \Drupal::service('entity.repository')->getTranslationFromContext($term)->label()];
+            $choice->option = [
+              $term->id() => str_repeat('-', $term->depth)
+              . \Drupal::service('entity.repository')->getTranslationFromContext($term)->label(),
+            ];
             $options[] = $choice;
           }
         }
@@ -225,7 +247,8 @@ class TaxonomyIndexTid extends ManyToOne {
             $keys = array_keys($options);
             $default_value = array_shift($keys);
           }
-          // Due to #1464174 there is a chance that array('') was saved in the admin ui.
+          // Due to #1464174 there is a chance that.
+          // Array('') was saved in the admin ui.
           // Let's choose a safe default value.
           elseif ($default_value == ['']) {
             $default_value = 'All';
@@ -253,7 +276,7 @@ class TaxonomyIndexTid extends ManyToOne {
     }
 
     if (!$form_state->get('exposed')) {
-      // Retain the helper option
+      // Retain the helper option.
       $this->helper->buildOptionsForm($form, $form_state);
 
       // Show help text if not exposed to end users.
@@ -261,6 +284,9 @@ class TaxonomyIndexTid extends ManyToOne {
     }
   }
 
+  /**
+   * {@inheritdoc}
+   */
   protected function valueValidate($form, FormStateInterface $form_state) {
     // We only validate if they've chosen the text field style.
     if ($this->options['type'] != 'textfield') {
@@ -276,6 +302,9 @@ class TaxonomyIndexTid extends ManyToOne {
     $form_state->setValue(['options', 'value'], $tids);
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function acceptExposedInput($input) {
     if (empty($this->options['exposed'])) {
       return TRUE;
@@ -288,9 +317,9 @@ class TaxonomyIndexTid extends ManyToOne {
     }
 
     // If view is an attachment and is inheriting exposed filters, then assume
-    // exposed input has already been validated
+    // exposed input has already been validated.
     if (!empty($this->view->is_attachment) && $this->view->display_handler->usesExposed()) {
-      $this->validated_exposed_input = (array) $this->view->exposed_raw_input[$this->options['expose']['identifier']];
+      $this->validatedExposedInput = (array) $this->view->exposed_raw_input[$this->options['expose']['identifier']];
     }
 
     // If we're checking for EMPTY or NOT, we don't need any input, and we can
@@ -300,21 +329,24 @@ class TaxonomyIndexTid extends ManyToOne {
     }
 
     // If it's non-required and there's no value don't bother filtering.
-    if (!$this->options['expose']['required'] && empty($this->validated_exposed_input)) {
+    if (!$this->options['expose']['required'] && empty($this->validatedExposedInput)) {
       return FALSE;
     }
 
     $rc = parent::acceptExposedInput($input);
     if ($rc) {
       // If we have previously validated input, override.
-      if (isset($this->validated_exposed_input)) {
-        $this->value = $this->validated_exposed_input;
+      if (isset($this->validatedExposedInput)) {
+        $this->value = $this->validatedExposedInput;
       }
     }
 
     return $rc;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function validateExposed(&$form, FormStateInterface $form_state) {
     if (empty($this->options['exposed'])) {
       return;
@@ -325,7 +357,7 @@ class TaxonomyIndexTid extends ManyToOne {
     // We only validate if they've chosen the text field style.
     if ($this->options['type'] != 'textfield') {
       if ($form_state->getValue($identifier) != 'All') {
-        $this->validated_exposed_input = (array) $form_state->getValue($identifier);
+        $this->validatedExposedInput = (array) $form_state->getValue($identifier);
       }
       return;
     }
@@ -336,15 +368,21 @@ class TaxonomyIndexTid extends ManyToOne {
 
     if ($values = $form_state->getValue($identifier)) {
       foreach ($values as $value) {
-        $this->validated_exposed_input[] = $value['target_id'];
+        $this->validatedExposedInput[] = $value['target_id'];
       }
     }
   }
 
+  /**
+   * {@inheritdoc}
+   */
   protected function valueSubmit($form, FormStateInterface $form_state) {
-    // prevent array_filter from messing up our arrays in parent submit.
+    // Prevent array_filter from messing up our arrays in parent submit.
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function buildExposeForm(&$form, FormStateInterface $form_state) {
     parent::buildExposeForm($form, $form_state);
     if ($this->options['type'] != 'select') {
@@ -357,8 +395,11 @@ class TaxonomyIndexTid extends ManyToOne {
     ];
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function adminSummary() {
-    // set up $this->valueOptions for the parent summary
+    // Set up $this->valueOptions for the parent summary.
     $this->valueOptions = [];
 
     if ($this->value) {
