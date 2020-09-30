@@ -6,7 +6,7 @@ use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\views\ViewExecutableFactory;
 
 /**
- * Class ContentListingHelperBlock.
+ * Helper class for ContentListingBlock.
  *
  * @package Drupal\ezcontent_listing
  */

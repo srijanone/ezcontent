@@ -149,7 +149,10 @@ class GenerateImageCaptionAndTitleAction extends ActionBase implements Container
                 }
                 else {
                   $this->messenger->addError(t('Image caption not updated for media @mediaName
-                    , Please check setting @link.', ['@link' => $link, '@mediaName' => $entity->getName()]));
+                    , Please check setting @link.', [
+                      '@link' => $link,
+                      '@mediaName' => $entity->getName(),
+                    ]));
                 }
               }
               // Update image title if it is mandatory.
@@ -170,7 +173,10 @@ class GenerateImageCaptionAndTitleAction extends ActionBase implements Container
                   }
                   else {
                     $this->messenger->addError(t('Image caption not updated for media @mediaName
-                    , Please check setting @link.', ['@link' => $link, '@mediaName' => $entity->getName()]));
+                    , Please check setting @link.', [
+                      '@link' => $link,
+                      '@mediaName' => $entity->getName(),
+                    ]));
                   }
                 }
                 // Update image title if it is mandatory.
