@@ -103,7 +103,7 @@ class GoogleTextToSpeech extends EzcontentTextToSpeechPluginBase implements Ezco
   public function convertTextToSpeech($text) {
     $speech = '';
     if ($text) {
-      $api_key = $this->configFactory->get('smart_article.settings')
+      $api_key = $this->configFactory->get('ezcontent_smart_article.settings')
         ->get('gcp_text_to_speech_key');
       $data = [
         'input' => [
