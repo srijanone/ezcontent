@@ -70,7 +70,7 @@ class TextToSpeechQueue extends QueueWorkerBase implements ContainerFactoryPlugi
    * {@inheritdoc}
    */
   public function processItem($data) {
-    $text_to_speech_service = $this->configFactory->get('smart_article.settings')
+    $text_to_speech_service = $this->configFactory->get('ezcontent_smart_article.settings')
       ->get('text_to_speech_service');
     $plugin = $this->textToSpeechManager->createInstance($text_to_speech_service);
     $speech = $plugin->convertTextToSpeech($data['text']);
