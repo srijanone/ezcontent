@@ -102,7 +102,7 @@ function ezcontent_form_alter(array &$form, FormStateInterface $form_state, $for
   if ($form_state->getFormObject() instanceof EntityFormInterface) {
     $entityType = $form_state->getFormObject()->getEntity()->bundle();
     $entityHideObj = \Drupal::config('ezcontent.settings')->getRawData();
-    if ((bool) $entityHideObj[$entityType]) {
+    if (isset($entityHideObj[$entityType]) && $entityHideObj[$entityType]) {
       $form['revision_information']['#access'] = FALSE;
     }
   }
