@@ -1,6 +1,15 @@
 <?php
 
 /**
+ * @file
+ * Install file for ezcontent_article.
+ */
+
+use Drupal\Core\Serialization\Yaml;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\field\Entity\FieldStorageConfig;
+
+/**
  * Enhanced the content field display in article form.
  */
 function ezcontent_article_update_8001() {
@@ -10,6 +19,31 @@ function ezcontent_article_update_8001() {
   // Execute configuration update definitions with logging of success.
   $updateHelper->executeUpdate('ezcontent_article', 'ezcontent_article_update_8001');
 
+  // Output logged messages to related channel of update execution.
+  return $updateHelper->logger()->output();
+}
+
+/**
+ * Added field_premium to article content type inside additional options field group in right side bar of article form.
+ */
+function ezcontent_article_update_8002() {
+  $module_handler = \Drupal::moduleHandler();
+  // Import premium field storage.
+  $storage_file = 'field.storage.node.field_premium';
+  $config_path = file_get_contents(DRUPAL_ROOT . '/' . $module_handler->getModule('ezcontent_node')->getPath() . '/config/install/' . $storage_file . '.yml');
+  $data = Yaml::decode($config_path);
+  $fieldStorage = FieldStorageConfig::create($data);
+  $fieldStorage->save();
+  // Import premium field instance.
+  $field = 'field.field.node.article.field_premium';
+  $config_path = file_get_contents(DRUPAL_ROOT . '/' . $module_handler->getModule('ezcontent_article')->getPath() . '/config/install/' . $field . '.yml');
+  $data = Yaml::decode($config_path);
+  $field = FieldConfig::create($data);
+  $field->save();
+  /** @var \Drupal\update_helper\Updater $updateHelper */
+  $updateHelper = \Drupal::service('update_helper.updater');
+  // Execute configuration update definitions with logging of success.
+  $updateHelper->executeUpdate('ezcontent_article', 'ezcontent_article_update_8002');
   // Output logged messages to related channel of update execution.
   return $updateHelper->logger()->output();
 }

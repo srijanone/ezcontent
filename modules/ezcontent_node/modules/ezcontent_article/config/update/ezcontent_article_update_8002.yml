@@ -1,0 +1,43 @@
+core.entity_form_display.node.article.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      third_party_settings:
+        field_group:
+          group_additional_options:
+            children:
+              - field_social_sharing
+              - field_premium
+            format_settings:
+              classes: ''
+              description: ''
+              id: ''
+              open: true
+              required_fields: true
+              weight: 0
+            format_type: details_sidebar
+            label: 'Additional Options'
+            parent_name: ''
+            region: content
+            weight: 19
+    change:
+      content:
+        field_premium:
+          region: content
+          settings:
+            display_label: true
+          third_party_settings: {  }
+          type: boolean_checkbox
+          weight: 20
+core.entity_view_display.node.article.default:
+  expected_config: {  }
+  update_actions:
+    add:
+      hidden:
+        field_premium: true
+core.entity_view_display.node.article.teaser:
+  expected_config: {  }
+  update_actions:
+    add:
+      hidden:
+        field_premium: true

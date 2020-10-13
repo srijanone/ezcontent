@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.field_author
     - field.field.node.article.field_content
     - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_premium
     - field.field.node.article.field_short_title
     - field.field.node.article.field_social_sharing
     - field.field.node.article.field_subhead
@@ -47,6 +48,7 @@ hidden:
   field_author: true
   field_content: true
   field_meta_tags: true
+  field_premium: true
   field_short_title: true
   field_social_sharing: true
   field_subhead: true

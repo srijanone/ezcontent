@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.field_author
     - field.field.node.article.field_content
     - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_premium
     - field.field.node.article.field_short_title
     - field.field.node.article.field_social_sharing
     - field.field.node.article.field_subhead
@@ -81,7 +82,6 @@ third_party_settings:
       weight: 3
       format_type: details
       format_settings:
-        label: Taxonomy
         description: ''
         required_fields: true
         id: ''
@@ -89,6 +89,22 @@ third_party_settings:
         open: false
       label: Taxonomy
       region: content
+    group_additional_options:
+      children:
+        - field_social_sharing
+        - field_premium
+      parent_name: ''
+      weight: 19
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        open: true
+        required_fields: true
+        weight: 0
+      label: 'Additional Options'
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -96,7 +112,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -136,10 +152,18 @@ content:
     third_party_settings: {  }
     region: content
   field_meta_tags:
-    weight: 121
-    settings: {  }
+    weight: 17
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
+  field_premium:
+    weight: 20
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_short_title:
     weight: -4
@@ -150,7 +174,7 @@ content:
     type: string_textfield
     region: content
   field_social_sharing:
-    weight: 124
+    weight: 19
     settings:
       display_label: true
     third_party_settings: {  }
@@ -205,7 +229,7 @@ content:
     type: entity_browser_entity_reference
     region: content
   field_yoast_seo:
-    weight: 123
+    weight: 18
     settings:
       body: field_summary
     third_party_settings: {  }
@@ -213,13 +237,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 15
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -227,17 +251,17 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 6
     region: content
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 20
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -245,14 +269,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 16
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 7
     region: content
     third_party_settings: {  }
   title:
@@ -271,7 +295,7 @@ content:
           tolerance: 10
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -281,12 +305,12 @@ content:
     third_party_settings: {  }
   unpublish_on:
     type: datetime_timestamp_no_default
-    weight: 30
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
