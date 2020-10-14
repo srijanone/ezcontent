@@ -5,9 +5,11 @@
  * Hooks implementations for EzContent Node module.
  */
 
+use Drupal\ezcontent_node\Element\Date;
+
 /**
  * Implements hook_element_info_alter().
  */
 function ezcontent_node_element_info_alter(array &$info) {
-  $info['date']['#process'][] = [\Drupal\ezcontent_node\Element\Date::class, 'processDate'];
+  $info['date']['#process'][] = [Date::class, 'processDate'];
 }

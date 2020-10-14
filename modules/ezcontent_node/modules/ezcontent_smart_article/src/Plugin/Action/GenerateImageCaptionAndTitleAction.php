@@ -117,7 +117,7 @@ class GenerateImageCaptionAndTitleAction extends ActionBase implements Container
    */
   public function execute($entity = NULL) {
     if ($entity->getEntityType()->id() == 'media') {
-      foreach ($entity->getFields() as $key => $field) {
+      foreach ($entity->getFields() as $field) {
         // Check if entity has any field of image type.
         if ($field->getFieldDefinition()->getType() == 'image') {
           $imageField = $field->getFieldDefinition()->getName();
@@ -148,7 +148,7 @@ class GenerateImageCaptionAndTitleAction extends ActionBase implements Container
                   $entity->$imageField->alt = $caption;
                 }
                 else {
-                  $this->messenger->addError(t('Image caption not updated for media @mediaName
+                  $this->messenger->addError($this->t('Image caption not updated for media @mediaName
                     , Please check setting @link.', [
                       '@link' => $link,
                       '@mediaName' => $entity->getName(),
@@ -163,7 +163,7 @@ class GenerateImageCaptionAndTitleAction extends ActionBase implements Container
             }
             // Handle more than one images.
             elseif ($cardinality > 1 || $cardinality === -1) {
-              foreach ($entity->$imageField as $ikey => $image) {
+              foreach ($entity->$imageField as $image) {
                 if (empty($image->alt)) {
                   $file = File::load($image->target_id);
                   // Get image caption from plugin.
@@ -172,7 +172,7 @@ class GenerateImageCaptionAndTitleAction extends ActionBase implements Container
                     $image->alt = $caption;
                   }
                   else {
-                    $this->messenger->addError(t('Image caption not updated for media @mediaName
+                    $this->messenger->addError($this->t('Image caption not updated for media @mediaName
                     , Please check setting @link.', [
                       '@link' => $link,
                       '@mediaName' => $entity->getName(),

@@ -64,7 +64,6 @@ class GenerateSubProfile extends BaseGenerator {
     $questions['themes'] = new Question('Themes to install (comma separated)');
     $questions['install'] = new Question('Additional module to install(comma separated)');
     $questions['exclude'] = new Question('Module to exclude (comma separated)');
-    $vars = $this->collectVars($input, $output, $questions);
     $subprofilePath = '/profiles/custom/{machine_name}';
     $this->addFile($subprofilePath . '/{machine_name}.info.yml')
       ->template('subprofile-info.twig');

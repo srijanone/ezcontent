@@ -3,4 +3,3 @@ ezcontent_smart_article.config:
   route_name: ezcontent_smart_article.config
   parent: system.admin_config_system
   description: 'Configure services(Srijan AI, AWS, Google) to get AI-enabled content on the smart article.'
-

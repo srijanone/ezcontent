@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for module EzContent Article.
+ */
+
+/**
  * Enhanced the content field display in article form.
  */
 function ezcontent_article_update_8001() {

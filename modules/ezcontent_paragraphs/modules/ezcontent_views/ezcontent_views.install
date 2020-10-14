@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for EzContent Views Module.
+ */
+
+/**
  * Changed the paragraph type icon.
  */
 function ezcontent_views_update_8001() {

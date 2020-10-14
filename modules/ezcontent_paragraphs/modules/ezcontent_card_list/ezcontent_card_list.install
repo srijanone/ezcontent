@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for EzContent Card List Module.
+ */
+
+/**
  * Changed the paragraph type icon.
  */
 function ezcontent_card_list_update_8001() {

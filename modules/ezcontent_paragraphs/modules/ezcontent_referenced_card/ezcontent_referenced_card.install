@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for EzContent Referenced Card Module.
+ */
+
+/**
  * Changed the paragraph type icon.
  */
 function ezcontent_referenced_card_update_8001() {
