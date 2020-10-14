@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for EzContent Social Media Embed Module.
+ */
+
+/**
  * Changed the paragraph type icon.
  */
 function ezcontent_social_media_embed_update_8001() {

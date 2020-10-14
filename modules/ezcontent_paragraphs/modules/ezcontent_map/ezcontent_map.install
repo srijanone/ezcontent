@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for EzContent Map Module.
+ */
+
+/**
  * Changed the paragraph type icon.
  */
 function ezcontent_map_update_8001() {

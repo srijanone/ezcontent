@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for EzContent Text Module.
+ */
+
+/**
  * Changed the paragraph type icon.
  */
 function ezcontent_text_update_8001() {

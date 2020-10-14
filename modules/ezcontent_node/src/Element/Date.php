@@ -29,13 +29,13 @@ class Date extends CoreDate {
       if ($element['#attributes']['type'] == 'date') {
         $dateFormat = !empty($element['#date_date_format']) ? $element['#date_date_format'] : DateFormat::load('html_date')->getPattern();
         $element['#attributes']['min'] = $date->format($dateFormat);
-        // Placeholder for browsers who do not support date element, like Safari
+        // Placeholder for browsers not supporting date element, like Safari.
         $element['#attributes']['placeholder'] = $date->format($dateFormat);
       }
       elseif ($element['#attributes']['type'] == 'time') {
         $dateFormat = !empty($element['#date_time_format']) ? $element['#date_time_format'] : DateFormat::load('html_time')->getPattern();
         $element['#attributes']['min'] = $date->format($dateFormat);
-        // Placeholder for browsers who do not support time element, like Safari
+        // Placeholder for browsers not supporting time element, like Safari.
         $element['#attributes']['placeholder'] = $date->format($dateFormat);
       }
     }

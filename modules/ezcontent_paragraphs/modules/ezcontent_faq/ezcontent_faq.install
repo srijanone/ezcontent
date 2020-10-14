@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install file for EzContent FAQ Module.
+ */
+
+/**
  * Changed the paragraph type icon.
  */
 function ezcontent_faq_update_8001() {
