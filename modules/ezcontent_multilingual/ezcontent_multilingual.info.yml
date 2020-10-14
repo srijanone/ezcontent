@@ -1,7 +1,0 @@
-name: EZContent Multilingual Feature
-type: module
-description: 'Provides multilingual features.'
-package: EZContent Multilingual
-core_version_requirement: ^8 || ^9
-dependencies:
-  - drupal:content_translation

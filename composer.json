@@ -45,6 +45,7 @@
     "drupal/google_analytics": "^3.0",
     "drupal/image_widget_crop": "^2.3",
     "drupal/inline_entity_form": "^1.0@RC",
+    "drupal/layout_builder_at": "^2.0",
     "drupal/layout_builder_modal": "^1.0",
     "drupal/layout_builder_restrictions": "^2.1",
     "drupal/layout_library": "^1.0-beta1",
