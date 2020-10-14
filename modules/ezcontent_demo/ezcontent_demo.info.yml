@@ -6,6 +6,7 @@ core: 8.x
 dependencies:
   - better_normalizers:better_normalizers
   - default_content:default_content
+  - drupal:content_translation
   - ezcontent_api:ezcontent_preview
   - ezcontent:ezcontent_block
   - ezcontent:ezcontent_block_cards
@@ -46,5 +47,6 @@ dependencies:
   - ezcontent:ezcontent_views
   - ezcontent:ezcontent_taxonomy
   - ezcontent:ezcontent_user
+  - layout_builder_at:layout_builder_at
   - menu_link_content:menu_link_content
   - responsive_preview:responsive_preview
