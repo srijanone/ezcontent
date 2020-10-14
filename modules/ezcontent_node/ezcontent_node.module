@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Hooks implementations for EzContent Node module.
+ */
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function ezcontent_node_element_info_alter(array &$info) {
+  $info['date']['#process'][] = [\Drupal\ezcontent_node\Element\Date::class, 'processDate'];
+}
