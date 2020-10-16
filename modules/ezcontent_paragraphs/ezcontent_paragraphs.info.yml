@@ -4,6 +4,7 @@ description: 'Provides base for multiple paragraphs like Text, Image, Video etc.
 package: EZContent Paragraphs
 core: 8.x
 dependencies:
-  - media_library
-  - paragraphs_edit
-  - paragraphs_library
+  - better_normalizers:better_normalizers
+  - drupal:media_library
+  - paragraphs_edit:paragraphs_edit
+  - paragraphs:paragraphs_library

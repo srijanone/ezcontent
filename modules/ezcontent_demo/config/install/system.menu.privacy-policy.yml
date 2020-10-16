@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: privacy-policy
-label: 'Privacy Policy'
-description: ''
-locked: false
