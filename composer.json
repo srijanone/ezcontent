@@ -37,7 +37,6 @@
     "drupal/entity_usage": "^2.0@beta",
     "drupal/environment_indicator": "^3.7",
     "drupal/ezcontent_api": "^2.0",
-    "drupal/ezcontent_demo": "1.0.x-dev",
     "drupal/ezcontent_publish": "^1.0",
     "drupal/field_group": "^3.0",
     "drupal/fvm": "^1.1",
