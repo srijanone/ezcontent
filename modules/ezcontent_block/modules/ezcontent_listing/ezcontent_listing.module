@@ -9,18 +9,20 @@
  * Implements hook_preprocess_block().
  */
 function ezcontent_listing_preprocess_block(&$variables) {
-  if (isset($variables['content']) && isset($variables['content']['#block_content'])) {
-    $block = $variables['content']['#block_content'];
+  $routeOptions = \Drupal::routeMatch()->getRouteObject()->getOptions();
+  $blockContentList = $routeOptions['_layout_builder'] ? $variables['content']['content'] : $variables['content'];
+  $block = $routeOptions['_layout_builder'] ? $variables['content']['content']['#block_content'] : $variables['content']['#block_content'];
+  if (isset($blockContentList) && isset($block)) {
     $block_type = $block->bundle();
     if ($block_type == 'content_listing_component') {
       $variables['#attached']['library'][] = 'ezcontent_listing/ezcontent_listing_css';
-      $block_view_mode = $variables['content']['#view_mode'];
+      $block_view_mode = $blockContentList['#view_mode'];
       $helper_block_service = \Drupal::service('ezcontent_listing.helper_block');
 
       switch ($block_view_mode) {
         case 'full':
           $content_list_data = $helper_block_service->getContentListingBlock($block);
-          $variables['content'] = array_merge($variables['content'], $content_list_data);
+          $variables['content'] = array_merge($blockContentList, $content_list_data);
           break;
       }
     }
