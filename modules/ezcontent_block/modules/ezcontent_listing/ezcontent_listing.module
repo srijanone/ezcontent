@@ -9,21 +9,26 @@
  * Implements hook_preprocess_block().
  */
 function ezcontent_listing_preprocess_block(&$variables) {
-  $routeOptions = \Drupal::routeMatch()->getRouteObject()->getOptions();
-  $blockContentList = $routeOptions['_layout_builder'] ? $variables['content']['content'] : $variables['content'];
-  $block = $routeOptions['_layout_builder'] ? $variables['content']['content']['#block_content'] : $variables['content']['#block_content'];
-  if (isset($blockContentList) && isset($block)) {
-    $block_type = $block->bundle();
-    if ($block_type == 'content_listing_component') {
-      $variables['#attached']['library'][] = 'ezcontent_listing/ezcontent_listing_css';
-      $block_view_mode = $blockContentList['#view_mode'];
-      $helper_block_service = \Drupal::service('ezcontent_listing.helper_block');
+  if (in_array($variables['plugin_id'], [
+    'content_listing_component',
+    'inline_block:content_listing_component',
+  ])) {
+    $routeOptions = \Drupal::routeMatch()->getRouteObject()->getOptions();
+    $blockContentList = isset($routeOptions['_layout_builder']) ? $variables['content']['content'] : $variables['content'];
+    $block = $blockContentList['#block_content'];
+    if (isset($blockContentList) && isset($block)) {
+      $block_type = $block->bundle();
+      if ($block_type == 'content_listing_component') {
+        $variables['#attached']['library'][] = 'ezcontent_listing/ezcontent_listing_css';
+        $block_view_mode = $blockContentList['#view_mode'];
+        $helper_block_service = \Drupal::service('ezcontent_listing.helper_block');
 
-      switch ($block_view_mode) {
-        case 'full':
-          $content_list_data = $helper_block_service->getContentListingBlock($block);
-          $variables['content'] = array_merge($blockContentList, $content_list_data);
-          break;
+        switch ($block_view_mode) {
+          case 'full':
+            $content_list_data = $helper_block_service->getContentListingBlock($block);
+            $variables['content'] = array_merge($blockContentList, $content_list_data);
+            break;
+        }
       }
     }
   }
