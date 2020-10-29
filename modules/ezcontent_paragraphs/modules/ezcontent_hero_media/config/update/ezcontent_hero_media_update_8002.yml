@@ -1,0 +1,34 @@
+core.entity_view_display.paragraph.card.hero_media:
+  expected_config:
+    hidden:
+      field_text_background_color: true
+      field_text_position: true
+  update_actions:
+    delete:
+      hidden:
+        field_text_background_color: true
+        field_text_position: true
+    add:
+      content:
+        field_text_background_color:
+          label: above
+          region: content
+          settings:
+            format: rgb
+            opacity: true
+          third_party_settings: {  }
+          type: color_field_formatter_text
+          weight: 6
+        field_text_position:
+          label: above
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+          type: list_default
+          weight: 7
+      third_party_settings:
+        field_group:
+          group_hero_media_content:
+            children:
+              - field_text_background_color
+              - field_text_position
