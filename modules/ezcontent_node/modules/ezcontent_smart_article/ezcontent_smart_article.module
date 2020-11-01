@@ -223,8 +223,27 @@ function ezcontent_smart_podcast_submit_handler(array &$form, FormStateInterface
       $data['entity_id'] = $entity_id;
       $data['field_name'] = $field_name;
       $data['text'] = $text;
-      $queue = \Drupal::queue('text_to_speech_queue');
-      $queue->createItem($data);
+      // Use key value to record an entry for the node being queued for podcast
+      // creation.
+      $key_value = \Drupal::keyValue('text_to_speech_node');
+      // If key_value has an entry for the node, it means the node is already
+      // added into the queue for conversion, then fetch the corresponding
+      // queue item id and update the data in the queue.
+      if ($key_value->has($entity_id)) {
+        $item_id = $key_value->get($entity_id)['item_id'];
+        \Drupal::database()->update('queue')
+          ->fields(['data' => serialize($data)])
+          ->condition('name', 'text_to_speech_queue')
+          ->condition('item_id', $item_id)
+          ->execute();
+      }
+      // The current node is being queued for the first time, so post queue
+      // creation set the node id and the queue item id in the key_value.
+      else {
+        $queue = \Drupal::queue('text_to_speech_queue');
+        $item_id = $queue->createItem($data);
+        $key_value->set($entity_id, ['item_id' => $item_id]);
+      }
     }
   }
 }
