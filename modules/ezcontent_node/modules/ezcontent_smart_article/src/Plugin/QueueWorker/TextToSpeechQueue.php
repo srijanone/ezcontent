@@ -3,6 +3,7 @@
 namespace Drupal\ezcontent_smart_article\Plugin\QueueWorker;
 
 use Drupal\Core\Config\ConfigFactory;
+use Drupal\Core\KeyValueStore\KeyValueFactoryInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Queue\QueueWorkerBase;
 use Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager;
@@ -34,6 +35,13 @@ class TextToSpeechQueue extends QueueWorkerBase implements ContainerFactoryPlugi
   protected $textToSpeechManager;
 
   /**
+   * The Key Value factory.
+   *
+   * @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface
+   */
+  protected $keyValue;
+
+  /**
    * TextToSpeechQueue constructor.
    *
    * @param array $configuration
@@ -46,11 +54,14 @@ class TextToSpeechQueue extends QueueWorkerBase implements ContainerFactoryPlugi
    *   The config factory object.
    * @param \Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager $textToSpeechManager
    *   Ezcontent text to speech manager.
+   * @param \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value
+   *   The key value factory object.
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, ConfigFactory $configFactory, EzcontentTextToSpeechManager $textToSpeechManager) {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, ConfigFactory $configFactory, EzcontentTextToSpeechManager $textToSpeechManager, KeyValueFactoryInterface $key_value) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->configFactory = $configFactory;
     $this->textToSpeechManager = $textToSpeechManager;
+    $this->keyValue = $key_value;
   }
 
   /**
@@ -62,7 +73,8 @@ class TextToSpeechQueue extends QueueWorkerBase implements ContainerFactoryPlugi
       $plugin_id,
       $plugin_definition,
       $container->get('config.factory'),
-      $container->get('plugin.manager.ezcontent_text_to_speech')
+      $container->get('plugin.manager.ezcontent_text_to_speech'),
+      $container->get('keyvalue')
     );
   }
 
@@ -70,11 +82,16 @@ class TextToSpeechQueue extends QueueWorkerBase implements ContainerFactoryPlugi
    * {@inheritdoc}
    */
   public function processItem($data) {
+    // Fetch text-to-speech service from the configuration.
     $text_to_speech_service = $this->configFactory->get('ezcontent_smart_article.settings')
       ->get('text_to_speech_service');
     $plugin = $this->textToSpeechManager->createInstance($text_to_speech_service);
+    // Perform conversion.
     $speech = $plugin->convertTextToSpeech($data['text']);
+    // Save the conversion result as media into the node entity.
     $plugin->saveSpeechToEntity($data['entity_type_id'], $data['entity_id'], $data['field_name'], $speech);
+    // Delete current node's entry from key value store.
+    $this->keyValue->get('text_to_speech_node')->delete($data['entity_id']);
   }
 
 }
