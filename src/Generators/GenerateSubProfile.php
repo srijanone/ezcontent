@@ -58,7 +58,7 @@ class GenerateSubProfile extends BaseGenerator {
     if ($profile != 'ezcontent') {
       throw new \UnexpectedValueException('Please make sure ezcontent profile is installed.');
     }
-    $questions = Utils::defaultQuestions();
+    $questions = Utils::moduleQuestions();
     $questions['name'] = new Question('Enter sub profile name', 'EZcontent sub profile');
     $questions['machine_name'] = new Question('Enter sub profile machine name', 'ezcontent_subprofile');
     $questions['themes'] = new Question('Themes to install (comma separated)');
