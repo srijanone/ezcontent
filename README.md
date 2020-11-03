@@ -104,15 +104,16 @@ cd MY_PROJECT;
 composer require srijanone/ezcontent:9.x-dev;
 ```
 
-### Recommendation
+### Demo Setup
 
-#### Use Drush To Install ezcontent_demo module
+Please use the following single command installer to setup a demo site. Please refer <a href="https://www.drupal.org/project/ezcontent_demo" target="_blank">EzContent Demo</a> package to know more about this.
 
-Currently *ezcontent_demo* module is a bit heavy which require extra memory
-to complete its installation via installation user interface, we recommend 
-you to install this module via drush or try installing its sub module one by
-one to distribute the load.
-example : 
 ```bash
- drush en -y ezcontent_demo
+COMPOSER_MEMORY_LIMIT=-1 composer create-project srijanone/ezcontent-project:dev-demo ezcontent-demo --no-interaction;
+```
+Currently ezcontent_demo module is a bit heavy which require extra memory to complete its installation via installation user interface, we recommend you to install this module via drush or try installing its sub module one by one to distribute the load.
+Drush command :
+
+```bash
+drush en -y ezcontent_demo
 ```
