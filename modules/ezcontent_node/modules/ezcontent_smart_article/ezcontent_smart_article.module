@@ -52,6 +52,7 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
           'class' => ['use-ajax'],
           'data-dialog-type' => 'modal',
           'data-dialog-options' => Json::encode([
+            'title' => t('Smart Article Settings'),
             'width' => 700,
             'closeOnEscape' => FALSE,
             'modal' => TRUE,
