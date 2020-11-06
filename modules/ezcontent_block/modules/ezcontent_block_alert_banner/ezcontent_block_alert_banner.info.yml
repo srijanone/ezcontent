@@ -4,5 +4,5 @@ description: "Provides Alert Banner Block Types Based Features."
 package: EZContent Block
 core_version_requirement: ^8 || ^9
 dependencies:
-  - color_field
-  - ezcontent_block
+  - color_field:color_field
+  - ezcontent:ezcontent_block
