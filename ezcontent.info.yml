@@ -12,6 +12,7 @@ install:
   - ckeditor
   - color
   - comment
+  - components
   - config
   - config_rewrite
   - contact

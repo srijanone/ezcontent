@@ -93,10 +93,6 @@ function ezcontent_themes_installed($theme_list) {
         ->save(TRUE);
     }
   }
-  elseif (in_array('ezcontent_theme', $theme_list)) {
-    // Install Components module.
-    \Drupal::service('module_installer')->install(['components'], TRUE);
-  }
 }
 
 /**
