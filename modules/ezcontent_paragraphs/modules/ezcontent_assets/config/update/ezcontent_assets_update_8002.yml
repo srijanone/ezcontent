@@ -1,0 +1,12 @@
+core.entity_form_display.paragraph.assets.default:
+  expected_config:
+    content:
+      field_media:
+        settings:
+          open: false
+  update_actions:
+    change:
+      content:
+        field_media:
+          settings:
+            open: true

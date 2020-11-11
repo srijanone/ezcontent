@@ -316,7 +316,10 @@ function ezcontent_smart_summary_generate_callback(&$form, FormStateInterface $f
   $summary = $text['data']['data']['summary'];
 
   $response = new AjaxResponse();
-  $arguments = [$summary, 'edit-field-smart-text-summary-0-summary-container-summary-area'];
+  $arguments = [
+    $summary,
+    'edit-field-smart-text-summary-0-summary-container-summary-area',
+  ];
   $response->addCommand(new InvokeCommand(NULL, "update_summary_text", $arguments));
   return $response;
 }
