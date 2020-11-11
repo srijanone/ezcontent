@@ -74,7 +74,8 @@ function ezcontent_cards_gallery_preprocess_ezcontent_colorbox_view_mode_formatt
 
     case 'custom':
       $token_service = \Drupal::token();
-      $gallery_id = $token_service->replace($settings['colorbox_gallery_custom'], [$entity_type => $entity, 'entity' => $item], ['clear' => TRUE]);
+      $gallery_id = $token_service->replace($settings['colorbox_gallery_custom'],
+        [$entity_type => $entity, 'entity' => $item], ['clear' => TRUE]);
       break;
 
     default:
@@ -95,7 +96,13 @@ function ezcontent_cards_gallery_preprocess_ezcontent_colorbox_view_mode_formatt
   $variables['url'] = NULL;
   $item_type = $item->getEntityTypeId();
   if ($item_type === 'paragraph') {
-    $variables['url'] = Url::fromRoute('ezcontent_paragraphs.display')->setRouteParameters(['paragraph' => $item->id(), 'view_mode' => $variables['modal']['#view_mode']]);
+    $variables['url'] = Url::fromRoute('ezcontent_paragraphs.display')
+      ->setRouteParameters(
+        [
+          'paragraph' => $item->id(),
+          'view_mode' => $variables['modal']['#view_mode'],
+        ]
+      );
   }
   $variables['attributes']['title'] = isset($entity->field_title) && $entity->field_title->value ? $entity->field_title->value : $entity->getParentEntity()->getTitle();
   $variables['attributes']['data-colorbox-gallery'] = $gallery_id;

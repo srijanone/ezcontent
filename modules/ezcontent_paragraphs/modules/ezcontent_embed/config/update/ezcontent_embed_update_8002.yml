@@ -1,0 +1,13 @@
+core.entity_form_display.paragraph.embed.default:
+  expected_config:
+    content:
+      field_script:
+        third_party_settings: {  }
+  update_actions:
+    change:
+      content:
+        field_script:
+          third_party_settings:
+            allowed_formats:
+              hide_guidelines: '1'
+              hide_help: '0'

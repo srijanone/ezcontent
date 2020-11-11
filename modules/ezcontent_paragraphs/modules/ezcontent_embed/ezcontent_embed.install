@@ -18,3 +18,17 @@ function ezcontent_embed_update_8001() {
   // Output logged messages to related channel of update execution.
   return $updateHelper->logger()->output();
 }
+
+/**
+ * Hide guidlines help text for script field.
+ */
+function ezcontent_embed_update_8002() {
+  /** @var \Drupal\update_helper\Updater $updateHelper */
+  $updateHelper = \Drupal::service('update_helper.updater');
+
+  // Execute configuration update definitions with logging of success.
+  $updateHelper->executeUpdate('ezcontent_embed', 'ezcontent_embed_update_8002');
+
+  // Output logged messages to related channel of update execution.
+  return $updateHelper->logger()->output();
+}

@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.embed.field_script
     - paragraphs.paragraphs_type.embed
   module:
+    - allowed_formats
     - text
 id: paragraph.embed.default
 targetEntityType: paragraph
@@ -16,7 +17,10 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
+    third_party_settings:
+      allowed_formats:
+        hide_guidelines: '1'
+        hide_help: '0'
     type: text_textarea
     region: content
 hidden:
