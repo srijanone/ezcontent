@@ -21,6 +21,7 @@ class Date extends CoreDate {
     // case where scheduler is enabled and is past dates are not allowed.
     $formObject = $form_state->getFormObject();
     if ($formObject instanceof ContentEntityForm &&
+      !empty($formObject->getEntity()->type->entity) &&
       $formObject->getEntity()->type->entity->getThirdPartySetting('scheduler', 'publish_past_date') == 'error' &&
       ($element['#parents'][0] == 'publish_on' || $element['#parents'][0] == 'unpublish_on')
     ) {

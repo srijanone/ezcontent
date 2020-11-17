@@ -60,10 +60,10 @@
         $('.field--type-ezcontent-smart-tags .tags-link-field .ui-autocomplete-input').val(finalTags);
       });
       // Open invalid subscription dialog.
-      $('#edit-overlay-link').trigger('click');
+      $('#edit-overlay-link', context).once('ezcontent_smart_article').trigger('click');
       // Generate tags as soon as image is uploaded.
       if (drupalSettings.imageTagOption == 'auto' && $(".image-preview")[0]) {
-        $('.generate-tags-button').trigger('click');
+        $('.generate-tags-button', context).once('ezcontent_smart_article').trigger('click');
       }
     }
   };
