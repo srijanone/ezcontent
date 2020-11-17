@@ -6,7 +6,7 @@ ezcontent_smart_article_libs:
     theme:
       css/ezcontent_smart_article.css: {}
   dependencies:
-    - core/jquery
+    - core/jquery.once
     - core/drupalSettings
 
 ezcontent_smart_article_subscription_page_libs:
