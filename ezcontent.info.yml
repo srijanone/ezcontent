@@ -39,7 +39,6 @@ install:
   - image
   - image_widget_crop
   - linkit
-  - moderation_dashboard
   - moderation_sidebar
   - options
   - path
