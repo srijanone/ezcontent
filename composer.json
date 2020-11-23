@@ -53,7 +53,7 @@
     "drupal/linkit": "~5.0",
     "drupal/liveblog": "1.x-dev#f4595035",
     "drupal/media_entity_browser": "2.x",
-    "drupal/media_entity_instagram": "^2.0",
+    "drupal/media_entity_instagram": "^3.0",
     "drupal/media_entity_slideshow": "2.x",
     "drupal/media_entity_twitter": "^2.1",
     "drupal/metatag": "^1.10",
