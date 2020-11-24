@@ -104,7 +104,6 @@
     },
     "patches": {
       "drupal/panels": {
-        "3030976 - Panels should check if there is an icon map before setting the no preview icon": "https://www.drupal.org/files/issues/2019-02-06/initial.patch",
         "2878684 - Use String.match to correlate regions when switching Layouts in Panels IPE": "https://www.drupal.org/files/issues/panels-ipe-2878684-3.patch"
       },
       "drupal/paragraphs" : {
