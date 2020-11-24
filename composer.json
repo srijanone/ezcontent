@@ -58,7 +58,7 @@
     "drupal/media_entity_twitter": "^2.1",
     "drupal/metatag": "^1.10",
     "drupal/moderation_sidebar": "^1.2",
-    "drupal/panels": "4.4",
+    "drupal/panels": "4.6 || 4.x-dev",
     "drupal/paragraphs": "^1.9",
     "drupal/paragraphs_edit": "^2.0@alpha",
     "drupal/paragraphs_jquery_ui_accordion": "^1.3",
