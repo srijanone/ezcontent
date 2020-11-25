@@ -3,18 +3,20 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.inline
-    - field.field.media.instagram.embed_code
+    - field.field.media.instagram.field_media_oembed_instagram
     - media.type.instagram
+  module:
+    - media
 id: media.instagram.inline
 targetEntityType: media
 bundle: instagram
 mode: inline
 content:
-  embed_code:
-    type: string_textarea
+  field_media_oembed_instagram:
+    type: oembed_textfield
     weight: 0
     settings:
-      rows: 1
+      size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
