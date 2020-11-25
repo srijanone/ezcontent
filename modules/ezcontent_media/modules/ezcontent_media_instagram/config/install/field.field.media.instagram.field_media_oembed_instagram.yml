@@ -2,17 +2,17 @@ langcode: und
 status: true
 dependencies:
   config:
-    - field.storage.media.embed_code
+    - field.storage.media.field_media_oembed_instagram
     - media.type.instagram
-id: media.instagram.embed_code
-field_name: embed_code
+id: media.instagram.field_media_oembed_instagram
+field_name: field_media_oembed_instagram
 entity_type: media
 bundle: instagram
-label: 'Instagram post'
+label: 'Instagram URL'
 description: 'Paste Instagram post URL.'
 required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: string

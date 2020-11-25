@@ -2,19 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.instagram.embed_code
+    - field.field.media.instagram.field_media_oembed_instagram
     - media.type.instagram
-third_party_settings: {  }
+  module:
+    - media
 id: media.instagram.default
 targetEntityType: media
 bundle: instagram
 mode: default
 content:
-  embed_code:
-    type: string_textarea
+  field_media_oembed_instagram:
+    type: oembed_textfield
     weight: 1
     settings:
-      rows: 5
+      size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
