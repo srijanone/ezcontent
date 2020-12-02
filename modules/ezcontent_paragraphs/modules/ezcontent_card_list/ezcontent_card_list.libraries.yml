@@ -2,3 +2,11 @@ ezcontent_card_list_css:
   css:
     theme:
       css/card.css: {}
+
+ezcontent_paragraph_cards:
+  version: 1.x
+  js:
+    js/ezcontent_paragraph_cards.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
