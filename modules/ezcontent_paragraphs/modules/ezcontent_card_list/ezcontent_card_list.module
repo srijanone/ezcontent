@@ -11,3 +11,12 @@
 function ezcontent_card_list_preprocess_paragraph__card_list(&$variables) {
   $variables['#attached']['library'][] = 'ezcontent_card_list/ezcontent_card_list_css';
 }
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function ezcontent_card_list_field_widget_paragraphs_form_alter(&$element, &$form_state, $context) {
+  if ($element['#paragraph_type'] == 'card_list') {
+    $element['#attached']['library'][] = 'ezcontent_card_list/ezcontent_paragraph_cards';
+  }
+}
