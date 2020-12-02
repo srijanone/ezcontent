@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - paragraphs.paragraphs_type.faq_qa
   content:
     - 'file:file:6eaf745b-748a-4603-8c82-44040d6a19db'
 id: faq
