@@ -42,7 +42,7 @@ content:
     type: string_textfield
     region: content
   view_mode_selection:
-    type: options_select
+    type: ezcontent_cards_view_modes_options_select
     region: content
     weight: 2
     settings: {  }
