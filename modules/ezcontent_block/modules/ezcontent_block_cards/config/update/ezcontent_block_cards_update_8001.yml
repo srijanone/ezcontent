@@ -1,0 +1,10 @@
+core.entity_form_display.block_content.cards.default:
+  expected_config:
+    content:
+      view_mode_selection:
+        type: options_select
+  update_actions:
+    change:
+      content:
+        view_mode_selection:
+          type: ezcontent_cards_view_modes_options_select

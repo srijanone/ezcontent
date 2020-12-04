@@ -50,7 +50,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   view_mode_selection:
-    type: options_select
+    type: ezcontent_cards_view_modes_options_select
     region: content
     weight: 26
     settings: {  }
