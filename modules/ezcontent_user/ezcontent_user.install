@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Contains updates hook.
+ */
+
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Editor role permission update.
+ */
+function ezcontent_user_update_8001() {
+  /** @var \Drupal\update_helper\Updater $updateHelper */
+  $updateHelper = \Drupal::service('update_helper.updater');
+  $module_path = drupal_get_path('module', 'ezcontent_user');
+  $file = 'user.role.editor';
+  $config_path = $module_path . '/config/install/' . $file . '.yml';
+  $data = Yaml::parseFile($config_path);
+  \Drupal::configFactory()->getEditable($file)->setData($data)->save(TRUE);
+  // Output logged messages to related channel of update execution.
+  return $updateHelper->logger()->output();
+}
