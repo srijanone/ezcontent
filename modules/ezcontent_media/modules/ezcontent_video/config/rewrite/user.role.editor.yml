@@ -1,0 +1,6 @@
+permissions:
+  - 'create video media'
+  - 'delete any video media'
+  - 'delete own video media'
+  - 'edit any video media'
+  - 'edit own video media'

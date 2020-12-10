@@ -7,3 +7,4 @@ configure: ezcontent_smart_article.config
 dependencies:
   - ezcontent:ezcontent_node
   - ezcontent_media:ezcontent_audio
+  - ezcontent_user

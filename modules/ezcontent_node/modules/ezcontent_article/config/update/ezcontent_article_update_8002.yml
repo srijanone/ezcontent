@@ -1,0 +1,7 @@
+user.role.editor:
+  expected_config: {  }
+  update_actions:
+    add:
+      permissions:
+        - 'break content lock'
+        - 'use yoast seo'
