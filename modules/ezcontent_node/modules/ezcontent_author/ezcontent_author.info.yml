@@ -8,3 +8,4 @@ dependencies:
   - ezcontent_image
   - layout_library
   - allowed_formats
+  - ezcontent_user

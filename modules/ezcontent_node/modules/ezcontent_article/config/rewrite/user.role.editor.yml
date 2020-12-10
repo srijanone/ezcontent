@@ -1,0 +1,11 @@
+permissions:
+  - 'create article content'
+  - 'delete any article content'
+  - 'delete article revisions'
+  - 'delete own article content'
+  - 'edit any article content'
+  - 'edit own article content'
+  - 'revert article revisions'
+  - 'view article revisions'
+  - 'break content lock'
+  - 'use yoast seo'
