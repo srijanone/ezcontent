@@ -5,3 +5,4 @@ package: EZContent Node
 core: 8.x
 dependencies:
   - ezcontent_node
+  - ezcontent_user
