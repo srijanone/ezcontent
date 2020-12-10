@@ -14,3 +14,4 @@ dependencies:
   - ezcontent_assets
   - length_indicator
   - schema_article
+  - ezcontent_user

@@ -1,0 +1,10 @@
+permissions:
+  - 'configure all landing_page node layout overrides'
+  - 'create landing_page content'
+  - 'delete any landing_page content'
+  - 'delete landing_page revisions'
+  - 'delete own landing_page content'
+  - 'edit any landing_page content'
+  - 'edit own landing_page content'
+  - 'revert landing_page revisions'
+  - 'view landing_page revisions'

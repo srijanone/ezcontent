@@ -1,0 +1,9 @@
+permissions:
+  - 'create author content'
+  - 'delete any author content'
+  - 'delete author revisions'
+  - 'delete own author content'
+  - 'edit any author content'
+  - 'edit own author content'
+  - 'revert author revisions'
+  - 'view author revisions'
