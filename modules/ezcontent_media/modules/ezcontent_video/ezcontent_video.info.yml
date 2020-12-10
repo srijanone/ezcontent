@@ -5,3 +5,4 @@ package: EZContent Media
 core: 8.x
 dependencies:
   - ezcontent_media
+  - ezcontent_user

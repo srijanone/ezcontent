@@ -1,0 +1,6 @@
+permissions:
+  - 'create instagram media'
+  - 'delete any instagram media'
+  - 'delete own instagram media'
+  - 'edit any instagram media'
+  - 'edit own instagram media'

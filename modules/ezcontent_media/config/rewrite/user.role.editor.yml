@@ -1,0 +1,6 @@
+permissions:
+  - 'create gallery media'
+  - 'delete any gallery media'
+  - 'delete own gallery media'
+  - 'edit any gallery media'
+  - 'edit own gallery media'

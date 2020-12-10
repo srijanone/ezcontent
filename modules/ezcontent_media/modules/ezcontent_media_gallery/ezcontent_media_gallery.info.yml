@@ -9,3 +9,4 @@ dependencies:
   - ezcontent_media
   - ezcontent_image
   - media_entity_slideshow
+  - ezcontent_user

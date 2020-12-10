@@ -6,3 +6,4 @@ core: 8.x
 dependencies:
   - ezcontent_media:ezcontent_media
   - image_widget_crop:image_widget_crop
+  - ezcontent_user

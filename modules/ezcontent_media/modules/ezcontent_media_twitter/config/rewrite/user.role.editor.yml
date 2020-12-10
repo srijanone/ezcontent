@@ -1,0 +1,6 @@
+permissions:
+  - 'create tweet media'
+  - 'delete any tweet media'
+  - 'delete own tweet media'
+  - 'edit any tweet media'
+  - 'edit own tweet media'

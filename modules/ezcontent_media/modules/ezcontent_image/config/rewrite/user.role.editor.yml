@@ -1,0 +1,6 @@
+permissions:
+  - 'create image media'
+  - 'delete any image media'
+  - 'delete own image media'
+  - 'edit any image media'
+  - 'edit own image media'
