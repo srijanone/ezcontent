@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: media
+label: Media
+revision: 0
+description: 'Allow you to add media.'
