@@ -1,0 +1,7 @@
+name: Media Block
+type: module
+description: "Provides Media Block Types Based Features."
+package: EZContent Block
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - ezcontent_block
