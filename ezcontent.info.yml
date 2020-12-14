@@ -5,7 +5,6 @@ core: 8.x
 
 # Modules to install to support the profile.
 install:
-  - admin_toolbar_tools
   - autosave_form
   - block_content
   - breakpoint
@@ -32,6 +31,7 @@ install:
   - formtips
   - fvm
   - gin_login
+  - gin_toolbar
   - google_analytics
   - help
   - history
