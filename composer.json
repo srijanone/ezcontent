@@ -136,6 +136,9 @@
       },
       "drupal/media_entity_instagram": {
         "3190830 - Media creation failed with error as invalid oembed resource": "https://www.drupal.org/files/issues/2021-01-27/media_entity_instagram-use_graph_api-3190830-9.patch"
+      },
+      "drupal/fvm": {
+        "3188401 - Add widget to override none option inside view mode select list ": "https://www.drupal.org/files/issues/2020-12-16/allow-user-to-custmise-none-option-from-select-3188401-3.patch"
       }
     },
     "installer-paths": {
