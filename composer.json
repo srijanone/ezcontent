@@ -132,6 +132,9 @@
       },
       "drupal/lb_direct_add": {
         "3157440 - Make first option a label not link": "https://www.drupal.org/files/issues/2020-09-09/make-first-option-a-label-not-link-3157440_3_reroll_updated_against_tag_8.x-1.2.patch"
+      },
+      "drupal/fvm": {
+        "3188401 - Add widget to override none option inside view mode select list ": "https://www.drupal.org/files/issues/2020-12-16/allow-user-to-custmise-none-option-from-select-3188401-3.patch"
       }
     },
     "installer-paths": {

@@ -5,9 +5,11 @@ dependencies:
     - field.field.paragraph.card_list.field_card
     - field.field.paragraph.card_list.field_link
     - field.field.paragraph.card_list.field_title
+    - field.field.paragraph.card_list.layout_selection
     - field.field.paragraph.card_list.view_mode_selection
     - paragraphs.paragraphs_type.card_list
   module:
+    - fvm
     - paragraphs_previewer
 id: paragraph.card_list.default
 targetEntityType: paragraph
@@ -41,14 +43,21 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   view_mode_selection:
-    type: ezcontent_cards_view_modes_options_select
+    type: fvm_options_select
     region: content
     weight: 2
-    settings: {  }
+    settings:
+      default_option: 'Cards Grid (1xn)'
     third_party_settings: {  }
 hidden:
   created: true
   field_link: true
+  layout_selection: true
   status: true
   uid: true

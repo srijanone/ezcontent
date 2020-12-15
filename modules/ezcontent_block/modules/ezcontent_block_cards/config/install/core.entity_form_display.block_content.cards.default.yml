@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.cards.field_title
     - field.field.block_content.cards.view_mode_selection
   module:
+    - fvm
     - paragraphs_previewer
 id: block_content.cards.default
 targetEntityType: block_content
@@ -49,11 +50,19 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   view_mode_selection:
-    type: ezcontent_cards_view_modes_options_select
+    type: fvm_options_select
     region: content
     weight: 26
-    settings: {  }
-    third_party_settings: {  }    
+    settings:
+      default_option: 'Cards Grid (1xn)'
+    third_party_settings: {  }
 hidden:
   field_link: true

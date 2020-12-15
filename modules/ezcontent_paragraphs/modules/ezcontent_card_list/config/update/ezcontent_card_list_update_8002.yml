@@ -7,4 +7,4 @@ core.entity_form_display.paragraph.card_list.default:
     change:
       content:
         view_mode_selection:
-          type: ezcontent_cards_view_modes_options_select
+          type: fvm_options_select
