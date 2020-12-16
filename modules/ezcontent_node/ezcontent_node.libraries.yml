@@ -1,0 +1,7 @@
+ezcontent_node_datetime_libs:
+  version: 1.x
+  js:
+    js/ezcontent_node_datetime.js: {}
+  dependencies:
+    - core/jquery.once
+    - core/drupalSettings
