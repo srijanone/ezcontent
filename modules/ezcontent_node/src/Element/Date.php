@@ -32,6 +32,9 @@ class Date extends CoreDate {
         $element['#attributes']['min'] = $date->format($dateFormat);
         // Placeholder for browsers not supporting date element, like Safari.
         $element['#attributes']['placeholder'] = $date->format($dateFormat);
+        // Attach library.
+        $element['#attached']['library'][] = 'ezcontent_node/ezcontent_node_datetime_libs';
+        $element['#attached']['drupalSettings']['currentDate'] = $date->format($dateFormat);
       }
       elseif ($element['#attributes']['type'] == 'time') {
         $dateFormat = !empty($element['#date_time_format']) ? $element['#date_time_format'] : DateFormat::load('html_time')->getPattern();
