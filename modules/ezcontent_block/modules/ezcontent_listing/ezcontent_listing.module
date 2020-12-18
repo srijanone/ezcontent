@@ -26,7 +26,12 @@ function ezcontent_listing_preprocess_block(&$variables) {
         switch ($block_view_mode) {
           case 'full':
             $content_list_data = $helper_block_service->getContentListingBlock($block);
-            $variables['content'] = array_merge($blockContentList, $content_list_data);
+            if (isset($routeOptions['_layout_builder'])) {
+              $variables['content']['content'] = array_merge($blockContentList, $content_list_data);
+            }
+            else {
+              $variables['content'] = array_merge($blockContentList, $content_list_data);
+            }
             break;
         }
       }
