@@ -34,6 +34,7 @@
     "drupal/email_registration": "^1.0",
     "drupal/entity_browser": "~2.1",
     "drupal/entity_embed": "^1.0",
+    "drupal/entityqueue": "^1.2",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/environment_indicator": "^3.7",
     "drupal/ezcontent_api": "^2.0",
@@ -138,6 +139,9 @@
       },
       "drupal/media_entity_twitter": {
         "Use twitter API in TweetVisibleConstraintValidator": "https://www.drupal.org/files/issues/2020-07-07/3155001-6.patch"
+      },
+      "drupal/entityqueue": {
+        "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
       }
     },
     "installer-paths": {
