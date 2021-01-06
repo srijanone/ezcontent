@@ -5,6 +5,8 @@
  * Install file for module EzContent Article.
  */
 
+use Symfony\Component\Yaml\Yaml;
+
 /**
  * Enhanced the content field display in article form.
  */
@@ -29,6 +31,21 @@ function ezcontent_article_update_8002() {
   // Execute configuration update definitions with logging of success.
   $updateHelper->executeUpdate('ezcontent_article', 'ezcontent_article_update_8002');
 
+  // Output logged messages to related channel of update execution.
+  return $updateHelper->logger()->output();
+}
+
+/**
+ * Configuration update.
+ */
+function ezcontent_article_update_8003() {
+  /** @var \Drupal\update_helper\Updater $updateHelper */
+  $updateHelper = \Drupal::service('update_helper.updater');
+  $module_path = drupal_get_path('module', 'ezcontent_article');
+  $file = 'entityqueue.entity_queue.featured_articles';
+  $config_path = $module_path . '/config/install/' . $file . '.yml';
+  $data = Yaml::parseFile($config_path);
+  \Drupal::configFactory()->getEditable($file)->setData($data)->save(TRUE);
   // Output logged messages to related channel of update execution.
   return $updateHelper->logger()->output();
 }

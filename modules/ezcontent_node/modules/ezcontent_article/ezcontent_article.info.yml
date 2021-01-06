@@ -6,6 +6,7 @@ core: 8.x
 dependencies:
   - autocomplete_deluxe
   - diff
+  - entityqueue
   - ezcontent_author
   - ezcontent_node
   - ezcontent_image
