@@ -138,9 +138,6 @@
       "drupal/fvm": {
         "3188401 - Add widget to override none option inside view mode select list ": "https://www.drupal.org/files/issues/2020-12-16/allow-user-to-custmise-none-option-from-select-3188401-3.patch"
       },
-      "drupal/media_entity_twitter": {
-        "Use twitter API in TweetVisibleConstraintValidator": "https://www.drupal.org/files/issues/2020-07-07/3155001-6.patch"
-      },
       "drupal/entityqueue": {
         "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
       }
