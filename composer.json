@@ -144,6 +144,14 @@
         "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
       }
     },
+    "patches-ignore": {
+      "acquia/lightning": {
+        "drupal/core": {
+          "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
+          "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
+        }
+      }
+    },
     "installer-paths": {
       "docroot/core": [
         "type:drupal-core"
