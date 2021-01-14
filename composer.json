@@ -19,7 +19,7 @@
     "bower-asset/colorbox": "^1.6",
     "bower-asset/dropzone": "^5.1",
     "bower-asset/slick-carousel": "^1.8",
-    "cweagans/composer-patches": "1.6.5",
+    "cweagans/composer-patches": "~1",
     "drupal/admin_toolbar": "^2.0",
     "drupal/allowed_formats": "^1.1",
     "drupal/autocomplete_deluxe": "^2.0",
@@ -145,7 +145,7 @@
       }
     },
     "patches-ignore": {
-      "drupal/lightning": {
+      "acquia/lightning": {
         "drupal/core": {
           "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2019-11-05/1356276-531-8.8.x-4.patch",
           "[subprofile support] 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch"
