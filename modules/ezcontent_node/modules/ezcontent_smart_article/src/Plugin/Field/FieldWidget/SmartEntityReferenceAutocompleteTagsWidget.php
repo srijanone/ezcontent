@@ -145,6 +145,7 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
     $uuid = $entity->uuid();
     $element['#attached']['library'][] = 'ezcontent_smart_article/ezcontent_smart_article_libs';
     $element['#attached']['drupalSettings']['imageTagOption'] = $imageTaggingActionType;
+    $element['#attached']['drupalSettings']['uuid'][$uuid] = $uuid;
     $element['status_messages'] = [
       '#type' => 'status_messages',
       '#weight' => -10,
@@ -161,12 +162,13 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
     }
     // Add generate tags button.
     $element['auto_image_tags'] = [
-      '#prefix' => '<div class="image-tag-field-wrapper" id="auto-image-tags">',
+      '#prefix' => '<div class="image-tag-field-wrapper" id="auto-image-tags-' . $uuid . '">',
       '#suffix' => '</div>',
       '#weight' => 0,
     ];
-    $element['generate_image_tags'] = [
+    $element['generate_image_tags_' . $uuid] = [
       '#type' => 'submit',
+      '#name' => 'generate_image_tags_' . $uuid,
       '#value' => $this->t('Generate Image Tags'),
       '#weight' => 11,
       '#data' => $uuid,
@@ -181,7 +183,7 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
       ],
       '#ajax' => [
         'callback' => [$this, 'ezcontentSmartImageTagsGenerateCallback'],
-        'wrapper' => 'auto-image-tags',
+        'wrapper' => 'auto-image-tags-'. $uuid,
         'effect' => 'fade',
         'event' => 'click',
         'progress' => [
@@ -220,8 +222,8 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
           '#tags' => $tags,
         ];
         $rendered_field = $this->renderer->render($auto_tags);
-        $response->addCommand(new HtmlCommand('#auto-image-tags', $rendered_field));
-        $arguments = [NULL, ''];
+        $response->addCommand(new HtmlCommand('#auto-image-tags-' . $uuid, $rendered_field));
+        $arguments = [NULL, $uuid];
         $response->addCommand(new InvokeCommand(NULL, "update_image_tags", $arguments));
         return $response;
       }

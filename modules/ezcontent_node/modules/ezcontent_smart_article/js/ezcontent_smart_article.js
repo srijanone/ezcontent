@@ -11,9 +11,13 @@
    */
   Drupal.behaviors.ezcontent_smart_article = {
     attach: function (context, settings) {
-      $('.field--type-ezcontent-smart-image-tags .image-tag-field-wrapper .tag-wrapper li', context).click(function (e) {
+      var uuidArray = drupalSettings.uuid;
+      $.each(uuidArray, function(uuidKey, uuidValue) {
+      var dynamicId = 'auto-image-tags-' + uuidValue;
+      var dynamicName = uuidValue + '[field_smart_image_tags][target_id]';
+      $('.field--type-ezcontent-smart-image-tags [id="' + dynamicId + '"] .tag-wrapper li', context).click(function (e) {
         var tagName = $(this).text();
-        var existingTags = $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input').val();
+        var existingTags = $('.field--type-ezcontent-smart-image-tags [name="' + dynamicName + '"]').val();
         var finalTags = '';
         if (existingTags === '') {
           // If empty set val attribute.
@@ -21,11 +25,11 @@
         } else {
           finalTags = existingTags + ', ' + tagName;
         }
-        $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input').val(finalTags);
+        $('.field--type-ezcontent-smart-image-tags [name="' + dynamicName + '"]').val(finalTags);
         $(this).addClass('list-disabled');
       });
       // Handle change event.
-      $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input', context).on('change mouseleave', function (e) {
+      $('.field--type-ezcontent-smart-image-tags [name="' + dynamicName + '"]', context).on('change mouseleave', function (e) {
         var originalTags = $(this).val().split(', ');
         var newFormattedTags = [];
         $.map(originalTags, function (tag) {
@@ -36,7 +40,7 @@
             newFormattedTags.push(tag);
           }
         });
-        $('.field--type-ezcontent-smart-image-tags .image-tag-field-wrapper .tag-wrapper li').each(function (i) {
+        $('.field--type-ezcontent-smart-image-tags [id="' + dynamicId + '"] .tag-wrapper li').each(function (i) {
           if ($.inArray($(this).text(), newFormattedTags) !== -1) {
             $(this).addClass('list-disabled');
           } else {
@@ -44,11 +48,8 @@
           }
         });
       });
-      // Handle hidden field on submit.
-      $('.entity-browser-smart-image-browser-form .is-entity-browser-submit').click(function () {
-        $("#smart_tag_hidden-text-id input").val("hidden");
-      });
-      $('.field--type-ezcontent-smart-tags .tag-field-wrapper .tag-wrapper li', context).click(function (e) {
+
+      $('.field--type-ezcontent-smart-tags [id="' + dynamicId + '"] .tag-wrapper li', context).click(function (e) {
         var tagName = $(this).text();
         var existingTags = $('.field--type-ezcontent-smart-tags .tags-link-field .ui-autocomplete-input').val();
         var finalTags = '';
@@ -58,6 +59,11 @@
           finalTags = existingTags + ', ' + tagName;
         }
         $('.field--type-ezcontent-smart-tags .tags-link-field .ui-autocomplete-input').val(finalTags);
+      });
+    });
+      // Handle hidden field on submit.
+      $('.entity-browser-smart-image-browser-form .is-entity-browser-submit').click(function () {
+        $("#smart_tag_hidden-text-id input").val("hidden");
       });
       // Open invalid subscription dialog.
       $('#edit-overlay-link', context).once('ezcontent_smart_article').trigger('click');
@@ -84,7 +90,7 @@
    * Places the content in the summary field.
    */
   $.fn.update_image_tags = function (data, target_editor) {
-    var tag_input = $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input');
+    var tag_input = $('.field--type-ezcontent-smart-image-tags').find(target_editor + '[field_smart_image_tags][target_id]');
     tag_input.mouseenter();
     tag_input.mouseleave();
   };
