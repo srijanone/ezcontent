@@ -1,0 +1,8 @@
+user.role.editor:
+  expected_config: {  }
+  update_actions:
+    add:
+      permissions:
+        - 'administer menu'
+        - 'administer redirects'
+        - 'administer sitemap settings'
