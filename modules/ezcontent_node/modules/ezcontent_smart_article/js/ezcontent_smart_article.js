@@ -11,9 +11,13 @@
    */
   Drupal.behaviors.ezcontent_smart_article = {
     attach: function (context, settings) {
-      $('.field--type-ezcontent-smart-image-tags .image-tag-field-wrapper .tag-wrapper li', context).click(function (e) {
+
+      // For Smart Image tags.
+      $('.image-tag-field-wrapper .tag-wrapper li', context).once().click(function () {
         var tagName = $(this).text();
-        var existingTags = $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input').val();
+        var imageWrapper = $(this).parents().eq(3);
+        var tagsField = imageWrapper.find('.ui-autocomplete-input');
+        var existingTags = tagsField.val();
         var finalTags = '';
         if (existingTags === '') {
           // If empty set val attribute.
@@ -21,11 +25,12 @@
         } else {
           finalTags = existingTags + ', ' + tagName;
         }
-        $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input').val(finalTags);
+        tagsField.val(finalTags);
         $(this).addClass('list-disabled');
       });
-      // Handle change event.
-      $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input', context).on('change mouseleave', function (e) {
+
+      // Handle change event for smart image tags.
+      $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input', context).on('change mouseleave', function () {
         var originalTags = $(this).val().split(', ');
         var newFormattedTags = [];
         $.map(originalTags, function (tag) {
@@ -36,7 +41,7 @@
             newFormattedTags.push(tag);
           }
         });
-        $('.field--type-ezcontent-smart-image-tags .image-tag-field-wrapper .tag-wrapper li').each(function (i) {
+        $(this).parents().eq(2).find('.image-tag-field-wrapper .tag-wrapper li').each(function (i) {
           if ($.inArray($(this).text(), newFormattedTags) !== -1) {
             $(this).addClass('list-disabled');
           } else {
@@ -48,6 +53,8 @@
       $('.entity-browser-smart-image-browser-form .is-entity-browser-submit').click(function () {
         $("#smart_tag_hidden-text-id input").val("hidden");
       });
+
+      // For Smart tags.
       $('.field--type-ezcontent-smart-tags .tag-field-wrapper .tag-wrapper li', context).click(function (e) {
         var tagName = $(this).text();
         var existingTags = $('.field--type-ezcontent-smart-tags .tags-link-field .ui-autocomplete-input').val();
@@ -84,7 +91,7 @@
    * Places the content in the summary field.
    */
   $.fn.update_image_tags = function (data, target_editor) {
-    var tag_input = $('.field--type-ezcontent-smart-image-tags .ui-autocomplete-input');
+    var tag_input = $(this).parent().find('.ui-autocomplete-input');
     tag_input.mouseenter();
     tag_input.mouseleave();
   };
