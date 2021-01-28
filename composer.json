@@ -87,7 +87,7 @@
     "oomphinc/composer-installers-extender": "^1.1 || ^2",
     "srijanone/ezcontent_admin": "1.0.x-dev",
     "srijanone/ezcontent_amp": "8.x-dev",
-    "srijanone/ezcontent_theme": "1.0.x-dev",
+    "srijanone/ezcontent_theme": "8.x-dev",
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
