@@ -5,3 +5,11 @@ package: EZContent User
 core: 8.x
 dependencies:
   - drupal:path
+  - password_policy:password_policy
+  - password_policy:password_policy_character_types
+  - password_policy:password_policy_characters
+  - password_policy:password_policy_consecutive
+  - password_policy:password_policy_consecutive
+  - password_policy:password_policy_history
+  - password_policy:password_policy_length
+  - password_policy:password_policy_username
