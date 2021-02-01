@@ -133,6 +133,9 @@
       },
       "drupal/lb_direct_add": {
         "3157440 - Make first option a label not link": "https://www.drupal.org/files/issues/2020-09-09/make-first-option-a-label-not-link-3157440_3_reroll_updated_against_tag_8.x-1.2.patch"
+      },
+      "drupal/media_entity_instagram": {
+        "3190830 - Media creation failed with error as invalid oembed resource": "https://www.drupal.org/files/issues/2021-01-27/media_entity_instagram-use_graph_api-3190830-9.patch"
       }
     },
     "installer-paths": {
