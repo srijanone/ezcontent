@@ -140,6 +140,9 @@
       },
       "drupal/entityqueue": {
         "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
+      },
+      "drupal/media_entity_instagram": {
+        "3190830 - Media creation failed with error as invalid oembed resource": "https://www.drupal.org/files/issues/2021-01-27/media_entity_instagram-use_graph_api-3190830-9.patch"
       }
     },
     "installer-paths": {
