@@ -83,6 +83,7 @@
     "drupal/yoast_seo": "^1.5",
     "oomphinc/composer-installers-extender": "^1.1 || ^2",
     "srijanone/ezcontent_api": "dev-master",
+    "srijanone/ezcontent_demo": "dev-master",
     "srijanone/ezcontent_publish": "dev-master",
     "srijanone/ezcontent_admin": "dev-master",
     "srijanone/ezcontent_amp": "dev-master",
