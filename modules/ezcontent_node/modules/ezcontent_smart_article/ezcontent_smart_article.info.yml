@@ -2,7 +2,7 @@ name: Smart Article Feature (Experimental)
 type: module
 description: 'Provides Smart article content type.'
 package: EZContent Node
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8.8 || ^9
 configure: ezcontent_smart_article.config
 dependencies:
   - ezcontent:ezcontent_audio

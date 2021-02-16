@@ -1,7 +1,7 @@
 name: EZ Content
 type: profile
 description: 'A Feature rich starter profile from Srijan.'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8.8 || ^9
 
 # Modules to install to support the profile.
 install:
