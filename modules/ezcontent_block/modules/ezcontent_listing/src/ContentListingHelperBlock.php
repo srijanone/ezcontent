@@ -44,6 +44,10 @@ class ContentListingHelperBlock {
    *
    * @param object $block
    *   Block entity to preprocess.
+   * @param string $type
+   *   Type of response to be returned.
+   * @param int $page
+   *   The page number.
    *
    * @return array
    *   Preprocessed data for the given block.
@@ -51,7 +55,7 @@ class ContentListingHelperBlock {
    * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
    * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
    */
-  public function getContentListingBlock($block) {
+  public function getContentListingBlock($block, $type = '', $page = 0) {
     $data = $arguments = [];
     if ($block->hasField('field_tags') && $block->field_tags->entity) {
       $tagsEntities = $block->field_tags->getString();
@@ -74,8 +78,18 @@ class ContentListingHelperBlock {
     if (is_object($view)) {
       $view->setDisplay('block_1');
       $view->setArguments($arguments);
+      if ($type === 'result') {
+        $view->setCurrentPage($page);
+        $view->execute();
+        // Handle pager in case of JSON:API response.
+        $data['rows'] = $view->result;
+        $data['total_rows'] = $view->total_rows;
+        $data['item_per_page'] = $view->getItemsPerPage();
+        return $data;
+      }
       $view->execute();
       $data['rows'] = $view->buildRenderable('block_1');
+
     }
 
     return $data;
