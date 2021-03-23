@@ -89,7 +89,7 @@
     "srijanone/ezcontent_publish": "dev-blt-test",
     "srijanone/ezcontent_admin": "dev-blt-test",
     "srijanone/ezcontent_amp": "dev-blt-test",
-    "srijanone/ezcontent_theme": "dev-blt-test-old",
+    "srijanone/ezcontent_theme": "dev-blt-test",
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
