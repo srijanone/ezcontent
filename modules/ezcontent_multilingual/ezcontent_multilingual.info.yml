@@ -1,0 +1,52 @@
+name: EZContent Multilingual
+type: module
+description: 'Enables multilingual feature.'
+package: EZContent Multilingual
+core_version_requirement: ^8 || ^9
+dependencies:
+  - better_normalizers
+  - content_translation
+  - ezcontent_api
+  - ezcontent_article
+  - ezcontent_assets
+  - ezcontent_author
+  - ezcontent_basic_page
+  - ezcontent_block
+  - ezcontent_block_cards
+  - ezcontent_block_embed
+  - ezcontent_block_hero_media
+  - ezcontent_block_map
+  - ezcontent_block_referenced_cards
+  - ezcontent_block_social_media
+  - ezcontent_block_text
+  - ezcontent_card
+  - ezcontent_card_list
+  - ezcontent_embed
+  - ezcontent_faq
+  - ezcontent_form
+  - ezcontent_gallery
+  - ezcontent_hero_media
+  - ezcontent_image
+  - ezcontent_landing_page
+  - ezcontent_landing_page_paragraphs
+  - ezcontent_listing
+  - ezcontent_map
+  - ezcontent_media
+  - ezcontent_media_gallery
+  - ezcontent_media_instagram
+  - ezcontent_media_twitter
+  - ezcontent_node
+  - ezcontent_paragraphs
+  - ezcontent_preview
+  - ezcontent_publish
+  - ezcontent_quote
+  - ezcontent_referenced_card
+  - ezcontent_social_media_embed
+  - ezcontent_taxonomy
+  - ezcontent_text
+  - ezcontent_user
+  - ezcontent_video
+  - ezcontent_views
+  - layout_builder_at
+  - menu_link_content
+  - responsive_preview
