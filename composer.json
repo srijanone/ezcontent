@@ -34,6 +34,7 @@
     "drupal/email_registration": "^1.0",
     "drupal/entity_browser": "~2.1",
     "drupal/entity_embed": "^1.0",
+    "drupal/entityqueue": "^1.2",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/environment_indicator": "^3.7",
     "drupal/ezcontent_api": "^2.0",
@@ -135,6 +136,9 @@
       },
       "drupal/fvm": {
         "3188401 - Add widget to override none option inside view mode select list ": "https://www.drupal.org/files/issues/2020-12-16/allow-user-to-custmise-none-option-from-select-3188401-3.patch"
+      },
+      "drupal/entityqueue": {
+        "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
       }
     },
     "installer-paths": {
