@@ -5,7 +5,7 @@
  * Contains updates hook.
  */
 
-use Symfony\Component\Yaml\Yaml;
+use Drupal\Component\Serialization\Yaml;
 
 /**
  * Editor role permission update.
@@ -37,12 +37,37 @@ function ezcontent_user_update_8002() {
       'password_policy_username',
     ], TRUE);
   $module_path = drupal_get_path('module', 'ezcontent_user');
-  /** @var \Drupal\update_helper\Updater $updateHelper */
-  $updateHelper = \Drupal::service('update_helper.updater');
   $file = 'password_policy.password_policy.basic_policy';
   $config_path = $module_path . '/config/install/' . $file . '.yml';
-  $data = Yaml::parseFile($config_path);
-  \Drupal::configFactory()->getEditable($file)->setData($data)->save(TRUE);
-  // Output logged messages to related channel of update execution.
-  return $updateHelper->logger()->output();
+  $updated = [];
+  $created = [];
+  /** @var \Drupal\Core\Config\ConfigManagerInterface $config_manager */
+  $config_manager = \Drupal::service('config.manager');
+  $raw = file_get_contents($config_path);
+  $value = Yaml::decode($raw);
+  if (!is_array($value)) {
+    throw new \RuntimeException(sprintf('Invalid YAML file %s'), $file);
+  }
+  $type = $config_manager->getEntityTypeIdByName(basename($file));
+  $entity_manager = $config_manager->getEntityTypeManager();
+  $definition = $entity_manager->getDefinition($type);
+  $id_key = $definition->getKey('id');
+  $id = $value[$id_key];
+  /** @var \Drupal\Core\Config\Entity\ConfigEntityStorage $entity_storage */
+  $entity_storage = $entity_manager->getStorage($type);
+  $entity = $entity_storage->load($id);
+  if ($entity) {
+    $entity = $entity_storage->updateFromStorageRecord($entity, $value);
+    $entity->save();
+    $updated[] = $id;
+  }
+  else {
+    $entity = $entity_storage->createFromStorageRecord($value);
+    $entity->save();
+    $created[] = $id;
+  }
+  return [
+    'udpated' => $updated,
+    'created' => $created,
+  ];
 }
