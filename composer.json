@@ -89,7 +89,7 @@
     "srijanone/ezcontent_publish": "dev-master",
     "srijanone/ezcontent_admin": "dev-master",
     "srijanone/ezcontent_amp": "dev-master",
-    "srijanone/ezcontent_theme": "dev-master-old",
+    "srijanone/ezcontent_theme": "dev-master",
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
