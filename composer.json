@@ -121,8 +121,7 @@
         "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch",
         "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2021-01-14/3143958-11-subprofile-support-8.9.x.patch",
         "Nested Paragraphs create multiple drag handles": "https://www.drupal.org/files/issues/2020-05-28/3092181-87-89x.patch",
-        "Restrict access to empty top level administration pages": "https://www.drupal.org/files/issues/2020-10-28/296693-216.patch",
-        "Layout icons not appearing for add section in off-canvas of layout builder": "https://www.drupal.org/files/issues/2021-01-06/off-canvas-style-resets-2958588-13.patch"
+        "Restrict access to empty top level administration pages": "https://www.drupal.org/files/issues/2020-10-28/296693-216.patch"
       },
       "drupal/slick": {
         "Slick patch": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
