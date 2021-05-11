@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.media_library
     - entity_browser.browser.smart_image_browser
     - field.field.node.smart_article.body
     - field.field.node.smart_article.field_company_name
@@ -10,17 +11,18 @@ dependencies:
     - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
     - field.field.node.smart_article.field_smart_text_summary
-    - image.style.thumbnail
+    - field.field.node.smart_article.field_transcribe
     - node.type.smart_article
   module:
     - content_moderation
     - entity_browser
     - ezcontent_smart_article
     - field_group
-    - image
+    - inline_entity_form
     - metatag
     - path
     - scheduler
+    - scheduler_content_moderation_integration
     - text
 third_party_settings:
   field_group:
@@ -43,7 +45,7 @@ third_party_settings:
         - field_smart_text_summary
         - group_generate_tags
       parent_name: ''
-      weight: 15
+      weight: 14
       format_type: fieldset
       format_settings:
         description: 'AI powered summary generation and tags suggestions.'
@@ -69,7 +71,7 @@ third_party_settings:
       children:
         - field_podcast
       parent_name: ''
-      weight: 20
+      weight: 15
       format_type: fieldset
       format_settings:
         description: 'AI powered Text to Speech'
@@ -78,6 +80,19 @@ third_party_settings:
         required_fields: false
       label: 'Auto Generate Podcast'
       region: content
+    group_auto_generate_transcribe:
+      children:
+        - field_transcribe
+      parent_name: ''
+      weight: 16
+      format_type: fieldset
+      region: content
+      format_settings:
+        description: 'AI powered Speech to Text'
+        id: ''
+        classes: ''
+        required_fields: false
+      label: 'Auto Generate Transcribe'
 id: node.smart_article.default
 targetEntityType: node
 bundle: smart_article
@@ -108,7 +123,7 @@ content:
     type: string_textfield
     region: content
   field_meta_tags:
-    weight: 26
+    weight: 17
     settings:
       sidebar: true
     third_party_settings: {  }
@@ -126,7 +141,7 @@ content:
     region: content
   field_smart_media_image:
     type: entity_browser_entity_reference
-    weight: 14
+    weight: 13
     settings:
       entity_browser: smart_image_browser
       field_widget_display: rendered_entity
@@ -159,6 +174,19 @@ content:
     third_party_settings: {  }
     type: smart_text_textarea_with_summary
     region: content
+  field_transcribe:
+    type: inline_entity_form_simple
+    weight: 20
+    settings:
+      form_mode: media_library
+      label_singular: ''
+      label_plural: ''
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    region: content
   moderation_state:
     type: moderation_state_default
     weight: 11
@@ -181,6 +209,12 @@ content:
   publish_on:
     type: datetime_timestamp_no_default
     weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 19
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -224,6 +258,12 @@ content:
   unpublish_on:
     type: datetime_timestamp_no_default
     weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }

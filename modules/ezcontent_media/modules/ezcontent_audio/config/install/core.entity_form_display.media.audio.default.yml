@@ -3,8 +3,10 @@ status: true
 dependencies:
   config:
     - field.field.media.audio.field_media_audio_file
+    - field.field.media.audio.field_transcribe_text
     - media.type.audio
   module:
+    - ezcontent_smart_article
     - file
     - path
 id: media.audio.default
@@ -24,6 +26,12 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_transcribe_text:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    type: ez_smart_transcribe_widget
     region: content
   path:
     type: path
