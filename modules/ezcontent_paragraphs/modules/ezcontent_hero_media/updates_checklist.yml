@@ -6,3 +6,9 @@
         '#description': '<p>This configuration update will update site configuration to newly provided configuration</p>'
         '#description_successful': '<p>Configuration is successfully updated.</p>'
         '#description_failed': '<p><strong>Update of configuration has failed.</strong><p>'
+
+    ezcontent_hero_media_update_8003:
+        '#title': 'Hide text position and background color field.'
+        '#description': '<p>This configuration update will update site configuration to newly provided configuration</p>'
+        '#description_successful': '<p>Configuration is successfully updated.</p>'
+        '#description_failed': '<p><strong>Update of configuration has failed.</strong><p>'
