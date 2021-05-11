@@ -108,14 +108,13 @@
         "Langcode cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
       },
       "drupal/core": {
-        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-15/reusable_inline_block_creation-2999491-61-updated-8.9.x.patch",
+        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch",
         "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch",
         "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
         "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
         "Nested Paragraphs create multiple drag handles": "https://www.drupal.org/files/issues/2020-09-30/3092181-130.patch",
         "Restrict access to empty top level administration pages": "https://www.drupal.org/files/issues/2020-09-16/core-restrict-access-top-empty-admin-pages-296693-198.patch",
-        "Layout icons not appearing for add section in off-canvas of layout builder": "https://www.drupal.org/files/issues/2021-01-06/off-canvas-style-resets-2958588-13.patch"
       },
       "drupal/slick": {
         "Slick patch": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
