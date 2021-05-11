@@ -1,0 +1,20 @@
+uuid: c53d968f-e255-4347-b56c-dcdd33923645
+langcode: en
+status: true
+dependencies:
+  module:
+    - ezcontent_smart_article
+    - media
+id: media.field_transcribe_text
+field_name: field_transcribe_text
+entity_type: media
+type: ezcontent_smart_transcribe
+settings:
+  target_type: media
+module: ezcontent_smart_article
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
