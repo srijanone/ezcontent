@@ -1,0 +1,28 @@
+uuid: 02345363-6635-4343-b859-d593ac7b7a80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_transcribe
+    - media.type.audio
+    - node.type.smart_article
+id: node.smart_article.field_transcribe
+field_name: field_transcribe
+entity_type: node
+bundle: smart_article
+label: Transcribe
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      audio: audio
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

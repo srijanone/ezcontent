@@ -4,14 +4,15 @@ dependencies:
   config:
     - field.field.node.smart_article.body
     - field.field.node.smart_article.field_company_name
+    - field.field.node.smart_article.field_meta_tags
     - field.field.node.smart_article.field_podcast
     - field.field.node.smart_article.field_smart_media_image
     - field.field.node.smart_article.field_smart_tags
     - field.field.node.smart_article.field_smart_text_summary
+    - field.field.node.smart_article.field_transcribe
     - node.type.smart_article
   module:
     - ezcontent_smart_article
-    - image
     - text
     - user
 id: node.smart_article.default
@@ -68,9 +69,19 @@ content:
     third_party_settings: {  }
     type: smart_text_default
     region: content
+  field_transcribe:
+    type: entity_reference_entity_view
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
   links:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_meta_tags: true
