@@ -1,0 +1,60 @@
+core.entity_view_display.paragraph.card.hero_media:
+  expected_config:
+    content:
+      field_text_background_color:
+        label: above
+        region: content
+        settings:
+          data_attribute: false
+          height: '50'
+          opacity: true
+          shape: square
+          width: '50'
+        third_party_settings: {  }
+        type: color_field_formatter_swatch_options
+        weight: 6
+      field_text_position:
+        label: above
+        region: content
+        settings: {  }
+        third_party_settings: {  }
+        type: list_default
+        weight: 7
+    third_party_settings:
+      field_group:
+        group_hero_media_content:
+          children:
+            - field_text_background_color
+            - field_text_position
+  update_actions:
+    delete:
+      content:
+        field_text_background_color:
+          label: above
+          region: content
+          settings:
+            data_attribute: false
+            height: '50'
+            opacity: true
+            shape: square
+            width: '50'
+          third_party_settings: {  }
+          type: color_field_formatter_swatch_options
+          weight: 6
+        field_text_position:
+          label: above
+          region: content
+          settings: {  }
+          third_party_settings: {  }
+          type: list_default
+          weight: 7
+      third_party_settings:
+        field_group:
+          group_hero_media_content:
+            children:
+              - field_text_background_color
+              - field_text_position
+    add:
+      hidden:
+        field_text_background_color: true
+        field_text_position: true
