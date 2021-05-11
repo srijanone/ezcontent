@@ -32,3 +32,7 @@ services:
   plugin.manager.ezcontent_text_to_speech:
     class: Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager
     parent: default_plugin_manager
+
+  plugin.manager.ezcontent_speech_to_text:
+    class: Drupal\ezcontent_smart_article\EzcontentSpeechToTextManager
+    parent: default_plugin_manager

@@ -2,21 +2,23 @@
 
 namespace Drupal\ezcontent_smart_article\Form;
 
-use Drupal\Core\Form\ConfigFormBase;
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\File\FileSystem;
-use GuzzleHttp\ClientInterface;
+use Drupal\Core\Form\ConfigFormBase;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
 use Drupal\Core\Messenger\Messenger;
+use Drupal\Core\Render\Renderer;
+use Drupal\Core\Url;
 use Drupal\ezcontent_smart_article\EzcontentImageCaptioningManager;
 use Drupal\ezcontent_smart_article\EzcontentImageTaggingManager;
+use Drupal\ezcontent_smart_article\EzcontentSpeechToTextManager;
 use Drupal\ezcontent_smart_article\EzcontentTextTaggingManager;
-use Drupal\Core\Link;
-use Drupal\Core\Url;
-use Drupal\Core\Render\Renderer;
+use Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager;
+use GuzzleHttp\ClientInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\Process\Process;
 
 /**
  * Class that configures forms module settings.
@@ -70,7 +72,6 @@ class ConfigForm extends ConfigFormBase {
    *
    * @var \Drupal\ezcontent_smart_article\EzcontentImageTaggingManager
    */
-
   protected $imageTaggingManager;
 
   /**
@@ -78,7 +79,6 @@ class ConfigForm extends ConfigFormBase {
    *
    * @var \Drupal\ezcontent_smart_article\EzcontentTextTaggingManager
    */
-
   protected $textTaggingManager;
 
   /**
@@ -86,7 +86,6 @@ class ConfigForm extends ConfigFormBase {
    *
    * @var \Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager
    */
-
   protected $textToSpeechManager;
 
   /**
@@ -95,6 +94,13 @@ class ConfigForm extends ConfigFormBase {
    * @var \Drupal\Core\Render\Renderer
    */
   protected $renderer;
+
+  /**
+   * Ezcontent Speech to Text Manager object.
+   *
+   * @var \Drupal\ezcontent_smart_article\EzcontentSpeechToTextManager
+   */
+  protected $speechToTextManager;
 
   /**
    * Constructs a \Drupal\fvm\Form\FvmSettingsForm object.
@@ -117,10 +123,12 @@ class ConfigForm extends ConfigFormBase {
    *   A text tagging Manager object.
    * @param \Drupal\ezcontent_smart_article\EzcontentTextToSpeechManager $textToSpeechManager
    *   Ezcontent text to speech manager object.
+   * @param \Drupal\ezcontent_smart_article\EzcontentSpeechToTextManager $speechToTextManager
+   *   Ezcontent speech to text manager object.
    * @param \Drupal\Core\Render\Renderer $renderer
    *   An rendere object.
    */
-  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager, EzcontentTextTaggingManager $textTaggingManager, EzcontentTextToSpeechManager $textToSpeechManager, Renderer $renderer) {
+  public function __construct(ConfigFactoryInterface $config_factory, EntityTypeManagerInterface $entityTypeManager, FileSystem $fileSystem, ClientInterface $httpClient, Messenger $messenger, EzcontentImageCaptioningManager $imageCaptioningManager, EzcontentImageTaggingManager $imageTaggingManager, EzcontentTextTaggingManager $textTaggingManager, EzcontentTextToSpeechManager $textToSpeechManager, EzcontentSpeechToTextManager $speechToTextManager, Renderer $renderer) {
     parent::__construct($config_factory);
     $this->fileStorage = $entityTypeManager->getStorage('file');
     $this->fileSystem = $fileSystem;
@@ -130,6 +138,7 @@ class ConfigForm extends ConfigFormBase {
     $this->imageTaggingManager = $imageTaggingManager;
     $this->textTaggingManager = $textTaggingManager;
     $this->textToSpeechManager = $textToSpeechManager;
+    $this->speechToTextManager = $speechToTextManager;
     $this->renderer = $renderer;
   }
 
@@ -147,6 +156,7 @@ class ConfigForm extends ConfigFormBase {
       $container->get('plugin.manager.image_tagging'),
       $container->get('plugin.manager.text_tagging'),
       $container->get('plugin.manager.ezcontent_text_to_speech'),
+      $container->get('plugin.manager.ezcontent_speech_to_text'),
       $container->get('renderer')
     );
   }
@@ -176,6 +186,7 @@ class ConfigForm extends ConfigFormBase {
     $pluginDefinitionsImageTagging = $this->imageTaggingManager->getDefinitions();
     $pluginDefinitionsTextTagging = $this->textTaggingManager->getDefinitions();
     $pluginDefinitionsTextToSpeech = $this->textToSpeechManager->getDefinitions();
+    $pluginDefinitionsSpeechToText = $this->speechToTextManager->getDefinitions();
     // Prepare options for image captioning service types.
     $imageCaptioningOptions = [];
     foreach ($pluginDefinitionsImageCaptioning as $pluginDefinition) {
@@ -195,6 +206,11 @@ class ConfigForm extends ConfigFormBase {
     $textToSpeechOptions = [];
     foreach ($pluginDefinitionsTextToSpeech as $pluginDefinition) {
       $textToSpeechOptions[$pluginDefinition['id']] = $pluginDefinition['label'];
+    }
+    // Prepare options for text to speech service types.
+    $speechToTextOptions = [];
+    foreach ($pluginDefinitionsSpeechToText as $pluginDefinition) {
+      $speechToTextOptions[$pluginDefinition['id']] = $pluginDefinition['label'];
     }
     $form['summary_generator_api_url'] = [
       '#type' => 'textfield',
@@ -360,6 +376,41 @@ class ConfigForm extends ConfigFormBase {
         'visible' => ['select[name="text_to_speech_service"]' => ['value' => 'google_text_to_speech']],
       ],
     ];
+    // Select plugin type for speech to text.
+    $form['speech_to_text_service'] = [
+      '#title' => $this->t('Speech To Text Service'),
+      '#type' => 'select',
+      '#description' => $this->t('Please choose speech to text service type.'),
+      '#options' => $speechToTextOptions,
+      '#default_value' => $config->get('speech_to_text_service'),
+    ];
+    $form['gcp_speech_to_text_key'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('GCP API Key For Speech to Text'),
+      '#description' => $this->t('Provide the API key.'),
+      '#default_value' => $config->get('gcp_speech_to_text_key'),
+      '#states' => [
+        'visible' => ['select[name="speech_to_text_service"]' => ['value' => 'google_speech_to_text']],
+      ],
+    ];
+    $form['ffmpeg_executable_path'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('FFMPEG Executable Path'),
+      '#description' => $this->t('Provide ffmpeg executable path, <b>including</b> the trailing slash/backslash. For example: /usr/bin/ffmpeg or C:\ffmpeg\bin\ffmpeg.exe'),
+      '#default_value' => $config->get('ffmpeg_executable_path'),
+    ];
+    $executablePath = $config->get('ffmpeg_executable_path');
+    if ($executablePath) {
+      $output = $this->execute($executablePath, '-version');
+      if ($output) {
+        $form['ffmpeg_version'] = array(
+          '#type' => 'details',
+          '#title' => $this->t('FFMPEG Version Information'),
+          '#description' => "<pre>" . $output . "</pre>",
+          '#open' => FALSE,
+        );
+      }
+    }
     return parent::buildForm($form, $form_state);
   }
 
@@ -416,6 +467,18 @@ class ConfigForm extends ConfigFormBase {
         }
         break;
     }
+    // Validate if api key is added for selected speech to text service.
+    $speechToTextService = $form_state->getValue('speech_to_text_service');
+    switch ($speechToTextService) {
+      case 'google_speech_to_text':
+        if (empty($form_state->getValue('gcp_speech_to_text_key'))) {
+          $form_state->setError($form['gcp_speech_to_text_key'],
+            $this->t("@field is required.",
+              ['@field' => $form['gcp_speech_to_text_key']['#title']]
+            ));
+        }
+        break;
+    }
   }
 
   /**
@@ -455,6 +518,36 @@ class ConfigForm extends ConfigFormBase {
     ]);
 
     return $response->getStatusCode();
+  }
+
+  /**
+   * This function is used to execute command on terminal.
+   *
+   * @param string $command
+   *   Given command.
+   * @param string $arguments
+   *   Given arguments to pass in command.
+   * @param string $error
+   *   Given response message.
+   *
+   * @return integer
+   *   Returns error code.
+   */
+  public function execute($command, $arguments, &$error = NULL) {
+    $command_line = $command . ' ' . $arguments;
+    $process = new Process($command_line);
+    $process->setTimeout(60);
+    try {
+      $process->run();
+      $output = utf8_encode($process->getOutput());
+      $error = utf8_encode($process->getErrorOutput());
+      $return_code = $process->getExitCode();
+    }
+    catch (\Exception $e) {
+      $error = $e->getMessage();
+      $return_code = $process->getExitCode() ? $process->getExitCode() : 1;
+    }
+    return $output;
   }
 
 }
