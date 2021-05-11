@@ -1,0 +1,25 @@
+uuid: 587e8006-19c8-4e2f-937b-bdd47dfcc040
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_transcribe_text
+    - media.type.audio
+  module:
+    - ezcontent_smart_article
+id: media.audio.field_transcribe_text
+field_name: field_transcribe_text
+entity_type: media
+bundle: audio
+label: 'Transcribe Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    convert_speech_to_text: 0
+    value: ''
+default_value_callback: ''
+settings:
+  transcription_source_field: field_media_audio_file
+field_type: ezcontent_smart_transcribe
