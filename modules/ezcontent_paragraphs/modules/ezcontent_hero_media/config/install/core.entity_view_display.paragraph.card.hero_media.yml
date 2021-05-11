@@ -14,10 +14,8 @@ dependencies:
     - field.field.paragraph.card.layout_selection
     - paragraphs.paragraphs_type.card
   module:
-    - color_field
     - field_group
     - link
-    - options
     - smart_trim
 third_party_settings:
   field_group:
@@ -28,8 +26,6 @@ third_party_settings:
         - field_subhead
         - field_summary
         - field_link
-        - field_text_background_color
-        - field_text_position
       parent_name: ''
       weight: 1
       format_type: html_element_hero_media_display
@@ -105,22 +101,6 @@ content:
     third_party_settings: {  }
     type: smart_trim
     region: content
-  field_text_background_color:
-    type: color_field_formatter_text
-    weight: 6
-    region: content
-    label: above
-    settings:
-      format: rgb
-      opacity: true
-    third_party_settings: {  }
-  field_text_position:
-    type: list_default
-    weight: 7
-    region: content
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_title:
     weight: 1
     label: hidden
@@ -130,4 +110,7 @@ content:
     type: string
     region: content
 hidden:
+  field_text_background_color: true
+  field_text_position: true
   layout_selection: true
+
