@@ -1,0 +1,14 @@
+name: pr-review
+on: [pull_request]
+jobs:
+  check-drupal-coding-standards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install PHPCS
+      - run: composer global require --dev drupal/coder dealerdirect/phpcodesniffer-composer-installer
+
+      - name: Clone the code
+      - uses: actions/checkout@v2
+      
+      - name: Check coding standards
+      - run: ~/vendor/bin/phpcs --standard="Drupal, DrupalPractice" --extensions="module,inc,install,test,profile,theme,css,info,txt,md,yml" .
