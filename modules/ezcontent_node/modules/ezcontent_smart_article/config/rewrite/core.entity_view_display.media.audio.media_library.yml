@@ -1,0 +1,5 @@
+dependencies:
+  config:
+    - field.field.media.audio.field_transcribe_text
+hidden:
+  field_transcribe_text: true
