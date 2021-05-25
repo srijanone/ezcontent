@@ -1,0 +1,16 @@
+dependencies:
+  config:
+    - field.field.media.audio.field_transcribe_text
+  module:
+    - ezcontent_smart_article
+id: media.audio.default
+targetEntityType: media
+bundle: audio
+mode: default
+content:
+  field_transcribe_text:
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    type: ez_smart_transcribe_widget
+    region: content
