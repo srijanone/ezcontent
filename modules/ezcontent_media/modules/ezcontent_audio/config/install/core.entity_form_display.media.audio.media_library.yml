@@ -4,31 +4,15 @@ dependencies:
   config:
     - core.entity_form_mode.media.media_library
     - field.field.media.audio.field_media_audio_file
-    - field.field.media.audio.field_transcribe_text
     - media.type.audio
-  module:
-    - ezcontent_smart_article
-    - file
 id: media.audio.media_library
 targetEntityType: media
 bundle: audio
 mode: media_library
-content:
-  field_media_audio_file:
-    type: file_generic
-    weight: 0
-    region: content
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-  field_transcribe_text:
-    type: ez_smart_transcribe_widget
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
+content: {  }
 hidden:
   created: true
+  field_media_audio_file: true
   name: true
   path: true
   status: true
