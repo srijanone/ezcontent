@@ -2,11 +2,11 @@ name: Liveblog Feature
 type: module
 description: 'Integrates Liveblog with EZContent'
 package: EZContent Node
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - ezcontent_node:ezcontent_node
-  - ezcontent_paragraphs:ezcontent_assets
-  - ezcontent_paragraphs:ezcontent_text
-  - ezcontent_paragraphs:ezcontent_embed
-  - ezcontent_paragraphs:ezcontent_quote
+  - ezcontent:ezcontent_node
+  - ezcontent:ezcontent_assets
+  - ezcontent:ezcontent_text
+  - ezcontent:ezcontent_embed
+  - ezcontent:ezcontent_quote
   - liveblog:liveblog_pusher

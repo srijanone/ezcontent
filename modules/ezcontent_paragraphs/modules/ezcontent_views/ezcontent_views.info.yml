@@ -2,8 +2,8 @@ name: Views Feature
 type: module
 description: 'Provides Views reference field feature.'
 package: EZContent Paragraphs
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - ezcontent_node
-  - ezcontent_paragraphs
-  - viewsreference
+  - ezcontent:ezcontent_node
+  - ezcontent:ezcontent_paragraphs
+  - viewsreference:viewsreference

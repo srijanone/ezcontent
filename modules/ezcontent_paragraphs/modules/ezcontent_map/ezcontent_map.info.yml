@@ -2,7 +2,7 @@ name: Map Feature
 type: module
 description: 'Provides Google map feature.'
 package: EZContent Paragraphs
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - ezcontent_paragraphs
-  - simple_gmap
+  - ezcontent:ezcontent_paragraphs
+  - simple_gmap:simple_gmap

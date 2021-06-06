@@ -2,10 +2,10 @@ name: EZContent Media Feature
 type: module
 description: 'Provides Media types for media based features.'
 package: EZContent Media
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - media_entity_browser
-  - video_embed_media
-  - dropzonejs_eb_widget
-  - libraries
-  - ezcontent_user
+  - dropzonejs:dropzonejs_eb_widget
+  - ezcontent:ezcontent_user
+  - libraries:libraries
+  - media_entity_browser:media_entity_browser
+  - video_embed_field:video_embed_media
