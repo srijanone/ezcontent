@@ -2,6 +2,6 @@ name: Audio Feature
 type: module
 description: 'Provides Audio Media type for audio files.'
 package: EZContent Media
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - ezcontent_media
+  - ezcontent:ezcontent_media

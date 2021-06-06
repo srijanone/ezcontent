@@ -201,7 +201,7 @@ function ezcontent_smart_podcast_submit_handler(array &$form, FormStateInterface
         if (isset($text_to_speech_content_fields[$default_display_field])) {
           if (isset($text_to_speech_reference_fields[$default_display_field])) {
             if ($entity->$default_display_field->entity) {
-              foreach ($entity->$default_display_field->referencedEntities() as $key => $ref_entity) {
+              foreach ($entity->$default_display_field->referencedEntities() as $ref_entity) {
                 if (in_array($ref_entity->getType(), array_keys($text_to_speech_reference_fields[$default_display_field]))) {
                   $text = $text . ' ' . ezcontent_smart_podcast_get_ref_text_to_speech_fields($ref_entity);
                 }
@@ -307,7 +307,7 @@ function ezcontent_smart_podcast_get_ref_text_to_speech_fields($entity) {
 /**
  * Summary generator callback.
  *
- * @todo: Move to a service.
+ * @todo Move to a service.
  */
 function ezcontent_smart_article_generate_callback(&$form, FormStateInterface $form_state) {
   $results = \Drupal::service('ezcontent_smart_article.companies_list');
@@ -324,7 +324,7 @@ function ezcontent_smart_article_generate_callback(&$form, FormStateInterface $f
 /**
  * Summary generator callback.
  *
- * @todo: Move to a service.
+ * @todo Move to a service.
  */
 function ezcontent_smart_summary_generate_callback(&$form, FormStateInterface $form_state) {
   $generate_summary = \Drupal::service('ezcontent_smart_article.generate_summary');
@@ -346,7 +346,7 @@ function ezcontent_smart_summary_generate_callback(&$form, FormStateInterface $f
 /**
  * Summary generator callback.
  *
- * @todo: Move to a service.
+ * @todo Move to a service.
  */
 function update_summary_field_submit_handler(&$form, FormStateInterface $form_state) {
   $entity = $form_state->getFormObject()->getEntity();

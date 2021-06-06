@@ -2,10 +2,10 @@ name: Card Feature
 type: module
 description: 'Provides card feature for promoting content.'
 package: EZContent Paragraphs
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - color_field
-  - ezcontent_paragraphs
-  - ezcontent_video
-  - layout_builder_restrictions
-  - layout_library
+  - color_field:color_field
+  - ezcontent:ezcontent_paragraphs
+  - ezcontent:ezcontent_video
+  - layout_builder_restrictions:layout_builder_restrictions
+  - layout_library:layout_library
