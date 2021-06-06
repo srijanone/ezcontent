@@ -2,8 +2,8 @@ name: Hero Media Block
 type: module
 description: "Provides Hero Media Block Types Based Features."
 package: EZContent Block
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - ezcontent_block
-  - ezcontent_card
-  - slick_paragraphs
+  - ezcontent:ezcontent_block
+  - ezcontent:ezcontent_card
+  - slick_paragraphs:slick_paragraphs

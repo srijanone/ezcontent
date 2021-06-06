@@ -2,12 +2,12 @@ name: Landing Page Feature
 type: module
 description: 'Provides Landing page content type.'
 package: EZContent Node
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
   - block_blacklist:block_blacklist
   - ezcontent_node:ezcontent_node
+  - ezcontent_node:ezcontent_user
   - layout_builder_modal:layout_builder_modal
   - layout_builder_restrictions:layout_builder_restrictions
   - layout_library:layout_library
   - lb_direct_add:lb_direct_add
-  - ezcontent_user

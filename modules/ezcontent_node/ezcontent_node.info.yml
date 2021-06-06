@@ -2,7 +2,7 @@ name: EZContent Node Feature
 type: module
 description: 'Provides shared node fields for other node-based features.'
 package: EZContent Node
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
   - drupal:datetime
   - field_group:field_group

@@ -1,7 +1,7 @@
-name: EZ Content
+name: EzContent
 type: profile
 description: 'A Feature rich starter profile from Srijan.'
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 
 # Modules to install to support the profile.
 install:
@@ -66,9 +66,9 @@ install:
 # Required modules
 # Note that any dependencies of the modules listed here will be installed automatically.
 dependencies:
-  - block
-  - node
-  - views
+  - drupal:block
+  - drupal:node
+  - drupal:views
 
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.
