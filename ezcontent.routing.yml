@@ -4,6 +4,6 @@ ezcontent.settings_form:
     _form: '\Drupal\ezcontent\Form\SettingsForm'
     _title: 'EzContent Settings'
   requirements:
-    _permission: 'access administration pages'
+    _permission: 'administer site configuration'
   options:
     _admin_route: TRUE
