@@ -2,17 +2,17 @@ name: Article Feature
 type: module
 description: 'Provides article content type.'
 package: EZContent Node
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - autocomplete_deluxe
-  - diff
-  - entityqueue
-  - ezcontent_author
-  - ezcontent_node
-  - ezcontent_image
-  - ezcontent_taxonomy
-  - ezcontent_text
-  - ezcontent_assets
-  - length_indicator
-  - schema_article
-  - ezcontent_user
+  - autocomplete_deluxe:autocomplete_deluxe
+  - diff:diff
+  - entityqueue:entityqueue
+  - ezcontent:ezcontent_author
+  - ezcontent:ezcontent_assets
+  - ezcontent:ezcontent_image
+  - ezcontent:ezcontent_node
+  - ezcontent:ezcontent_taxonomy
+  - ezcontent:ezcontent_text
+  - ezcontent:ezcontent_user
+  - length_indicator:length_indicator
+  - schema_metatag:schema_article

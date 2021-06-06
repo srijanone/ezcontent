@@ -2,10 +2,10 @@ name: Author Feature
 type: module
 description: 'Provides author content type.'
 package: EZContent Node
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - ezcontent_node
-  - ezcontent_image
-  - layout_library
-  - allowed_formats
-  - ezcontent_user
+  - allowed_formats:allowed_formats
+  - ezcontent:ezcontent_image
+  - ezcontent:ezcontent_node
+  - ezcontent:ezcontent_user
+  - layout_library:layout_library

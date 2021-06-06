@@ -2,7 +2,7 @@ name: FAQ Feature
 type: module
 description: 'Provides FAQ feature.'
 package: EZContent Paragraphs
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - ezcontent_paragraphs
-  - paragraphs_jquery_ui_accordion
+  - ezcontent:ezcontent_paragraphs
+  - paragraphs_jquery_ui_accordion:paragraphs_jquery_ui_accordion

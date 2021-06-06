@@ -2,4 +2,4 @@ name: EZContent Taxonomy Feature
 type: module
 description: 'Provides different taxonomies to the system.'
 package: EZContent Taxonomy
-core: 8.x
+core_version_requirement: ^8.8 || ^9

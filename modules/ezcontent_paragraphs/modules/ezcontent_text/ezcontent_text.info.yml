@@ -2,6 +2,6 @@ name: Text Feature
 type: module
 description: 'Provides basic Text paragraph feature.'
 package: EZContent Paragraphs
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 dependencies:
-  - ezcontent_paragraphs
+  - ezcontent:ezcontent_paragraphs
