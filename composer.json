@@ -142,9 +142,6 @@
       },
       "drupal/entityqueue": {
         "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
-      },
-      "drupal/blazy": {
-        "3214001 - Label with Orphaned text is displayed for newly created hero media block component": "https://www.drupal.org/files/issues/2021-05-21/3214001-3.patch"
       }
     },
     "installer-paths": {
