@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: cta
+label: CTA
+revision: 0
+description: 'A Call to Action component with a configurable background color.'

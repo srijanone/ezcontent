@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.cta
+    - field.field.block_content.cta.body
+    - field.field.block_content.cta.field_background_color
+    - field.field.block_content.cta.field_link
+    - field.field.block_content.cta.field_title
+  module:
+    - color_field
+    - link
+    - text
+id: block_content.cta.default
+targetEntityType: block_content
+bundle: cta
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_background_color:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: color_field_widget_html5
+    region: content
+  field_link:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

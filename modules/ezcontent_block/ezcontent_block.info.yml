@@ -3,3 +3,5 @@ type: module
 description: 'Provides Block types for block based features.'
 package: EZContent Block
 core: 8.x
+dependencies:
+  - color_field:color_field
