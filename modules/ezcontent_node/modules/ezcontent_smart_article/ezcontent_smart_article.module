@@ -5,14 +5,12 @@
  * Module file for ezcontent_smart_article.
  */
 
-use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Serialization\Json;
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\InvokeCommand;
-use Drupal\Component\Utility\Html;
-use Drupal\Component\Serialization\Json;
 use Drupal\Core\Entity\ContentEntityForm;
-use Drupal\Core\Ajax\HtmlCommand;
-use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
 /**
@@ -115,7 +113,7 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       $form['actions']['submit']['#submit'][] = 'update_summary_field_submit_handler';
     }
 
-    // Code for Smart Tags.
+    // Code for Podcast.
     $bundle = $entity_type = '';
     $form_object = $form_state->getFormObject();
     if ($form_object instanceof ContentEntityForm) {
@@ -123,30 +121,6 @@ function ezcontent_smart_article_form_node_form_alter(&$form, FormStateInterface
       $bundle = $entity->bundle();
       $entity_type = $entity->getEntityTypeId();
       if (!empty($entity_type) && !empty($bundle)) {
-        $field_definitions = \Drupal::service('entity_field.manager')->getFieldDefinitions($entity_type, $bundle);
-        $smart_tags = \Drupal::service('ezcontent_smart_article.generate_smarttags');
-        $term_reference_field = $smart_tags->findTermReferenceFieldsForEntityType($field_definitions, $bundle);
-        if (!empty($term_reference_field)) {
-          $ref_tag_field_settings = $field_definitions[$term_reference_field]->getSettings();
-          $form['message'] = [
-            '#type' => 'markup',
-            '#weight' => -10,
-            '#markup' => '<span class="validate-message"></span>',
-          ];
-          if (isset($form[$term_reference_field])) {
-            $form[$term_reference_field]['link_field'] = [
-              '#type' => 'hidden',
-              '#value' => $ref_tag_field_settings['long_text_fields'],
-            ];
-            $form[$term_reference_field]['widget']['smart_tags_submit']['#ajax'] = [
-              'callback' => 'generate_tags_form_submit',
-              'wrapper' => 'generate-tags',
-            ];
-            // Disable smart tag button if subscription keys not available.
-            $form[$term_reference_field]['widget']['smart_tags_submit']['#attributes'] = empty($summary_config->get('smart_tags_api_url')) ? ['disabled' => 'disabled'] : [];
-          }
-        }
-
         // Custom submit handler for Podcast.
         foreach ($entity->getFieldDefinitions() as $field_definition) {
           if ($field_definition->getType() === 'ezcontent_smart_podcast') {
@@ -356,47 +330,6 @@ function update_summary_field_submit_handler(&$form, FormStateInterface $form_st
 }
 
 /**
- * Implements form submit handler for smarttags.
- */
-function generate_tags_form_submit(array $form, FormStateInterface $form_state) {
-  $tags = [];
-  $response = new AjaxResponse();
-  $renderer = \Drupal::service('renderer');
-  $node = $form_state->getFormObject()->getEntity();
-  $link_field = $form_state->getValue('link_field');
-  $link_field_label = $node->$link_field->getFieldDefinition()->getLabel();
-  $field = $form_state->getValue($link_field);
-  if (empty($field[0]['value'])) {
-    $drupal_messenger = \Drupal::messenger();
-    $drupal_messenger->addError(t('@link_field_label field required.', ['@link_field_label' => $link_field_label]));
-    $message = [
-      '#theme' => 'status_messages',
-      '#message_list' => $drupal_messenger->all(),
-    ];
-    $messages = $renderer->render($message);
-    $drupal_messenger->deleteByType('error');
-    $link_field_id = str_replace('_', '-', $link_field);
-    $response->addCommand(new HtmlCommand('.validate-message', $messages));
-    $response->addCommand(new InvokeCommand("#edit-$link_field_id-0-value", 'addClass', ['error']));
-  }
-  else {
-    $config = \Drupal::config('ezcontent_smart_article.settings');
-    $imageTaggingManager = \Drupal::service('plugin.manager.text_tagging');
-    // Use plugin methods here.
-    $serviceType = $config->get('text_tagging_service');
-    $plugin = $imageTaggingManager->createInstance($serviceType);
-    $tags = $plugin->getTags(Json::encode($field[0]['value']));
-  }
-  $auto_tags = [
-    '#theme' => 'smarttag_template',
-    '#tags' => $tags,
-  ];
-  $rendered_field = $renderer->render($auto_tags);
-  $response->addCommand(new ReplaceCommand('#auto-tags', $rendered_field));
-  return $response;
-}
-
-/**
  * Implements hook_theme().
  */
 function ezcontent_smart_article_theme($existing, $type, $theme, $path) {
@@ -409,6 +342,9 @@ function ezcontent_smart_article_theme($existing, $type, $theme, $path) {
     ],
     'smart_article_invalid_subscription_popup' => [
       'variables' => [],
+    ],
+    'autocomplete_deluxe_smart_tags' => [
+      'variables' => ['tags' => []],
     ],
   ];
 }

@@ -7,10 +7,6 @@ services:
     class: Drupal\ezcontent_smart_article\GenerateSummary
     arguments: ['@config.factory', '@http_client', '@serialization.json', '@logger.factory']
 
-  ezcontent_smart_article.generate_smarttags:
-    class: Drupal\ezcontent_smart_article\GenerateSmartTags
-    arguments: ['@config.factory', '@http_client', '@logger.factory']
-
   ezcontent_smart_article.event_subscriber:
     class: Drupal\ezcontent_smart_article\EventSubscriber\SmartArticleCheckSubscriptionEvent
     arguments: ['@config.factory']
@@ -36,3 +32,7 @@ services:
   plugin.manager.ezcontent_speech_to_text:
     class: Drupal\ezcontent_smart_article\EzcontentSpeechToTextManager
     parent: default_plugin_manager
+
+  ezcontent_smart_article.generate_smarttags:
+    class: Drupal\ezcontent_smart_article\GenerateSmartTags
+    arguments: ['@config.factory', '@plugin.manager.text_tagging']
