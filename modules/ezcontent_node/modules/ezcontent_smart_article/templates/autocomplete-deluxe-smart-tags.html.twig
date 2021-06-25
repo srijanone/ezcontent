@@ -1,0 +1,9 @@
+{% if tags %}
+    {% for tag in tags %}
+        <span class="autocomplete-deluxe-item">
+            {{ tag }}
+            <a class="autocomplete-deluxe-item-delete" href="javascript:void(0)"></a>
+            <input type="hidden" value="{{ tag }}">
+        </span>
+    {% endfor %}
+{% endif %}

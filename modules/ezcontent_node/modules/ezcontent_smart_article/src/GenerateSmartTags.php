@@ -2,9 +2,8 @@
 
 namespace Drupal\ezcontent_smart_article;
 
+use Drupal\Component\Serialization\Json;
 use Drupal\Core\Config\ConfigFactoryInterface;
-use GuzzleHttp\ClientInterface;
-use Drupal\Core\Logger\LoggerChannelFactory;
 
 /**
  * Defines a route controller for watches autocomplete form elements.
@@ -19,85 +18,39 @@ class GenerateSmartTags {
   protected $config;
 
   /**
-   * An http client.
+   * EzContent Text Tagging Manager.
    *
-   * @var \GuzzleHttp\ClientInterface
+   * @var \Drupal\ezcontent_smart_article\EzcontentTextTaggingManager
    */
-  protected $httpClient;
+  protected $ezcontentTextTaggingManager;
 
   /**
-   * The channel logger object.
-   *
-   * @var \Drupal\Core\Logger\LoggerChannelFactory
-   */
-  protected $logger;
-
-  /**
-   * Constructs this factory object.
+   * Constructs GenerateSmartTags.
    *
    * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
    *   The config factory.
-   * @param \GuzzleHttp\ClientInterface $httpClient
-   *   An http client.
-   * @param \Drupal\Core\Logger\LoggerChannelFactory $logger
-   *   The channel logger object.
+   * @param \Drupal\ezcontent_smart_article\EzcontentTextTaggingManager $ezcontentTextTaggingManager
+   *   EzContent Text Tagging Manager.
    */
-  public function __construct(ConfigFactoryInterface $configFactory, ClientInterface $httpClient, LoggerChannelFactory $logger) {
+  public function __construct(ConfigFactoryInterface $configFactory, EzcontentTextTaggingManager $ezcontentTextTaggingManager) {
     $this->config = $configFactory->get('ezcontent_smart_article.settings');
-    $this->httpClient = $httpClient;
-    $this->logger = $logger;
+    $this->ezcontentTextTaggingManager = $ezcontentTextTaggingManager;
   }
 
   /**
-   * Get data from Endpoint.
+   * Generate Tags via configured text tagging service.
    *
-   * @param string $value
-   *   The field value.
-   *
-   * @return mixed
-   *   The tags generated from the above field value.
-   */
-  public function getTags($value = '') {
-    $url = $this->config->get('smart_tags_api_url');
-
-    $request = $this->httpClient->post($url, [
-      'json' => [
-        'article' => $value,
-      ],
-    ]);
-
-    if ($request->getStatusCode() == 200) {
-      return json_decode($request->getBody())->Tags;
-    }
-    else {
-      $this->logger->get('ezcontent_smart_article')->error('Call to API
-       endpoint failed. Reason: %reason.',
-        [
-          '%reason' => $request->getReasonPhrase(),
-        ]
-      );
-    }
-
-    return '';
-  }
-
-  /**
-   * Fetch ezcontent_smart_tags taxonomy_term reference field from given.
-   *
-   * FieldDefinitions list.
-   *
-   * @param object $fieldDefinitions
-   *   The list of field definition.
+   * @param string $field_value
+   *   The source text for generating tags.
    *
    * @return mixed
-   *   Machine name of the term reference field.
+   *   Returns generated tags.
+   * @throws \Drupal\Component\Plugin\Exception\PluginException
    */
-  public function findTermReferenceFieldsForEntityType($fieldDefinitions) {
-    foreach ($fieldDefinitions as $fieldDefinition) {
-      if ($fieldDefinition->getType() == 'ezcontent_smart_tags' && $fieldDefinition->getSetting('target_type') == 'taxonomy_term') {
-        return $fieldDefinition->getName();
-      }
-    }
+  public function generateTags($field_value) {
+    $serviceType = $this->config->get('text_tagging_service');
+    $plugin = $this->ezcontentTextTaggingManager->createInstance($serviceType);
+    return $plugin->getTags(Json::encode($field_value));
   }
 
 }
