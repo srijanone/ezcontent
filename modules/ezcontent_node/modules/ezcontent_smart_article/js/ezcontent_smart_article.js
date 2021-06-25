@@ -54,18 +54,6 @@
         $("#smart_tag_hidden-text-id input").val("hidden");
       });
 
-      // For Smart tags.
-      $('.field--type-ezcontent-smart-tags .tag-field-wrapper .tag-wrapper li', context).click(function (e) {
-        var tagName = $(this).text();
-        var existingTags = $('.field--type-ezcontent-smart-tags .tags-link-field .ui-autocomplete-input').val();
-        var finalTags = '';
-        if (existingTags === '') {
-          finalTags = existingTags + tagName;
-        } else {
-          finalTags = existingTags + ', ' + tagName;
-        }
-        $('.field--type-ezcontent-smart-tags .tags-link-field .ui-autocomplete-input').val(finalTags);
-      });
       // Open invalid subscription dialog.
       $('#edit-overlay-link', context).once('ezcontent_smart_article').trigger('click');
       // Generate tags as soon as image is uploaded.

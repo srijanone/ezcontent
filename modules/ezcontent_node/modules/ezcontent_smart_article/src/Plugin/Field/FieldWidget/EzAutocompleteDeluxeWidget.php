@@ -2,31 +2,35 @@
 
 namespace Drupal\ezcontent_smart_article\Plugin\Field\FieldWidget;
 
+use Drupal\autocomplete_deluxe\Plugin\Field\FieldWidget\AutocompleteDeluxeWidget;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Ajax\AjaxResponse;
-use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Ajax\BeforeCommand;
+use Drupal\Core\Ajax\InvokeCommand;
+use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Field\Plugin\Field\FieldWidget\EntityReferenceAutocompleteTagsWidget;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\KeyValueStore\KeyValueFactory;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Render\Renderer;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\ezcontent_smart_article\GenerateSmartTags;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Plugin implementation of the 'ezcontent_smart_tags_autocomplete_tags' widget.
+ * Plugin implementation of the 'options_buttons' widget.
  *
  * @FieldWidget(
- *   id = "ezcontent_smart_tags_autocomplete_tags",
- *   label = @Translation("Autocomplete (Tags style)"),
- *   description = @Translation("An autocomplete text field with tagging support."),
+ *   id = "ez_autocomplete_deluxe",
+ *   label = @Translation("Ez Autocomplete Deluxe"),
  *   field_types = {
  *     "ezcontent_smart_tags"
  *   },
- *   multiple_values = TRUE,
+ *   multiple_values = TRUE
  * )
  */
-class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAutocompleteTagsWidget {
+class EzAutocompleteDeluxeWidget extends AutocompleteDeluxeWidget implements ContainerFactoryPluginInterface {
 
   /**
    * The renderer object.
@@ -43,11 +47,11 @@ class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAuto
   protected $smartTags;
 
   /**
-   * EntityReferenceSmarttagsAutocompleteTagsWidget constructor.
+   * EzAutocompleteDeluxeWidget constructor.
    *
-   * @param $plugin_id
+   * @param string $plugin_id
    *   The plugin_id for the plugin instance.
-   * @param $plugin_definition
+   * @param mixed $plugin_definition
    *   The plugin implementation definition.
    * @param \Drupal\Core\Field\FieldDefinitionInterface $field_definition
    *   The field definition for the operation.
@@ -55,13 +59,19 @@ class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAuto
    *   The formatter settings.
    * @param array $third_party_settings
    *   Any third party settings.
+   * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
+   *   The module handler.
+   * @param \Drupal\Core\Session\AccountInterface $account
+   *   Current account.
+   * @param \Drupal\Core\KeyValueStore\KeyValueFactory $key_value
+   *   Key value storage.
    * @param \Drupal\Core\Render\Renderer $renderer
    *   Renderer object.
    * @param \Drupal\ezcontent_smart_article\GenerateSmartTags $generate_smart_tags
    *   EzContent Smart Tags service.
    */
-  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, array $third_party_settings, Renderer $renderer, GenerateSmartTags $generate_smart_tags) {
-    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $third_party_settings);
+  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, array $third_party_settings, ModuleHandlerInterface $module_handler, AccountInterface $account, KeyValueFactory $key_value, Renderer $renderer, GenerateSmartTags $generate_smart_tags) {
+    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $third_party_settings, $module_handler, $account, $key_value);
     $this->renderer = $renderer;
     $this->smartTags = $generate_smart_tags;
   }
@@ -76,6 +86,9 @@ class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAuto
       $configuration['field_definition'],
       $configuration['settings'],
       $configuration['third_party_settings'],
+      $container->get('module_handler'),
+      $container->get('current_user'),
+      $container->get('keyvalue'),
       $container->get('renderer'),
       $container->get('ezcontent_smart_article.generate_smarttags')
     );
@@ -88,11 +101,6 @@ class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAuto
     $element = parent::formElement($items, $delta, $element, $form, $form_state);
     $element['#prefix'] = '<div class="tags-link-field">';
     $element['#suffix'] = '</div>';
-    $element['auto_tags'] = [
-      '#prefix' => '<div class="tag-field-wrapper" id="auto-tags">',
-      '#suffix' => '</div>',
-      '#weight' => 0,
-    ];
     $element['smart_tags_submit'] = [
       '#type' => 'submit',
       '#name' => 'smart_tags_submit',
@@ -103,7 +111,7 @@ class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAuto
         'wrapper' => 'generate-tags',
       ],
     ];
-    $element['#attached']['library'][] = 'ezcontent_smart_article/ezcontent_smart_tags';
+    $element['#attached']['library'][] = 'ezcontent_smart_article/ez_auto_deluxe_smart_tags';
     return $element;
   }
 
@@ -159,11 +167,18 @@ class EntityReferenceSmarttagsAutocompleteTagsWidget extends EntityReferenceAuto
     // Display tag suggestions.
     if (!empty($tags)) {
       $auto_tags = [
-        '#theme' => 'smarttag_template',
+        '#theme' => 'autocomplete_deluxe_smart_tags',
         '#tags' => $tags,
       ];
       $rendered_field = $this->renderer->render($auto_tags);
-      $response->addCommand(new ReplaceCommand('#auto-tags', $rendered_field));
+      // Add tags into the autocomplete deluxe field.
+      $response->addCommand(new BeforeCommand('.autocomplete-deluxe-form.ui-autocomplete-input', $rendered_field));
+      // Prepare tags for adding them into the autocomplete deluxe value field.
+      $value = '';
+      foreach ($tags as $tag) {
+        $value = trim($value . ' ""' . $tag . '"" ');
+      }
+      $response->addCommand(new InvokeCommand('.autocomplete-deluxe-value-field', 'update_tags', [$value]));
     }
     return $response;
   }
