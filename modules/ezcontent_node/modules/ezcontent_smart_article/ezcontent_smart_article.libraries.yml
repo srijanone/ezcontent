@@ -13,3 +13,13 @@ ezcontent_smart_article_subscription_page_libs:
   css:
     theme:
       css/ezcontent_smart_article_subscription_page.css: {}
+
+ezcontent_smart_tags:
+  version: 1.x
+  js:
+    js/ezcontent_smart_tags.js: {}
+
+ez_auto_deluxe_smart_tags:
+  version: 1.x
+  js:
+    js/ez_auto_deluxe_smart_tags.js: {}
