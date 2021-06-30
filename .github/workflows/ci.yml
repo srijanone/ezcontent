@@ -1,0 +1,72 @@
+name: pr-review
+on: [pull_request]
+jobs:
+  check-drupal-coding-standards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install PHPCS
+        run: composer global require --dev drupal/coder dealerdirect/phpcodesniffer-composer-installer
+
+      - name: Clone the code
+        uses: actions/checkout@v2
+      
+      - name: Check coding standards
+        run: ~/.composer/vendor/bin/phpcs --standard="Drupal,DrupalPractice" --extensions="module,inc,install,test,profile,theme,css,info,txt,md,yml" .
+
+  phpstan-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP 7.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.3
+
+      - name: Composer install
+        run: composer install
+
+      - name: Analyse codebase
+        run: ./vendor/bin/phpstan analyse ./modules/ezcontent_node/modules/ezcontent_smart_article
+
+  local-php-security-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the code
+        uses: actions/checkout@v2
+
+      - name: Set up PHP 7.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 7.3
+
+      - name: Composer install
+        run: composer install
+
+      - name: Add Cache
+        uses: actions/cache@v2
+        id: cache-db
+        with:
+            path: ~/.symfony/cache
+            key: db
+
+      - name: Scan composer.lock
+        uses: symfonycorp/security-checker-action@v2
+
+  sonarcloud:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      with:
+        args: >
+          -Dsonar.projectKey=ezcontent
+          -Dsonar.sources=.
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONARCLOUD_URL: ${{ secrets.SONARCLOUD_URL }}
