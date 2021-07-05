@@ -36,8 +36,8 @@
     "drupal/entityqueue": "^1.2",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/environment_indicator": "^4.0",
-    "drupal/ezcontent_api": "^2.0",
-    "drupal/ezcontent_publish": "^1.2.0-alpha",
+    "drupal/ezcontent_api": "^2.1@alpha",
+    "drupal/ezcontent_publish": "^1.2@alpha",
     "drupal/field_group": "^3.0",
     "drupal/fvm": "^2.0",
     "drupal/gin_login": "^1.0-rc4",
@@ -86,7 +86,7 @@
     "oomphinc/composer-installers-extender": "^1.1 || ^2",
     "srijanone/ezcontent_admin": "1.0.x-dev",
     "srijanone/ezcontent_amp": "8.x-dev",
-    "srijanone/ezcontent_theme": "8.x-dev",
+    "srijanone/ezcontent_theme": "1.0.x-dev",
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
