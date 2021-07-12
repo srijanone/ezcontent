@@ -2,9 +2,14 @@
 
 namespace Drupal\ezcontent_smart_article\Plugin\Field\FieldWidget;
 
+use Drupal\Core\Database\Connection;
+use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\KeyValueStore\KeyValueFactoryInterface;
+use Drupal\Core\Queue\QueueFactory;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Plugin implementation of the 'ez_smart_transcribe_widget' widget.
@@ -19,6 +24,70 @@ use Drupal\Core\Form\FormStateInterface;
  * )
  */
 class SmartTranscribeWidget extends WidgetBase {
+
+  /**
+   * Key Value store.
+   *
+   * @var \Drupal\Core\KeyValueStore\KeyValueStoreInterface
+   */
+  protected $keyValue;
+
+  /**
+   * Database connection.
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected $connection;
+
+  /**
+   * Queue factory.
+   *
+   * @var \Drupal\Core\Queue\QueueFactory
+   */
+  protected $queue;
+
+  /**
+   * SmartTranscribeWidget constructor.
+   *
+   * @param $plugin_id
+   *   The plugin_id for the plugin instance.
+   * @param $plugin_definition
+   *   The plugin implementation definition.
+   * @param \Drupal\Core\Field\FieldDefinitionInterface $field_definition
+   *   The field definition for the operation.
+   * @param array $settings
+   *   The formatter settings.
+   * @param array $third_party_settings
+   *   Any third party settings.
+   * @param \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $keyValue
+   *   Key Value store factory.
+   * @param \Drupal\Core\Database\Connection $connection
+   *   Database connection.
+   * @param \Drupal\Core\Queue\QueueFactory $queue
+   *   Queue factory.
+   */
+  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, array $third_party_settings, KeyValueFactoryInterface $keyValue, Connection $connection, QueueFactory $queue) {
+    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $third_party_settings);
+    $this->keyValue = $keyValue->get('speech_to_text');
+    $this->connection = $connection;
+    $this->queue = $queue->get('speech_to_text_queue');
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $plugin_id,
+      $plugin_definition,
+      $configuration['field_definition'],
+      $configuration['settings'],
+      $configuration['third_party_settings'],
+      $container->get('keyvalue'),
+      $container->get('database'),
+      $container->get('queue')
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -61,14 +130,12 @@ class SmartTranscribeWidget extends WidgetBase {
       $data['field_name'] = $field_name;
       $data['source_field_name'] = $this->getFieldSetting('transcription_source_field');
       // Use key value to record an entry for the entity being queued for
-      // speech-to-text conversion.
-      $key_value = \Drupal::keyValue('speech_to_text');
-      // If key_value has an entry for the entity, it means the entity is
-      // already added into the queue for conversion, then fetch the
-      // corresponding queue item id and update the data in the queue.
-      if ($key_value->has($data['entity_uuid'])) {
-        $item_id = $key_value->get($data['entity_uuid'])['item_id'];
-        \Drupal::database()->update('queue')
+      // speech-to-text conversion. If key_value has an entry for the entity, it
+      // means the entity is already added into the queue for conversion, then
+      // fetch the corresponding queue item id and update the data in the queue.
+      if ($this->keyValue->has($data['entity_uuid'])) {
+        $item_id = $this->keyValue->get($data['entity_uuid'])['item_id'];
+        $this->connection->update('queue')
           ->fields(['data' => serialize($data)])
           ->condition('name', 'speech_to_text_queue')
           ->condition('item_id', $item_id)
@@ -77,9 +144,8 @@ class SmartTranscribeWidget extends WidgetBase {
       // The current entity is being queued for the first time, so post queue
       // creation set the entity uuid and the queue item id in the key_value.
       else {
-        $queue = \Drupal::queue('speech_to_text_queue');
-        $item_id = $queue->createItem($data);
-        $key_value->set($data['entity_uuid'], ['item_id' => $item_id]);
+        $item_id = $this->queue->createItem($data);
+        $this->keyValue->set($data['entity_uuid'], ['item_id' => $item_id]);
       }
     }
     return $values;
