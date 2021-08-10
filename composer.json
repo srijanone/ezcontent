@@ -118,9 +118,6 @@
       "drupal/slick": {
         "Slick patch": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
       },
-      "drupal/moderation_dashboard": {
-        "User schedule tab throw 500 error": "https://www.drupal.org/files/issues/2020-05-04/user_load_moderation_dashboard_updated_with_DI_for_beta_version_3048782.patch"
-      },
       "drupal/entity_browser": {
         "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
         "2897855 - Entity browser modal dialog opens by pressing enter in any text field": "https://www.drupal.org/files/issues/2020-10-07/prevent-entity-browser-from-open-on-enter-key-pressed-2897855-17-reroll-with-improvement.patch",
