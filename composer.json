@@ -36,7 +36,6 @@
     "drupal/entityqueue": "^1.2",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/environment_indicator": "^4.0",
-    "drupal/ezcontent_api": "^2.1@alpha",
     "drupal/ezcontent_publish": "^1.2@alpha",
     "drupal/field_group": "^3.0",
     "drupal/fvm": "^2.0",
@@ -84,6 +83,7 @@
     "drupal/webform": "^6.0",
     "drupal/yoast_seo": "^1.5",
     "oomphinc/composer-installers-extender": "^1.1 || ^2",
+    "srijanone/ezcontent_api": "dev-master",
     "srijanone/ezcontent_admin": "1.0.x-dev",
     "srijanone/ezcontent_amp": "8.x-dev",
     "srijanone/ezcontent_theme": "1.0.x-dev",
@@ -112,13 +112,8 @@
       "drupal/core": {
         "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch",
-        "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch",
-        "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
-        "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
-        "Nested Paragraphs create multiple drag handles": "https://www.drupal.org/files/issues/2020-09-30/3092181-130.patch"
-      },
-      "drupal/slick": {
-        "Slick patch": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
+        "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-09-25/contextual_links_with_LB-3020876-38.patch",
+        "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2021-05-20/3143958-14-subprofile-support-9.2.x.patch"
       },
       "drupal/entity_browser": {
         "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
@@ -127,9 +122,6 @@
       },
       "drupal/lb_direct_add": {
         "3157440 - Make first option a label not link": "https://www.drupal.org/files/issues/2020-09-09/make-first-option-a-label-not-link-3157440_3_reroll_updated_against_tag_8.x-1.2.patch"
-      },
-      "drupal/fvm": {
-        "3188401 - Add widget to override none option inside view mode select list ": "https://www.drupal.org/files/issues/2020-12-16/allow-user-to-custmise-none-option-from-select-3188401-3.patch"
       },
       "drupal/entityqueue": {
         "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
