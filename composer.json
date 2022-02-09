@@ -87,6 +87,7 @@
     "srijanone/ezcontent_admin": "dev-blt-dev-d9",
     "srijanone/ezcontent_amp": "dev-blt-dev-d9",
     "srijanone/ezcontent_theme": "dev-blt-dev-d9",
+    "srijanone/ezcontent_demo": "dev-blt-dev",
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
