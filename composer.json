@@ -83,10 +83,10 @@
     "drupal/webform": "^6.0",
     "drupal/yoast_seo": "^1.5",
     "oomphinc/composer-installers-extender": "^1.1 || ^2",
-    "srijanone/ezcontent_api": "dev-master",
-    "srijanone/ezcontent_admin": "1.0.x-dev",
-    "srijanone/ezcontent_amp": "8.x-dev",
-    "srijanone/ezcontent_theme": "1.0.x-dev",
+    "srijanone/ezcontent_api": "dev-blt-dev-d9",
+    "srijanone/ezcontent_admin": "dev-blt-dev-d9",
+    "srijanone/ezcontent_amp": "dev-blt-dev-d9",
+    "srijanone/ezcontent_theme": "dev-blt-dev-d9",
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
