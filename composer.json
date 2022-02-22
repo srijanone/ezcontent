@@ -28,16 +28,15 @@
     "drupal/color_field": "^2.2",
     "drupal/colorbox": "^1.4",
     "drupal/config_rewrite": "^1.3",
-    "drupal/core-composer-scaffold": "^8.8",
     "drupal/dropzonejs": "^2.0",
     "drupal/email_registration": "^1.0",
     "drupal/entity_browser": "~2.1",
     "drupal/entity_embed": "^1.0",
     "drupal/entityqueue": "^1.2",
     "drupal/entity_usage": "^2.0@beta",
-    "drupal/environment_indicator": "^3.7",
+    "drupal/environment_indicator": "^4.0",
     "drupal/field_group": "^3.0",
-    "drupal/fvm": "^1.1",
+    "drupal/fvm": "^2.0",
     "drupal/gin_login": "^1.0-rc4",
     "drupal/gin_toolbar": "^1.0-beta",
     "drupal/google_analytics": "^3.0",
@@ -72,17 +71,17 @@
     "drupal/scheduler": "^1.1",
     "drupal/scheduler_content_moderation_integration": "^1.3",
     "drupal/schema_metatag": "^1.4",
-    "drupal/seo_checklist": "^4.1",
+    "drupal/seo_checklist": "4.x-dev",
     "drupal/simple_gmap": "^3.0",
     "drupal/simple_sitemap": "^3.3",
     "drupal/slick_entityreference": "^2.0",
     "drupal/slick_paragraphs": "2.x",
-    "drupal/social_media": "^1.8",
+    "drupal/social_media": "1.x-dev",
     "drupal/social_media_links": "^2.6",
     "drupal/update_helper": "^2.0",
     "drupal/video_embed_field": "^2.2",
     "drupal/viewsreference": "^2.0",
-    "drupal/webform": "^5.4",
+    "drupal/webform": "^6.0",
     "drupal/yoast_seo": "^1.5",
     "oomphinc/composer-installers-extender": "^1.1 || ^2",
     "srijanone/ezcontent_api": "dev-blt-test",
@@ -117,15 +116,9 @@
         "Langcode cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
       },
       "drupal/core": {
-        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-15/reusable_inline_block_creation-2999491-61-updated-8.9.x.patch",
+        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
         "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/block_content-classes-2830725-2.patch",
-        "Contextual links of reusable content blocks are not displayed when rendering entities built via Layout Builder": "https://www.drupal.org/files/issues/2020-02-22/contextual_links_layout_builder_0.patch",
-        "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2021-01-14/3143958-11-subprofile-support-8.9.x.patch",
-        "Nested Paragraphs create multiple drag handles": "https://www.drupal.org/files/issues/2020-05-28/3092181-87-89x.patch",
-        "Restrict access to empty top level administration pages": "https://www.drupal.org/files/issues/2020-10-28/296693-216.patch"
-      },
-      "drupal/slick": {
-        "Slick patch": "https://www.drupal.org/files/issues/2020-03-03/slick_blazy_formatter_field_type_fix-3117331-2.patch"
+        "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2021-11-18/1356276-675.patch"
       },
       "drupal/entity_browser": {
         "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
@@ -135,11 +128,11 @@
       "drupal/lb_direct_add": {
         "3157440 - Make first option a label not link": "https://www.drupal.org/files/issues/2020-09-09/make-first-option-a-label-not-link-3157440_3_reroll_updated_against_tag_8.x-1.2.patch"
       },
-      "drupal/fvm": {
-        "3188401 - Add widget to override none option inside view mode select list ": "https://www.drupal.org/files/issues/2020-12-16/allow-user-to-custmise-none-option-from-select-3188401-3.patch"
-      },
       "drupal/entityqueue": {
         "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
+      },
+      "drupal/social_media": {
+        "3178056 - Dispatcher error due to Symfony Event class deprecation handling": "https://www.drupal.org/files/issues/2020-11-20/dispatcher_error-3178056-5.patch"
       }
     },
     "installer-paths": {
