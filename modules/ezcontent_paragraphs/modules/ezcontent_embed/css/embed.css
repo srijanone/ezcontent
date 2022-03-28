@@ -1,11 +1,11 @@
 .paragraph--type--embed {
   padding: 0;
 }
-iframe {
+.paragraph--type--embed iframe {
   margin: 30px auto;
   max-width: 100%;
 }
-iframe::after {
+.paragraph--type--embed iframe::after {
   clear: both;
   content: "";
   display: table;
