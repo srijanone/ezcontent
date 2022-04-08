@@ -53,7 +53,7 @@ content:
     region: content
     weight: 2
     settings:
-      default_option: 'Card Grid (1xn)'
+      default_option: 'Cards Grid (1xn)'
     third_party_settings: {  }
 hidden:
   created: true

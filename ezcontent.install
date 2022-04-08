@@ -46,3 +46,28 @@ function ezcontent_update_8002() {
   // Install gin toolbar.
   \Drupal::service('module_installer')->install(['gin_toolbar']);
 }
+
+/**
+ * Remove entries for deprecated service from database, if any.
+ */
+function ezcontent_update_8003() {
+  // Check for all the routes in the router table and delete the ones that have
+  // "paramconverter.latest_revision" service registered as a converter in the
+  // parameters options for the route.
+  $routes = \Drupal::database()->select('router', 'r')
+    ->fields('r', ['name', 'route'])
+    ->execute()->fetchAll();
+  foreach ($routes as $route) {
+    $unserialized_routes = $ur_options = [];
+    $unserialized_routes = unserialize($route->route);
+    $ur_options = $unserialized_routes->getOptions();
+    if (isset($ur_options['parameters'])) {
+      if (isset($ur_options['parameters'][key($ur_options['parameters'])]['converter'])
+        && $ur_options['parameters'][key($ur_options['parameters'])]['converter'] === 'paramconverter.latest_revision') {
+        \Drupal::database()->delete('router')
+          ->condition('name', $route->name)
+          ->execute();
+      }
+    }
+  }
+}
