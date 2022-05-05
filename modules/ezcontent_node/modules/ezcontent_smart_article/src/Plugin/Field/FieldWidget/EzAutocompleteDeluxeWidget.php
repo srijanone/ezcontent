@@ -131,12 +131,13 @@ class EzAutocompleteDeluxeWidget extends AutocompleteDeluxeWidget implements Con
    * Set a form error if there are duplicate entity ids.
    */
   public static function validateNoDuplicates(array &$element, FormStateInterface $form_state, array &$complete_form) {
+    $ids = NULL;
     $input = NestedArray::getValue($form_state->getValues(), $element['#parents']);
-
-    $ids = array_column($input['target_id'], 'target_id');
-
+    if ($input['target_id']) :
+      $ids = array_column($input['target_id'], 'target_id');
+    endif;
     // Check that there aren't duplicate entity_id values.
-    if (count($ids) !== count(array_flip($ids))) {
+    if ($ids and count($ids) !== count(array_flip($ids))) {
       $form_state->setError($element, 'Field "' . $element['target_id']['#title'] . '" doesn\'t allow duplicates.');
     }
 
