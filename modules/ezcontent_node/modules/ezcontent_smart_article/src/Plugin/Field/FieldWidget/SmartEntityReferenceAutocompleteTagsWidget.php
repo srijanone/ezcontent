@@ -123,8 +123,11 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
    * Set a form error if there are duplicate entity ids.
    */
   public static function validateNoDuplicates(array &$element, FormStateInterface $form_state, array &$complete_form) {
+    $ids = [];
     $input = NestedArray::getValue($form_state->getValues(), $element['#parents']);
-    $ids = array_column($input['target_id'], 'target_id');
+    if ($input['target_id']) :
+      $ids = array_column($input['target_id'], 'target_id');
+    endif;
     if (count($ids) !== count(array_flip($ids))) {
       $form_state->setError($element, t("Field @field_title doesn\'t allow duplicates.", ['@field_title' => $element['target_id']['#title']]));
     }
@@ -208,7 +211,7 @@ class SmartEntityReferenceAutocompleteTagsWidget extends EntityReferenceAutocomp
       $fid = $file_id['fids'][0];
     }
     if (!empty($fid)) {
-      // @todo: fetch file object from form_state.
+      // @todo fetch file object from form_state.
       $file = File::load($fid);
       $serviceType = $this->configFactory->get('ezcontent_smart_article.settings')
         ->get('image_tagging_service');
