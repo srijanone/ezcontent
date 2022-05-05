@@ -84,7 +84,12 @@ class CompaniesList {
     ]);
 
     if ($request->getStatusCode() == 200) {
-      return $this->serializer->decode($request->getBody())['body'];
+      if (array_key_exists("body", $this->serializer->decode($request->getBody()))) {
+        return $this->serializer->decode($request->getBody())['body'];
+      }
+      else {
+        return [];
+      }
     }
     else {
       $this->logger->get('ezcontent_smart_article')->error('Call to API
