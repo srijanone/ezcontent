@@ -20,7 +20,7 @@
     "bower-asset/dropzone": "5.7.2",
     "bower-asset/slick-carousel": "^1.8",
     "cweagans/composer-patches": "~1",
-    "drupal/admin_toolbar": "^2.0",
+    "drupal/admin_toolbar": "^3.2",
     "drupal/allowed_formats": "^1.1",
     "drupal/autocomplete_deluxe": "^2.0",
     "drupal/better_normalizers": "^1.0@beta",
