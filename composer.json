@@ -121,9 +121,6 @@
         "2897855 - Entity browser modal dialog opens by pressing enter in any text field": "https://www.drupal.org/files/issues/2020-10-07/prevent-entity-browser-from-open-on-enter-key-pressed-2897855-17-reroll-with-improvement.patch",
         "3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2020-11-19/3183414-2.patch"
       },
-      "drupal/lb_direct_add": {
-        "3157440 - Make first option a label not link": "https://www.drupal.org/files/issues/2020-09-09/make-first-option-a-label-not-link-3157440_3_reroll_updated_against_tag_8.x-1.2.patch"
-      },
       "drupal/entityqueue": {
         "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
       },
