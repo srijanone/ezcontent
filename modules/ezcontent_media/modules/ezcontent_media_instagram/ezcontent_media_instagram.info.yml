@@ -2,7 +2,7 @@ name: 'Media Instagram Feature'
 type: module
 description: 'Provides Instagram media type.'
 package: EZContent Media
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.8 || ^9 || ^10
 dependencies:
   - ezcontent:ezcontent_media
   - ezcontent:ezcontent_user
