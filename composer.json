@@ -83,7 +83,7 @@
     "drupal/webform": "^6.0",
     "drupal/yoast_seo": "^1.5",
     "oomphinc/composer-installers-extender": "^1.1 || ^2",
-    "srijanone/ezcontent_api": "dev-master",
+    "srijanone/ezcontent_api": "3.0.x-dev-dev",
     "srijanone/ezcontent_admin": "1.0.x-dev",
     "srijanone/ezcontent_amp": "8.x-dev",
     "srijanone/ezcontent_theme": "2.0.x-dev-dev",
