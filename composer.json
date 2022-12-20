@@ -75,7 +75,7 @@
     "drupal/simple_sitemap": "^3.3",
     "drupal/slick_entityreference": "^2.0",
     "drupal/slick_paragraphs": "2.x",
-    "drupal/social_media": "1.x-dev",
+
     "drupal/social_media_links": "^2.6",
     "drupal/update_helper": "^3.0",
     "drupal/video_embed_field": "^2.2",
