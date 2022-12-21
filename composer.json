@@ -67,6 +67,7 @@
     "drupal/redirect": "^1.8",
     "drupal/responsive_preview": "^2.0",
     "drupal/robotstxt": "1.x-dev@dev",
+    "drupal/scheduler_content_moderation_integration": "^2.0.0-beta1",
  
     "drupal/schema_metatag": "^2.4",
 
