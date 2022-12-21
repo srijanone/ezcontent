@@ -68,7 +68,7 @@
     "drupal/responsive_preview": "^2.0",
     "drupal/robotstxt": "1.x-dev@dev",
     "drupal/scheduler": "^2.0@RC'",
-    "drupal/scheduler_content_moderation_integration": "2.x-dev@dev",
+    "drupal/scheduler_content_moderation_integration": "^2.0@beta",
     "drupal/schema_metatag": "^2.4",
 
     "drupal/simple_gmap": "3.1.x-dev@dev",
