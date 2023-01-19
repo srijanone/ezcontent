@@ -33,11 +33,12 @@
     "drupal/email_registration": "^1.2",
     "drupal/entity_browser": "~2.8",
     "drupal/entity_embed": "1.x-dev@dev",
-
+    "drupal/entityqueue": "^1.5",
     "drupal/entity_usage": "^2.0@beta",
     "drupal/environment_indicator": "^4.0",
     "srijanone/ezcontent_publish": "2.0.x-dev-dev",
     "drupal/field_group": "^3.4",
+    "drupal/fvm": "^2.0.3",
 
     "drupal/gin_login": "^2.0",
     "drupal/gin_toolbar": "^1.0@RC",
@@ -51,7 +52,7 @@
     "drupal/length_indicator": "^1.2",
     "drupal/libraries": "^4.0",
     "drupal/linkit": "6.0.x-dev@dev",
-
+    "drupal/liveblog":"^2.0@alpha",
     "drupal/media_entity_browser": "2.x-dev@dev",
     "drupal/media_entity_instagram": "^3.0",
     "drupal/media_entity_slideshow": "^2.5",
@@ -62,11 +63,12 @@
     "drupal/paragraphs": "^1.15",
     "drupal/paragraphs_edit": "^2.0",
 
-
+    "drupal/paragraphs_previewer":"^1.7",
     "drupal/pathauto": "^1.x-dev@dev",
     "drupal/redirect": "^1.8",
     "drupal/responsive_preview": "^2.0",
     "drupal/robotstxt": "1.x-dev@dev",
+    "drupal/scheduler":"^2.0@RC",
     "drupal/scheduler_content_moderation_integration": "^2.0.0-beta1",
  
     "drupal/schema_metatag": "^2.4",
