@@ -5,28 +5,48 @@
    "license":"GPL-2.0-or-later",
    "minimum-stability":"dev",
    "prefer-stable":true,
-   "repositories":{
-      "better_normalizers":{
+   "repositories":[
+      {
          "type":"vcs",
          "url":"https://git.drupalcode.org/issue/better_normalizers-3286221.git"
       },
-      "seo_checklist":{
+      {
          "type":"vcs",
          "url":"https://git.drupalcode.org/issue/seo_checklist-3330572"
       },
-      "social_media":{
+      {
          "type":"vcs",
          "url":"https://git.drupalcode.org/issue/social_media-3289788"
       },
-      "drupal":{
+      {
+         "type":"vcs",
+         "url":"https://git.drupalcode.org/issue/jsonapi_views-3288151"
+      },
+      {
+         "type":"vcs",
+         "url":"https://git.drupalcode.org/issue/formtips-3330266"
+      },
+      {
+         "type":"vcs",
+         "url":"https://git.drupalcode.org/issue/jsonapi_explorer-3288136"
+      },
+      {
+         "type":"vcs",
+         "url":"https://git.drupalcode.org/issue/amp-3286062"
+      },
+      {
+         "type":"vcs",
+         "url":"https://git.drupalcode.org/issue/amptheme-3328926"
+      },
+      {
          "type":"composer",
          "url":"https://packages.drupal.org/8"
       },
-      "assets":{
+      {
          "type":"composer",
          "url":"https://asset-packagist.org"
       }
-   },
+   ],
    "require":{
       "bower-asset/colorbox":"^1.6",
       "bower-asset/dropzone":"5.7.2",
