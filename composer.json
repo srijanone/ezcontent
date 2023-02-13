@@ -1,156 +1,164 @@
 {
-  "name": "srijanone/ezcontent",
-  "description": "A Feature rich stater profile from Srijan.",
-  "type": "drupal-profile",
-  "license": "GPL-2.0-or-later",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": {
-    "drupal": {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    "assets": {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
-  },
-  "require": {
-    "bower-asset/colorbox": "^1.6",
-    "bower-asset/dropzone": "5.7.2",
-    "bower-asset/slick-carousel": "^1.8",
-    "cweagans/composer-patches": "~1",
-    "drupal/admin_toolbar": "^3.3",
-    "drupal/allowed_formats": "^2.0",
-    "drupal/autocomplete_deluxe": "^2.0",
-
-
-    "drupal/color_field": "^3.0",
-    "drupal/colorbox": "^2.0",
-    "drupal/components": "^3.0@beta",
-    "drupal/config_rewrite": "^1.5",
-    "drupal/dropzonejs": "^2.7",
-    "drupal/email_registration": "^1.2",
-    "drupal/entity_browser": "~2.8",
-    "drupal/entity_embed": "1.x-dev@dev",
-    "drupal/entityqueue": "^1.5",
-    "drupal/entity_usage": "^2.0@beta",
-    "drupal/environment_indicator": "^4.0",
-    "srijanone/ezcontent_publish": "2.0.x-dev-dev",
-    "drupal/field_group": "^3.4",
-    "drupal/fvm": "^2.0.3",
-
-    "drupal/gin_login": "^2.0",
-    "drupal/gin_toolbar": "^1.0@RC",
-    "drupal/google_analytics": "^4.0",
-    "drupal/image_widget_crop": "^2.4",
-    "drupal/inline_entity_form": "^1.0@RC",
-    "drupal/layout_builder_modal": "^1.2",
-    "drupal/layout_builder_restrictions": "^2.17",
-    "drupal/layout_library": "1.x-dev@dev",
-    "drupal/lb_direct_add": "^2.0",
-    "drupal/length_indicator": "^1.2",
-    "drupal/libraries": "^4.0",
-    "drupal/linkit": "6.0.x-dev@dev",
-    "drupal/liveblog":"^2.0@alpha",
-    "drupal/media_entity_browser": "2.x-dev@dev",
-    "drupal/media_entity_instagram": "^3.0",
-    "drupal/media_entity_slideshow": "^2.5",
-    "drupal/media_entity_twitter": "^2.9",
-    "drupal/metatag": "^1.22",
-    "drupal/moderation_dashboard": "^2.1",
-    "drupal/moderation_sidebar": "^1.7",
-    "drupal/paragraphs": "^1.15",
-    "drupal/paragraphs_edit": "^2.0",
-
-    "drupal/paragraphs_previewer":"^1.7",
-    "drupal/pathauto": "^1.x-dev@dev",
-    "drupal/redirect": "^1.8",
-    "drupal/responsive_preview": "^2.0",
-    "drupal/robotstxt": "1.x-dev@dev",
-    "drupal/scheduler":"^2.0@RC",
-    "drupal/scheduler_content_moderation_integration": "^2.0.0-beta1",
- 
-    "drupal/schema_metatag": "^2.4",
-
-    "drupal/simple_gmap": "3.1.x-dev@dev",
-    "drupal/simple_sitemap": "^4.1",
-    "drupal/slick_entityreference": "^2.1",
-    "drupal/slick_paragraphs": "^2.2",
-
-    "drupal/social_media_links": "^2.9",
-    "drupal/update_helper": "^3.0",
-    "drupal/video_embed_field": "^2.5",
-    "drupal/viewsreference": "^2.0@beta",
-    "drupal/webform": "6.2.x-dev@dev",
-    "drupal/yoast_seo": "^2.0@alpha",
-    "oomphinc/composer-installers-extender": "^1.1 || ^2",
-    "srijanone/ezcontent_api": "3.0.x-dev-dev",
-    "srijanone/ezcontent_admin": "1.0.x-dev",
-    "srijanone/ezcontent_amp": "1.0.x-dev-dev",
-    "srijanone/ezcontent_theme": "2.0.x-dev-dev",
-    "vardot/blazy": "^1.8"
-  },
-  "require-dev": {
-    "drush/drush": "^11",
-    "drupal/coder": "~8",
-    "mglaman/phpstan-drupal": "^0.12",
-    "phpstan/phpstan-deprecation-rules": "^0.12"
-  },
-  "config": {
-    "sort-packages": true,
-    "preferred-install": {
-      "drupal/core": "dist"
-    }
-  },
-  "extra": {
-    "patchLevel": {
-      "drupal/core": "-p2"
-    },
-    "patches": {
-      "drupal/paragraphs" : {
-        "Langcode cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
+   "name":"srijanone/ezcontent",
+   "description":"A Feature rich stater profile from Srijan.",
+   "type":"drupal-profile",
+   "license":"GPL-2.0-or-later",
+   "minimum-stability":"dev",
+   "prefer-stable":true,
+   "repositories":{
+      "better_normalizers":{
+         "type":"vcs",
+         "url":"https://git.drupalcode.org/issue/better_normalizers-3286221.git"
       },
-      "drupal/core": {
-        "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
-        "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/2023-01-14/2830725-36.patch",
-        "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2022-12-08/3266057-88.patch"
+      "seo_checklist":{
+         "type":"vcs",
+         "url":"https://git.drupalcode.org/issue/seo_checklist-3330572"
       },
-      "drupal/entity_browser": {
-        "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
-        "2897855 - Entity browser modal dialog opens by pressing enter in any text field": "https://www.drupal.org/files/issues/2020-10-07/prevent-entity-browser-from-open-on-enter-key-pressed-2897855-17-reroll-with-improvement.patch",
-        "3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2020-11-19/3183414-2.patch"
+      "social_media":{
+         "type":"vcs",
+         "url":"https://git.drupalcode.org/issue/social_media-3289788"
       },
-      "drupal/entityqueue": {
-        "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
+      "drupal":{
+         "type":"composer",
+         "url":"https://packages.drupal.org/8"
       },
-      "drupal/social_media": {
-        "3178056 - Dispatcher error due to Symfony Event class deprecation handling": "https://www.drupal.org/files/issues/2020-11-20/dispatcher_error-3178056-5.patch"
+      "assets":{
+         "type":"composer",
+         "url":"https://asset-packagist.org"
       }
-    },
-    "installer-paths": {
-      "docroot/core": [
-        "type:drupal-core"
+   },
+   "require":{
+      "bower-asset/colorbox":"^1.6",
+      "bower-asset/dropzone":"5.7.2",
+      "bower-asset/slick-carousel":"^1.8",
+      "cweagans/composer-patches":"~1",
+      "drupal/admin_toolbar":"^3.3",
+      "drupal/allowed_formats":"^2.0",
+      "drupal/autocomplete_deluxe":"^2.0",
+      "drupal/better_normalizers": "dev-3286221-8.x-1.x-automated-drupal-10",
+      "drupal/color_field":"^3.0",
+      "drupal/colorbox":"^2.0",
+      "drupal/components":"^3.0@beta",
+      "drupal/config_rewrite":"^1.5",
+      "drupal/dropzonejs":"^2.7",
+      "drupal/email_registration":"^1.2",
+      "drupal/entity_browser":"~2.8",
+      "drupal/entity_embed":"1.x-dev@dev",
+      "drupal/entityqueue":"^1.5",
+      "drupal/entity_usage":"^2.0@beta",
+      "drupal/environment_indicator":"^4.0",
+      "srijanone/ezcontent_publish":"2.0.x-dev-dev",
+      "drupal/field_group":"^3.4",
+      "drupal/fvm":"^2.0.3",
+      "drupal/gin_login":"^2.0",
+      "drupal/gin_toolbar":"^1.0@RC",
+      "drupal/google_analytics":"^4.0",
+      "drupal/image_widget_crop":"^2.4",
+      "drupal/inline_entity_form":"^1.0@RC",
+      "drupal/layout_builder_modal":"^1.2",
+      "drupal/layout_builder_restrictions":"^2.17",
+      "drupal/layout_library":"1.x-dev@dev",
+      "drupal/lb_direct_add":"^2.0",
+      "drupal/length_indicator":"^1.2",
+      "drupal/libraries":"^4.0",
+      "drupal/linkit":"6.0.x-dev@dev",
+      "drupal/liveblog":"^2.0@alpha",
+      "drupal/media_entity_browser":"2.x-dev@dev",
+      "drupal/media_entity_instagram":"^3.0",
+      "drupal/media_entity_slideshow":"^2.5",
+      "drupal/media_entity_twitter":"^2.9",
+      "drupal/metatag":"^1.22",
+      "drupal/moderation_dashboard":"^2.1",
+      "drupal/moderation_sidebar":"^1.7",
+      "drupal/paragraphs":"^1.15",
+      "drupal/paragraphs_edit":"^2.0",
+      "drupal/paragraphs_previewer":"^1.7",
+      "drupal/pathauto":"^1.x-dev@dev",
+      "drupal/redirect":"^1.8",
+      "drupal/responsive_preview":"^2.0",
+      "drupal/robotstxt":"1.x-dev@dev",
+      "drupal/scheduler":"^2.0@RC",
+      "drupal/scheduler_content_moderation_integration":"^2.0.0-beta1",
+      "drupal/schema_metatag":"^2.4",
+      "drupal/seo_checklist": "dev-Pandya-Hardik-5.0.x-patch-03436",
+      "drupal/simple_gmap":"3.1.x-dev@dev",
+      "drupal/simple_sitemap":"^4.1",
+      "drupal/slick_entityreference":"^2.1",
+      "drupal/slick_paragraphs":"^2.2",
+      "drupal/social_media": "dev-3289788-drupal-10-fixes",
+      "drupal/social_media_links":"^2.9",
+      "drupal/update_helper":"^3.0",
+      "drupal/video_embed_field":"^2.5",
+      "drupal/viewsreference":"^2.0@beta",
+      "drupal/webform":"6.2.x-dev@dev",
+      "drupal/yoast_seo":"^2.0@alpha",
+      "oomphinc/composer-installers-extender":"^1.1 || ^2",
+      "srijanone/ezcontent_api":"3.0.x-dev-dev",
+      "srijanone/ezcontent_admin":"1.0.x-dev",
+      "srijanone/ezcontent_amp":"1.0.x-dev-dev",
+      "srijanone/ezcontent_theme":"2.0.x-dev-dev",
+      "vardot/blazy":"^1.8"
+   },
+   "require-dev":{
+      "drush/drush":"^11",
+      "drupal/coder":"~8",
+      "mglaman/phpstan-drupal":"^0.12",
+      "phpstan/phpstan-deprecation-rules":"^0.12"
+   },
+   "config":{
+      "sort-packages":true,
+      "preferred-install":{
+         "drupal/core":"dist"
+      }
+   },
+   "extra":{
+      "patchLevel":{
+         "drupal/core":"-p2"
+      },
+      "patches":{
+         "drupal/paragraphs":{
+            "Langcode cannot be null":"https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
+         },
+         "drupal/core":{
+            "Add reusable option to inline block creation":"https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
+            "Add block classes for bundle and view mode":"https://www.drupal.org/files/issues/2023-01-14/2830725-36.patch",
+            "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent":"https://www.drupal.org/files/issues/2022-12-08/3266057-88.patch"
+         },
+         "drupal/entity_browser":{
+            "Media file lost while duplicating paragraph":"https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
+            "2897855 - Entity browser modal dialog opens by pressing enter in any text field":"https://www.drupal.org/files/issues/2020-10-07/prevent-entity-browser-from-open-on-enter-key-pressed-2897855-17-reroll-with-improvement.patch",
+            "3183414 - Entity browser modal popup does not close on pressing escape key":"https://www.drupal.org/files/issues/2020-11-19/3183414-2.patch"
+         },
+         "drupal/entityqueue":{
+            "3124403 - Fixed get translation context error ":"https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
+         },
+         "drupal/social_media":{
+            "3178056 - Dispatcher error due to Symfony Event class deprecation handling":"https://www.drupal.org/files/issues/2020-11-20/dispatcher_error-3178056-5.patch"
+         }
+      },
+      "installer-paths":{
+         "docroot/core":[
+            "type:drupal-core"
+         ],
+         "docroot/libraries/{$name}":[
+            "type:drupal-library",
+            "type:bower-asset",
+            "type:npm-asset"
+         ],
+         "docroot/modules/contrib/{$name}":[
+            "type:drupal-module"
+         ],
+         "docroot/profiles/contrib/{$name}":[
+            "type:drupal-profile"
+         ],
+         "docroot/themes/contrib/{$name}":[
+            "type:drupal-theme"
+         ]
+      },
+      "installer-types":[
+         "bower-asset",
+         "npm-asset"
       ],
-      "docroot/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "docroot/modules/contrib/{$name}": [
-        "type:drupal-module"
-      ],
-      "docroot/profiles/contrib/{$name}": [
-        "type:drupal-profile"
-      ],
-      "docroot/themes/contrib/{$name}": [
-        "type:drupal-theme"
-      ]
-    },
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
-    "enable-patching": true
-  }
+      "enable-patching":true
+   }
 }
