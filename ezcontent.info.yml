@@ -9,7 +9,7 @@ install:
   - autosave_form
   - block_content
   - breakpoint
-  - ckeditor
+  - ckeditor5
   - color
   - comment
   - components
