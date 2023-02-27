@@ -19,4 +19,3 @@ permissions:
   - 'administer display modes'
   - 'use text format restricted_html'
   - 'view media'
-  - 'view search api pages'
