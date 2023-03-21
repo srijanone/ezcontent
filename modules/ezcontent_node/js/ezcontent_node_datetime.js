@@ -3,7 +3,7 @@
  * JQuery to allow past time for future date.
  */
 
-(function ($, drupalSettings) {
+(function ($, drupalSettings, once) {
 
   'use strict';
 
@@ -46,4 +46,4 @@
       });
     }
   };
-})(jQuery, drupalSettings);
+})(jQuery, drupalSettings, once);
