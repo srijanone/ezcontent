@@ -33,7 +33,7 @@
       }
 
       // Handle onchange.
-      $('input#edit-publish-on-0-value-date , input#edit-unpublish-on-0-value-date', context).once().change(function () {
+      $(once("edit-publish-on-0-value-date,edit-unpublish-on-0-value-date", "input#edit-publish-on-0-value-date , input#edit-unpublish-on-0-value-date", context)).change(function () {
         var timeElementId = $(this).attr('id') === 'edit-publish-on-0-value-date'
           ? 'edit-publish-on-0-value-time' : 'edit-unpublish-on-0-value-time';
         if ($(this).val() != drupalSettings.currentDate) {
