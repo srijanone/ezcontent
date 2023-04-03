@@ -39,10 +39,6 @@
          "url":"https://git.drupalcode.org/issue/amptheme-3328926"
       },
       {
-         "type":"vcs",
-         "url":"https://git.drupalcode.org/issue/warmer-3309450"  
-      },
-      {
          "type":"composer",
          "url":"https://packages.drupal.org/8"
       },
@@ -128,8 +124,7 @@
       "srijanone/ezcontent_admin":"2.0.x-dev-dev",
       "srijanone/ezcontent_amp":"1.0.x-dev-dev",
       "srijanone/ezcontent_theme":"2.0.x-dev-dev",
-      "vardot/blazy":"^1.8",
-      "drupal/warmer": "2.x-dev"
+      "vardot/blazy":"^1.8"
    },
    "require-dev":{
       "drush/drush":"^11",
