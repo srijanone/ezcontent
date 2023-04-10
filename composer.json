@@ -41,7 +41,7 @@
     "drupal/fvm": "^2.0",
     "drupal/gin_login": "^1.0-rc4",
     "drupal/gin_toolbar": "^1.0-beta",
-    "drupal/google_analytics": "^3.0",
+    "drupal/google_analytics": "^4.0",
     "drupal/image_widget_crop": "^2.3",
     "drupal/inline_entity_form": "^1.0@RC",
     "drupal/layout_builder_modal": "^1.0",
