@@ -72,7 +72,7 @@
     "drupal/schema_metatag": "^1.4",
     "drupal/seo_checklist": "4.x-dev",
     "drupal/simple_gmap": "^3.0",
-    "drupal/simple_sitemap": "^3.3",
+    "drupal/simple_sitemap": "^4.1",
     "drupal/slick_entityreference": "^2.0",
     "drupal/slick_paragraphs": "2.x",
     "drupal/social_media": "1.x-dev",
