@@ -16,10 +16,6 @@
       },
       {
          "type":"vcs",
-         "url":"https://git.drupalcode.org/issue/social_media-3289788"
-      },
-      {
-         "type":"vcs",
          "url":"https://git.drupalcode.org/issue/jsonapi_views-3288151"
       },
       {
@@ -111,7 +107,7 @@
       "drupal/simple_sitemap":"^4.1",
       "drupal/slick_entityreference":"^2.1",
       "drupal/slick_paragraphs":"^2.2",
-      "drupal/social_media":"dev-3289788-drupal-10-fixes",
+      "drupal/social_media":"^2.0",
       "drupal/social_media_links":"^2.9",
       "drupal/stable":"^2.0",
       "drupal/update_helper":"^3.0",
