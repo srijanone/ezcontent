@@ -2,7 +2,7 @@ name: EZContent User Feature
 type: module
 description: 'Provides user based features.'
 package: EZContent User
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.8 || ^9 || ^10
 dependencies:
   - drupal:path
   - password_policy:password_policy

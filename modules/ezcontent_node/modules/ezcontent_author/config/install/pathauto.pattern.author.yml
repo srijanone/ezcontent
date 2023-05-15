@@ -9,7 +9,7 @@ type: 'canonical_entities:node'
 pattern: 'author/[node:title]'
 selection_criteria:
   1fdd38de-71f7-43b1-bc9f-a16cb56b8b12:
-    id: node_type
+    id: entity_bundle:node
     bundles:
       author: author
     negate: false

@@ -2,7 +2,7 @@ name: Hero Media Block
 type: module
 description: "Provides Hero Media Block Types Based Features."
 package: EZContent Block
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.8 || ^9 || ^10
 dependencies:
   - ezcontent:ezcontent_block
   - ezcontent:ezcontent_card

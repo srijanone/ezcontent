@@ -1,6 +1,15 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - field_ui
+    - filter
+    - media
+    - system
+_core:
+  default_config_hash: 7q5QXSdK2IoIAZRBYRDBKwAul6Xt8e3b8qB03ivuf18
 id: anonymous
 label: 'Anonymous user'
 weight: -10
@@ -10,4 +19,3 @@ permissions:
   - 'administer display modes'
   - 'use text format restricted_html'
   - 'view media'
-  - 'view search api pages'
