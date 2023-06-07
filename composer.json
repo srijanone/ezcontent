@@ -136,9 +136,6 @@
        "drupal/core": "-p2"
      },
      "patches": {
-      "drupal/libraries":{
-         "2878684 - Undefined method getImplementations()": "https://www.drupal.org/files/issues/2023-02-15/3342032-undefined-method-getimplementations.patch"
-       },
        "drupal/paragraphs" : {
          "Langcode cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
        },
@@ -154,9 +151,6 @@
        },
        "drupal/entityqueue": {
          "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
-       },
-       "drupal/social_media": {
-         "3178056 - Dispatcher error due to Symfony Event class deprecation handling": "https://www.drupal.org/files/issues/2020-11-20/dispatcher_error-3178056-5.patch"
        }
      },
      "installer-paths": {
