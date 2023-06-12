@@ -99,7 +99,7 @@ abstract class EzcontentTextToSpeechPluginBase extends PluginBase implements Ezc
           $destination = $scheme . '://' . $speech_filename;
         } while (file_exists($destination));
       }
-      $speech_file = file_save_data($speech, $destination, FileSystemInterface::EXISTS_RENAME);
+      $speech_file = \Drupal::service('file.repository')->writeData($speech, $destination, FileSystemInterface::EXISTS_RENAME);
       $media = $this->entityTypeManager->getStorage('media')
         ->loadByProperties(['field_media_audio_file' => ['target_id' => $speech_file->id()]]);
       $media = !empty($media) ? $media[key($media)] : [];

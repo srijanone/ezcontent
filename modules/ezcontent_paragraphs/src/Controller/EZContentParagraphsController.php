@@ -17,7 +17,7 @@ class EZContentParagraphsController extends ControllerBase {
     $content = $this->entityTypeManager()
       ->getViewBuilder('paragraph')
       ->view($paragraph, $view_mode);
-    return new Response(render($content));
+    return new Response(\Drupal::service('renderer')->render($content));
   }
 
 }
