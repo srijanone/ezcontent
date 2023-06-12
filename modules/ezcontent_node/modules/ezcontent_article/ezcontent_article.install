@@ -39,7 +39,7 @@ function ezcontent_article_update_8002() {
  * Configuration update.
  */
 function ezcontent_article_update_8003() {
-  $module_path = drupal_get_path('module', 'ezcontent_article');
+  $module_path = \Drupal::service('extension.list.module')->getPath('ezcontent_article');
   // Install entityqueue module.
   \Drupal::service('module_installer')->install(['entityqueue'], TRUE);
   $file = 'entityqueue.entity_queue.featured_articles';
