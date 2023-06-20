@@ -1,12 +1,19 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - filter
+    - shortcut
+    - system
+_core:
+  default_config_hash: Swq9FZzFR7Hdl1QjTxO5k1qLOirmVEUpQlTKhL4xvE0
 id: authenticated
 label: 'Authenticated user'
 weight: -9
 is_admin: false
 permissions:
   - 'access content'
-  - 'use text format basic_html'
-  - 'view search api pages'
   - 'access shortcuts'
+  - 'use text format basic_html'

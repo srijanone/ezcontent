@@ -2,8 +2,8 @@
 
 namespace Drupal\ezcontent_smart_article\EventSubscriber;
 
+use Symfony\Contracts\EventDispatcher\Event;
 use Drupal\Core\Config\ConfigFactoryInterface;
-use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 
