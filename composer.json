@@ -146,7 +146,7 @@
          "drupal/core": {
             "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
             "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/2023-01-14/2830725-36.patch",
-            "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2022-12-08/3266057-88.patch"
+            "[subprofile support] 3266057 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2023-03-03/3266057-109-10-0-x.patch"
          },
          "drupal/entity_browser": {
             "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
