@@ -2,7 +2,7 @@ name: EZContent Listing
 type: module
 description: 'Includes content listing changes.'
 package: EZContent Block
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.8 || ^9 || ^10
 dependencies:
   - ezcontent:ezcontent_article
   - ezcontent:ezcontent_author

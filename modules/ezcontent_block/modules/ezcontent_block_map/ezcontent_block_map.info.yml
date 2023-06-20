@@ -2,7 +2,7 @@ name: Map Block
 type: module
 description: "Provides Map Block Types Based Features."
 package: EZContent Block
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^8.8 || ^9 || ^10
 dependencies:
   - ezcontent:ezcontent_block
   - simple_gmap:simple_gmap

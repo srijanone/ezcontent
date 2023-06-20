@@ -23,7 +23,7 @@ class ModerationTest extends BrowserTestBase {
    *
    * @todo: Make this work with gin_login and email_registration module.
    */
-  public function setUp() {
+  public function setUp(): void {
     // Ignore schema errors.
     $this->strictConfigSchema = FALSE;
     parent::setUp();
@@ -47,8 +47,8 @@ class ModerationTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     // Assert that the image thumbnail and add paragraph
     // button is present in the HTML.
-    $this->assertRaw('id="edit-field-thumbnail-entity-browser-entity-browser-open-modal"');
-    $this->assertRaw('id="edit-field-content-add-more-add-modal-form-area-add-more"');
+    $this->assertSession()->responseContains('id="edit-field-thumbnail-entity-browser-entity-browser-open-modal"');
+    $this->assertSession()->responseContains('id="edit-field-content-add-more-add-modal-form-area-add-more"');
   }
 
   /**
@@ -67,8 +67,8 @@ class ModerationTest extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
     // Assert that the image thumbnail and add paragraph
     // button is present in the HTML.
-    $this->assertRaw('id="edit-field-thumbnail-wrapper"');
-    $this->assertFieldByName('body[0][value]');
+    $this->assertSession()->responseContains('id="edit-field-thumbnail-wrapper"');
+    $this->assertSession()->fieldExists('body[0][value]');
   }
 
 }
