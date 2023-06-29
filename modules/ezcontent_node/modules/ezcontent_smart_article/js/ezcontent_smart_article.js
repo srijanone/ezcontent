@@ -13,7 +13,7 @@
     attach: function (context, settings) {
 
       // For Smart Image tags.
-      $(once('.image-tag-field-wrapper .tag-wrapper li', context)).click(function () {
+      $(once('.image-tag-field-wrapper', '.tag-wrapper li', context)).click(function () {
         var tagName = $(this).text();
         var imageWrapper = $(this).parents().eq(3);
         var tagsField = imageWrapper.find('.ui-autocomplete-input');
