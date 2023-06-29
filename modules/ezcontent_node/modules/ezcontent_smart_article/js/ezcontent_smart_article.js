@@ -13,7 +13,7 @@
     attach: function (context, settings) {
 
       // For Smart Image tags.
-      $('.image-tag-field-wrapper .tag-wrapper li', context).once().click(function () {
+      $(once('.image-tag-field-wrapper .tag-wrapper li', context)).click(function () {
         var tagName = $(this).text();
         var imageWrapper = $(this).parents().eq(3);
         var tagsField = imageWrapper.find('.ui-autocomplete-input');
@@ -55,10 +55,10 @@
       });
 
       // Open invalid subscription dialog.
-      $('#edit-overlay-link', context).once('ezcontent_smart_article').trigger('click');
+      $(once('ezcontent_smart_article','#edit-overlay-link', context)).trigger('click');
       // Generate tags as soon as image is uploaded.
       if (drupalSettings.imageTagOption == 'auto' && $(".image-preview")[0]) {
-        $('.generate-tags-button', context).once('ezcontent_smart_article').trigger('click');
+        $(once('ezcontent_smart_article','.generate-tags-button', context)).trigger('click');
       }
     }
   };
