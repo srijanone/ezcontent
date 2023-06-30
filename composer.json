@@ -16,10 +16,6 @@
       },
       {
          "type": "vcs",
-         "url": "https://git.drupalcode.org/issue/formtips-3330266"
-      },
-      {
-         "type": "vcs",
          "url": "https://git.drupalcode.org/issue/jsonapi_explorer-3288136"
       },
       {
