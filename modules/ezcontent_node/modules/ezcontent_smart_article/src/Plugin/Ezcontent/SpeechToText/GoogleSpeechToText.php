@@ -65,7 +65,7 @@ class GoogleSpeechToText extends EzcontentSpeechToTextPluginBase implements Ezco
   /**
    * A File system service object.
    *
-   * @var \Drupal\Core\File\FileSystem;
+   * @var \Drupal\Core\File\FileSystem
    */
   protected $fileSystem;
 
@@ -124,11 +124,11 @@ class GoogleSpeechToText extends EzcontentSpeechToTextPluginBase implements Ezco
     $config = $this->configFactory->get('ezcontent_smart_article.settings');
     $executable_path = $config->get('ffmpeg_executable_path');
     $outputPath = $this->fileSystem->realPath('public://' . $pathInfo['filename'] . '.flac');
-    $output = $this->executeCommand($executable_path, '-i "' . $inputPath . '" "' . $outputPath. '" -y', $error);
+    $output = $this->executeCommand($executable_path, '-i "' . $inputPath . '" "' . $outputPath . '" -y', $error);
     if (!$output) {
       $resultText = $this->getSpeechToText($outputPath);
     }
-    //@todo When there's an error code. Log the error.
+    // @todo When there's an error code. Log the error.
     return $resultText ?? "";
   }
 
@@ -142,17 +142,17 @@ class GoogleSpeechToText extends EzcontentSpeechToTextPluginBase implements Ezco
    * @param string $error
    *   Given response message.
    *
-   * @return integer
+   * @return int
    *   Returns error code.
    */
-  function executeCommand($command, $arguments, &$error = NULL) {
+  public function executeCommand($command, $arguments, &$error = NULL) {
     $command_line = $command . ' ' . $arguments;
-    $process = new Process($command_line);
+    $process = new Process([$command_line]);
     $process->setTimeout(60);
     try {
       $process->run();
-      $output = utf8_encode($process->getOutput());
-      $error = utf8_encode($process->getErrorOutput());
+      $output = mb_convert_encoding($process->getOutput(), 'UTF-8', 'ISO-8859-1');
+      $error = mb_convert_encoding($process->getErrorOutput(), 'UTF-8', 'ISO-8859-1');
       $return_code = $process->getExitCode();
     }
     catch (\Exception $e) {
@@ -171,30 +171,30 @@ class GoogleSpeechToText extends EzcontentSpeechToTextPluginBase implements Ezco
    * @return string
    *   Returns response text from Speech-To-Text API.
    */
-  function getSpeechToText($inputFilePath) {
+  public function getSpeechToText($inputFilePath) {
     $config = $this->configFactory->get('ezcontent_smart_article.settings');
     $baseRequestUrl = self::API_ENDPOINT . '?key=' . $config->get('gcp_speech_to_text_key');
     $inputData = base64_encode(file_get_contents($inputFilePath));
     $formParams = [
       "config" => [
-        "enableAutomaticPunctuation" => true,
+        "enableAutomaticPunctuation" => TRUE,
         "encoding" => "FLAC",
-        "languageCode" => "en-US"
+        "languageCode" => "en-US",
       ],
       "audio" => [
-        "content" => $inputData
-      ]
+        "content" => $inputData,
+      ],
     ];
     $response = $this->httpClient->post($baseRequestUrl, [
-      'verify' => true,
+      'verify' => TRUE,
       'body' => json_encode($formParams),
-        'headers' => [
-          'Content-type' => 'application/json',
-          'Accept' => 'application/json'
-        ],
+      'headers' => [
+        'Content-type' => 'application/json',
+        'Accept' => 'application/json',
+      ],
     ])->getBody()->getContents();
     $responseArray = json_decode($response);
-    //@todo Google Speech-To-Text provides different alternative. Can we extract more ?
+    // @todo Google Speech-To-Text provides different alternative. Can we extract more ?
     return $responseArray->results[0]->alternatives[0]->transcript ?? '';
   }
 
