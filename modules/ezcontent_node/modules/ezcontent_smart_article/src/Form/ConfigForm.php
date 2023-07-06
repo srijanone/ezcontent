@@ -403,12 +403,12 @@ class ConfigForm extends ConfigFormBase {
     if ($executablePath) {
       $output = $this->execute($executablePath, '-version');
       if ($output) {
-        $form['ffmpeg_version'] = array(
+        $form['ffmpeg_version'] = [
           '#type' => 'details',
           '#title' => $this->t('FFMPEG Version Information'),
           '#description' => "<pre>" . $output . "</pre>",
           '#open' => FALSE,
-        );
+        ];
       }
     }
     return parent::buildForm($form, $form_state);
@@ -530,17 +530,17 @@ class ConfigForm extends ConfigFormBase {
    * @param string $error
    *   Given response message.
    *
-   * @return integer
+   * @return int
    *   Returns error code.
    */
   public function execute($command, $arguments, &$error = NULL) {
     $command_line = $command . ' ' . $arguments;
-    $process = new Process($command_line);
+    $process = new Process([$command_line]);
     $process->setTimeout(60);
     try {
       $process->run();
-      $output = utf8_encode($process->getOutput());
-      $error = utf8_encode($process->getErrorOutput());
+      $output = mb_convert_encoding($process->getOutput(), 'UTF-8', 'ISO-8859-1');
+      $error = mb_convert_encoding($process->getErrorOutput(), 'UTF-8', 'ISO-8859-1');
       $return_code = $process->getExitCode();
     }
     catch (\Exception $e) {
