@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: 4HLMWJHuwpYh3u68pZa5cIAyfLKtENbpUqwnNJ2jmNE
+allowed_section_attributes:
+  id: true
+  class: true
+  class_list: false
+  style: true
+  data: true
+allowed_section_region_attributes:
+  id: true
+  class_list: false
+  class: true
+  style: true
+  data: true
+class_list: {  }
