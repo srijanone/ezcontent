@@ -6,6 +6,8 @@ core_version_requirement: ^8.8 || ^9 || ^10
 dependencies:
   - ezcontent_node:ezcontent_node
   - ezcontent_node:ezcontent_user
+  - layout_builder_component_attributes:layout_builder_component_attributes
   - layout_builder_restrictions:layout_builder_restrictions
+  - layout_custom_section_classes:layout_custom_section_classes
   - layout_library:layout_library
   - lb_direct_add:lb_direct_add
