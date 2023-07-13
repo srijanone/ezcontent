@@ -90,7 +90,7 @@
     "vardot/blazy": "^1.8"
   },
   "require-dev": {
-    "drush/drush": "~9",
+    "drush/drush": "~10",
     "drupal/coder": "~8",
     "mglaman/phpstan-drupal": "^0.12",
     "phpstan/phpstan-deprecation-rules": "^0.12"
