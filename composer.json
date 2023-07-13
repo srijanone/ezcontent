@@ -117,7 +117,6 @@
    "require-dev":{
       "drush/drush":"^11",
       "drupal/coder":"~8",
-      "mglaman/phpstan-drupal":"^0.12",
       "phpstan/phpstan-deprecation-rules":"^0.12"
    },
    "config":{
