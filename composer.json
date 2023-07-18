@@ -73,6 +73,7 @@
       "drupal/layout_builder_styles": "^2.0",
       "drupal/layout_custom_section_classes": "^1.0",
       "drupal/layout_library": "1.x-dev@dev",
+      "drupal/layout_paragraphs": "^2.0",
       "drupal/lb_direct_add": "^2.0",
       "drupal/length_indicator": "^1.2",
       "drupal/libraries": "^4.0",
