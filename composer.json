@@ -80,6 +80,7 @@
     "drupal/social_media_links": "^2.6",
     "drupal/update_helper": "^2.0",
     "drupal/video_embed_field": "^2.2",
+    "drupal/view_mode_conditional_fields": "1.0.x-dev@dev",
     "drupal/viewsreference": "^2.0",
     "drupal/webform": "^6.0",
     "drupal/yoast_seo": "^1.5",
