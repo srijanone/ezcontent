@@ -2,7 +2,7 @@
 
 namespace Drupal\ezcontent_node\PathProcessor;
 
-use Drupal\Core\Extension\ModuleHandler;
+use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\PathProcessor\OutboundPathProcessorInterface;
 use Drupal\Core\Render\BubbleableMetadata;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,17 +20,17 @@ class EZContentAmpOutboundPathProcessor implements OutboundPathProcessorInterfac
   /**
    * Module Handler service.
    *
-   * @var Drupal\Core\Extension\ModuleHandler
+   * @var Drupal\Core\Extension\ModuleHandlerInterface
    */
   protected $moduleHandler;
 
   /**
    * Constructs an EZContentAmpOutboundPathProcessor object.
    *
-   * @param Drupal\Core\Extension\ModuleHandler $moduleHandler
+   * @param Drupal\Core\Extension\ModuleHandlerInterface $moduleHandler
    *   The module handler service.
    */
-  public function __construct(ModuleHandler $moduleHandler) {
+  public function __construct(ModuleHandlerInterface $moduleHandler) {
     $this->moduleHandler = $moduleHandler;
   }
 
