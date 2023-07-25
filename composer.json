@@ -127,6 +127,14 @@
       "sort-packages":true,
       "preferred-install":{
          "drupal/core":"dist"
+      },
+      "allow-plugins": {
+         "cweagans/composer-patches": true,
+         "drupal/core-composer-scaffold": true,
+         "drupal/core-project-message": true,
+         "composer/installers": true,
+         "dealerdirect/phpcodesniffer-composer-installer": true,
+         "oomphinc/composer-installers-extender": true
       }
    },
    "extra":{
