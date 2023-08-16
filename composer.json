@@ -44,7 +44,7 @@
       "drupal/entityqueue":"^1.5",
       "drupal/entity_usage":"^2.0@beta",
       "drupal/environment_indicator":"^4.0",
-      "srijanone/ezcontent_publish":"2.0.x-dev-dev",
+      "drupal/ezcontent_publish":"^2.1",
       "drupal/field_group":"^3.4",
       "drupal/fvm":"^2.0.3",
       "drupal/gin_login":"^2.0",
@@ -100,10 +100,10 @@
       "drupal/webform":"6.2.x-dev@dev",
       "drupal/yoast_seo":"^2.0@alpha",
       "oomphinc/composer-installers-extender":"^1.1 || ^2",
-      "srijanone/ezcontent_api":"3.0.x-dev-dev",
-      "srijanone/ezcontent_admin":"2.0.x-dev-dev",
-      "srijanone/ezcontent_amp":"1.0.x-dev-dev",
-      "srijanone/ezcontent_theme":"2.0.x-dev-dev",
+      "drupal/ezcontent_api":"^2.3",
+      "srijanone/ezcontent_admin":"^2.1",
+      "srijanone/ezcontent_amp":"^1.1",
+      "srijanone/ezcontent_theme":"^2.1",
       "vardot/blazy":"^1.8"
    },
    "require-dev":{
