@@ -112,7 +112,7 @@
       "drupal/stable": "^2.0",
       "drupal/update_helper": "^3.0",
       "drupal/video_embed_field": "^2.5",
-      "drupal/view_mode_conditional_fields": "dev-3369799-automated-drupal-10",
+      "drupal/view_mode_conditional_fields": "^1.0",
       "drupal/viewsreference": "^2.0@beta",
       "drupal/webform": "^6.2@beta",
       "drupal/yoast_seo": "^2.0@alpha",
