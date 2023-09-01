@@ -8,7 +8,7 @@
    "repositories":[
      {
          "type":"vcs",
-         "url":"https://git.drupalcode.org/issue/yoast_seo-3384771/-/tree/3384771-need-to-update"
+         "url":"https://git.drupalcode.org/issue/yoast_seo-3384771"
       },
       {
          "type":"vcs",
