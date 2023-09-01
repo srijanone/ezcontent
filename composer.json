@@ -6,6 +6,10 @@
    "minimum-stability":"dev",
    "prefer-stable":true,
    "repositories":[
+     {
+         "type":"vcs",
+         "url":"https://git.drupalcode.org/issue/yoast_seo-3384771/-/tree/3384771-need-to-update"
+      },
       {
          "type":"vcs",
          "url":"https://git.drupalcode.org/issue/better_normalizers-3286221.git"
@@ -98,7 +102,7 @@
       "drupal/view_mode_conditional_fields": "^1.0",
       "drupal/viewsreference":"^2.0@beta",
       "drupal/webform": "^6.2@beta",
-      "drupal/yoast_seo":"^2.0@alpha",
+      "drupal/yoast_seo":"dev-3384771-need-to-update",
       "oomphinc/composer-installers-extender":"^1.1 || ^2",
       "drupal/ezcontent_api":"^2.3",
       "srijanone/ezcontent_admin":"^2.1",
