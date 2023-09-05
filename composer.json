@@ -44,7 +44,7 @@
       "drupal/entityqueue":"^1.5",
       "drupal/entity_usage":"^2.0@beta",
       "drupal/environment_indicator":"^4.0",
-      "drupal/ezcontent_demo":"2.0.x-dev",
+      "drupal/ezcontent_demo":"dev-2.0.x-dev",
       "drupal/ezcontent_publish":"^2.1",
       "drupal/field_group":"^3.4",
       "drupal/fvm":"^2.0.3",
