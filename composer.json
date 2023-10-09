@@ -27,10 +27,6 @@
          "url": "https://git.drupalcode.org/issue/amptheme-3328926"
       },
       {
-         "type": "vcs",
-         "url": "https://git.drupalcode.org/issue/view_mode_conditional_fields-3369799"
-      },
-      {
          "type": "composer",
          "url": "https://packages.drupal.org/8"
       },
