@@ -19,14 +19,6 @@
          "url": "https://git.drupalcode.org/issue/jsonapi_explorer-3288136"
       },
       {
-         "type": "vcs",
-         "url": "https://git.drupalcode.org/issue/amp-3286062"
-      },
-      {
-         "type": "vcs",
-         "url": "https://git.drupalcode.org/issue/amptheme-3328926"
-      },
-      {
          "type": "composer",
          "url": "https://packages.drupal.org/8"
       },
