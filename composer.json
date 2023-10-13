@@ -15,10 +15,6 @@
          "url":"https://git.drupalcode.org/issue/jsonapi_explorer-3288136"
       },
       {
-         "type":"vcs",
-         "url":"https://git.drupalcode.org/issue/yoast_seo-3384771"
-      },
-      {
          "type":"composer",
          "url":"https://packages.drupal.org/8"
       },
@@ -105,7 +101,7 @@
       "drupal/view_mode_conditional_fields": "^1.0",
       "drupal/viewsreference": "^2.0@beta",
       "drupal/webform": "^6.2@beta",
-      "drupal/yoast_seo": "dev-3384771-need-to-update",
+      "drupal/yoast_seo": "^2.0@alpha",
       "oomphinc/composer-installers-extender": "^1.1 || ^2",
       "srijanone/ezcontent_admin": "dev-blt-dev",
       "srijanone/ezcontent_amp": "dev-blt-dev",
