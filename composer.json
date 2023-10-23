@@ -11,10 +11,6 @@
          "url": "https://git.drupalcode.org/issue/better_normalizers-3286221.git"
       },
       {
-         "type": "vcs",
-         "url": "https://git.drupalcode.org/issue/jsonapi_explorer-3288136"
-      },
-      {
          "type": "composer",
          "url": "https://packages.drupal.org/8"
       },
@@ -43,7 +39,8 @@
       "drupal/core-recommended": "^10.1",
       "drupal/dropzonejs": "^2.7",
       "drupal/email_registration": "^1.2",
-      "drupal/entity_browser": "~2.8",
+      "drupal/entity_browser": "^2.9",
+      "drupal/entity_browser_table": "^1.4",
       "drupal/entity_embed": "^1.4",
       "drupal/entity_usage": "^2.0@beta",
       "drupal/entityqueue": "^1.5",
@@ -68,6 +65,7 @@
       "drupal/libraries": "^4.0",
       "drupal/linkit": "^6.1",
       "drupal/liveblog": "^2.0@alpha",
+      "drupal/media_entity_audio": "^3.1",
       "drupal/media_entity_browser": "^2.0@alpha",
       "drupal/media_entity_instagram": "^3.0",
       "drupal/media_entity_slideshow": "^2.5",
