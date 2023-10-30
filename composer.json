@@ -7,10 +7,6 @@
    "prefer-stable":true,
    "repositories":[
       {
-         "type":"vcs",
-         "url":"https://git.drupalcode.org/issue/better_normalizers-3286221.git"
-      },
-      {
          "type":"composer",
          "url":"https://packages.drupal.org/8"
       },
@@ -27,7 +23,7 @@
       "drupal/admin_toolbar":"^3.3",
       "drupal/allowed_formats":"^2.0",
       "drupal/autocomplete_deluxe":"^2.0",
-      "drupal/better_normalizers":"dev-3286221-8.x-1.x-automated-drupal-10",
+      "drupal/better_normalizers":"^2.0@beta",
       "drupal/block_list_override":"^1.0",
       "drupal/color":"^1.0",
       "drupal/color_field":"^3.0",
