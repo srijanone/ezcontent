@@ -136,7 +136,10 @@
          },
          "drupal/entityqueue":{
             "3124403 - Fixed get translation context error ":"https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
-         }
+         },
+         "drupal/yoast_seo": {
+            "Uncaught DOMException: Failed to execute 'remove' on 'DOMTokenList':3394487": "https://www.drupal.org/files/issues/2023-11-03/3394487-failed-to-execute-remove-on-domtokenlist.patch"
+        }
       },
       "installer-paths": {
          "docroot/core": [
