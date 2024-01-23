@@ -134,17 +134,23 @@
          "Langcode cannot be null": "https://www.drupal.org/files/issues/2019-08-10/paragraphs-set_langcode_widgets-290139_updated.patch"
        },
        "drupal/core": {
-         "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2021-03-18/reusable_inline_block_creation-2999491-66.patch",
+         "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2024-01-23/add_reusable_option_to_inline_block_creation-2999491-141.patch",
          "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/2023-01-14/2830725-36.patch",
          "[subprofile support] 3266057 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2023-11-30/3266057-120.patch"
        },
        "drupal/entity_browser": {
          "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
          "2897855 - Entity browser modal dialog opens by pressing enter in any text field": "https://www.drupal.org/files/issues/2020-10-07/prevent-entity-browser-from-open-on-enter-key-pressed-2897855-17-reroll-with-improvement.patch",
-         "3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2020-11-19/3183414-2.patch"
+         "3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2024-01-23/3183414-4854c20620950e32562404f178f8bf9a61ebb1dd-03.patch"
        },
        "drupal/entityqueue": {
          "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
+       },
+       "drupal/yoast_seo": {
+         "error Title field is required -3010164": "https://www.drupal.org/files/issues/2021-11-02/yoast_seo-3010164-12.patch",
+         "Not working at all due to Ajax error (since updating to 8.6.15) -3050504": "https://www.drupal.org/files/issues/2019-05-29/yoast_seo-ajax-error-3050504-6.patch",
+         "Uncaught DOMException: Failed to execute 'remove' on 'DOMTokenList':-3394487": "https://www.drupal.org/files/issues/2023-11-03/3394487-failed-to-execute-remove-on-domtokenlist.patch",
+         "Metatags depending on URL cause errors for unsaved entities after updating to Drupal 8.8.0 -3110455": "https://www.drupal.org/files/issues/2023-10-09/yoast_seo-3110455-22.patch"
        }
      },
      "installer-paths": {
