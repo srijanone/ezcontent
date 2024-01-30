@@ -133,10 +133,15 @@
          "drupal/entity_browser": {
             "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
             "2897855 - Entity browser modal dialog opens by pressing enter in any text field": "https://www.drupal.org/files/issues/2020-10-07/prevent-entity-browser-from-open-on-enter-key-pressed-2897855-17-reroll-with-improvement.patch",
-            "3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2020-11-19/3183414-2.patch"
+            "3183414 - Entity browser modal popup does not close on pressing escape key": "https://www.drupal.org/files/issues/2020-11-19/3183414-2.patch",
+            "3409505 - Uncaught TypeError: Cannot read properties of null (reading 'style') (toolbar.js)": "https://www.drupal.org/files/issues/2023-12-20/fix-toolbarjs-null-handling.patch",
+            "3356667 - Error: Cannot read properties of undefined (reading 'settings') with dialog.position.js": "https://www.drupal.org/files/issues/2023-11-28/core-dialog-position-debounce-3356667-19.patch"
          },
          "drupal/entityqueue": {
             "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
+         },
+         "drupal/token":{
+            "3397358 -Menu link submit save callback detection breaks some AJAX forms": "https://www.drupal.org/files/issues/2023-11-10/token-3218969-breaks-some-ajax-forms-3397358-7.patch"
          }
       },
       "installer-paths": {
