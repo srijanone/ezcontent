@@ -139,6 +139,9 @@
          "drupal/entityqueue":{
             "3124403 - Fixed get translation context error ":"https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
          },
+         "drupal/layout_paragraphs":{
+            "3418020 -Uncaught TypeError: Cannot read properties of undefined (reading 'indexOf')":"https://www.drupal.org/files/issues/2024-01-30/3418020-4.patch"
+         },
          "drupal/token":{
             "3397358 -Menu link submit save callback detection breaks some AJAX forms": "https://www.drupal.org/files/issues/2023-11-10/token-3218969-breaks-some-ajax-forms-3397358-7.patch"
          },
