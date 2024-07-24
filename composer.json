@@ -147,7 +147,7 @@
          "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
        },
        "drupal/layout_paragraphs": {
-        "3418020 -Uncaught TypeError: Cannot read properties of undefined (reading 'indexOf')": "https://www.drupal.org/files/issues/2024-07-24/3418020-5.patch"
+         "3418020 -Uncaught TypeError: Cannot read properties of undefined (reading 'indexOf')": "https://www.drupal.org/files/issues/2024-07-24/3418020-5.patch"
        },
        "drupal/yoast_seo": {
          "error Title field is required -3010164": "https://www.drupal.org/files/issues/2021-11-02/yoast_seo-3010164-12.patch",
