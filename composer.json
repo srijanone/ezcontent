@@ -136,9 +136,7 @@
        "drupal/core": {
          "Add reusable option to inline block creation": "https://www.drupal.org/files/issues/2024-01-23/add_reusable_option_to_inline_block_creation-2999491-141.patch",
          "Add block classes for bundle and view mode": "https://www.drupal.org/files/issues/2023-01-14/2830725-36.patch",
-         "[subprofile support] 3266057 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2024-07-12/3266057-130.patch",
-         "3409505 - Uncaught TypeError: Cannot read properties of null (reading 'style') (toolbar.js)": "https://www.drupal.org/files/issues/2023-12-20/fix-toolbarjs-null-handling.patch",
-         "3356667 - Error: Cannot read properties of undefined (reading 'settings') with dialog.position.js": "https://www.drupal.org/files/issues/2023-11-28/core-dialog-position-debounce-3356667-19.patch"
+         "[subprofile support] 3266057 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2024-07-12/3266057-130.patch"
        },
        "drupal/entity_browser": {
          "Media file lost while duplicating paragraph": "https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
@@ -148,11 +146,8 @@
        "drupal/entityqueue": {
          "3124403 - Fixed get translation context error ": "https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
        },
-       "drupal/layout_paragraphs":{
-         "3418020 -Uncaught TypeError: Cannot read properties of undefined (reading 'indexOf')":"https://www.drupal.org/files/issues/2024-01-30/3418020-4.patch"
-       },
-       "drupal/token":{
-         "3397358 -Menu link submit save callback detection breaks some AJAX forms": "https://www.drupal.org/files/issues/2023-11-10/token-3218969-breaks-some-ajax-forms-3397358-7.patch"
+       "drupal/layout_paragraphs": {
+        "3418020 -Uncaught TypeError: Cannot read properties of undefined (reading 'indexOf')": "https://www.drupal.org/files/issues/2024-07-24/3418020-5.patch"
        },
        "drupal/yoast_seo": {
          "error Title field is required -3010164": "https://www.drupal.org/files/issues/2021-11-02/yoast_seo-3010164-12.patch",
