@@ -38,6 +38,7 @@ install:
   - history
   - image
   - image_widget_crop
+  - layout_builder_modal
   - linkit
   - moderation_dashboard
   - moderation_sidebar
