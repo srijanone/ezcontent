@@ -103,7 +103,7 @@
       "srijanone/ezcontent_demo": "dev-blt-dev",
       "srijanone/ezcontent_publish": "dev-blt-dev",
       "srijanone/ezcontent_theme": "dev-blt-dev",
-      "vardot/blazy": "^3.0"
+      "vardot/blazy": "^1.8"
    },
    "require-dev": {
       "drush/drush":"^12",
