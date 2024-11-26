@@ -45,7 +45,7 @@
       "drupal/gin_toolbar":"^1.0@RC",
       "drupal/google_analytics":"^4.0",
       "drupal/image_widget_crop":"^2.4",
-      "drupal/inline_entity_form":"^3.0@RC",
+      "drupal/inline_entity_form":"^1.0@RC ||^3.0@RC",
       "drupal/layout_builder_backgrounds": "^1.0",
       "drupal/layout_builder_component_attributes": "^2.1",
       "drupal/layout_builder_modal":"^1.2",
