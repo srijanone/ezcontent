@@ -144,9 +144,7 @@
        },
        "drupal/yoast_seo": {
          "error Title field is required -3010164": "https://www.drupal.org/files/issues/2021-11-02/yoast_seo-3010164-12.patch",
-         "Not working at all due to Ajax error (since updating to 8.6.15) -3050504": "https://www.drupal.org/files/issues/2019-05-29/yoast_seo-ajax-error-3050504-6.patch",
-         "Uncaught DOMException: Failed to execute 'remove' on 'DOMTokenList':-3394487": "https://www.drupal.org/files/issues/2023-11-03/3394487-failed-to-execute-remove-on-domtokenlist.patch",
-         "Metatags depending on URL cause errors for unsaved entities after updating to Drupal 8.8.0 -3110455": "https://www.drupal.org/files/issues/2023-10-09/yoast_seo-3110455-22.patch"
+         "Not working at all due to Ajax error (since updating to 8.6.15) -3050504": "https://www.drupal.org/files/issues/2019-05-29/yoast_seo-ajax-error-3050504-6.patch"
        }
      },
      "installer-paths": {
