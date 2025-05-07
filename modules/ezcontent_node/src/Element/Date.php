@@ -26,7 +26,8 @@ class Date extends CoreDate {
       ($element['#parents'][0] == 'publish_on' || $element['#parents'][0] == 'unpublish_on')
     ) {
       // Add min to Publish and UnPublish date and time.
-      $date = new DrupalDateTime();
+      $timezone = \Drupal::config('system.date')->get('timezone.default');
+      $date = new DrupalDateTime('now', new \DateTimeZone($timezone));
       if ($element['#attributes']['type'] == 'date') {
         $dateFormat = !empty($element['#date_date_format']) ? $element['#date_date_format'] : DateFormat::load('html_date')->getPattern();
         $element['#attributes']['min'] = $date->format($dateFormat);
