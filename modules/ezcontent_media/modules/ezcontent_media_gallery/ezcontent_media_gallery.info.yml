@@ -2,7 +2,7 @@ name: Media Gallery Feature
 type: module
 description: 'Provides Slick Gallery.'
 package: EZContent Media
-core_version_requirement: ^8.8 || ^9 || ^10
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - blazy:blazy
   - ezcontent:ezcontent_media

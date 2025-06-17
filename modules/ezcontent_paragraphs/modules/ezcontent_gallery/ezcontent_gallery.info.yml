@@ -2,7 +2,7 @@ name: Gallery Feature
 type: module
 description: 'Provides gallery feature.'
 package: EZContent Paragraphs
-core_version_requirement: ^8.8 || ^9 || ^10
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - ezcontent:ezcontent_assets
   - libraries:libraries

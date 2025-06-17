@@ -2,7 +2,7 @@ name: Social Media Block
 type: module
 description: "Provides Social Media Block Types Based Features."
 package: EZContent Block
-core_version_requirement: ^8.8 || ^9 || ^10
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - ezcontent:ezcontent_block
   - ezcontent:ezcontent_media_instagram

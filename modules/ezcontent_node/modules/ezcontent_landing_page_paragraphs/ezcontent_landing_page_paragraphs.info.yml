@@ -2,7 +2,7 @@ name: Landing Page Paragraphs Feature
 type: module
 description: 'Provides landing page paragraphs content type.'
 package: EZContent Node
-core_version_requirement: ^8.8 || ^9 || ^10
+core_version_requirement: ^10.3 || ^11
 dependencies:
   - ezcontent:ezcontent_node
   - ezcontent:ezcontent_assets
