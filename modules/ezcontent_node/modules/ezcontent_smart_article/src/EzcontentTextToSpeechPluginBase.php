@@ -6,7 +6,7 @@ use Drupal\Component\Plugin\PluginBase;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\Core\File\FileSystemInterface;
+use Drupal\Core\File\FileExists;
 use Drupal\media\Entity\Media;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -99,7 +99,7 @@ abstract class EzcontentTextToSpeechPluginBase extends PluginBase implements Ezc
           $destination = $scheme . '://' . $speech_filename;
         } while (file_exists($destination));
       }
-      $speech_file = \Drupal::service('file.repository')->writeData($speech, $destination, FileSystemInterface::EXISTS_RENAME);
+      $speech_file = \Drupal::service('file.repository')->writeData($speech, $destination, FileExists::Rename);
       $media = $this->entityTypeManager->getStorage('media')
         ->loadByProperties(['field_media_audio_file' => ['target_id' => $speech_file->id()]]);
       $media = !empty($media) ? $media[key($media)] : [];
