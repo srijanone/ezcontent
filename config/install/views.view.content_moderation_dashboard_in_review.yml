@@ -573,7 +573,6 @@ display:
           default_argument_type: user
           default_argument_options:
             user: false
-          default_argument_skip_url: false
           summary_options:
             base_path: ''
             count: true
@@ -609,7 +608,6 @@ display:
           title: '{%if raw_arguments.uid == raw_arguments.null %}{{"Your drafts"|t}}{%else%} {{"User''s drafts"|t}}{% endif %}'
           default_argument_type: current_user
           default_argument_options: {  }
-          default_argument_skip_url: true
           summary_options:
             base_path: ''
             count: true
