@@ -42,7 +42,7 @@
       "drupal/field_group":"^3.4",
       "drupal/fvm":"^2.0.3",
       "drupal/gin_login":"^2.0",
-      "drupal/gin_toolbar":"^1.0@RC",
+      "drupal/gin_toolbar":"^1.0@beta || ^2.1",
       "drupal/google_analytics":"^4.0",
       "drupal/image_widget_crop":"^2.4",
       "drupal/inline_entity_form":"^1.0@RC ||^3.0@RC",
