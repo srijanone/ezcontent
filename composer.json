@@ -19,7 +19,7 @@
       "bower-asset/colorbox": "^1.6",
       "bower-asset/dropzone": "5.7.2",
       "bower-asset/slick-carousel": "^1.8",
-      "cweagans/composer-patches": "^2.0",
+      "cweagans/composer-patches": "^1.0",
       "drupal/admin_toolbar": "^3.3",
       "drupal/allowed_formats": "^3.0",
       "drupal/autocomplete_deluxe": "^2.0",
