@@ -128,7 +128,7 @@
          },
          "drupal/entity_browser":{
             "Media file lost while duplicating paragraph":"https://www.drupal.org/files/issues/2020-03-25/3104901.patch",
-            "2897855 - Entity browser modal dialog opens by pressing enter in any text field":"https://www.drupal.org/files/issues/2020-10-07/prevent-entity-browser-from-open-on-enter-key-pressed-2897855-17-reroll-with-improvement.patch"
+            "2897855 - Entity browser modal dialog opens by pressing enter in any text field":"https://git.drupalcode.org/project/entity_browser/-/merge_requests/104.diff"
          },
          "drupal/entityqueue":{
             "3124403 - Fixed get translation context error ":"https://www.drupal.org/files/issues/2020-04-02/type-error-3124403-2.patch"
