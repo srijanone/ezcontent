@@ -90,7 +90,7 @@
       "drupal/social_media_links":"^2.9",
       "drupal/stable":"^2.0",
       "drupal/update_helper":"^4.0",
-      "drupal/video_embed_field":"^2.5",
+      "drupal/video_embed_field":"^3.0",
       "drupal/view_mode_conditional_fields": "^1.0",
       "drupal/viewsreference":"^2.0@beta",
       "drupal/webform": "^6.2@beta",
