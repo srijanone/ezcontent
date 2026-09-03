@@ -33,7 +33,7 @@
       "drupal/dropzonejs":"^2.7",
       "drupal/email_registration":"^1.2",
       "drupal/entity_browser":"^2.9",
-      "drupal/entity_browser_table": "^2.0",
+      "drupal/entity_browser_table": "^1.4",
       "drupal/entity_embed": "^1.4",
       "drupal/entityqueue":"^1.5",
       "drupal/entity_usage":"^2.0@beta",
